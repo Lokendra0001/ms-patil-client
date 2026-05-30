@@ -1,26 +1,187 @@
 @import "tailwindcss";
+/* Global Styles */
+body {
+  font-family: var(--font-sans);
+  background: var(--background);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+@theme {
+  /* ===== FONT SYSTEM ===== */
+  --font-sans: var(--font-poppins), ui-sans-serif, system-ui;
+  --font-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular;
+
+  /* Optional fonts */
+  --font-padyakke: var(--font-padyakke);
+  --font-eden-meadow: var(--font-eden-meadow);
+  --font-barlow: var(--font-barlow);
+  --font-carattere: var(--font-carattere);
+  --font-abhaya: var(--font-abhaya), serif;
+  --font-serif: "Times New Roman", Times, serif;
+
+  /* ===== BACKGROUNDS ===== */
+  --color-primary-background: var(--background);
+  --color-gray-background: var(--gray-background);
+  --color-service-btn-background: var(--service-btn-background);
+  --color-input-background: var(--input-background);
+  --color-red-linear-left-background: var(--red-linear-left-background);
+  --color-red-linear-right-background: var(--red-linear-right-background);
+
+  /* ===== TEXT COLORS ===== */
+  --color-text-primary: var(--text-primary);
+  --color-text-normal: var(--text-normal);
+  --color-text-gray: var(--text-gray);
+  --color-text-green: var(--text-green);
+  --color-text-red: var(--text-red);
+  --color-text-white: var(--text-white);
+
+  /* ===== THEME COLORS ===== */
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-primary-light: var(--primary-light);
+  --color-primary-light-hover: var(--primary-light-hover);
+  --color-theme: var(--primary-light);
+  --color-theme-hover: var(--primary-light-hover);
+  --color-light: var(--primary-light);
+  --color-light-hover: var(--primary-light-hover);
+
+  /* ===== EXTRA ===== */
+  --color-whatsapp: var(--whatsapp);
+}
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+  /* ===== COLORS ===== */
+  --background: #f8fafc;
+  --gray-background: #f1f5f9;
+  --service-btn-background: #e0ecff;
+  --input-background: #ffffff;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  /* ===== ACTIVE PALETTE: Warm Honey Yellow (Current) ===== */
+  --primary: #1a1a1a;
+  --primary-hover: #000000;
+  --primary-light: #ffb83b;
+  --primary-light-hover: #e09b1f;
+  --red-linear-left-background: #1a1a1a;
+  --red-linear-right-background: #ffb83b;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  /* 🌌 Midnight Blue + Coral (Bold but Professional) */
+  /* --primary: #1b263b;
+--primary-hover: #141c2b;
+--primary-light: #ff6b6b;
+--primary-light-hover: #e05555;
+
+--red-linear-left-background: #1b263b;
+--red-linear-right-background: #ff6b6b; */
+
+  /* ===== OPTIONAL PALETTES (To swap, comment the active lines above and uncomment one of these blocks) ===== */
+
+  /* Palette 1: Pure Safety Yellow (#ffcc00)
+  --primary: #1a1a1a;
+  --primary-hover: #000000;
+  --primary-light: #ffcc00;
+  --primary-light-hover: #cc9900;
+  --red-linear-left-background: #1a1a1a;
+  --red-linear-right-background: #ffcc00;
+  */
+
+  /* Palette 2: Vibrant Yellow (#eab308)
+  --primary: #1a1a1a;
+  --primary-hover: #000000;
+  --primary-light: #eab308;
+  --primary-light-hover: #ca8a04;
+  --red-linear-left-background: #1a1a1a;
+  --red-linear-right-background: #eab308;
+  */
+
+  /* Palette 3: Golden (#d1a12e)
+  --primary: #1a1a1a;
+  --primary-hover: #000000;
+  --primary-light: #d1a12e;
+  --primary-light-hover: #b58924;
+  --red-linear-left-background: #1a1a1a;
+  --red-linear-right-background: #d1a12e;
+  */
+
+  /* Palette 4: Orangered (#f25a22)
+  --primary: #1a1a1a;
+  --primary-hover: #000000;
+  --primary-light: #f25a22;
+  --primary-light-hover: #d94e18;
+  --red-linear-left-background: #1a1a1a;
+  --red-linear-right-background: #f25a22;
+  */
+
+  /* Palette 5: Indigo & Dark Navy (#4f46e5 / #0b1528)
+  --primary: #0b1528;
+  --primary-hover: #050a14;
+  --primary-light: #4f46e5;
+  --primary-light-hover: #3730a3;
+  --red-linear-left-background: #0b1528;
+  --red-linear-right-background: #4f46e5;
+  */
+
+  /* Palette 6: Classic Light Blue (#3b82f6)
+  --primary: #1e3a8a;
+  --primary-hover: #172a6b;
+  --primary-light: #3b82f6;
+  --primary-light-hover: #2563eb;
+  --red-linear-left-background: #1e3a8a;
+  --red-linear-right-background: #3b82f6;
+
+  /* ===== TEXT ===== */
+  --text-primary: #1e293b;
+  --text-normal: #334155;
+  --text-gray: #64748b;
+  --text-green: #16a34a;
+  --text-red: #dc2626;
+  --text-white: #ffffff;
+
+  /* ===== EXTRA ===== */
+  --whatsapp: #25d366;
+
+  /* ===== FONT ===== */
+  --font-poppins: "Poppins", sans-serif;
+}
+@custom-variant dark (&:where(.dark, .dark *));
+
+@utility no-scrollbar {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@utility animate-fade-in-up {
+  animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@utility animate-marquee {
+  animation: marquee 25s linear infinite;
 }

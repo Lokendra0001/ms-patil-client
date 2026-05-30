@@ -1,0 +1,443 @@
+"use client";
+
+import React, { useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import Hero from "@/component/common/Hero";
+import ProjectCard from "@/component/common/ProjectCard";
+import { projectsData } from "@/data/projects";
+
+const ProjectDetailsView = ({ id }) => {
+  const [activeImageIndex, setActiveImageIndex] = useState(null);
+
+  // Retrieve project by string matching the dynamic id parameter
+  const project = projectsData.find((p) => p.id === String(id));
+
+  // Fallback if ID is invalid
+  if (!project) {
+    return (
+      <main className="w-full flex-grow bg-white py-24 text-center">
+        <h2 className="text-xl font-bold text-primary mb-4">
+          Project Not Found
+        </h2>
+        <Link
+          href="/projects"
+          className="text-sm font-bold text-primary-light-hover hover:underline"
+        >
+          Return to Projects
+        </Link>
+      </main>
+    );
+  }
+
+  // Get other projects to display at the bottom (exclude current project)
+  const otherProjects = projectsData
+    .filter((p) => p.id !== project.id)
+    .slice(0, 3);
+
+  const crumbs = [
+    { name: "Home", href: "/" },
+    { name: "Projects", href: "/projects" },
+    { name: project.title },
+  ];
+
+  return (
+    <main className="w-full flex-grow bg-white select-text">
+      {/* Dynamic Hero banner */}
+      <Hero
+        tagline={project.category}
+        title={project.title}
+        bgImage={project.image}
+        breadcrumbs={crumbs}
+      />
+
+      <section className="w-full py-20 lg:py-24 bg-white relative overflow-hidden">
+        {/* Blueprint grid watermark */}
+        <div className="absolute inset-0 opacity-[0.012] pointer-events-none select-none">
+          <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+            <line
+              x1="20%"
+              y1="0"
+              x2="20%"
+              y2="100%"
+              stroke="currentColor"
+              strokeWidth="1"
+            />
+            <line
+              x1="80%"
+              y1="0"
+              x2="80%"
+              y2="100%"
+              stroke="currentColor"
+              strokeWidth="1"
+            />
+          </svg>
+        </div>
+
+        <div className="max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
+            {/* LEFT COLUMN: Main specifications and copy */}
+            <div className="lg:col-span-8 flex flex-col">
+              {/* Back to Projects Button */}
+              <div className="mb-6 flex items-center">
+                <Link
+                  href="/projects"
+                  className="inline-flex items-center gap-2 text-xs font-black tracking-widest text-primary-light-hover hover:text-primary transition-colors uppercase select-none group"
+                >
+                  <svg
+                    className="w-4 h-4 transform group-hover:-translate-x-1 transition-transform text-primary-light"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2.5}
+                      d="M10 19l-7-7m0 0l7-7m-7 7h18"
+                    />
+                  </svg>
+                  <span>Back to Projects</span>
+                </Link>
+              </div>
+
+              {/* Featured Project Image */}
+              <div className="relative w-full aspect-[16/10] overflow-hidden bg-slate-50 border border-slate-200/50 mb-10 select-none">
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  fill
+                  className="object-cover"
+                  priority
+                />
+              </div>
+
+              {/* Title & Description */}
+              <h3 className="text-2xl font-extrabold text-primary mb-5 tracking-tight">
+                Project Overview & Execution
+              </h3>
+
+              <div className="text-xs sm:text-sm text-slate-500 font-normal leading-relaxed space-y-6 max-w-4xl mb-10">
+                <p>{project.description}</p>
+                <p>
+                  Our construction operations prioritize structural safety,
+                  quality concrete aggregate supplies, and PWD compliant layouts
+                  to ensure decades of structural integrity under load.
+                </p>
+              </div>
+
+              {/* Highlights Bullet Matrix */}
+              <h4 className="text-lg font-extrabold text-primary mb-5 tracking-tight">
+                Key Operations & Accomplishments
+              </h4>
+              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4 mb-10 select-none">
+                {project.highlights.map((point, index) => (
+                  <li
+                    key={index}
+                    className="flex items-start gap-3 text-xs font-bold text-primary"
+                  >
+                    <svg
+                      className="w-4 h-4 text-primary-light flex-shrink-0 mt-0.5"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      strokeWidth={3}
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M9 5l7 7-7 7"
+                      />
+                    </svg>
+                    <span>{point}</span>
+                  </li>
+                ))}
+              </ul>
+
+              {/* Secondary Detail Section */}
+              <h4 className="text-lg font-extrabold text-primary mb-4 tracking-tight">
+                Engineering with Style & Quality
+              </h4>
+              <p className="text-xs sm:text-sm text-slate-500 font-normal leading-relaxed max-w-4xl">
+                Every phase of this project underwent rigorous site inspection
+                guidelines. From soil consolidation to materials procurement,
+                M/S Chetankumar Bhagwan Suryawanshi ensured the deployment of
+                qualified site supervisors, precision engineering equipment, and
+                state-of-the-art construction standards.
+              </p>
+            </div>
+
+            {/* RIGHT COLUMN: Info cards & Lead generation sidebar */}
+            <div className="lg:col-span-4 flex flex-col">
+              {/* Card 1: Project Information Box */}
+              <div className="border border-slate-200/60 p-6 bg-slate-50 mb-8 rounded-none select-none">
+                <h4 className="text-sm font-extrabold text-primary uppercase tracking-wider mb-6 pb-2.5 border-b border-slate-200/60">
+                  Information About the Project
+                </h4>
+
+                <div className="space-y-4.5 mb-8">
+                  <div>
+                    <span className="text-[9px] font-bold text-slate-400 uppercase tracking-widest block mb-0.5">
+                      Location
+                    </span>
+                    <span className="text-xs sm:text-sm font-semibold text-primary">
+                      {project.location}
+                    </span>
+                  </div>
+                  <div>
+                    <span className="text-[9px] font-bold text-slate-400 uppercase tracking-widest block mb-0.5">
+                      Client
+                    </span>
+                    <span className="text-xs sm:text-sm font-semibold text-primary">
+                      {project.client}
+                    </span>
+                  </div>
+                  <div>
+                    <span className="text-[9px] font-bold text-slate-400 uppercase tracking-widest block mb-0.5">
+                      Category
+                    </span>
+                    <span className="text-xs sm:text-sm font-semibold text-primary">
+                      {project.category}
+                    </span>
+                  </div>
+                  <div>
+                    <span className="text-[9px] font-bold text-slate-400 uppercase tracking-widest block mb-0.5">
+                      Technology
+                    </span>
+                    <span className="text-xs sm:text-sm font-semibold text-primary">
+                      {project.technology}
+                    </span>
+                  </div>
+                  <div>
+                    <span className="text-[9px] font-bold text-slate-400 uppercase tracking-widest block mb-0.5">
+                      Scope of Work
+                    </span>
+                    <span className="text-xs sm:text-sm font-semibold text-primary">
+                      {project.scope}
+                    </span>
+                  </div>
+                  <div>
+                    <span className="text-[9px] font-bold text-slate-400 uppercase tracking-widest block mb-0.5">
+                      Completion Date
+                    </span>
+                    <span className="text-xs sm:text-sm font-semibold text-primary">
+                      {project.date}
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Card 2: Contact Callout Box */}
+              <div className="bg-slate-900 text-white p-6 rounded-none relative overflow-hidden select-none shadow-md">
+                <h4 className="text-base font-extrabold text-white mb-3 leading-tight tracking-tight">
+                  Are You Going to Start a new Project?
+                </h4>
+                <p className="text-xs text-slate-400 font-normal leading-relaxed mb-6">
+                  Get in touch with our team to discuss your engineering,
+                  grading, and construction requirements.
+                </p>
+
+                <div className="space-y-4">
+                  <div className="flex items-center gap-3">
+                    <svg
+                      className="w-4 h-4 text-primary-light flex-shrink-0"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                      />
+                    </svg>
+                    <span className="text-xs font-semibold text-slate-200">
+                      +91 98765 43210
+                    </span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <svg
+                      className="w-4 h-4 text-primary-light flex-shrink-0"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                      />
+                    </svg>
+                    <span className="text-xs font-semibold text-slate-200">
+                      info@mspatilconstruction.com
+                    </span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <svg
+                      className="w-4 h-4 text-primary-light flex-shrink-0"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                      />
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                      />
+                    </svg>
+                    <span className="text-xs font-semibold text-slate-200">
+                      Pune, Maharashtra
+                    </span>
+                  </div>
+                </div>
+
+                <Link
+                  href="/contact"
+                  className="w-full border border-primary-light text-primary-light hover:bg-primary-light hover:text-slate-950 font-bold text-xs uppercase tracking-widest py-3.5 text-center block transition-all duration-300 mt-8"
+                >
+                  Contact Us
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          {/* Interactive Project Gallery Section */}
+          <div className="mt-20 lg:mt-24 border-t border-slate-100 pt-16 select-none">
+            <h4 className="text-lg font-extrabold text-primary mb-8 tracking-tight text-center">
+              Project Photo Gallery
+            </h4>
+
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {project.gallery.map((imgUrl, index) => (
+                <div
+                  key={index}
+                  onClick={() => setActiveImageIndex(index)}
+                  className="group relative aspect-video sm:aspect-square overflow-hidden bg-slate-50 border border-slate-200/50 cursor-zoom-in"
+                >
+                  <Image
+                    src={imgUrl}
+                    alt={`Project Gallery Image ${index + 1}`}
+                    fill
+                    className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                  />
+                  {/* Hover expansion overlay */}
+                  <div className="absolute inset-0 bg-slate-950/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <div className="w-8 h-8 rounded-full border-2 border-white flex items-center justify-center text-white text-lg font-normal">
+                      +
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* OTHER PROJECTS SHOWCASE SECTION */}
+      <section className="w-full bg-white py-20 lg:py-24 border-t border-slate-200/50">
+        <div className="max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 relative z-10">
+          <div className="flex flex-col items-center text-center mb-12 select-none">
+            <span className="text-[10px] sm:text-xs font-black tracking-[0.25em] text-primary-light uppercase mb-2">
+              Portfolio
+            </span>
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-primary leading-tight">
+              Other Projects
+            </h2>
+            <div className="w-12 h-1 bg-primary-light mt-4" />
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {otherProjects.map((item) => (
+              <ProjectCard key={item.id} project={item} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FULLSCREEN LIGHTBOX MODAL */}
+      {activeImageIndex !== null && (
+        <div className="fixed inset-0 bg-slate-950/95 z-50 flex flex-col justify-center items-center p-4 select-none">
+          {/* Close button */}
+          <button
+            onClick={() => setActiveImageIndex(null)}
+            className="absolute top-6 right-6 text-white hover:text-primary-light focus:outline-none p-2 cursor-pointer z-50"
+            aria-label="Close Lightbox"
+          >
+            <svg
+              className="w-8 h-8"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2.5}
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+
+          {/* Featured Image */}
+          <div className="relative w-full max-w-4xl aspect-[16/10] sm:aspect-[16/9] flex justify-center items-center">
+            <Image
+              src={project.gallery[activeImageIndex]}
+              alt={`Fullscreen Gallery View ${activeImageIndex + 1}`}
+              fill
+              className="object-contain"
+              priority
+            />
+          </div>
+
+          {/* Navigation Controls */}
+          <div className="absolute bottom-6 flex items-center gap-6 text-white text-xs font-bold uppercase tracking-wider">
+            <button
+              onClick={() => {
+                if (activeImageIndex > 0) {
+                  setActiveImageIndex(activeImageIndex - 1);
+                }
+              }}
+              disabled={activeImageIndex === 0}
+              className={`px-3 py-1.5 transition-colors border select-none ${
+                activeImageIndex === 0
+                  ? "text-slate-600 border-slate-800/50 cursor-not-allowed"
+                  : "text-white hover:text-primary-light hover:border-primary-light border-white/20 cursor-pointer"
+              }`}
+            >
+              ← Prev
+            </button>
+            <span className="text-slate-400 font-mono">
+              {activeImageIndex + 1} / {project.gallery.length}
+            </span>
+            <button
+              onClick={() => {
+                if (activeImageIndex < project.gallery.length - 1) {
+                  setActiveImageIndex(activeImageIndex + 1);
+                }
+              }}
+              disabled={activeImageIndex === project.gallery.length - 1}
+              className={`px-3 py-1.5 transition-colors border select-none ${
+                activeImageIndex === project.gallery.length - 1
+                  ? "text-slate-600 border-slate-800/50 cursor-not-allowed"
+                  : "text-white hover:text-primary-light hover:border-primary-light border-white/20 cursor-pointer"
+              }`}
+            >
+              Next →
+            </button>
+          </div>
+        </div>
+      )}
+    </main>
+  );
+};
+
+export default ProjectDetailsView;
