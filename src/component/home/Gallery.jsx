@@ -4,6 +4,27 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Button from "@/component/common/Button";
 
+// Import all 17 gallery SVG images
+import gImg2 from "../../../public/assets/home/gallary-grid/img2.svg";
+import gImg3 from "../../../public/assets/home/gallary-grid/img3.svg";
+import gImg4 from "../../../public/assets/home/gallary-grid/img4.svg";
+import gImg5 from "../../../public/assets/home/gallary-grid/img5.svg";
+import gImg6 from "../../../public/assets/home/gallary-grid/img6.svg";
+import gImg7 from "../../../public/assets/home/gallary-grid/img7.svg";
+import gImg8 from "../../../public/assets/home/gallary-grid/img8.svg";
+import gImg9 from "../../../public/assets/home/gallary-grid/img9.svg";
+import gImg10 from "../../../public/assets/home/gallary-grid/img10.svg";
+import gImg11 from "../../../public/assets/home/gallary-grid/img11.svg";
+import gImg12 from "../../../public/assets/home/gallary-grid/img12.svg";
+import gImg13 from "../../../public/assets/home/gallary-grid/img13.svg";
+import gImg14 from "../../../public/assets/home/gallary-grid/img14.svg";
+import gImg15 from "../../../public/assets/home/gallary-grid/img15.svg";
+import gImg16 from "../../../public/assets/home/gallary-grid/img16.svg";
+import gImg17 from "../../../public/assets/home/gallary-grid/img17.svg";
+import gImg18 from "../../../public/assets/home/gallary-grid/img18.svg";
+import gImg19 from "../../../public/assets/home/gallary-grid/img19.svg";
+import gImg20 from "../../../public/assets/home/gallary-grid/img20.svg";
+
 const Gallery = () => {
   const categories = [
     { id: "all", name: "All Projects" },
@@ -14,68 +35,150 @@ const Gallery = () => {
 
   const galleryItems = [
     {
-      id: 1,
-      category: "roads",
-      title: "National Highway Bypass",
-      description:
-        "Complete excavation, grading, and asphalt laying for bypass corridor.",
-      image:
-        "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=800&q=80",
-    },
-    {
       id: 2,
-      category: "concrete",
-      title: "Trimix Concrete Flooring",
-      description:
-        "High-accuracy structural concrete flooring for MIDC industrial park warehouses.",
-      image:
-        "https://images.unsplash.com/photo-1590069261209-f8e9b8642343?auto=format&fit=crop&w=800&q=80",
+      category: "roads",
+      title: "Highway Paving Project",
+      description: "",
+      image: gImg2,
     },
     {
       id: 3,
-      category: "earthworks",
-      title: "Industrial Earthworks & Grading",
-      description:
-        "Heavy grading and site preparation using fully-owned crawler excavator fleet.",
-      image:
-        "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80",
+      category: "concrete",
+      title: "Concrete Foundation Casting",
+      description: "",
+      image: gImg3,
     },
     {
       id: 4,
-      category: "roads",
-      title: "Asphalt Overlay Resurfacing",
-      description:
-        "Sub-grade preparation and multi-layer asphalt rolling operations.",
-      image:
-        "https://images.unsplash.com/photo-1515162305285-0293e4767cc2?auto=format&fit=crop&w=800&q=80",
+      category: "earthworks",
+      title: "Industrial Site Grading",
+      description: "",
+      image: gImg4,
     },
     {
       id: 5,
-      category: "concrete",
-      title: "RCC Slab Culvert Bridge",
-      description:
-        "PWD structural slab culvert casting and RDSO-compliant reinforcement grids.",
-      image:
-        "https://images.unsplash.com/photo-1581094288338-2314dddb7ecc?auto=format&fit=crop&w=800&q=80",
+      category: "roads",
+      title: "Sub-grade Asphalt Compaction",
+      description: "",
+      image: gImg5,
     },
     {
       id: 6,
+      category: "concrete",
+      title: "Reinforced Slab Construction",
+      description: "",
+      image: gImg6,
+    },
+    {
+      id: 7,
       category: "earthworks",
-      title: "Industrial PEB Foundations",
-      description:
-        "Reinforced pile foundations and columns completed for steel structural sheds.",
-      image:
-        "https://images.unsplash.com/photo-1590348697210-293d37f8e5b2?auto=format&fit=crop&w=800&q=80",
+      title: "Heavy Earthmoving Fleet",
+      description: "",
+      image: gImg7,
+    },
+    {
+      id: 8,
+      category: "roads",
+      title: "National Highway Expansion",
+      description: "",
+      image: gImg8,
+    },
+    {
+      id: 9,
+      category: "concrete",
+      title: "Transit Mixer Delivery",
+      description: "",
+      image: gImg9,
+    },
+    {
+      id: 10,
+      category: "earthworks",
+      title: "Excavation and Pipeline Trenching",
+      description: "",
+      image: gImg10,
+    },
+    {
+      id: 11,
+      category: "roads",
+      title: "PWD Bypass Overpass",
+      description: "",
+      image: gImg11,
+    },
+    {
+      id: 12,
+      category: "concrete",
+      title: "Industrial Shed Columns",
+      description: "",
+      image: gImg12,
+    },
+    {
+      id: 13,
+      category: "earthworks",
+      title: "Mass Compaction Leveling",
+      description: "",
+      image: gImg13,
+    },
+    {
+      id: 14,
+      category: "roads",
+      title: "Road Roller Levelling Works",
+      description: "",
+      image: gImg14,
+    },
+    {
+      id: 15,
+      category: "concrete",
+      title: "High-accuracy Trimix Floor",
+      description: "",
+      image: gImg15,
+    },
+    {
+      id: 16,
+      category: "earthworks",
+      title: "Warehouse Site Prep",
+      description: "",
+      image: gImg16,
+    },
+    {
+      id: 17,
+      category: "roads",
+      title: "Highways Median Casting",
+      description: "",
+      image: gImg17,
+    },
+    {
+      id: 18,
+      category: "concrete",
+      title: "Ready-mix RCC Retaining Wall",
+      description: "",
+      image: gImg18,
+    },
+    {
+      id: 19,
+      category: "earthworks",
+      title: "Ready-mix RCC Retaining Wall",
+      description: "",
+      image: gImg19,
+    },
+    {
+      id: 20,
+      category: "concrete",
+      title: "Ready-mix RCC Retaining Wall",
+      description: "",
+      image: gImg20,
     },
   ];
 
   const [activeFilter, setActiveFilter] = useState("all");
   const [lightboxIndex, setLightboxIndex] = useState(null);
+  const [isExpanded, setIsExpanded] = useState(false);
 
   const filteredItems =
     activeFilter === "all"
       ? galleryItems
       : galleryItems.filter((item) => item.category === activeFilter);
+
+  const displayedItems = isExpanded ? filteredItems : filteredItems.slice(0, 6);
 
   const openLightbox = (id) => {
     // Find index within the current filtered list
@@ -141,7 +244,7 @@ const Gallery = () => {
             VISUAL PORTFOLIO
           </span>
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-primary leading-tight">
-            Our Project{" "}
+            Our Project Progress{" "}
             <span className="text-primary-light-hover">Gallery</span>
           </h2>
           <div className="w-16 h-1 bg-primary-light mt-4 select-none" />
@@ -157,6 +260,7 @@ const Gallery = () => {
                 onClick={() => {
                   setActiveFilter(cat.id);
                   setLightboxIndex(null);
+                  setIsExpanded(false);
                 }}
                 variant={isActive ? "theme" : "reverse"}
                 className="px-5 py-2 text-xs tracking-wider uppercase"
@@ -169,35 +273,27 @@ const Gallery = () => {
 
         {/* Dynamic Project Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredItems.map((item) => (
+          {displayedItems.map((item) => (
             <div
               key={item.id}
               onClick={() => openLightbox(item.id)}
               className="relative overflow-hidden aspect-[4/3] group cursor-pointer border border-slate-200/80 bg-slate-50"
             >
               {/* Project Image */}
-              <img
+              <Image
                 src={item.image}
                 alt={item.title}
-                className="w-full h-full object-cover filter grayscale-[10%] group-hover:grayscale-0 transition-all duration-700 ease-out group-hover:scale-105"
+                fill
+                priority
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                className="object-cover filter grayscale-[10%] group-hover:grayscale-0 transition-all duration-700 ease-out group-hover:scale-105"
               />
 
-              {/* Hover Overlay Container */}
-              <div className="absolute inset-0 bg-slate-950/75 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6 z-10">
-                <span className="text-[9px] uppercase tracking-wider text-primary-light font-black mb-1 select-none">
-                  {categories.find((c) => c.id === item.category)?.name}
-                </span>
-                <h4 className="text-sm sm:text-base font-extrabold text-white leading-tight">
-                  {item.title}
-                </h4>
-                <p className="text-[10px] text-slate-300 mt-1 leading-relaxed line-clamp-2">
-                  {item.description}
-                </p>
-
-                {/* Center zoom icon watermark */}
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 border border-white/20 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 scale-90 group-hover:scale-100">
+              {/* Hover Zoom Overlay (No text content, just zoom watermark icon) */}
+              <div className="absolute inset-0 bg-slate-950/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-10">
+                <div className="w-12 h-12 border border-white/25 rounded-full flex items-center justify-center scale-90 group-hover:scale-100 transition-all duration-300 bg-slate-950/20 backdrop-blur-xs">
                   <svg
-                    className="w-4 h-4 text-primary-light"
+                    className="w-5 h-5 text-primary-light"
                     fill="none"
                     stroke="currentColor"
                     strokeWidth="2.5"
@@ -214,6 +310,21 @@ const Gallery = () => {
             </div>
           ))}
         </div>
+
+        {/* Show More / Show Less Toggle Button */}
+        {filteredItems.length > 6 && (
+          <div className="flex justify-center mt-12 select-none">
+            <Button
+              onClick={() => setIsExpanded(!isExpanded)}
+              variant="theme"
+              className="px-8 py-3.5 uppercase tracking-wider text-xs font-bold transition-all duration-300"
+            >
+              {isExpanded
+                ? "Show Less"
+                : `Load More Projects (${filteredItems.length - 6} More)`}
+            </Button>
+          </div>
+        )}
       </div>
 
       {/* Lightbox Modal Overlay */}
@@ -240,28 +351,20 @@ const Gallery = () => {
             ‹
           </button>
 
-          {/* Large Image Frame */}
+          {/* Large Image Frame (Maximized viewport space, no text caption) */}
           <div
-            className="relative max-w-5xl max-h-[75vh] w-full h-full flex flex-col justify-center items-center"
+            className="relative max-w-5xl max-h-[85vh] w-full h-full flex flex-col justify-center items-center"
             onClick={(e) => e.stopPropagation()} // Prevent click-out close
           >
-            <img
-              src={currentItem.image}
-              alt={currentItem.title}
-              className="max-w-full max-h-[65vh] object-contain border border-slate-900 shadow-2xl select-text"
-            />
-
-            {/* Caption Panel */}
-            <div className="w-full max-w-full mt-4 text-center select-text">
-              <span className="text-[9px] uppercase tracking-wider text-primary-light font-black">
-                {categories.find((c) => c.id === currentItem.category)?.name}
-              </span>
-              <h3 className="text-sm sm:text-base font-extrabold text-white mt-1">
-                {currentItem.title}
-              </h3>
-              <p className="text-[11px] text-slate-400 mt-1 max-w-2xl mx-auto leading-relaxed">
-                {currentItem.description}
-              </p>
+            <div className="relative w-full h-[80vh] max-h-[80vh] flex justify-center items-center">
+              <Image
+                src={currentItem.image}
+                alt={currentItem.title}
+                fill
+                priority
+                className="object-contain border border-slate-900 shadow-2xl"
+                sizes="(max-width: 1200px) 100vw, 80vw"
+              />
             </div>
           </div>
 

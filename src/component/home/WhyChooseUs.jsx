@@ -3,6 +3,8 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import Heading from "@/component/common/Heading";
+
 
 const WhyChooseUs = () => {
   const highlightPoints = [
@@ -117,19 +119,14 @@ const WhyChooseUs = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {/* Box 1 (Row 1, Col 1): Title Block & Checklist */}
           <div className="flex flex-col justify-center pr-4 mb-6 lg:mb-0">
-            {/* Tagline block (uppercase tracking) */}
-            <span className="text-[10px] sm:text-xs font-black tracking-[0.25em] text-primary-light uppercase mb-2 block select-none">
-              WHY CHOOSE US
-            </span>
+            <Heading
+              tagline="WHY CHOOSE US"
+              title="Designing Future"
+              highlight="with Excellence"
+              textColor="text-primary"
+              className="!mb-0"
+            />
 
-            {/* Heading matching About Us font size with yellow highlight */}
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-primary leading-tight">
-              Designing Future{" "}
-              <span className="text-primary-light-hover">with Excellence</span>
-            </h2>
-
-            {/* Standard horizontal yellow accent line matching other page headings */}
-            <div className="w-16 h-1 bg-primary-light mt-4 mb-6 select-none" />
 
             {/* Checklist */}
             <ul className="flex flex-col gap-3">

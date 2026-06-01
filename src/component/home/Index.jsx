@@ -36,15 +36,14 @@ const Index = () => {
       {/* FAQ Section */}
       <FAQ />
 
-
       {/* Gallery Section */}
       <Gallery />
 
+      {/* Testimonials Section */}
+      <Testimonials />
+
       {/* Call To Action Section */}
       <CallToAction />
-
-      {/* Testimonials Section
-      <Testimonials /> */}
       {/* Additional homepage sections can be added here */}
     </main>
   );

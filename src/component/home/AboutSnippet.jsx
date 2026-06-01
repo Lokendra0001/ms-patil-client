@@ -3,50 +3,53 @@
 import React from "react";
 import Image from "next/image";
 import Button from "@/component/common/Button";
+import img1 from "../../../public/assets/home/about/left-img.png";
+import img2 from "../../../public/assets/home/about/first-img.png";
+import img3 from "../../../public/assets/home/about/main-img.png";
+
 
 const AboutSnippet = () => {
   return (
-    <section className="w-full bg-white py-20 lg:py-28 border-b border-slate-100 select-text overflow-hidden">
-      <div className="max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12">
+    <section className="w-full  py-20 lg:py-28 border-b border-slate-100 select-text overflow-hidden">
+      <div className="max-w-[1500px] mx-auto px-4 sm:px-8 lg:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-center">
-          {/* Left Column: Staggered Architectural Dual Image Collage */}
-          <div className="lg:col-span-6 relative pb-16 sm:pb-24 lg:pb-0">
-            {/* Background design border wireframe */}
-            <div className="absolute top-8 left-4 right-12 bottom-12 border border-primary-light/35 pointer-events-none z-0 hidden sm:block" />
+          {/* Left Column: Custom Shaped Architectural Image Showcase */}
+          <div className=" h-full lg:col-span-6 relative pb-12 lg:pb-0 flex justify-center lg:justify-start">
+            {/* The Outer Offset Shaped Border */}
 
-            <div className="grid grid-cols-2 gap-6 relative z-10">
-              {/* Image 1: Infrastructure/Roadways (Staggered high) */}
-              <div className="aspect-[3/4] relative bg-slate-100 overflow-hidden border border-slate-200 shadow-md">
-                <Image
-                  src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=600&q=80"
-                  alt="Infrastructure Project Site"
-                  className="object-cover filter grayscale-[15%] hover:grayscale-0 transition-all duration-500 hover:scale-102"
-                  fill
-                  priority
-                />
-              </div>
-
-              {/* Image 2: Commercial/Structural Building (Staggered low) */}
-              <div className="aspect-[3/4] relative bg-slate-100 overflow-hidden border border-slate-200 shadow-md mt-16">
-                <Image
-                  src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80"
-                  alt="Industrial Construction Site"
-                  className="object-cover filter grayscale-[15%] hover:grayscale-0 transition-all duration-500 hover:scale-102"
-                  fill
-                  priority
-                />
-              </div>
+            {/* The Image Container */}
+            <div className="relative h-full w-full max-w-[500px] z-10">
+              <div className="absolute inset-0  -right-10 -bottom-2 border border-primary-light/60 rounded-tl-[40px] rounded-tr-[80px] rounded-br-[15px] rounded-bl-[4px] pointer-events-none z-0 hidden sm:block" />
+              <Image
+                src={img1}
+                alt="M/S Chetankumar Bhagwan Suryawanshi Project Site"
+                className="object-cover z-50 relative  rounded-tl-[40px] rounded-tr-[80px] rounded-br-[15px] rounded-bl-[4px]"
+                fill
+                priority
+                sizes="(max-width: 1024px) 100vw, 40vw"
+              />
             </div>
 
-            {/* Floating Black Heritage Stamp Badge */}
-            <div className="absolute -left-4 top-1/2 -translate-y-1/2 bg-slate-950 text-white p-5 shadow-2xl z-20 border border-slate-800 flex flex-col items-center justify-center text-center w-32 h-32 select-none">
-              <span className="text-[10px] font-black tracking-[0.25em] text-primary-light uppercase">
-                Experience
-              </span>
-              <span className="text-2xl font-black text-white mt-1">
-                20+ Yrs
-              </span>
-              <div className="w-6 h-0.5 bg-primary-light mt-2" />
+            {/* Folded 3D Ribbon Badge (Inspired by brochure geometric wraps) */}
+            <div className="absolute -left-5 bottom-16  select-none">
+              {/* Back shadow fold (z-0) */}
+              <div className="absolute -bottom-4 left-2.5 w-15 h-5 bg-primary-light z-0 transform skew-x-45  pointer-events-none" />
+
+              {/* Main front ribbon face (z-20) */}
+              <div className="z-30 relative bg-primary-light text-text-white px-6 py-3.5  shadow-2xl  transform ">
+                <div className="absolute inset-1 border border-slate-950/10 pointer-events-none" />
+                <div className="transform  flex flex-col">
+                  <span className="text-2xl font-black tracking-tight leading-none">
+                    20+ YRS
+                  </span>
+                  <span className="text-[8px] font-semibold uppercase tracking-[0.15em] mt-1 text-text-primary">
+                    Established Trust
+                  </span>
+                </div>
+              </div>
+
+              {/* Underneath fold shadow bracket (z-0) */}
+              {/* <div className="absolute top-[48px] left-0 w-8 h-8 bg-slate-950/90 z-0 transform -skew-x-12 pointer-events-none shadow-md" /> */}
             </div>
           </div>
 

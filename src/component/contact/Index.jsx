@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { Suspense } from "react";
 import ContactHero from "./ContactHero";
 import ContactForm from "./ContactForm";
 import ContactMap from "./ContactMap";
@@ -10,7 +10,9 @@ const Index = () => {
   return (
     <main className="w-full flex-grow bg-white">
       <ContactHero />
-      <ContactForm />
+      <Suspense fallback={<div className="py-20 text-center text-slate-500 font-mono text-xs uppercase tracking-widest">Loading contact console...</div>}>
+        <ContactForm />
+      </Suspense>
       <ContactMap />
       <ContactDirect />
     </main>

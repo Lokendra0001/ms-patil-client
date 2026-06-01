@@ -2,6 +2,8 @@
 
 import React, { useState } from "react";
 import Button from "@/component/common/Button";
+import Heading from "@/component/common/Heading";
+
 
 const FAQ = () => {
   const [openIndex, setOpenIndex] = useState(0);
@@ -42,23 +44,15 @@ const FAQ = () => {
           
           {/* Left Column: Vertically Centered CTA Block (Non-sticky) */}
           <div className="lg:col-span-5 flex flex-col items-start">
-            {/* Tagline block */}
-            <span className="text-[10px] sm:text-xs font-black tracking-[0.25em] text-primary-light uppercase mb-2 block select-none">
-              DEALING WITH YOUR WORRIES
-            </span>
-            
-            {/* Heading */}
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-primary leading-tight">
-              If Your Question Is Not Here <span className="text-primary-light-hover">Contact Us</span>
-            </h2>
+            <Heading
+              tagline="DEALING WITH YOUR WORRIES"
+              title="If Your Question Is Not Here"
+              highlight="Contact Us"
+              description="Can't find the specific contracting, registration, or machinery details you're looking for? Reach out directly to our operations office, and we'll resolve your query."
+              textColor="text-primary"
+              className="!mb-8 max-w-md"
+            />
 
-            {/* Standard yellow accent line */}
-            <div className="w-16 h-1 bg-primary-light mt-4 mb-6 select-none" />
-
-            {/* Description */}
-            <p className="text-xs sm:text-sm text-slate-500 font-semibold leading-relaxed mb-8 max-w-md">
-              Can't find the specific contracting, registration, or machinery details you're looking for? Reach out directly to our operations office, and we'll resolve your query.
-            </p>
 
             {/* Rectangular Contact Button */}
             <Button

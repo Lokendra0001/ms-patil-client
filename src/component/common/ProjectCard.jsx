@@ -41,7 +41,7 @@ const ProjectCard = ({ project }) => {
           </span>
           
           {/* Title */}
-          <h3 className="text-base sm:text-lg font-bold text-slate-900 mb-2 transition-colors duration-300 group-hover:text-primary-light-hover line-clamp-2">
+          <h3 className="text-base sm:text-lg font-semibold text-text-primary mb-2 transition-colors duration-300 group-hover:text-primary-light-hover line-clamp-2">
             {project.title}
           </h3>
           

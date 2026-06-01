@@ -3,6 +3,8 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
+import Heading from "@/component/common/Heading";
+
 
 // Import Swiper styles
 import "swiper/css";
@@ -77,15 +79,15 @@ const Testimonials = () => {
 
       <div className="max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 relative z-10">
         {/* Centered Headers */}
-        <div className="flex flex-col items-center text-center mb-16">
-          <span className="text-[10px] sm:text-xs font-black tracking-[0.25em] text-primary-light uppercase mb-2 block select-none">
-            WHAT OUR PARTNERS SAY
-          </span>
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-primary leading-tight">
-            Earning Trust Through <span className="text-primary-light-hover">Consistent Delivery</span>
-          </h2>
-          <div className="w-16 h-1 bg-primary-light mt-4 select-none" />
-        </div>
+        <Heading
+          tagline="WHAT OUR PARTNERS SAY"
+          title="Earning Trust Through"
+          highlight="Consistent Delivery"
+          align="center"
+          textColor="text-primary"
+          className="!mb-16"
+        />
+
 
         {/* Swiper Carousel Viewport */}
         <div className="w-full testimonial-swiper-wrapper cursor-grab">

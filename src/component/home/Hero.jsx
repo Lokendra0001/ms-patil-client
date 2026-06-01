@@ -4,47 +4,85 @@ import React, { useState, useEffect } from "react";
 import Button from "@/component/common/Button";
 import banner1 from "../../../public/assets/home/hero/banner-1.png";
 import banner2 from "../../../public/assets/home/hero/banner-2.png";
+import banner3 from "../../../public/assets/home/hero/banner-3.png";
 
 const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
+  // const slides = [
+  //   {
+  //     image: banner1,
+  //     subtitle: "LEADERS IN INFRASTRUCTURE & CONSTRUCTION",
+  //     titleText: "BUILDING THE FOUNDATIONS OF ",
+  //     titleHighlight: "MODERN INFRASTRUCTURE",
+  //     description:
+  //       "Delivering world-class engineering, procurement, and construction services for national highway networks, heavy industrial structures, and modern urban environments.",
+  //     primaryBtn: { text: "Our Projects", href: "/projects" },
+  //     secondaryBtn: { text: "Get in Touch", href: "/contact" },
+  //   },
+  //   {
+  //     image: banner2,
+  //     subtitle: "ENGINEERING EXCELLENCE & TRUST",
+  //     titleText: "COMMERCIAL & ",
+  //     titleHighlight: "INDUSTRIAL LANDMARKS",
+  //     description:
+  //       "Setting new benchmarks in corporate architecture with state-of-the-art office parks, advanced manufacturing complexes, and highly functional logistical hubs.",
+  //     primaryBtn: { text: "Explore Services", href: "/services" },
+  //     secondaryBtn: { text: "Contact Us", href: "/contact" },
+  //   },
+  //   {
+  //     image:
+  //       // "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1920&q=80",
+  //       banner1,
+  //     subtitle: "CRAFTING PREMIUM SPACES",
+  //     titleText: "LUXURY RESIDENCES & ",
+  //     titleHighlight: "MODERN TOWNSHIPS",
+  //     description:
+  //       "Architecting master-planned housing communities, luxury apartments, and premium townships built with unmatched material quality and structural integrity.",
+  //     primaryBtn: { text: "Our Residences", href: "/services/residential" },
+  //     secondaryBtn: {
+  //       text: "Book Consultation",
+  //       href: "/contact?consultation=true",
+  //     },
+  //   },
+  // ];
+
+
   const slides = [
-    {
-      image: banner1,
-      subtitle: "LEADERS IN INFRASTRUCTURE & CONSTRUCTION",
-      titleText: "BUILDING THE FOUNDATIONS OF ",
-      titleHighlight: "MODERN INFRASTRUCTURE",
-      description:
-        "Delivering world-class engineering, procurement, and construction services for national highway networks, heavy industrial structures, and modern urban environments.",
-      primaryBtn: { text: "Our Projects", href: "/projects" },
-      secondaryBtn: { text: "Get in Touch", href: "/contact" },
+  {
+    image: banner1,
+    subtitle: "VERTICALLY INTEGRATED CONTRACTING",
+    titleText: "20+ YEARS OF ENGINEERING EXCELLENCE FROM ",
+    titleHighlight: "SOURCE TO STRUCTURE",
+    description:
+      "M/S Chetankumar Bhagwan Suryawanshi is a registered PWD Class IV infrastructure contractor delivering high-compliance civil works across 5 states with zero third-party material dependency.",
+    primaryBtn: { text: "Our Capabilities", href: "/services" },
+    secondaryBtn: { text: "Get in Touch", href: "/contact" },
+  },
+  {
+    image: banner2,
+    subtitle: "HEAVY INDUSTRIAL CIVIL SPECIALISTS",
+    titleText: "HIGH-DURABILITY FOUNDATIONS & ",
+    titleHighlight: "MIDC INDUSTRIAL LANDMARKS",
+    description:
+      "Engineering heavy-load concrete layouts, precision Trimix industrial flooring, and structural PEB foundations for premier corporate facilities including RM Chemical, Indo Amines, and Arihant Detergents.",
+    primaryBtn: { text: "Explore Services", href: "/services" },
+    secondaryBtn: { text: "Contact Us", href: "/contact" },
+  },
+  {
+    image: banner3,
+    subtitle: "HIGH-COMPLIANCE SECTOR CAPABILITY",
+    titleText: "APPROVED RAILWAY & ",
+    titleHighlight: "CIVIC INFRASTRUCTURE",
+    description:
+      "Executing strict RDSO-compliant cross-drainage networks, bulk earthworks, and municipal road corridors driven entirely by our owned heavy machinery fleet and in-house material manufacturing plants.",
+    primaryBtn: { text: "Our Projects", href: "/projects" },
+    secondaryBtn: {
+      text: "View Sector Expertise",
+      href: "/sectors/railway-infrastructure",
     },
-    {
-      image: banner2,
-      subtitle: "ENGINEERING EXCELLENCE & TRUST",
-      titleText: "COMMERCIAL & ",
-      titleHighlight: "INDUSTRIAL LANDMARKS",
-      description:
-        "Setting new benchmarks in corporate architecture with state-of-the-art office parks, advanced manufacturing complexes, and highly functional logistical hubs.",
-      primaryBtn: { text: "Explore Services", href: "/services" },
-      secondaryBtn: { text: "Contact Us", href: "/contact" },
-    },
-    {
-      image:
-        // "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1920&q=80",
-        banner1,
-      subtitle: "CRAFTING PREMIUM SPACES",
-      titleText: "LUXURY RESIDENCES & ",
-      titleHighlight: "MODERN TOWNSHIPS",
-      description:
-        "Architecting master-planned housing communities, luxury apartments, and premium townships built with unmatched material quality and structural integrity.",
-      primaryBtn: { text: "Our Residences", href: "/services/residential" },
-      secondaryBtn: {
-        text: "Book Consultation",
-        href: "/contact?consultation=true",
-      },
-    },
-  ];
+  },
+];
 
   // Auto-play slider
   useEffect(() => {
@@ -63,15 +101,15 @@ const Hero = () => {
   };
 
   return (
-    <main className="w-full flex-grow bg-white">
+    <main className=" w-full flex-grow bg-white">
       {/* Hero Section */}
-      <section className="relative w-full h-[580px] sm:h-[650px] lg:h-[720px] bg-slate-950 overflow-hidden select-none">
+      <section className="  relative w-full h-[580px] sm:h-[650px] lg:h-[800px] bg-slate-950 overflow-hidden select-none">
         {/* Slides Container */}
-        <div className="w-full h-full relative">
+        <div className=" w-full h-full relative pt-50">
           {slides.map((slide, index) => (
             <div
               key={index}
-              className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
+              className={`  absolute inset-0 transition-opacity duration-1000 ease-in-out ${
                 index === currentSlide
                   ? "opacity-100 z-10"
                   : "opacity-0 z-0 pointer-events-none"
@@ -92,7 +130,7 @@ const Hero = () => {
 
               {/* Slide Content - Only render when active to force CSS animation trigger on slide change */}
               {index === currentSlide && (
-                <div className="absolute inset-0 flex items-center z-20">
+                <div className="relative w-full h-full flex items-center z-20 pt-20">
                   <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12">
                     <div className="max-w-3xl">
                       {/* Accent Line + Subtitle */}
