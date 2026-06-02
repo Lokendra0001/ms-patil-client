@@ -1,19 +1,17 @@
 "use client";
 
 import React from "react";
-import Hero from "@/component/common/Hero";
+import Hero from "@/component/common/hero/Hero";
+import banner from "../../../public/assets/about/hero/banner.png";
 
 const AboutHero = () => {
-  const crumbs = [
-    { name: "Home", href: "/" },
-    { name: "About" }
-  ];
+  const crumbs = [{ name: "Home", href: "/" }, { name: "About Us" }];
 
   return (
     <Hero
       tagline="Building Communities"
-      title="About"
-      bgImage="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1600&q=80"
+      title="About Us"
+      bgImage={banner}
       breadcrumbs={crumbs}
     />
   );

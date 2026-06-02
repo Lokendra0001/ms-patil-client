@@ -25,7 +25,7 @@ const TechnicalSplit = ({ data }) => {
               {data.scope.punchlines.map((punchline, idx) => (
                 <div key={idx} className="flex gap-4 items-start group">
                   {/* Step Index Number */}
-                  <span className="text-xs sm:text-sm font-black text-primary-light-hover tracking-wider select-none shrink-0 bg-slate-50 w-8 h-8 flex items-center justify-center border border-border-secondary rounded-none">
+                  <span className="text-xs sm:text-sm font-black text-primary-light-hover tracking-wider select-text shrink-0 bg-slate-50 w-8 h-8 flex items-center justify-center border border-border-secondary rounded-none">
                     0{idx + 1}
                   </span>
                   
@@ -42,7 +42,7 @@ const TechnicalSplit = ({ data }) => {
           <div className="lg:col-span-5">
             <div className="bg-slate-50 border border-border-secondary rounded-none p-8 sm:p-10 space-y-6 relative overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.01)]">
               {/* Gold vertical bar */}
-              <div className="absolute left-0 top-0 bottom-0 w-1 bg-primary-light select-none" />
+              <div className="absolute left-0 top-0 bottom-0 w-1 bg-primary-light select-text" />
 
               <div className="space-y-2">
                 <span className="text-[10px] font-black tracking-[0.22em] text-primary-light uppercase block">
@@ -86,7 +86,7 @@ const TechnicalSplit = ({ data }) => {
 
                 {/* Verification Stamp */}
                 <div className="pt-2">
-                  <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-emerald-500/[0.04] border border-emerald-500/20 text-emerald-600 text-[10px] font-bold uppercase tracking-wider select-none">
+                  <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-emerald-500/[0.04] border border-emerald-500/20 text-emerald-600 text-[10px] font-bold uppercase tracking-wider select-text">
                     <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-ping" />
                     <span>{data.scope.reference.verification}</span>
                   </div>

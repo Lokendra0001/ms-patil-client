@@ -1,34 +1,57 @@
 "use client";
 
 import React, { useState } from "react";
-import ProjectCard from "@/component/common/ProjectCard";
+import ProjectCard from "@/component/common/project/ProjectCard";
 import { projectsData } from "@/data/projects";
 
 const ProjectsList = () => {
   const [activeTab, setActiveTab] = useState("All");
 
-  const tabs = ["All", "Industrial", "Government", "Institutional", "Railway", "Residential"];
+  const tabs = [
+    "All",
+    "Industrial",
+    "Government",
+    "Institutional",
+    "Railway",
+    "Residential",
+  ];
 
   // Filtering Logic
-  const filteredProjects = activeTab === "All"
-    ? projectsData
-    : projectsData.filter((project) => project.category.toLowerCase() === activeTab.toLowerCase());
+  const filteredProjects =
+    activeTab === "All"
+      ? projectsData
+      : projectsData.filter(
+          (project) =>
+            project.category.toLowerCase() === activeTab.toLowerCase(),
+        );
 
   return (
     <section className="w-full bg-white py-20 lg:py-24 relative overflow-hidden select-text">
-      
       {/* Blueprint grid watermark */}
-      <div className="absolute inset-0 opacity-[0.012] pointer-events-none select-none">
+      <div className="absolute inset-0 opacity-[0.012] pointer-events-none select-text">
         <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
-          <line x1="20%" y1="0" x2="20%" y2="100%" stroke="currentColor" strokeWidth="1" />
-          <line x1="80%" y1="0" x2="80%" y2="100%" stroke="currentColor" strokeWidth="1" />
+          <line
+            x1="20%"
+            y1="0"
+            x2="20%"
+            y2="100%"
+            stroke="currentColor"
+            strokeWidth="1"
+          />
+          <line
+            x1="80%"
+            y1="0"
+            x2="80%"
+            y2="100%"
+            stroke="currentColor"
+            strokeWidth="1"
+          />
         </svg>
       </div>
 
       <div className="max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 relative z-10">
-        
         {/* Section Heading */}
-        <div className="flex flex-col items-center text-center mb-12 select-none">
+        <div className="flex flex-col items-center text-center mb-12 select-text">
           <span className="text-[10px] sm:text-xs font-black tracking-[0.25em] text-primary-light uppercase mb-2">
             Our Work
           </span>
@@ -39,7 +62,7 @@ const ProjectsList = () => {
         </div>
 
         {/* Category Filters Block with Guide Label */}
-        <div className="flex flex-col items-center mb-16 select-none w-full">
+        <div className="flex flex-col items-center mb-16 select-text w-full">
           <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-3">
             Filter by Category
           </span>
@@ -68,7 +91,7 @@ const ProjectsList = () => {
 
         {/* Project Cards Grid (3 Columns, Shared ProjectCard layout) */}
         {filteredProjects.length > 0 ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 xl:gap-8 ">
             {filteredProjects.map((project) => (
               <ProjectCard key={project.id} project={project} />
             ))}
@@ -80,7 +103,6 @@ const ProjectsList = () => {
             </span>
           </div>
         )}
-
       </div>
     </section>
   );

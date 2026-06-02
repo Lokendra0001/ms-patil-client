@@ -31,7 +31,7 @@ const SectorsList = () => {
             >
               
               {/* Image Banner */}
-              <div className="relative aspect-[16/9] w-full overflow-hidden bg-slate-100 select-none">
+              <div className="relative aspect-[16/9] w-full overflow-hidden bg-slate-100 select-text">
                 <Image
                   src={sector.image}
                   alt={sector.name}
@@ -52,7 +52,7 @@ const SectorsList = () => {
               <div className="p-8 flex-grow flex flex-col justify-between relative">
                 
                 {/* Bottom expanding gold line */}
-                <div className="absolute bottom-0 left-0 w-0 h-[4px] bg-primary-light transition-all duration-300 group-hover:w-full select-none" />
+                <div className="absolute bottom-0 left-0 w-0 h-[4px] bg-primary-light transition-all duration-300 group-hover:w-full select-text" />
 
                 <div className="space-y-3">
                   {/* Subtitle */}
@@ -75,7 +75,7 @@ const SectorsList = () => {
                 <div className="pt-6">
                   <Link
                     href={`/sectors/${sector.slug}`}
-                    className="inline-flex items-center gap-1.5 text-xs font-black tracking-wider uppercase text-slate-400 group-hover:text-primary-light-hover transition-colors duration-300 select-none"
+                    className="inline-flex items-center gap-1.5 text-xs font-black tracking-wider uppercase text-slate-400 group-hover:text-primary-light-hover transition-colors duration-300 select-text"
                   >
                     <span>Explore Capabilities</span>
                     <span className="transform group-hover:translate-x-1.5 transition-transform duration-300">

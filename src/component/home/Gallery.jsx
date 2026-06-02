@@ -2,173 +2,16 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import Button from "@/component/common/Button";
+import Button from "@/component/CTA/Button";
+import Heading from "@/component/common/Heading";
+import { categories, galleryItems } from "../../data/home/gallery";
 
-// Import all 17 gallery SVG images
-import gImg2 from "../../../public/assets/home/gallary-grid/img2.svg";
-import gImg3 from "../../../public/assets/home/gallary-grid/img3.svg";
-import gImg4 from "../../../public/assets/home/gallary-grid/img4.svg";
-import gImg5 from "../../../public/assets/home/gallary-grid/img5.svg";
-import gImg6 from "../../../public/assets/home/gallary-grid/img6.svg";
-import gImg7 from "../../../public/assets/home/gallary-grid/img7.svg";
-import gImg8 from "../../../public/assets/home/gallary-grid/img8.svg";
-import gImg9 from "../../../public/assets/home/gallary-grid/img9.svg";
-import gImg10 from "../../../public/assets/home/gallary-grid/img10.svg";
-import gImg11 from "../../../public/assets/home/gallary-grid/img11.svg";
-import gImg12 from "../../../public/assets/home/gallary-grid/img12.svg";
-import gImg13 from "../../../public/assets/home/gallary-grid/img13.svg";
-import gImg14 from "../../../public/assets/home/gallary-grid/img14.svg";
-import gImg15 from "../../../public/assets/home/gallary-grid/img15.svg";
-import gImg16 from "../../../public/assets/home/gallary-grid/img16.svg";
-import gImg17 from "../../../public/assets/home/gallary-grid/img17.svg";
-import gImg18 from "../../../public/assets/home/gallary-grid/img18.svg";
-import gImg19 from "../../../public/assets/home/gallary-grid/img19.svg";
-import gImg20 from "../../../public/assets/home/gallary-grid/img20.svg";
+// Import yet-another-react-lightbox and its Zoom plugin
+import Lightbox from "yet-another-react-lightbox";
+import Zoom from "yet-another-react-lightbox/plugins/zoom";
+import "yet-another-react-lightbox/styles.css";
 
 const Gallery = () => {
-  const categories = [
-    { id: "all", name: "All Projects" },
-    { id: "roads", name: "Roads & Highways" },
-    { id: "concrete", name: "RCC & Concrete" },
-    { id: "earthworks", name: "Industrial & Earthworks" },
-  ];
-
-  const galleryItems = [
-    {
-      id: 2,
-      category: "roads",
-      title: "Highway Paving Project",
-      description: "",
-      image: gImg2,
-    },
-    {
-      id: 3,
-      category: "concrete",
-      title: "Concrete Foundation Casting",
-      description: "",
-      image: gImg3,
-    },
-    {
-      id: 4,
-      category: "earthworks",
-      title: "Industrial Site Grading",
-      description: "",
-      image: gImg4,
-    },
-    {
-      id: 5,
-      category: "roads",
-      title: "Sub-grade Asphalt Compaction",
-      description: "",
-      image: gImg5,
-    },
-    {
-      id: 6,
-      category: "concrete",
-      title: "Reinforced Slab Construction",
-      description: "",
-      image: gImg6,
-    },
-    {
-      id: 7,
-      category: "earthworks",
-      title: "Heavy Earthmoving Fleet",
-      description: "",
-      image: gImg7,
-    },
-    {
-      id: 8,
-      category: "roads",
-      title: "National Highway Expansion",
-      description: "",
-      image: gImg8,
-    },
-    {
-      id: 9,
-      category: "concrete",
-      title: "Transit Mixer Delivery",
-      description: "",
-      image: gImg9,
-    },
-    {
-      id: 10,
-      category: "earthworks",
-      title: "Excavation and Pipeline Trenching",
-      description: "",
-      image: gImg10,
-    },
-    {
-      id: 11,
-      category: "roads",
-      title: "PWD Bypass Overpass",
-      description: "",
-      image: gImg11,
-    },
-    {
-      id: 12,
-      category: "concrete",
-      title: "Industrial Shed Columns",
-      description: "",
-      image: gImg12,
-    },
-    {
-      id: 13,
-      category: "earthworks",
-      title: "Mass Compaction Leveling",
-      description: "",
-      image: gImg13,
-    },
-    {
-      id: 14,
-      category: "roads",
-      title: "Road Roller Levelling Works",
-      description: "",
-      image: gImg14,
-    },
-    {
-      id: 15,
-      category: "concrete",
-      title: "High-accuracy Trimix Floor",
-      description: "",
-      image: gImg15,
-    },
-    {
-      id: 16,
-      category: "earthworks",
-      title: "Warehouse Site Prep",
-      description: "",
-      image: gImg16,
-    },
-    {
-      id: 17,
-      category: "roads",
-      title: "Highways Median Casting",
-      description: "",
-      image: gImg17,
-    },
-    {
-      id: 18,
-      category: "concrete",
-      title: "Ready-mix RCC Retaining Wall",
-      description: "",
-      image: gImg18,
-    },
-    {
-      id: 19,
-      category: "earthworks",
-      title: "Ready-mix RCC Retaining Wall",
-      description: "",
-      image: gImg19,
-    },
-    {
-      id: 20,
-      category: "concrete",
-      title: "Ready-mix RCC Retaining Wall",
-      description: "",
-      image: gImg20,
-    },
-  ];
-
   const [activeFilter, setActiveFilter] = useState("all");
   const [lightboxIndex, setLightboxIndex] = useState(null);
   const [isExpanded, setIsExpanded] = useState(false);
@@ -180,38 +23,14 @@ const Gallery = () => {
 
   const displayedItems = isExpanded ? filteredItems : filteredItems.slice(0, 6);
 
-  const openLightbox = (id) => {
-    // Find index within the current filtered list
-    const index = filteredItems.findIndex((item) => item.id === id);
-    if (index !== -1) {
-      setLightboxIndex(index);
-    }
-  };
-
-  const closeLightbox = () => {
-    setLightboxIndex(null);
-  };
-
-  const showPrev = (e) => {
-    e.stopPropagation();
-    if (lightboxIndex !== null) {
-      setLightboxIndex((prev) =>
-        prev === 0 ? filteredItems.length - 1 : prev - 1,
-      );
-    }
-  };
-
-  const showNext = (e) => {
-    e.stopPropagation();
-    if (lightboxIndex !== null) {
-      setLightboxIndex((prev) =>
-        prev === filteredItems.length - 1 ? 0 : prev + 1,
-      );
-    }
-  };
-
-  const currentItem =
-    lightboxIndex !== null ? filteredItems[lightboxIndex] : null;
+  // Map filteredItems to format compatible with yet-another-react-lightbox
+  const slides = filteredItems.map((item) => {
+    const src =
+      typeof item.image === "object" && item.image !== null
+        ? item.image.src
+        : item.image;
+    return { src };
+  });
 
   return (
     <section className="w-full bg-white py-20 lg:py-24 border-t border-slate-200/50 relative overflow-hidden select-text">
@@ -239,19 +58,17 @@ const Gallery = () => {
 
       <div className="max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 relative z-10">
         {/* Header Block (Centered) */}
-        <div className="flex flex-col items-center text-center mb-12">
-          <span className="text-[10px] sm:text-xs font-black tracking-[0.25em] text-primary-light uppercase mb-2 block select-none">
-            VISUAL PORTFOLIO
-          </span>
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-primary leading-tight">
-            Our Project Progress{" "}
-            <span className="text-primary-light-hover">Gallery</span>
-          </h2>
-          <div className="w-16 h-1 bg-primary-light mt-4 select-none" />
-        </div>
+        <Heading
+          tagline="VISUAL PORTFOLIO"
+          title="Our Project Progress"
+          highlight="Gallery"
+          align="center"
+          textColor="text-primary"
+          className="!mb-12"
+        />
 
         {/* Filter Navigation Tabs */}
-        <div className="flex flex-wrap items-center justify-center gap-3 mb-12 select-none">
+        <div className="flex flex-wrap items-center justify-center gap-3 mb-12 select-text">
           {categories.map((cat) => {
             const isActive = activeFilter === cat.id;
             return (
@@ -273,10 +90,10 @@ const Gallery = () => {
 
         {/* Dynamic Project Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {displayedItems.map((item) => (
+          {displayedItems.map((item, index) => (
             <div
               key={item.id}
-              onClick={() => openLightbox(item.id)}
+              onClick={() => setLightboxIndex(index)}
               className="relative overflow-hidden aspect-[4/3] group cursor-pointer border border-slate-200/80 bg-slate-50"
             >
               {/* Project Image */}
@@ -313,7 +130,7 @@ const Gallery = () => {
 
         {/* Show More / Show Less Toggle Button */}
         {filteredItems.length > 6 && (
-          <div className="flex justify-center mt-12 select-none">
+          <div className="flex justify-center mt-12 select-text">
             <Button
               onClick={() => setIsExpanded(!isExpanded)}
               variant="theme"
@@ -328,56 +145,14 @@ const Gallery = () => {
       </div>
 
       {/* Lightbox Modal Overlay */}
-      {lightboxIndex !== null && currentItem && (
-        <div
-          className="fixed inset-0 bg-slate-950/95 z-[999] flex items-center justify-center p-4 sm:p-8 select-none"
-          onClick={closeLightbox}
-        >
-          {/* Close button */}
-          <button
-            onClick={closeLightbox}
-            className="absolute top-6 right-6 text-white text-3xl font-light hover:text-primary-light transition-colors duration-200 cursor-pointer z-50 p-2"
-            aria-label="Close gallery lightbox"
-          >
-            ✕
-          </button>
-
-          {/* Left Navigate Arrow */}
-          <button
-            onClick={showPrev}
-            className="absolute left-4 sm:left-6 top-1/2 -translate-y-1/2 text-white hover:text-primary-light text-3xl sm:text-4xl p-3 cursor-pointer z-50 transition-colors"
-            aria-label="Previous image"
-          >
-            ‹
-          </button>
-
-          {/* Large Image Frame (Maximized viewport space, no text caption) */}
-          <div
-            className="relative max-w-5xl max-h-[85vh] w-full h-full flex flex-col justify-center items-center"
-            onClick={(e) => e.stopPropagation()} // Prevent click-out close
-          >
-            <div className="relative w-full h-[80vh] max-h-[80vh] flex justify-center items-center">
-              <Image
-                src={currentItem.image}
-                alt={currentItem.title}
-                fill
-                priority
-                className="object-contain border border-slate-900 shadow-2xl"
-                sizes="(max-width: 1200px) 100vw, 80vw"
-              />
-            </div>
-          </div>
-
-          {/* Right Navigate Arrow */}
-          <button
-            onClick={showNext}
-            className="absolute right-4 sm:right-6 top-1/2 -translate-y-1/2 text-white hover:text-primary-light text-3xl sm:text-4xl p-3 cursor-pointer z-50 transition-colors"
-            aria-label="Next image"
-          >
-            ›
-          </button>
-        </div>
-      )}
+      <Lightbox
+        open={lightboxIndex !== null}
+        close={() => setLightboxIndex(null)}
+        index={lightboxIndex !== null ? lightboxIndex : 0}
+        slides={slides}
+        plugins={[Zoom]}
+        zoom={{ scrollToZoom: true, maxZoomPixelRatio: 4 }}
+      />
     </section>
   );
 };

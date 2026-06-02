@@ -4,103 +4,13 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Heading from "@/component/common/Heading";
-
+import {
+  highlightPoints,
+  checklistItems,
+  whyChooseUsData,
+} from "../../data/home/whyChooseUs";
 
 const WhyChooseUs = () => {
-  const highlightPoints = [
-    {
-      title: "Vertical Integration",
-      description:
-        "Operating our own stone aggregate crushers, sand processing units, RMC, and fly ash brick plants.",
-      icon: (
-        <svg
-          className="w-6 h-6 text-primary-light-hover"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-          strokeWidth={1.5}
-        >
-          <path
-            strokeLinecap="square"
-            strokeLinejoin="miter"
-            d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
-          />
-        </svg>
-      ),
-    },
-    {
-      title: "Owned Machinery Fleet",
-      description:
-        "Complete scheduling control with our comprehensive inventory of modern cranes, mixers, and paving machinery.",
-      icon: (
-        <svg
-          className="w-6 h-6 text-primary-light-hover"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-          strokeWidth={1.5}
-        >
-          <path
-            strokeLinecap="square"
-            strokeLinejoin="miter"
-            d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z"
-          />
-          <path
-            strokeLinecap="square"
-            strokeLinejoin="miter"
-            d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10M21 16V9a1 1 0 00-1-1h-6v8h7z"
-          />
-        </svg>
-      ),
-    },
-    {
-      title: "Quality & Compliance",
-      description:
-        "Registered Class IV PWD contractor with strict laboratory batch testing at our plants to verify strength.",
-      icon: (
-        <svg
-          className="w-6 h-6 text-primary-light-hover"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-          strokeWidth={1.5}
-        >
-          <path
-            strokeLinecap="square"
-            strokeLinejoin="miter"
-            d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
-          />
-        </svg>
-      ),
-    },
-    {
-      title: "On-Time Execution",
-      description:
-        "Strict project timeline management protocols delivering highway corridors and institutional facilities on schedule.",
-      icon: (
-        <svg
-          className="w-6 h-6 text-primary-light-hover"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-          strokeWidth={1.5}
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-          />
-        </svg>
-      ),
-    },
-  ];
-
-  const checklistItems = [
-    "Building the future with ideas",
-    "Designing future with excellence",
-    "Discovering possibility in concrete",
-  ];
-
   return (
     <section className="w-full py-20 lg:py-24 select-text relative overflow-hidden bg-slate-50/10 border-b border-slate-100">
       {/* Next.js optimized background Image component acting as a watermark drawing */}
@@ -120,20 +30,19 @@ const WhyChooseUs = () => {
           {/* Box 1 (Row 1, Col 1): Title Block & Checklist */}
           <div className="flex flex-col justify-center pr-4 mb-6 lg:mb-0">
             <Heading
-              tagline="WHY CHOOSE US"
-              title="Designing Future"
-              highlight="with Excellence"
+              tagline={whyChooseUsData.tagline}
+              title={whyChooseUsData.title}
+              highlight={whyChooseUsData.highlight}
               textColor="text-primary"
               className="!mb-0"
             />
-
 
             {/* Checklist */}
             <ul className="flex flex-col gap-3">
               {checklistItems.map((item, idx) => (
                 <li
                   key={idx}
-                  className="flex items-center gap-3 text-xs sm:text-sm text-slate-600 font-semibold select-none"
+                  className="flex items-center gap-3 text-xs sm:text-sm text-slate-600 font-semibold select-text"
                 >
                   {/* Yellow Check SVG */}
                   <svg
@@ -168,7 +77,7 @@ const WhyChooseUs = () => {
                 <div className="w-12 h-12 bg-slate-50 flex items-center justify-center border border-slate-100 group-hover:bg-primary-light/15 group-hover:border-primary-light/10 transition-colors duration-300 shrink-0">
                   {point.icon}
                 </div>
-                <span className="text-4xl font-extrabold text-slate-100 group-hover:text-primary-light-hover/10 transition-colors duration-300 select-none">
+                <span className="text-4xl font-extrabold text-slate-100 group-hover:text-primary-light-hover/10 transition-colors duration-300 select-text">
                   0{index + 1}
                 </span>
               </div>
@@ -181,16 +90,6 @@ const WhyChooseUs = () => {
                   {point.description}
                 </p>
               </div>
-
-              <Link
-                href={"#"}
-                className="w-fit mt-6 relative z-10 flex items-center gap-1.5 text-xs font-black tracking-wider uppercase text-slate-400 group-hover:text-primary-light-hover transition-colors duration-300"
-              >
-                <span>Explore Details</span>
-                <span className="transform group-hover:translate-x-1.5 transition-transform duration-300">
-                  →
-                </span>
-              </Link>
             </div>
           ))}
 
@@ -215,27 +114,26 @@ const WhyChooseUs = () => {
                   />
                 </svg>
               </div>
-              <span className="text-4xl font-extrabold text-slate-100 group-hover:text-primary-light-hover/10 transition-colors duration-300 select-none">
-                05
+              <span className="text-4xl font-extrabold text-slate-100 group-hover:text-primary-light-hover/10 transition-colors duration-300 select-text">
+                0{highlightPoints.length + 1}
               </span>
             </div>
 
             <div className="relative z-10 flex-grow flex flex-col justify-between">
               <div>
                 <h3 className="text-base sm:text-lg font-bold text-slate-900 mb-2 relative z-10">
-                  Partner With Us
+                  {whyChooseUsData.cta.title}
                 </h3>
                 <p className="text-xs sm:text-sm text-slate-500 group-hover:text-slate-600 transition-colors duration-300 leading-relaxed font-semibold relative z-10">
-                  Ready to initiate your next industrial, municipal, or
-                  infrastructure landmark? Let's connect.
+                  {whyChooseUsData.cta.description}
                 </p>
               </div>
 
               <Link
-                href="/contact"
-                className="text-primary-light-hover hover:text-slate-900 font-bold text-xs tracking-wider uppercase inline-flex items-center gap-1.5 transition-colors duration-200 mt-6 select-none relative z-10"
+                href={whyChooseUsData.cta.btnHref}
+                className="text-primary-light-hover hover:text-slate-900 font-bold text-xs tracking-wider uppercase inline-flex items-center gap-1.5 transition-colors duration-200 mt-6 select-text relative z-10"
               >
-                CONTACT US{" "}
+                {whyChooseUsData.cta.btnText}{" "}
                 <span className="transform group-hover:translate-x-1 transition-transform duration-200">
                   →
                 </span>

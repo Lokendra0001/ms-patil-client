@@ -4,54 +4,10 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import Heading from "@/component/common/Heading";
-
-
-// Import Swiper styles
+import { testimonials } from "../../data/home/testimonials";
 import "swiper/css";
 
 const Testimonials = () => {
-  const testimonials = [
-    {
-      quote:
-        "M/S Patil Associates demonstrated exemplary execution on the highway bypass corridor. Having their own aggregate crushing and RMC concrete plants meant zero material supply delays.",
-      author: "Er. Rajesh Deshmukh",
-      role: "Executive Engineer",
-      organization: "Public Works Department (PWD)",
-      initials: "RD",
-    },
-    {
-      quote:
-        "Outstanding performance on our PEB industrial park foundation. Their Trimix concrete floor finish was highly accurate and completed two weeks ahead of schedule.",
-      author: "Vikas Khandelwal",
-      role: "Project Director",
-      organization: "Semantic Infra Projects",
-      initials: "VK",
-    },
-    {
-      quote:
-        "Excellent cooperation during our joint venture railway sub-grade execution. Their fully-owned fleet of Tata Hitachi excavators eliminated mobilization bottlenecks entirely.",
-      author: "Sanjay Shekhawat",
-      role: "Chief Engineer",
-      organization: "HEIGL Infra Ltd (Railways Division)",
-      initials: "SS",
-    },
-    {
-      quote:
-        "The Trimix flooring and industrial shed works completed at the Chincholi MIDC site was highly professional. Excellent technical compliance and finish.",
-      author: "Er. Anil Patil",
-      role: "Division Engineer",
-      organization: "MIDC Maharashtra Division",
-      initials: "AP",
-    },
-    {
-      quote:
-        "M/S Patil is our primary supplier for fly ash bricks and RMC concrete. Their testing records, cube tests, and load parameters are always transparent and compliant.",
-      author: "Manoj Jaiswal",
-      role: "Procurement Manager",
-      organization: "Jaiswal Builders & Materials",
-      initials: "MJ",
-    },
-  ];
 
   return (
     <section className="w-full bg-slate-50 py-20 lg:py-24 border-b border-slate-200/50 relative overflow-hidden select-text">
@@ -116,13 +72,13 @@ const Testimonials = () => {
               <SwiperSlide key={idx} className="!h-auto flex flex-col">
                 <div className="bg-white border border-slate-200/60 p-8 sm:p-10 flex flex-col justify-between h-full relative shadow-[0_4px_30px_rgba(15,23,42,0.005)]">
                   {/* Decorative quotes watermark */}
-                  <span className="absolute top-4 right-6 text-7xl text-slate-100 font-serif select-none pointer-events-none">
+                  <span className="absolute top-4 right-6 text-7xl text-slate-100 font-serif select-text pointer-events-none">
                     “
                   </span>
 
                   <div>
                     {/* Star ratings */}
-                    <div className="flex items-center gap-1 mb-6 select-none">
+                    <div className="flex items-center gap-1 mb-6 select-text">
                       {[...Array(5)].map((_, i) => (
                         <svg
                           key={i}
@@ -145,7 +101,7 @@ const Testimonials = () => {
                   <div>
                     <div className="w-full h-px bg-slate-100 mb-6" />
                     <div className="flex items-center gap-4">
-                      <div className="w-10 h-10 rounded-none bg-slate-50 border border-slate-200/80 flex items-center justify-center text-slate-700 font-black text-xs select-none">
+                      <div className="w-10 h-10 rounded-none bg-slate-50 border border-slate-200/80 flex items-center justify-center text-slate-700 font-black text-xs select-text">
                         {t.initials}
                       </div>
                       <div>

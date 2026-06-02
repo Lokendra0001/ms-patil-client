@@ -19,7 +19,7 @@ const CompliancePanel = ({ data }) => {
         />
 
         {/* 3-Column Compliance Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 xl:gap-8">
           {data.compliance.map((item, idx) => (
             <div
               key={idx}
@@ -32,7 +32,7 @@ const CompliancePanel = ({ data }) => {
                 <span className="text-[10px] font-bold text-primary-light-hover uppercase tracking-widest block">
                   Standard 0{idx + 1}
                 </span>
-                <h3 className="text-lg sm:text-xl font-bold text-text-primary tracking-tight">
+                <h3 className="text-lg sm:text-xl font-semibold text-text-primary tracking-tight">
                   {item.title}
                 </h3>
               </div>

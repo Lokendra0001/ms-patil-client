@@ -3,6 +3,23 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import ContentContainer from "@/component/common/ContentContainer";
+const renderTitle = (title, highlight) => {
+  if (!highlight) return title;
+  const index = title.toLowerCase().indexOf(highlight.toLowerCase());
+  if (index === -1) return title;
+  const before = title.substring(0, index);
+  const match = title.substring(index, index + highlight.length);
+  const after = title.substring(index + highlight.length);
+  return (
+    <>
+      {before}
+      <span className="text-primary-light-hover">{match}</span>
+      {after}
+    </>
+  );
+};
+
 const ServiceHero = ({ data }) => {
   return (
     <main className="w-full flex-grow bg-white select-text">
@@ -22,7 +39,7 @@ const ServiceHero = ({ data }) => {
         </div>
 
         {/* Content Container */}
-        <div className="max-w-[1600px] mx-auto w-full px-4 sm:px-8 lg:px-12 relative z-20">
+        <ContentContainer className="pt-15 relative">
           {/* Breadcrumbs */}
           <nav className="flex items-center gap-2 text-xs font-mono font-bold tracking-wider text-slate-400 uppercase mb-6">
             <Link
@@ -48,8 +65,8 @@ const ServiceHero = ({ data }) => {
           <span className="text-[10px] sm:text-xs font-black tracking-[0.25em] text-primary-light uppercase block mb-3 font-mono">
             {data.tagline}
           </span>
-          <h1 className="text-4xl sm:text-6xl font-extrabold text-white tracking-tight leading-none uppercase mb-6">
-            {data.title}
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-none uppercase mb-6">
+            {renderTitle(data.title, data.highlight)}
           </h1>
 
           {/* Gold Divider Line */}
@@ -59,7 +76,7 @@ const ServiceHero = ({ data }) => {
           <p className="text-slate-300 text-sm sm:text-base max-w-2xl leading-relaxed font-medium">
             {data.description}
           </p>
-        </div>
+        </ContentContainer>
       </section>
     </main>
   );

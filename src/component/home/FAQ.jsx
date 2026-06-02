@@ -1,35 +1,12 @@
 "use client";
 
 import React, { useState } from "react";
-import Button from "@/component/common/Button";
+import Button from "@/component/CTA/Button";
 import Heading from "@/component/common/Heading";
-
+import { faqs } from "../../data/home/faq";
 
 const FAQ = () => {
   const [openIndex, setOpenIndex] = useState(0);
-
-  const faqs = [
-    {
-      question: "What work does M/S Patil Associates & Developers do?",
-      answer: "We are a civil engineering and government contracting firm specializing in RCC works, road building, earthworks, drainage networks, and major infrastructure.",
-    },
-    {
-      question: "How many years of construction experience do you have?",
-      answer: "Over 20 years of experience with 30+ completed projects and an average annual turnover of ₹11 Crore.",
-    },
-    {
-      question: "Where are you located and which areas do you serve?",
-      answer: "We are headquartered in Dhule, Maharashtra and operate across Maharashtra, Rajasthan, Madhya Pradesh, Delhi, and Mumbai.",
-    },
-    {
-      question: "Do you own your construction equipment fleet or hire it?",
-      answer: "We own 100% of our fleet (including Tata Hitachi excavators, transit mixers, road rollers, and Kyb Conmat RMC plants) for zero mobilization delay.",
-    },
-    {
-      question: "Are you a registered government contractor?",
-      answer: "Yes, we hold Class IV PWD registration along with MSME, GST, and full EPF/ESIC contract compliance.",
-    },
-  ];
 
   const handleToggle = (index) => {
     setOpenIndex(openIndex === index ? -1 : index);
@@ -38,10 +15,8 @@ const FAQ = () => {
   return (
     <section className="w-full bg-white py-20 lg:py-24 border-b border-slate-100 select-text">
       <div className="max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12">
-        
         {/* Parent grid is set to items-start to keep the left column stable */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-          
           {/* Left Column: Vertically Centered CTA Block (Non-sticky) */}
           <div className="lg:col-span-5 flex flex-col items-start">
             <Heading
@@ -53,14 +28,8 @@ const FAQ = () => {
               className="!mb-8 max-w-md"
             />
 
-
             {/* Rectangular Contact Button */}
-            <Button
-              href="/contact"
-              variant="theme"
-              size="lg"
-              className=""
-            >
+            <Button href="/contact" variant="theme" size="lg" className="">
               Contact Us
             </Button>
           </div>
@@ -82,7 +51,7 @@ const FAQ = () => {
                   {/* Accordion header button */}
                   <button
                     onClick={() => handleToggle(index)}
-                    className="w-full text-left p-5 sm:p-6 flex justify-between items-center gap-4 focus:outline-none select-none cursor-pointer"
+                    className="w-full text-left p-5 sm:p-6 flex justify-between items-center gap-4 focus:outline-none select-text cursor-pointer"
                   >
                     <span
                       className={` text-sm sm:text-base font-bold transition-colors duration-200 ${
@@ -91,10 +60,10 @@ const FAQ = () => {
                     >
                       {faq.question}
                     </span>
-                    
+
                     {/* Expand/Collapse sign indicator */}
                     <span
-                      className={`text-lg sm:text-xl font-bold shrink-0 leading-none transition-colors duration-200 select-none ${
+                      className={`text-lg sm:text-xl font-bold shrink-0 leading-none transition-colors duration-200 select-text ${
                         isOpen ? "text-primary-light-hover" : "text-slate-400"
                       }`}
                     >
@@ -118,7 +87,6 @@ const FAQ = () => {
               );
             })}
           </div>
-
         </div>
       </div>
     </section>

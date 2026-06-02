@@ -39,7 +39,7 @@ const ContactDirect = () => {
             href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2.5 px-6 py-3 border border-emerald-500/20 text-[#25d366] text-xs font-bold uppercase tracking-wider bg-emerald-500/[0.03] hover:bg-[#25d366] hover:text-white transition-all duration-200 select-none cursor-pointer"
+            className="inline-flex items-center gap-2.5 px-6 py-3 border border-emerald-500/20 text-[#25d366] text-xs font-bold uppercase tracking-wider bg-emerald-500/[0.03] hover:bg-[#25d366] hover:text-white transition-all duration-200 select-text cursor-pointer"
           >
             <svg
               className="w-4 h-4 fill-current"
@@ -54,7 +54,7 @@ const ContactDirect = () => {
           {/* Call Operations Direct */}
           <a
             href="tel:+919876543210"
-            className="inline-flex items-center gap-2.5 px-6 py-3 border border-slate-200 text-slate-800 text-xs font-bold uppercase tracking-wider bg-slate-50 hover:bg-primary-light hover:text-white hover:border-primary-light transition-all duration-200 select-none cursor-pointer"
+            className="inline-flex items-center gap-2.5 px-6 py-3 border border-slate-200 text-slate-800 text-xs font-bold uppercase tracking-wider bg-slate-50 hover:bg-primary-light hover:text-white hover:border-primary-light transition-all duration-200 select-text cursor-pointer"
           >
             <svg
               className="w-4 h-4"

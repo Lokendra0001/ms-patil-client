@@ -48,7 +48,7 @@ const GeographicReach = () => {
     <section className="w-full bg-white py-20 lg:py-24 border-t border-slate-100 select-text">
       <div className="max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12">
         {/* Section Heading */}
-        <div className="flex flex-col items-center text-center mb-16 select-none">
+        <div className="flex flex-col items-center text-center mb-16 select-text">
           <span className="text-[10px] sm:text-xs font-black tracking-[0.25em] text-primary-light uppercase mb-2">
             Geographic Reach
           </span>
@@ -64,7 +64,7 @@ const GeographicReach = () => {
           <div className="lg:col-span-7 flex justify-center order-1">
             <div className="relative w-full max-w-[550px] aspect-[5/6] bg-slate-50 border border-slate-200/50 p-8 shadow-sm flex items-center justify-center overflow-hidden">
               {/* Map Title/Indicator overlay */}
-              <div className="absolute top-6 left-6 z-10 select-none">
+              <div className="absolute top-6 left-6 z-10 select-text">
                 <span className="text-[9px] font-bold text-slate-400 uppercase tracking-widest block">
                   Interactive Map
                 </span>
@@ -74,7 +74,7 @@ const GeographicReach = () => {
               </div>
 
               {/* Real India Map Outline Silhouette with Absolute hotspots inside the same wrapper */}
-              <div className="relative w-[85%] h-[85%] select-none">
+              <div className="relative w-[85%] h-[85%] select-text">
                 <img
                   src="/india_map.svg"
                   alt="Map of India outline"
@@ -133,7 +133,7 @@ const GeographicReach = () => {
 
           {/* RIGHT COLUMN: Interactive Content Cards List */}
           <div className="lg:col-span-5 flex flex-col gap-4 order-2">
-            <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-1 select-none">
+            <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-1 select-text">
               Select or Hover on a Region
             </span>
 

@@ -48,7 +48,7 @@ const Footer = () => {
             <p className="text-xs sm:text-sm text-slate-500 font-semibold leading-relaxed mb-6">
               Delivering highway bypass corridors, municipal complexes, and vertically integrated manufacturing solutions for public and private infrastructure landmarks.
             </p>
-            <div className="flex flex-col gap-1.5 text-xs text-slate-400 font-bold select-none">
+            <div className="flex flex-col gap-1.5 text-xs text-slate-400 font-bold select-text">
               <div>✓ Class IV PWD Contractor</div>
               <div>✓ MSME & GST Registered</div>
             </div>
@@ -67,7 +67,7 @@ const Footer = () => {
                     href={link.href}
                     className="text-xs sm:text-sm text-slate-600 hover:text-primary-light-hover transition-colors duration-200 font-semibold flex items-center gap-1.5"
                   >
-                    <span className="text-primary-light-hover select-none">→</span>
+                    <span className="text-primary-light-hover select-text">→</span>
                     {link.name}
                   </Link>
                 </li>
@@ -88,7 +88,7 @@ const Footer = () => {
                     href={service.href}
                     className="text-xs sm:text-sm text-slate-600 hover:text-primary-light-hover transition-colors duration-200 font-semibold flex items-center gap-1.5"
                   >
-                    <span className="text-primary-light-hover select-none">▪</span>
+                    <span className="text-primary-light-hover select-text">▪</span>
                     {service.name}
                   </Link>
                 </li>
@@ -134,7 +134,7 @@ const Footer = () => {
         </div>
 
         {/* Bottom copyright alignment bar */}
-        <div className="border-t border-slate-200 pt-8 mt-4 flex flex-col sm:flex-row justify-between items-center text-slate-500 font-semibold text-xs gap-4 select-none">
+        <div className="border-t border-slate-200 pt-8 mt-4 flex flex-col sm:flex-row justify-between items-center text-slate-500 font-semibold text-xs gap-4 select-text">
           <div>
             © {currentYear} M/S Chetankumar Bhagwan Suryawanshi. All rights reserved.
           </div>

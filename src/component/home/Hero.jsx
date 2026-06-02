@@ -1,88 +1,13 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import Button from "@/component/common/Button";
-import banner1 from "../../../public/assets/home/hero/banner-1.png";
-import banner2 from "../../../public/assets/home/hero/banner-2.png";
-import banner3 from "../../../public/assets/home/hero/banner-3.png";
+import Button from "@/component/CTA/Button";
+import { slides } from "@/data/home/hero";
+import ContentContainer from "../common/ContentContainer";
+import Image from "next/image";
 
 const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-
-  // const slides = [
-  //   {
-  //     image: banner1,
-  //     subtitle: "LEADERS IN INFRASTRUCTURE & CONSTRUCTION",
-  //     titleText: "BUILDING THE FOUNDATIONS OF ",
-  //     titleHighlight: "MODERN INFRASTRUCTURE",
-  //     description:
-  //       "Delivering world-class engineering, procurement, and construction services for national highway networks, heavy industrial structures, and modern urban environments.",
-  //     primaryBtn: { text: "Our Projects", href: "/projects" },
-  //     secondaryBtn: { text: "Get in Touch", href: "/contact" },
-  //   },
-  //   {
-  //     image: banner2,
-  //     subtitle: "ENGINEERING EXCELLENCE & TRUST",
-  //     titleText: "COMMERCIAL & ",
-  //     titleHighlight: "INDUSTRIAL LANDMARKS",
-  //     description:
-  //       "Setting new benchmarks in corporate architecture with state-of-the-art office parks, advanced manufacturing complexes, and highly functional logistical hubs.",
-  //     primaryBtn: { text: "Explore Services", href: "/services" },
-  //     secondaryBtn: { text: "Contact Us", href: "/contact" },
-  //   },
-  //   {
-  //     image:
-  //       // "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1920&q=80",
-  //       banner1,
-  //     subtitle: "CRAFTING PREMIUM SPACES",
-  //     titleText: "LUXURY RESIDENCES & ",
-  //     titleHighlight: "MODERN TOWNSHIPS",
-  //     description:
-  //       "Architecting master-planned housing communities, luxury apartments, and premium townships built with unmatched material quality and structural integrity.",
-  //     primaryBtn: { text: "Our Residences", href: "/services/residential" },
-  //     secondaryBtn: {
-  //       text: "Book Consultation",
-  //       href: "/contact?consultation=true",
-  //     },
-  //   },
-  // ];
-
-
-  const slides = [
-  {
-    image: banner1,
-    subtitle: "VERTICALLY INTEGRATED CONTRACTING",
-    titleText: "20+ YEARS OF ENGINEERING EXCELLENCE FROM ",
-    titleHighlight: "SOURCE TO STRUCTURE",
-    description:
-      "M/S Chetankumar Bhagwan Suryawanshi is a registered PWD Class IV infrastructure contractor delivering high-compliance civil works across 5 states with zero third-party material dependency.",
-    primaryBtn: { text: "Our Capabilities", href: "/services" },
-    secondaryBtn: { text: "Get in Touch", href: "/contact" },
-  },
-  {
-    image: banner2,
-    subtitle: "HEAVY INDUSTRIAL CIVIL SPECIALISTS",
-    titleText: "HIGH-DURABILITY FOUNDATIONS & ",
-    titleHighlight: "MIDC INDUSTRIAL LANDMARKS",
-    description:
-      "Engineering heavy-load concrete layouts, precision Trimix industrial flooring, and structural PEB foundations for premier corporate facilities including RM Chemical, Indo Amines, and Arihant Detergents.",
-    primaryBtn: { text: "Explore Services", href: "/services" },
-    secondaryBtn: { text: "Contact Us", href: "/contact" },
-  },
-  {
-    image: banner3,
-    subtitle: "HIGH-COMPLIANCE SECTOR CAPABILITY",
-    titleText: "APPROVED RAILWAY & ",
-    titleHighlight: "CIVIC INFRASTRUCTURE",
-    description:
-      "Executing strict RDSO-compliant cross-drainage networks, bulk earthworks, and municipal road corridors driven entirely by our owned heavy machinery fleet and in-house material manufacturing plants.",
-    primaryBtn: { text: "Our Projects", href: "/projects" },
-    secondaryBtn: {
-      text: "View Sector Expertise",
-      href: "/sectors/railway-infrastructure",
-    },
-  },
-];
 
   // Auto-play slider
   useEffect(() => {
@@ -101,97 +26,107 @@ const Hero = () => {
   };
 
   return (
-    <main className=" w-full flex-grow bg-white">
+    <main className=" w-full flex-1 bg-white">
       {/* Hero Section */}
-      <section className="  relative w-full h-[580px] sm:h-[650px] lg:h-[800px] bg-slate-950 overflow-hidden select-none">
-        {/* Slides Container */}
-        <div className=" w-full h-full relative pt-50">
+      <section className="  relative w-full min-h-[700px] sm:min-h-[750px] lg:min-h-[850px] bg-slate-950 overflow-hidden select-text flex flex-col justify-between">
+        {/* Background Images Layer */}
+        <div className="absolute inset-0 z-0">
           {slides.map((slide, index) => (
             <div
               key={index}
-              className={`  absolute inset-0 transition-opacity duration-1000 ease-in-out ${
+              className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
                 index === currentSlide
                   ? "opacity-100 z-10"
                   : "opacity-0 z-0 pointer-events-none"
               }`}
             >
-              {/* Background Image with Ken Burns effect */}
-              <div
-                className={`absolute inset-0 bg-cover bg-center transition-transform duration-[6000ms] ease-out ${
+              <Image
+                src={slide.image}
+                alt="slider-images"
+                priority
+                fill
+                className={`object-cover transition-transform duration-[6000ms] ease-out ${
                   index === currentSlide ? "scale-105" : "scale-100"
                 }`}
-                style={{
-                  backgroundImage: `url(${slide.image?.src || slide.image})`,
-                }}
               />
+            </div>
+          ))}
+          {/* Solid Heavy Dark Overlay (Tinted for high contrast text) */}
+          <div className="absolute inset-0 bg-slate-950/70 z-10" />
+        </div>
 
-              {/* Solid Heavy Dark Overlay (Tinted for high contrast text) */}
-              <div className="absolute inset-0 bg-slate-950/70" />
-
-              {/* Slide Content - Only render when active to force CSS animation trigger on slide change */}
+        {/* Slides Content Layer */}
+        <div className="w-full relative z-20 flex-grow flex items-center">
+          {slides.map((slide, index) => (
+            <div
+              key={index}
+              className={`w-full transition-opacity duration-1000 ease-in-out ${
+                index === currentSlide
+                  ? "relative opacity-100 z-10"
+                  : "absolute inset-0 opacity-0 pointer-events-none z-0"
+              }`}
+            >
               {index === currentSlide && (
-                <div className="relative w-full h-full flex items-center z-20 pt-20">
-                  <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12">
-                    <div className="max-w-3xl">
-                      {/* Accent Line + Subtitle */}
-                      <div className="flex items-center gap-3.5 mb-5 animate-fade-in-up">
-                        <div className="w-12 h-1 bg-primary-light" />
-                        <span className="text-xs sm:text-sm font-bold tracking-[0.22em] text-primary-light uppercase">
-                          {slide.subtitle}
-                        </span>
-                      </div>
+                <ContentContainer>
+                  <div className="max-w-4xl pt-15 lg:pt-0">
+                    {/* Accent Line + Subtitle */}
+                    <div className="flex items-center  justify-start gap-3.5 mb-5 animate-fade-in-up">
+                      <div className="w-5 md:w-12 h-1 bg-primary-light " />
+                      <span className="text-xs sm:text-sm font-bold tracking-[0.22em] text-primary-light uppercase">
+                        {slide.subtitle}
+                      </span>
+                    </div>
 
-                      {/* Bold Uppercase Heading */}
-                      <h1
-                        className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight uppercase mb-6 max-w-3xl animate-fade-in-up"
-                        style={{ animationDelay: "150ms" }}
-                      >
-                        {slide.titleText}
-                        <span className="text-primary-light-hover">
-                          {slide.titleHighlight}
-                        </span>
-                      </h1>
+                    {/* Bold Uppercase Heading */}
+                    <h1
+                      className="text-[28px] sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight uppercase mb-6 max-w-4xl animate-fade-in-up text-cente lg:text-left"
+                      style={{ animationDelay: "150ms" }}
+                    >
+                      {slide.titleText}
+                      <span className="text-primary-light-hover">
+                        {slide.titleHighlight}
+                      </span>
+                    </h1>
 
-                      {/* Description Text */}
-                      <p
-                        className="text-sm sm:text-base text-slate-300 mb-9 max-w-2xl leading-relaxed animate-fade-in-up"
-                        style={{ animationDelay: "300ms" }}
-                      >
-                        {slide.description}
-                      </p>
+                    {/* Description Text */}
+                    <p
+                      className=" text-sm sm:text-base text-slate-300 mb-9 max-w-2xl leading-relaxed animate-fade-in-up"
+                      style={{ animationDelay: "300ms" }}
+                    >
+                      {slide.description}
+                    </p>
 
-                      {/* CTA Buttons using common Button component */}
-                      <div
-                        className="flex flex-wrap gap-4 animate-fade-in-up"
-                        style={{ animationDelay: "450ms" }}
+                    {/* CTA Buttons using common Button component */}
+                    <div
+                      className="flex flex-wrap  gap-4 animate-fade-in-up"
+                      style={{ animationDelay: "450ms" }}
+                    >
+                      <Button
+                        href={slide.primaryBtn.href}
+                        variant="theme"
+                        size="hr"
+                        className="px-8 py-3.5 text-xs tracking-wider uppercase h-auto hover:text-white"
                       >
-                        <Button
-                          href={slide.primaryBtn.href}
-                          variant="theme"
-                          size="hr"
-                          className="px-8 py-3.5 text-xs tracking-wider uppercase h-auto hover:text-white"
-                        >
-                          {slide.primaryBtn.text}
-                        </Button>
-                        <Button
-                          href={slide.secondaryBtn.href}
-                          variant="hero"
-                          size="hr"
-                          className="px-8 py-3.5 text-xs tracking-wider uppercase h-auto"
-                        >
-                          {slide.secondaryBtn.text}
-                        </Button>
-                      </div>
+                        {slide.primaryBtn.text}
+                      </Button>
+                      <Button
+                        href={slide.secondaryBtn.href}
+                        variant="hero"
+                        size="hr"
+                        className="px-8 py-3.5 text-xs tracking-wider uppercase h-auto"
+                      >
+                        {slide.secondaryBtn.text}
+                      </Button>
                     </div>
                   </div>
-                </div>
+                </ContentContainer>
               )}
             </div>
           ))}
         </div>
 
         {/* Navigation Arrows (Left/Right Sides) */}
-        <button
+        {/* <button
           onClick={handlePrev}
           className="absolute left-4 sm:left-6 top-1/2 -translate-y-1/2 z-20 w-11 h-11 bg-white/10 hover:bg-primary-light text-white hover:border-primary-light border border-white/20 flex items-center justify-center rounded-none transition-colors focus:outline-none cursor-pointer"
           aria-label="Previous slide"
@@ -228,13 +163,13 @@ const Hero = () => {
               d="M9 5l7 7-7 7"
             />
           </svg>
-        </button>
+        </button> */}
 
         {/* Bottom Bar: Slider Dots & Counter */}
         <div className="absolute bottom-8 sm:bottom-10 left-0 right-0 z-20 w-full">
           <div className="max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 flex items-center justify-between">
             {/* Slide Hero Counter (01 / 03) */}
-            <div className="text-white text-xs sm:text-sm font-bold tracking-widest select-none">
+            <div className="text-white text-xs sm:text-sm font-bold tracking-widest select-text">
               <span className="text-primary-light">0{currentSlide + 1}</span>
               <span className="text-white/30 mx-2">/</span>
               <span className="text-white/55 font-medium">

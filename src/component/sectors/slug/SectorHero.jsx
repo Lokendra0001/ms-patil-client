@@ -8,14 +8,14 @@ const SectorHero = ({ data }) => {
   if (!data) return null;
   const title = data.name;
   const highlight = data.highlight;
-
+  console.log(highlight);
   let titleNode = title;
   if (highlight && title.includes(highlight)) {
     const parts = title.split(highlight);
     titleNode = (
       <>
         {parts[0]}
-        <span className="text-primary-light">{highlight}</span>
+        <span className="text-primary-light! ">{highlight}</span>
         {parts[1]}
       </>
     );
@@ -37,16 +37,16 @@ const SectorHero = ({ data }) => {
       </div>
 
       <div className="max-w-[1600px] mx-auto w-full px-4 sm:px-8 lg:px-12 relative z-20">
-        <div className="max-w-3xl space-y-6">
+        <div className="max-w-4xl space-y-6">
           {/* Technical Badge Overlay */}
           <div className="inline-block">
-            <span className="px-3 py-1 bg-primary-light text-slate-950 text-[10px] sm:text-xs font-black tracking-widest uppercase rounded-none select-none">
+            <span className="px-3 py-1 bg-primary-light text-slate-950 text-[10px] sm:text-xs font-black tracking-widest uppercase rounded-none select-text">
               [ {data.badge} ]
             </span>
           </div>
 
           {/* Title */}
-          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight uppercase tracking-tight font-sans">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight uppercase tracking-tight font-sans ">
             {titleNode}
           </h1>
 

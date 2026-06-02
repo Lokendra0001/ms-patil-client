@@ -4,11 +4,27 @@ import React from "react";
 import Image from "next/image";
 import profilePic from "../../../public/assets/about/ceo-message/ceo-profile1.jpeg";
 
+import { ceoMessage } from "../../data/about/ceo";
+
 const CeoMessage = () => {
+  const renderTitle = (title, highlight) => {
+    if (!highlight) return title;
+    const parts = title.split(new RegExp(`(${highlight})`, "gi"));
+    return parts.map((part, index) =>
+      part.toLowerCase() === highlight.toLowerCase() ? (
+        <span key={index} className="text-primary-light-hover">
+          {part}
+        </span>
+      ) : (
+        part
+      )
+    );
+  };
+
   return (
     <section className="w-full bg-slate-50 py-20 lg:py-24 border-t border-b border-slate-200/50 relative overflow-hidden select-text">
       {/* Blueprint grid subtle watermarks */}
-      <div className="absolute inset-0 opacity-[0.01] pointer-events-none select-none">
+      <div className="absolute inset-0 opacity-[0.01] pointer-events-none select-text">
         <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
           <line
             x1="20%"
@@ -54,7 +70,7 @@ const CeoMessage = () => {
           {/* Right Column: Title, Quote, Message paragraphs & Signature */}
           <div className="lg:col-span-7 flex flex-col items-start">
             {/* Tagline block with gold line on left */}
-            <div className="flex items-center gap-3 mb-4 select-none">
+            <div className="flex items-center gap-3 mb-4 select-text">
               <div className="w-8 h-0.5 bg-primary-light" />
               <span className="text-[10px] sm:text-xs font-black tracking-[0.25em] text-primary-light uppercase">
                 CEO's Message
@@ -63,35 +79,18 @@ const CeoMessage = () => {
 
             {/* Vision Quote */}
             <h3 className="text-xl sm:text-2xl lg:text-3xl font-extrabold text-primary italic leading-snug mb-8">
-              “Make your{" "}
-              <span className="text-primary-light-hover">vision</span> become a
-              reality”
+              {renderTitle(ceoMessage.quote, "vision")}
             </h3>
 
             {/* Message paragraphs directly from catalogue page 3 */}
             <div className="text-xs sm:text-sm text-slate-500 font-semibold leading-relaxed space-y-6 max-w-3xl">
-              <p>
-                Every project starts as a vision—a dream of what could be. Our
-                mission is to make that vision a reality. From concept to
-                completion, we collaborate with you to transform blueprints into
-                buildings, plans into spaces, and ideas into infrastructure.
-              </p>
-              <p>
-                With our expertise, innovative solutions, and commitment to
-                quality, we ensure every detail reflects your aspirations.
-                Whether it’s creating a modern office space, a sustainable
-                residential community, or a state-of-the-art facility, we shape
-                your dreams into enduring realities.
-              </p>
-              <p>
-                We build more than structures—we create spaces that inspire and
-                leave a lasting impact. With precision and passion, we turn your
-                vision into a legacy that stands the test of time.
-              </p>
+              {ceoMessage.paragraphs.map((paragraph, index) => (
+                <p key={index}>{paragraph}</p>
+              ))}
             </div>
 
             {/* Signature & Credentials block */}
-            <div className="mt-8 flex flex-col items-start select-none">
+            <div className="mt-8 flex flex-col items-start select-text">
               {/* Cursive text rendering */}
               <div
                 className="text-3xl text-primary-light-hover tracking-wide font-normal mb-1.5"

@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import ProjectCard from "@/component/common/ProjectCard";
+import ProjectCard from "@/component/common/project/ProjectCard";
 import { projectsData } from "@/data/projects";
 import Heading from "@/component/common/Heading";
 
@@ -66,7 +66,7 @@ const RelatedProjects = ({ slug }) => {
         />
 
         {/* Project Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 xl:gap-10">
           {related.map((project) => (
             <ProjectCard key={project.id} project={project} />
           ))}

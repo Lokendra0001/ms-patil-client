@@ -13,7 +13,7 @@ const ServiceCTA = () => {
             <span className="text-[10px] sm:text-xs font-black tracking-[0.25em] text-primary-light  block ">
               Start Your Project
             </span>
-            <h2 className="text-2xl sm:text-3xl font-semibold text-text-primary  tracking-tight ">
+            <h2 className="text-2xl sm:text-3xl font-bold text-text-primary  tracking-tight ">
               Need this service for your project?
             </h2>
             <p className="text-xs sm:text-sm text-text-gray tracking-wider leading-relaxed  max-w-xl">

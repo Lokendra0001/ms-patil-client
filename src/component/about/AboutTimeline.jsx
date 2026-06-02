@@ -3,61 +3,16 @@
 import React, { useState } from "react";
 import Image from "next/image";
 
+import { milestones } from "../../data/about/timeline";
+
 const AboutTimeline = () => {
   // Default active index set to the present milestone (index 3)
   const [activeIndex, setActiveIndex] = useState(3);
 
-  const milestones = [
-    {
-      year: "2006",
-      tag: "PHASE I",
-      title: "The Foundation",
-      description:
-        "Established the firm, executing localized civil works, earthworks, and municipal drainage systems to lay down our core construction capabilities.",
-      metric: "Focus Area",
-      metricDetail: "Localized Civil Works & Earthmoving Operations",
-      image:
-        "https://images.unsplash.com/photo-1579847259164-e35f08e5988d?auto=format&fit=crop&w=1200&q=80",
-    },
-    {
-      year: "2014",
-      tag: "PHASE II",
-      title: "Scale & Capability Upgrade",
-      description:
-        "Expanded operations into major institutional structures, industrial foundation laying, and grading up to handling large-scale concrete works.",
-      metric: "Focus Area",
-      metricDetail: "Industrial Foundations & Heavy Concrete Works",
-      image:
-        "https://images.unsplash.com/photo-1590069261209-f8e9b8642343?auto=format&fit=crop&w=1200&q=80",
-    },
-    {
-      year: "2021",
-      tag: "PHASE III",
-      title: "Vertical Integration",
-      description:
-        "Shifted to self-reliance by setting up fully automated Ready Mix Concrete (RMC) plants and stone crushing facilities to control raw material quality.",
-      metric: "Focus Area",
-      metricDetail: "RMC Operations & Crushing Plant Production",
-      image:
-        "https://images.unsplash.com/photo-1581094288338-2314dddb7ecc?auto=format&fit=crop&w=1200&q=80",
-    },
-    {
-      year: "Present",
-      tag: "CURRENT STATE",
-      title: "Premier Contractor",
-      description:
-        "Operating as a premier Class IV PWD Contractor delivering critical highway bypass corridors, institutional complexes, and private infrastructure frameworks.",
-      metric: "Focus Area",
-      metricDetail: "Highway Bypass Corridors & PWD Infrastructure",
-      image:
-        "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1200&q=80",
-    },
-  ];
-
   return (
     <section className="w-full bg-white py-20 lg:py-24 border-b border-slate-200/50 relative overflow-hidden select-text">
       {/* Blueprint grid watermark */}
-      <div className="absolute inset-0 opacity-[0.012] pointer-events-none select-none">
+      <div className="absolute inset-0 opacity-[0.012] pointer-events-none select-text">
         <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
           <line
             x1="20%"
@@ -80,7 +35,7 @@ const AboutTimeline = () => {
 
       <div className="max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 relative z-10">
         {/* Section Header */}
-        <div className="flex flex-col items-center text-center mb-16 select-none">
+        <div className="flex flex-col items-center text-center mb-16 select-text">
           <span className="text-[10px] sm:text-xs font-bold tracking-[0.25em] text-primary-light uppercase mb-2">
             Our Evolution
           </span>
@@ -129,7 +84,7 @@ const AboutTimeline = () => {
           </div>
 
           {/* Right Panel: Vertical Accordion Switcher */}
-          <div className="col-span-1 lg:col-span-5 flex flex-col justify-center p-8 sm:p-10 border-t lg:border-t-0 lg:border-l border-slate-200/85 bg-white select-none">
+          <div className="col-span-1 lg:col-span-5 flex flex-col justify-center p-8 sm:p-10 border-t lg:border-t-0 lg:border-l border-slate-200/85 bg-white select-text">
             <div className="space-y-4">
               {milestones.map((milestone, idx) => {
                 const isSelected = idx === activeIndex;

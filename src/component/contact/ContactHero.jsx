@@ -1,19 +1,17 @@
 "use client";
 
 import React from "react";
-import Hero from "@/component/common/Hero";
+import Hero from "@/component/common/hero/Hero";
+import banner from "../../../public/assets/contact/hero/banner.png";
 
 const ContactHero = () => {
-  const crumbs = [
-    { name: "Home", href: "/" },
-    { name: "Contact Us" }
-  ];
+  const crumbs = [{ name: "Home", href: "/" }, { name: "Contact Us" }];
 
   return (
     <Hero
       tagline="Get In Touch"
       title="Contact Us"
-      bgImage="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1600&q=80"
+      bgImage={banner}
       breadcrumbs={crumbs}
     />
   );

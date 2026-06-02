@@ -3,141 +3,13 @@
 import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Heading from "@/component/common/Heading";
-import mobilization from "../../../public/assets/services/service-process/mobilization.png";
-import survey from "../../../public/assets/services/service-process/survey.jpg";
-import earthwork from "../../../public/assets/services/service-process/earthwork.svg";
-import foundation from "../../../public/assets/home/hero/banner-2.png";
-import structure from "../../../public/assets/home/gallary-grid/img20.svg";
+import { phases } from "../../data/services/process";
 
 const ServicesProcess = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
   const [isInView, setIsInView] = useState(false);
   const sectionRef = useRef(null);
-
-  const phases = [
-    {
-      num: "01",
-      name: "Mobilisation",
-      title: "Site Mobilisation & Setup",
-      description:
-        "Sourcing and deploying heavy machinery, assembling our team of civil engineers, establishing temporary base yards, and securing early material supply channels.",
-      deliverables: [
-        "Temporary site office setup",
-        "Machinery transit & placement",
-        "Raw materials storage yards",
-      ],
-      image: mobilization,
-    },
-    {
-      num: "02",
-      name: "Survey",
-      title: "Topographic Survey & Layout",
-      description:
-        "Executing precise land measurements, boundary mapping, and excavation markings using advanced differential GPS (DGPS) and total stations.",
-      deliverables: [
-        "Precision boundary layout",
-        "Topographic contour maps",
-        "Excavation grid markers",
-      ],
-      image: survey,
-    },
-    {
-      num: "03",
-      name: "Earthwork",
-      title: "Excavation & Ground Preparation",
-      description:
-        "Performing bulk excavation, cut-and-fill operations, subgrade leveling, and active soil stabilization to prepare a solid building bed.",
-      deliverables: [
-        "Bulk ground excavation",
-        "Soil density & compaction test",
-        "Level grading & subgrade prep",
-      ],
-      image: earthwork,
-    },
-    {
-      num: "04",
-      name: "Foundation",
-      title: "RCC Foundations & Footings",
-      description:
-        "Drilling foundation piles, building reinforcement rebar cages, and pouring high-performance concrete to secure the load-bearing foundation.",
-      deliverables: [
-        "Piling & micro-piles installation",
-        "Steel reinforcement tying",
-        "Foundations concrete pouring",
-      ],
-      image: foundation,
-    },
-    {
-      num: "05",
-      name: "Structure",
-      title: "RCC & Structural Framework",
-      description:
-        "Constructing vertical support columns, beams, multi-level slab formwork, and assembling pre-engineered steel frames (PEB).",
-      deliverables: [
-        "RCC column & beam frames",
-        "Roof & floor slab casting",
-        "PEB structure assembly",
-      ],
-      image: structure,
-    },
-    {
-      num: "06",
-      name: "Drainage",
-      title: "Water Management & Utilities",
-      description:
-        "Laying underground stormwater pipelines, run-off channels, cross-drainage culverts, and containment systems to secure the site against water.",
-      deliverables: [
-        "Stormwater drainage pipeline",
-        "Reinforced box culverts",
-        "Utility containment conduits",
-      ],
-      image:
-        "https://images.unsplash.com/photo-1581094288338-2314dddb7ecc?auto=format&fit=crop&w=800&q=80",
-    },
-    {
-      num: "07",
-      name: "Roads",
-      title: "Road Base & Asphalt Paving",
-      description:
-        "Laying WMM/GSB stone aggregates, primary bituminous coating, and finishing concrete or hot-mix asphalt overlays for internal and main roads.",
-      deliverables: [
-        "Crushed aggregate base lay",
-        "Asphalt/concrete pavement",
-        "Curb stones & gutters",
-      ],
-      image:
-        "https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?auto=format&fit=crop&w=800&q=80",
-    },
-    {
-      num: "08",
-      name: "Finishing",
-      title: "Trimix Flooring & Finishing",
-      description:
-        "Executing specialized Vacuum Dewatered Flooring (Trimix), external building plastering, joint seals, and traffic layout markings.",
-      deliverables: [
-        "Trimix floor finish",
-        "External plastering & sealant",
-        "Road signage & layouts",
-      ],
-      image:
-        "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=800&q=80",
-    },
-    {
-      num: "09",
-      name: "Handover",
-      title: "Inspections & Client Handover",
-      description:
-        "Conducting rigorous material strength certifications, structural compliance reviews, safety clearing, and final client key handover.",
-      deliverables: [
-        "Quality test record sign-off",
-        "Client walkthrough review",
-        "As-built drawing handover",
-      ],
-      image:
-        "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80",
-    },
-  ];
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -324,12 +196,12 @@ const ServicesProcess = () => {
                 {/* Collapsed content container */}
                 {isOpen && (
                   <div className="px-6 pb-6 pt-2 border-t border-slate-100 flex flex-col gap-6">
-                    {/* Visual Photo */}
-                    <div className="w-full h-48 overflow-hidden bg-slate-900">
-                      <img
+                    <div className="w-full h-48 overflow-hidden bg-slate-900 relative">
+                      <Image
                         src={phase.image}
                         alt={phase.title}
-                        className="w-full h-full object-cover"
+                        fill
+                        className="object-cover transition-all duration-700 hover:scale-105"
                       />
                     </div>
 

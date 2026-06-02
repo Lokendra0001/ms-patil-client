@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
-import Button from "@/component/common/Button";
+import Button from "@/component/CTA/Button";
 
 const ContactForm = () => {
   const searchParams = useSearchParams();

@@ -3,9 +3,12 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import Hero from "@/component/common/Hero";
-import ProjectCard from "@/component/common/ProjectCard";
+import Hero from "@/component/common/hero/Hero";
+import ProjectCard from "@/component/common/project/ProjectCard";
 import { projectsData } from "@/data/projects";
+import Lightbox from "yet-another-react-lightbox";
+import Zoom from "yet-another-react-lightbox/plugins/zoom";
+import "yet-another-react-lightbox/styles.css";
 
 const ProjectDetailsView = ({ id }) => {
   const [activeImageIndex, setActiveImageIndex] = useState(null);
@@ -30,6 +33,9 @@ const ProjectDetailsView = ({ id }) => {
     );
   }
 
+  // Map gallery images to format compatible with yet-another-react-lightbox
+  const slides = project.gallery.map((imgUrl) => ({ src: imgUrl }));
+
   // Get other projects to display at the bottom (exclude current project)
   const otherProjects = projectsData
     .filter((p) => p.id !== project.id)
@@ -53,7 +59,7 @@ const ProjectDetailsView = ({ id }) => {
 
       <section className="w-full py-20 lg:py-24 bg-white relative overflow-hidden">
         {/* Blueprint grid watermark */}
-        <div className="absolute inset-0 opacity-[0.012] pointer-events-none select-none">
+        <div className="absolute inset-0 opacity-[0.012] pointer-events-none select-text">
           <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
             <line
               x1="20%"
@@ -82,7 +88,7 @@ const ProjectDetailsView = ({ id }) => {
               <div className="mb-6 flex items-center">
                 <Link
                   href="/projects"
-                  className="inline-flex items-center gap-2 text-xs font-black tracking-widest text-primary-light-hover hover:text-primary transition-colors uppercase select-none group"
+                  className="inline-flex items-center gap-2 text-xs font-black tracking-widest text-primary-light-hover hover:text-primary transition-colors uppercase select-text group"
                 >
                   <svg
                     className="w-4 h-4 transform group-hover:-translate-x-1 transition-transform text-primary-light"
@@ -102,7 +108,7 @@ const ProjectDetailsView = ({ id }) => {
               </div>
 
               {/* Featured Project Image */}
-              <div className="relative w-full aspect-[16/10] overflow-hidden bg-slate-50 border border-slate-200/50 mb-10 select-none">
+              <div className="relative w-full aspect-[16/10] overflow-hidden bg-slate-50 border border-slate-200/50 mb-10 select-text">
                 <Image
                   src={project.image}
                   alt={project.title}
@@ -130,7 +136,7 @@ const ProjectDetailsView = ({ id }) => {
               <h4 className="text-lg font-extrabold text-primary mb-5 tracking-tight">
                 Key Operations & Accomplishments
               </h4>
-              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4 mb-10 select-none">
+              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4 mb-10 select-text">
                 {project.highlights.map((point, index) => (
                   <li
                     key={index}
@@ -170,7 +176,7 @@ const ProjectDetailsView = ({ id }) => {
             {/* RIGHT COLUMN: Info cards & Lead generation sidebar */}
             <div className="lg:col-span-4 flex flex-col">
               {/* Card 1: Project Information Box */}
-              <div className="border border-slate-200/60 p-6 bg-slate-50 mb-8 rounded-none select-none">
+              <div className="border border-slate-200/60 p-6 bg-slate-50 mb-8 rounded-none select-text">
                 <h4 className="text-sm font-extrabold text-primary uppercase tracking-wider mb-6 pb-2.5 border-b border-slate-200/60">
                   Information About the Project
                 </h4>
@@ -228,7 +234,7 @@ const ProjectDetailsView = ({ id }) => {
               </div>
 
               {/* Card 2: Contact Callout Box */}
-              <div className="bg-slate-900 text-white p-6 rounded-none relative overflow-hidden select-none shadow-md">
+              <div className="bg-slate-900 text-white p-6 rounded-none relative overflow-hidden select-text shadow-md">
                 <h4 className="text-base font-extrabold text-white mb-3 leading-tight tracking-tight">
                   Are You Going to Start a new Project?
                 </h4>
@@ -311,7 +317,7 @@ const ProjectDetailsView = ({ id }) => {
           </div>
 
           {/* Interactive Project Gallery Section */}
-          <div className="mt-20 lg:mt-24 border-t border-slate-100 pt-16 select-none">
+          <div className="mt-20 lg:mt-24 border-t border-slate-100 pt-16 select-text">
             <h4 className="text-lg font-extrabold text-primary mb-8 tracking-tight text-center">
               Project Photo Gallery
             </h4>
@@ -321,18 +327,30 @@ const ProjectDetailsView = ({ id }) => {
                 <div
                   key={index}
                   onClick={() => setActiveImageIndex(index)}
-                  className="group relative aspect-video sm:aspect-square overflow-hidden bg-slate-50 border border-slate-200/50 cursor-zoom-in"
+                  className="group relative aspect-video sm:aspect-square overflow-hidden bg-slate-50 border border-slate-200/50 cursor-pointer"
                 >
                   <Image
                     src={imgUrl}
                     alt={`Project Gallery Image ${index + 1}`}
                     fill
-                    className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                    className="object-cover filter grayscale-[10%] group-hover:grayscale-0 transition-all duration-700 ease-out group-hover:scale-105"
                   />
                   {/* Hover expansion overlay */}
-                  <div className="absolute inset-0 bg-slate-950/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                    <div className="w-8 h-8 rounded-full border-2 border-white flex items-center justify-center text-white text-lg font-normal">
-                      +
+                  <div className="absolute inset-0 bg-slate-950/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-10">
+                    <div className="w-12 h-12 border border-white/25 rounded-full flex items-center justify-center scale-90 group-hover:scale-100 transition-all duration-300 bg-slate-950/20 backdrop-blur-xs">
+                      <svg
+                        className="w-5 h-5 text-primary-light"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2.5"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                        />
+                      </svg>
                     </div>
                   </div>
                 </div>
@@ -345,7 +363,7 @@ const ProjectDetailsView = ({ id }) => {
       {/* OTHER PROJECTS SHOWCASE SECTION */}
       <section className="w-full bg-white py-20 lg:py-24 border-t border-slate-200/50">
         <div className="max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 relative z-10">
-          <div className="flex flex-col items-center text-center mb-12 select-none">
+          <div className="flex flex-col items-center text-center mb-12 select-text">
             <span className="text-[10px] sm:text-xs font-black tracking-[0.25em] text-primary-light uppercase mb-2">
               Portfolio
             </span>
@@ -364,78 +382,14 @@ const ProjectDetailsView = ({ id }) => {
       </section>
 
       {/* FULLSCREEN LIGHTBOX MODAL */}
-      {activeImageIndex !== null && (
-        <div className="fixed inset-0 bg-slate-950/95 z-50 flex flex-col justify-center items-center p-4 select-none">
-          {/* Close button */}
-          <button
-            onClick={() => setActiveImageIndex(null)}
-            className="absolute top-6 right-6 text-white hover:text-primary-light focus:outline-none p-2 cursor-pointer z-50"
-            aria-label="Close Lightbox"
-          >
-            <svg
-              className="w-8 h-8"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2.5}
-                d="M6 18L18 6M6 6l12 12"
-              />
-            </svg>
-          </button>
-
-          {/* Featured Image */}
-          <div className="relative w-full max-w-4xl aspect-[16/10] sm:aspect-[16/9] flex justify-center items-center">
-            <Image
-              src={project.gallery[activeImageIndex]}
-              alt={`Fullscreen Gallery View ${activeImageIndex + 1}`}
-              fill
-              className="object-contain"
-              priority
-            />
-          </div>
-
-          {/* Navigation Controls */}
-          <div className="absolute bottom-6 flex items-center gap-6 text-white text-xs font-bold uppercase tracking-wider">
-            <button
-              onClick={() => {
-                if (activeImageIndex > 0) {
-                  setActiveImageIndex(activeImageIndex - 1);
-                }
-              }}
-              disabled={activeImageIndex === 0}
-              className={`px-3 py-1.5 transition-colors border select-none ${
-                activeImageIndex === 0
-                  ? "text-slate-600 border-slate-800/50 cursor-not-allowed"
-                  : "text-white hover:text-primary-light hover:border-primary-light border-white/20 cursor-pointer"
-              }`}
-            >
-              ← Prev
-            </button>
-            <span className="text-slate-400 font-mono">
-              {activeImageIndex + 1} / {project.gallery.length}
-            </span>
-            <button
-              onClick={() => {
-                if (activeImageIndex < project.gallery.length - 1) {
-                  setActiveImageIndex(activeImageIndex + 1);
-                }
-              }}
-              disabled={activeImageIndex === project.gallery.length - 1}
-              className={`px-3 py-1.5 transition-colors border select-none ${
-                activeImageIndex === project.gallery.length - 1
-                  ? "text-slate-600 border-slate-800/50 cursor-not-allowed"
-                  : "text-white hover:text-primary-light hover:border-primary-light border-white/20 cursor-pointer"
-              }`}
-            >
-              Next →
-            </button>
-          </div>
-        </div>
-      )}
+      <Lightbox
+        open={activeImageIndex !== null}
+        close={() => setActiveImageIndex(null)}
+        index={activeImageIndex !== null ? activeImageIndex : 0}
+        slides={slides}
+        plugins={[Zoom]}
+        zoom={{ scrollToZoom: true, maxZoomPixelRatio: 4 }}
+      />
     </main>
   );
 };
