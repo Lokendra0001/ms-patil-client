@@ -1,8 +1,7 @@
-
-import img1 from "../../../public/assets/home/about/left-img.png";
-import img2 from "../../../public/assets/home/about/first-img.png";
-import img3 from "../../../public/assets/home/about/main-img.png";
-import img4 from "../../../public/assets/home/projects/rm.png";
+import img1 from "../../../public/assets/home/about/left-img.webp";
+import img2 from "../../../public/assets/home/about/first-img.webp";
+import img3 from "../../../public/assets/home/about/main-img.webp";
+import img4 from "../../../public/assets/home/projects/rm.webp";
 
 export const images = [
   {

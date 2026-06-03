@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import Link from "next/link";
+import Button from "@/component/CTA/Button";
 import ProjectCard from "@/component/common/project/ProjectCard";
 import { projectsData } from "@/data/projects";
 import Heading from "@/component/common/Heading";
@@ -74,12 +74,9 @@ const RelatedProjects = ({ slug }) => {
 
         {/* View All Projects Button */}
         <div className="flex justify-center mt-12 sm:mt-16">
-          <Link
-            href="/projects"
-            className="inline-flex items-center justify-center px-8 py-4 border border-gray-400 hover:border-transparent text-text-primary  hover:bg-primary-light hover:text-text-white  font-bold tracking-widest text-xs uppercase transition-all duration-300 rounded"
-          >
+          <Button href="/projects" variant="header" size="md">
             View All Projects
-          </Link>
+          </Button>
         </div>
       </div>
     </section>

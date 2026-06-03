@@ -5,7 +5,6 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import Header from "../layout/Header";
 import Footer from "../layout/Footer";
-import QueryProvider from "@/providers/QueryProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -21,7 +20,7 @@ export const poppins = Poppins({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
   variable: "--font-poppins",
-  });
+});
 
 export const metadata = {
   title: "Create Next App",
@@ -35,11 +34,9 @@ export default function RootLayout({ children }) {
       className={`${geistSans.variable} ${geistMono.variable} ${poppins.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        <QueryProvider>
-          <Header />
-          {children}
-          <Footer />
-        </QueryProvider>
+        <Header />
+        {children}
+        <Footer />
       </body>
     </html>
   );

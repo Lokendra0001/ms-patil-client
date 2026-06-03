@@ -4,7 +4,7 @@ import React from "react";
 import Button from "@/component/CTA/Button";
 import ProjectCard from "@/component/common/project/ProjectCard";
 import Heading from "@/component/common/Heading";
-import { projects } from "../../data/home/featuredProjects";
+import { projectsData as projects } from "../../data/projects";
 
 const FeaturedProjects = () => {
   return (

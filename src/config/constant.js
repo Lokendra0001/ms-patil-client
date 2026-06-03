@@ -16,31 +16,39 @@ export const API = {
 
 export const META = {
   HOME: {
-    title: "M/S Patil Associates | Premium Construction & Engineering Services",
-    description: "M/S Patil Associates (Ms Patil Construction) specializes in delivering high-quality residential, commercial, and industrial construction projects with precision and innovation.",
+    title: "M/S Chetankumar Bhagwan Suryawanshi | Ms Patil Construction",
+    description:
+      "M/S Chetankumar Bhagwan Suryawanshi (formerly Ms Patil Construction) is a premier PWD Class IV Government Contractor based in Dhule, Maharashtra, delivering highway, industrial, and civil construction services.",
   },
   ABOUT: {
-    title: "About Us | M/S Patil Associates",
-    description: "Meet the team of quality and innovation architects at M/S Patil Associates. We deliver robust construction services backed by safety and excellence.",
+    title: "About Us | M/S Chetankumar Bhagwan Suryawanshi | Ms Patil Construction",
+    description:
+      "Learn more about M/S Chetankumar Bhagwan Suryawanshi (Ms Patil Construction). We are a leading civil infrastructure and government contractor with 20+ years of trust.",
   },
   PROJECT: {
-    title: "Our Construction Projects | M/S Patil Associates",
-    description: "Explore our portfolio of completed and ongoing residential, commercial, and industrial construction projects showcasing engineering excellence.",
+    title: "Our Construction Projects | M/S Chetankumar Bhagwan Suryawanshi",
+    description:
+      "Explore our portfolio of industrial structures, PWD highway bypass corridors, railway operations, and institutional constructions executed by M/S Chetankumar Bhagwan Suryawanshi.",
   },
   SERVICE: {
-    title: "Construction & Engineering Services | M/S Patil Associates",
-    description: "M/S Patil Associates offers comprehensive construction, project management, and structural engineering services tailored to your vision.",
+    title: "Civil Engineering & Construction Services | M/S Chetankumar Bhagwan Suryawanshi",
+    description:
+      "Comprehensive construction and engineering services including industrial structures, highway corridors, railway operations, and urban municipal utility services.",
   },
   BLOG: {
-    title: "Construction Blog & Industry Insights | M/S Patil Associates",
-    description: "Stay updated with the latest construction trends, project highlights, and engineering news from M/S Patil Associates.",
+    title: "Construction Insights & Articles | M/S Chetankumar Bhagwan Suryawanshi",
+    description:
+      "Stay updated with the latest construction trends, industry insights, and engineering updates from M/S Chetankumar Bhagwan Suryawanshi (Ms Patil Construction).",
   },
   CONTACT: {
-    title: "Contact Our Construction Team | M/S Patil Associates",
-    description: "Get in touch with M/S Patil Associates to discuss your residential or commercial building project. Reach out today for consultations.",
+    title: "Contact Us | M/S Chetankumar Bhagwan Suryawanshi",
+    description:
+      "Get in touch with our corporate office or project division. Let's discuss your next industrial, civil infrastructure, or road construction project.",
   },
   PLANT: {
-    title: "Machinery, Equipment & Batching Plants | M/S Patil Associates",
-    description: "Discover the state-of-the-art machinery, batching plants, and equipment inventory enabling precision engineering at M/S Patil Associates.",
+    title: "Machinery, Equipment & Batching Plants | M/S Chetankumar Bhagwan Suryawanshi",
+    description:
+      "Discover our state-of-the-art machinery, batching plants, and equipment inventory enabling precision engineering at M/S Chetankumar Bhagwan Suryawanshi.",
   },
 };
+

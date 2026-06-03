@@ -1,6 +1,6 @@
-import service1 from "../../../public/assets/home/hero/banner-2.png";
-import service2 from "../../../public/assets/services/hero/service2.png";
-import service4 from "../../../public/assets/home/deliver/highway.png";
+import service1 from "../../../public/assets/home/hero/banner-2.webp";
+import service2 from "../../../public/assets/services/hero/service2.webp";
+import service4 from "../../../public/assets/home/deliver/highway.webp";
 
 export const categories = [
   {

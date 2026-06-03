@@ -1,6 +1,6 @@
-import highway from "../../../public/assets/home/deliver/highway.png";
-import industrial from "../../../public/assets/home/hero/banner-2.png";
-import concrete from "../../../public/assets/home/deliver/concrete.png";
+import highway from "../../../public/assets/home/deliver/highway.webp";
+import industrial from "../../../public/assets/home/hero/banner-2.webp";
+import concrete from "../../../public/assets/home/deliver/concrete.webp";
 
 export const primaryServices = [
   {

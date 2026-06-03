@@ -74,24 +74,27 @@ const Hero = ({ tagline, title, bgImage, breadcrumbs = [] }) => {
         {/* Breadcrumbs */}
         {breadcrumbs.length > 0 && (
           <nav
+            aria-label="Breadcrumb"
             className="flex items-center gap-2 text-xs font-bold tracking-wide text-slate-400 select-text animate-fade-in-up"
             style={{ animationDelay: "200ms" }}
           >
-            {breadcrumbs.map((crumb, index) => (
-              <React.Fragment key={index}>
-                {index > 0 && <span className="text-slate-600">/</span>}
-                {crumb.href ? (
-                  <Link
-                    href={crumb.href}
-                    className="hover:text-primary-light transition-colors"
-                  >
-                    {crumb.name}
-                  </Link>
-                ) : (
-                  <span className="text-primary-light">{crumb.name}</span>
-                )}
-              </React.Fragment>
-            ))}
+            <ol className="flex items-center gap-2 list-none p-0 m-0">
+              {breadcrumbs.map((crumb, index) => (
+                <li key={index} className="flex items-center gap-2">
+                  {index > 0 && <span className="text-slate-600" aria-hidden="true">/</span>}
+                  {crumb.href ? (
+                    <Link
+                      href={crumb.href}
+                      className="hover:text-primary-light transition-colors"
+                    >
+                      {crumb.name}
+                    </Link>
+                  ) : (
+                    <span className="text-primary-light" aria-current="page">{crumb.name}</span>
+                  )}
+                </li>
+              ))}
+            </ol>
           </nav>
         )}
       </div>

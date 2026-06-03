@@ -71,7 +71,7 @@ const AboutTimeline = () => {
                     src={milestone.image}
                     alt={milestone.title}
                     fill
-                    className={`object-cover transition-transform duration-[10000ms] ease-out ${
+                    className={`object-left object-cover transition-transform duration-[10000ms] ease-out ${
                       isSelected ? "scale-105" : "scale-100"
                     }`}
                     priority={idx === 3}

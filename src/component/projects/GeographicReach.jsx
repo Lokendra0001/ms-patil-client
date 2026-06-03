@@ -76,7 +76,7 @@ const GeographicReach = () => {
               {/* Real India Map Outline Silhouette with Absolute hotspots inside the same wrapper */}
               <div className="relative w-[85%] h-[85%] select-text">
                 <img
-                  src="/india_map.svg"
+                  src="/india_map.webp"
                   alt="Map of India outline"
                   className="w-full h-full object-contain opacity-[0.08] grayscale"
                 />

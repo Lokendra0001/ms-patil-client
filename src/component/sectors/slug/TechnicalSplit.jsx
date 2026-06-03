@@ -10,7 +10,6 @@ const TechnicalSplit = ({ data }) => {
     <section className="py-20 sm:py-24 bg-white border-t border-border-secondary select-text">
       <div className="max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-          
           {/* Left Column: Scope & Punchlines */}
           <div className="lg:col-span-7 space-y-8">
             <Heading
@@ -28,7 +27,7 @@ const TechnicalSplit = ({ data }) => {
                   <span className="text-xs sm:text-sm font-black text-primary-light-hover tracking-wider select-text shrink-0 bg-slate-50 w-8 h-8 flex items-center justify-center border border-border-secondary rounded-none">
                     0{idx + 1}
                   </span>
-                  
+
                   {/* Punchline text */}
                   <p className="text-xs sm:text-sm text-text-gray tracking-wider leading-relaxed mt-1">
                     {punchline}
@@ -83,19 +82,9 @@ const TechnicalSplit = ({ data }) => {
                     {data.scope.reference.project}
                   </p>
                 </div>
-
-                {/* Verification Stamp */}
-                <div className="pt-2">
-                  <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-emerald-500/[0.04] border border-emerald-500/20 text-emerald-600 text-[10px] font-bold uppercase tracking-wider select-text">
-                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-ping" />
-                    <span>{data.scope.reference.verification}</span>
-                  </div>
-                </div>
               </div>
-
             </div>
           </div>
-
         </div>
       </div>
     </section>

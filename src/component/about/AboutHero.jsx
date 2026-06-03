@@ -2,7 +2,7 @@
 
 import React from "react";
 import Hero from "@/component/common/hero/Hero";
-import banner from "../../../public/assets/about/hero/banner.png";
+import banner from "../../../public/assets/about/hero/banner.webp";
 
 const AboutHero = () => {
   const crumbs = [{ name: "Home", href: "/" }, { name: "About Us" }];

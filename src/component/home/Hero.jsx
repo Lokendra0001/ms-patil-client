@@ -42,7 +42,7 @@ const Hero = () => {
             >
               <Image
                 src={slide.image}
-                alt="slider-images"
+                alt={`${slide.titleText} ${slide.titleHighlight} - M/S Chetankumar Bhagwan Suryawanshi`}
                 priority
                 fill
                 className={`object-cover transition-transform duration-[6000ms] ease-out ${

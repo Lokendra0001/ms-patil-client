@@ -67,25 +67,54 @@ const ContactForm = () => {
     return Object.keys(errors).length === 0;
   };
 
-  const handleFormSubmit = (e) => {
+  const handleFormSubmit = async (e) => {
     e.preventDefault();
     if (!validateForm()) return;
 
     setIsSubmitting(true);
 
-    // Mock API Call delay
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setSubmitSuccess(true);
-      setFormData({
-        name: "",
-        email: "",
-        phone: "",
-        inquiryType: "general",
-        subject: "",
-        message: "",
+    try {
+      const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY;
+
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: accessKey,
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          inquiry_type: formData.inquiryType,
+          subject: formData.subject,
+          message: formData.message,
+          from_name: "Ms Patil Construction - Website",
+        }),
       });
-    }, 1500);
+
+      const result = await response.json();
+
+      if (result.success) {
+        setSubmitSuccess(true);
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          inquiryType: "general",
+          subject: "",
+          message: "",
+        });
+      } else {
+        alert(result.message || "Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      console.error("Error submitting to Web3Forms:", error);
+      alert("Failed to send message. Please check your network and try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const toggleFaq = (index) => {

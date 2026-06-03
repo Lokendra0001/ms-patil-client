@@ -1,10 +1,10 @@
 import React from "react";
-import civil from "../../../public/assets/home/hero/banner-2.png";
-import industrial from "../../../public/assets/services/hero/service2.png";
-import highway from "../../../public/assets/home/deliver/highway.png";
-import railway from "../../../public/assets/home/hero/banner-3.png";
-import brk from "../../../public/assets/services/our-assets/brk.svg";
-import drainage from "../../../public/assets/services/service-catalogue/drainage.png";
+import civil from "../../../public/assets/home/hero/banner-2.webp";
+import industrial from "../../../public/assets/services/hero/service2.webp";
+import highway from "../../../public/assets/home/deliver/highway.webp";
+import railway from "../../../public/assets/home/hero/banner-3.webp";
+import brk from "../../../public/assets/services/our-assets/brk.webp";
+import drainage from "../../../public/assets/services/service-catalogue/drainage.webp";
 
 export const catalogue = [
   {

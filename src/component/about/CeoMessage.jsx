@@ -2,7 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
-import profilePic from "../../../public/assets/about/ceo-message/ceo-profile1.jpeg";
+import profilePic from "../../../public/assets/about/ceo-message/ceo-profile1.webp";
 
 import { ceoMessage } from "../../data/about/ceo";
 
@@ -17,7 +17,7 @@ const CeoMessage = () => {
         </span>
       ) : (
         part
-      )
+      ),
     );
   };
 

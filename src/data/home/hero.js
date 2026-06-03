@@ -1,6 +1,6 @@
-import banner1 from "../../../public/assets/home/hero/banner-1.png";
-import banner2 from "../../../public/assets/home/hero/banner-2.png";
-import banner3 from "../../../public/assets/home/hero/banner-3.png";
+import banner1 from "../../../public/assets/home/hero/banner-1.webp";
+import banner2 from "../../../public/assets/home/hero/banner-2.webp";
+import banner3 from "../../../public/assets/home/hero/banner-3.webp";
 
 export const slides = [
   {

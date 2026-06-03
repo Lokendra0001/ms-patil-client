@@ -2,7 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
-import ceo from "../../../public/assets/about/ceo-message/ceo-profile1.jpeg";
+import ceo from "../../../public/assets/about/ceo-message/ceo-profile1.webp";
 
 import { credentials } from "../../data/about/leadership";
 

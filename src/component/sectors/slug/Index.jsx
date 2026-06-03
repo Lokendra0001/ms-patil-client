@@ -9,9 +9,9 @@ import AssetStrip from "./AssetStrip";
 import ServiceCTA from "@/component/services/slug/ServiceCTA";
 import { sectorsData } from "@/data/sectors";
 
-const Index = () => {
+const Index = ({ slug: propSlug }) => {
   const params = useParams();
-  const slug = params?.slug;
+  const slug = propSlug || params?.slug;
 
   const sector = sectorsData[slug];
 

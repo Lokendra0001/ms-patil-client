@@ -1,12 +1,12 @@
-import mobilization from "../../../public/assets/services/service-process/mobilization.png";
-import survey from "../../../public/assets/services/service-process/survey.jpg";
-import earthwork from "../../../public/assets/services/service-process/earthwork.svg";
-import foundation from "../../../public/assets/home/hero/banner-2.png";
-import structure from "../../../public/assets/home/gallary-grid/img20.svg";
-import drainage from "../../../public/assets/services/service-catalogue/drainage.png";
-import road from "../../../public/assets/home/deliver/highway.png";
-import finishing from "../../../public/assets/services/service-process/finishing.png";
-import handover from "../../../public/assets/services/service-process/handover.jpg";
+import mobilization from "../../../public/assets/services/service-process/mobilization.webp";
+import survey from "../../../public/assets/services/service-process/survey.webp";
+import earthwork from "../../../public/assets/services/service-process/earthwork.webp";
+import foundation from "../../../public/assets/home/hero/banner-2.webp";
+import structure from "../../../public/assets/home/gallary-grid/img20.webp";
+import drainage from "../../../public/assets/services/service-catalogue/drainage.webp";
+import road from "../../../public/assets/home/deliver/highway.webp";
+import finishing from "../../../public/assets/services/service-process/finishing.webp";
+import handover from "../../../public/assets/services/service-process/handover.webp";
 
 export const phases = [
   {

@@ -1,10 +1,10 @@
-import rmc from "../../../public/assets/home/hero/banner-1.png";
-import crusher from "../../../public/assets/home/deliver/concrete.png";
-import brks from "../../../public/assets/services/our-assets/brk.svg";
-import sand from "../../../public/assets/services/our-assets/sand.png";
-import hitachi from "../../../public/assets/services/our-assets/hitachi.png";
-import trucks from "../../../public/assets/services/our-assets/trucks.png";
-import roller1 from "../../../public/assets/services/our-assets/roller.png";
+import rmc from "../../../public/assets/home/hero/banner-1.webp";
+import crusher from "../../../public/assets/home/deliver/concrete.webp";
+import brks from "../../../public/assets/services/our-assets/brk.webp";
+import sand from "../../../public/assets/services/our-assets/sand.webp";
+import hitachi from "../../../public/assets/services/our-assets/hitachi.webp";
+import trucks from "../../../public/assets/services/our-assets/trucks.webp";
+import roller1 from "../../../public/assets/services/our-assets/roller.webp";
 
 export const plants = [
   {

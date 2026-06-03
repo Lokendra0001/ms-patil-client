@@ -1,4 +1,4 @@
-import railwayImage from "../../../public/assets/home/hero/banner-3.png";
+import railwayImage from "../../../public/assets/home/hero/banner-3.webp";
 
 export const railway = railwayImage;
 

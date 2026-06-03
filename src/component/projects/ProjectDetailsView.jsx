@@ -34,7 +34,12 @@ const ProjectDetailsView = ({ id }) => {
   }
 
   // Map gallery images to format compatible with yet-another-react-lightbox
-  const slides = project.gallery.map((imgUrl) => ({ src: imgUrl }));
+  const slides = project.gallery.map((imgUrl) => ({
+    src:
+      typeof imgUrl === "object" && imgUrl !== null && imgUrl.src
+        ? imgUrl.src
+        : imgUrl,
+  }));
 
   // Get other projects to display at the bottom (exclude current project)
   const otherProjects = projectsData

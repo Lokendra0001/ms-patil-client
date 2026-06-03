@@ -1,218 +1,611 @@
+import rmChemical from "../../public/assets/project/rm-chemical/rm-chemical.webp";
+import rmChemical1 from "../../public/assets/project/rm-chemical/rm-chemical1.webp";
+import rmChemical2 from "../../public/assets/project/rm-chemical/rm-chemical2.webp";
+import rmChemical3 from "../../public/assets/project/rm-chemical/rm-chemical3.webp";
+
+// Arihant Assets
+import arihant1 from "../../public/assets/project/arihant-detergent/img1.webp";
+import arihant2 from "../../public/assets/project/arihant-detergent/img2.webp";
+
+// Indian Phospate Assets
+import indPhos1 from "../../public/assets/project/indian-phospate/img1.webp";
+import indPhos2 from "../../public/assets/project/indian-phospate/img2.webp";
+import indPhos3 from "../../public/assets/project/indian-phospate/img3.webp";
+
+// Indo Assets
+import indo1 from "../../public/assets/project/indo/img1.webp";
+import indo2 from "../../public/assets/project/indo/img2.webp";
+import indo3 from "../../public/assets/project/indo/im3.webp";
+
+import rm1 from "../../public/assets/project/rm-phosphate/img1.webp";
+import rm2 from "../../public/assets/home/gallary-grid/img14.webp";
+
+// RMPCL
+import rmpcl1 from "../../public/assets/project/rmpcl/img1.webp";
+import rmpcl2 from "../../public/assets/project/rmpcl/img2.webp";
+
+import railway1 from "../../public/assets/home/gallary-grid/img16.webp";
+import railway2 from "../../public/assets/home/gallary-grid/img17.webp";
+
+import hscc1 from "../../public/assets/project/hccc/img1.webp";
+import hscc2 from "../../public/assets/project/hccc/img2.webp";
+import hscc3 from "../../public/assets/project/hccc/img3.avif";
+
+import ipg1 from "../../public/assets/project/ipg/img1.webp";
+import ipg2 from "../../public/assets/project/ipg/img2.webp";
+
+// RMPCL Feed
+import rmpclPlant1 from "../../public/assets/project/rmpcl-plant/img1.webp";
+import rmpclPlant2 from "../../public/assets/project/rmpcl-plant/img2.webp";
+
+// RMPCL
+import semantic1 from "../../public/assets/project/semantic/img1.webp";
+import semantic2 from "../../public/assets/project/semantic/img2.webp";
+import semantic3 from "../../public/assets/project/semantic/img3.webp";
+
+import sbd1 from "../../public/assets/project/sbd/img4.webp";
+import sbd2 from "../../public/assets/project/sbd/img2.webp";
+import sbd3 from "../../public/assets/project/sbd/img3.webp";
+import sbd4 from "../../public/assets/project/sbd/img1.webp";
+
+// Podar
+import podar1 from "../../public/assets/project/podar/img1.webp";
+import podar2 from "../../public/assets/home/gallary-grid/img17.webp";
+import podar3 from "../../public/assets/project/podar/img3.webp";
+
+import mvpk1 from "../../public/assets/project/mpkv/img1.webp";
+import mvpk2 from "../../public/assets/project/mpkv/img2.webp";
+import mvpk3 from "../../public/assets/project/mpkv/img3.webp";
+import mvpk4 from "../../public/assets/project/mpkv/img4.webp";
+
+import dhule1 from "../../public/assets/project/dhule-munciple/img1.webp";
+import dhule2 from "../../public/assets/project/dhule-munciple/im2.webp";
+import dhule3 from "../../public/assets/project/dhule-munciple/img3.webp";
+
+import irrigation1 from "../../public/assets/project/irrigation/img1.webp";
+import irrigation2 from "../../public/assets/project/irrigation/img2.webp";
+import irrigation3 from "../../public/assets/home/hero/banner-1.webp";
+
+import supply1 from "../../public/assets/project/water-supply/img1.webp";
+import supply2 from "../../public/assets/project/water-supply/img2.webp";
+import supply3 from "../../public/assets/project/water-supply/img3.webp";
+
+import electricity1 from "../../public/assets/project/electricity/img1.webp";
+import electricity2 from "../../public/assets/project/electricity/img2.webp";
+import electricity3 from "../../public/assets/project/electricity/img3.webp";
+
+import gavpl1 from "../../public/assets/project/gavpl/img1.webp";
+import gavpl2 from "../../public/assets/project/gavpl/img2.webp";
+import gavpl3 from "../../public/assets/project/gavpl/img3.webp";
+
+import residental1 from "../../public/assets/project/residental/img1.webp";
+import residental2 from "../../public/assets/project/residental/img2.webp";
+import residental3 from "../../public/assets/project/residental/img3.webp";
+
+import mutli1 from "../../public/assets/project/multi-storey/img1.webp";
+import mutli2 from "../../public/assets/project/multi-storey/img2.webp";
+import mutli3 from "../../public/assets/services/hero/service2.webp";
+
+import manjoot1 from "../../public/assets/project/manjoot/img1.webp";
+import manjoot2 from "../../public/assets/home/hero/banner-2.webp";
+
+import dayal1 from "../../public/assets/project/ram-dayal/img1.webp";
+import dayal2 from "../../public/assets/project/ram-dayal/img2.webp";
+
 export const projectsData = [
+  // ==========================================
+  // 8.1 INDUSTRIAL & CHEMICAL SECTOR PROJECTS
+  // ==========================================
   {
     id: "1",
-    title: "Automated RMC Plant Setup",
-    client: "M/S RMC Aggregates Division",
-    location: "Dhule, Maharashtra",
+    title: "R M Chemical Pvt. Ltd. – Industrial Plant Works",
+    client: "RM Chemical Pvt. Ltd.",
+    location: "MIDC, Dhule",
     category: "Industrial",
-    technology: "Automated Batching Systems",
-    scope: "Heavy Foundation Piling & Site Grading",
-    date: "January 15, 2026",
-    image: "https://images.unsplash.com/photo-1581094288338-2314dddb7ecc?auto=format&fit=crop&w=1200&q=80",
-    description: "Successfully executed the comprehensive civil works and mechanical foundation layouts for a fully automated Ready-Mix Concrete (RMC) batching plant. The project required deep piling, precision grading, and high-strength concrete framing to support heavy vibrational processing equipment.",
+    technology: "RCC Structural Systems",
+    scope:
+      "Civil construction, RCC structural works, boundary wall, concrete flooring, excavation and backfill, industrial shed foundation",
+    date: "2026",
+    image: rmChemical,
+    description:
+      "Executed comprehensive industrial civil engineering and structural framework development for the RM Chemical production facility. The project systematically covered deep terrain excavation, foundation structures, structural columns casting, layout flooring, and robust security perimeter fencing.",
     highlights: [
-      "Precision civil foundation grading",
-      "Vibration-isolated concrete machinery bases",
-      "High-durability retaining walls and ballast layouts",
-      "Strict compliance with regional PWD codes"
+      "Heavy-duty RCC industrial shed foundation structural pedestals",
+      "Expansive specialized concrete factory interior flatwork flooring",
+      "Engineered earthwork excavation and structural backfill compaction",
+      "Perimeter masonry and reinforced concrete campus boundary walls",
     ],
-    gallery: [
-      "https://images.unsplash.com/photo-1581094288338-2314dddb7ecc?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=600&q=80"
-    ]
+    gallery: [rmChemical1, rmChemical2, rmChemical3],
   },
   {
     id: "2",
-    title: "Logistic Transit Warehouses",
-    client: "Varan Logistics Limited",
-    location: "Jalgaon, Maharashtra",
+    title: "RMJ Veritable Pvt. Ltd. – Industrial Infrastructure",
+    client: "RMJ Veritable Pvt. Ltd.",
+    location: "MIDC, Dhule",
     category: "Industrial",
-    technology: "Pre-Engineered Metal Buildings",
-    scope: "Structural Steel Frame & Bulk Grading",
-    date: "November 10, 2025",
-    image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1200&q=80",
-    description: "Designed and built the structural civil frame and grade slab elements for a multi-unit transit warehouse corridor. The operations included bulk earthmoving, subgrade ballast preparation, structural steel erection, and perimeter stormwater drainage networks.",
+    technology: "RCC & Drainage Systems",
+    scope:
+      "Industrial civil works, RCC structure, excavation, backfilling, drainage works, paver block laying",
+    date: "2026",
+    image: indo1,
+    description:
+      "Delivered full-scale industrial site mobilization, grading, and concrete framing development. Work involved robust utility alignment alongside specialized surface drainage conduits and interlocked high-strength paver installations for industrial transport transit.",
     highlights: [
-      "Bulk excavation and earthworks leveling",
-      "Reinforced jointless floor slab casting",
-      "Pre-engineered steel support structures",
-      "Optimized stormwater runoff networks"
+      "Rigid RCC structural elements and load-bearing framing",
+      "Integrated chemical facility stormwater drainage layout networks",
+      "Heavy-traffic interlocking paver surface courtyard pathways",
+      "Precision foundation grading, cutting, and subgrade backfilling",
     ],
-    gallery: [
-      "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1581094288338-2314dddb7ecc?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=600&q=80"
-    ]
+    gallery: [indo1, indo2, indo3],
   },
   {
     id: "3",
-    title: "Four-Lane Highway Bypass",
-    client: "Public Works Department (PWD)",
-    location: "Dhule Bypass Section",
-    category: "Government",
-    technology: "Flexible Asphalt Pavements",
-    scope: "Roadway Paving & Culvert Drainage",
-    date: "March 22, 2026",
-    image: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1200&q=80",
-    description: "Delivered state highway paving and grading operations for the PWD bypass corridor in Dhule. Work included subgrade preparation, base-course laying, hot-mix asphalt paving, road shoulders formation, and concrete pipe culvert drainage setups.",
+    title: "Arihant Detergents Pvt. Ltd. – Production Complex",
+    client: "Arihant Detergents Pvt. Ltd.",
+    location: "MIDC, Dhule",
+    category: "Industrial",
+    technology: "Building Construction",
+    scope:
+      "Industrial building construction, flooring, boundary wall, earthwork and site development",
+    date: "2025",
+    image: arihant1,
+    description:
+      "Successfully constructed the main manufacturing unit shell and structural building envelope. Managed holistic site grading, heavy industrial interior ground slab overlays, and complete exterior security enclosure boundaries.",
     highlights: [
-      "Subbase leveling and earthworks compaction",
-      "Precision multi-layer hot asphalt paving",
-      "Reinforced concrete pipe pipe culvert laying",
-      "Roadway safety markings and signs"
+      "End-to-end multi-room industrial building infrastructure construction",
+      "Large-scale earthwork leveling and strategic site infrastructure development",
+      "High-durability warehouse flooring suitable for heavy processing equipment",
+      "Finished structural boundary wall panels with protective masonry accents",
     ],
-    gallery: [
-      "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1579847259164-e35f08e5988d?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1590644365607-1c5a519a7a37?auto=format&fit=crop&w=600&q=80"
-    ]
+    gallery: [arihant1, arihant2],
   },
   {
     id: "4",
-    title: "Municipal Stormwater Drainage",
-    client: "Dhule Municipal Corporation",
-    location: "Nandurbar Sector",
-    category: "Government",
-    technology: "Reinforced Concrete Pipes",
-    scope: "Trench Excavation & Culvert Pipelines",
-    date: "December 05, 2025",
-    image: "https://images.unsplash.com/photo-1579847259164-e35f08e5988d?auto=format&fit=crop&w=1200&q=80",
-    description: "Completed the excavation, alignment, and installation of main reinforced stormwater concrete pipelines for the Municipal Corporation. The works involved deep trenching in rock-mixed soils, pipe layout stabilization, and construction of brick masonry access chambers.",
+    title: "Indo Amines Limited – Chemical Plant Infrastructure",
+    client: "Indo Amines Limited",
+    location: "MIDC, Dhule",
+    category: "Industrial",
+    technology: "RCC & Foundations",
+    scope:
+      "Chemical plant civil works, RCC structure, foundations, concrete flooring, drainage",
+    date: "2025",
+    image: indo3,
+    description:
+      "Executed core specialized civil structures designed for aggressive chemical environment processing zones. Built heavy-duty foundation blocks, monolithic columns matrices, open drainage collection basins, and seamless rigid concrete flooring zones.",
     highlights: [
-      "Deep trenching and soil stabilization",
-      "Precision alignment of concrete pipes",
-      "Masonry storm chambers and manholes",
-      "Site utility clearance and restoration"
+      "Corrosion-resistant high-grade concrete foundation bases and slabs",
+      "Engineered monolithic RCC structures and industrial facility pillars",
+      "High-volume drainage channels for efficient chemical plant stormwater control",
+      "Reinforced jointless floor layout casting with advanced admixtures",
     ],
-    gallery: [
-      "https://images.unsplash.com/photo-1579847259164-e35f08e5988d?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1590644365607-1c5a519a7a37?auto=format&fit=crop&w=600&q=80"
-    ]
+    gallery: [indo1, indo2, indo3],
   },
   {
     id: "5",
-    title: "Government Polytechnic College",
-    client: "State Higher Education Board",
-    location: "Dhule Campus, Maharashtra",
-    category: "Institutional",
-    technology: "Reinforced Cement Concrete",
-    scope: "Multistory Structuring & Site Grading",
-    date: "February 28, 2026",
-    image: "https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1200&q=80",
-    description: "Executed the structural concrete framework and brickwork partition walls for the academic department wing of the Polytechnic campus. Activities included columns casting, floor slab casting, interior brickwork dividers, and external plastering.",
+    title: "Indian Phosphate Pvt. Ltd. – Processing Facility",
+    client: "Indian Phosphate Pvt. Ltd.",
+    location: "Udaipur, Rajasthan",
+    category: "Industrial",
+    technology: "Structural Concrete",
+    scope:
+      "Civil construction, foundations, structural concrete, industrial building",
+    date: "2025",
+    image: indPhos1,
+    description:
+      "Expanded regional industrial operations by delivering high-specification structural concrete frameworks and specialized deep raft foundations to securely support heavy raw mineral processing assemblies in Rajasthan.",
     highlights: [
-      "RCC framework (columns, beams, slabs)",
-      "Vibration-free concrete casting",
-      "Partition brickwork and plastering",
-      "Compliant fire-escape staircase frames"
+      "Deep heavy-load industrial equipment machinery foundations",
+      "Precision structural concrete framing, beams, and columns matrix casting",
+      "Multi-tier industrial building shell development and masonry walls",
+      "Successful cross-state logistics and material mobilization management",
     ],
-    gallery: [
-      "https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1586773860418-d37222d8fce8?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1508459855340-fb63ac591728?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=600&q=80"
-    ]
+    gallery: [indPhos1, indPhos2, indPhos3],
   },
   {
     id: "6",
-    title: "Primary Healthcare Center Complex",
-    client: "District Health Administration",
-    location: "Sakri Block, Maharashtra",
-    category: "Institutional",
-    technology: "Load Bearing Frameworks",
-    scope: "Foundation Concrete & Brickwork Masonry",
-    date: "October 18, 2025",
-    image: "https://images.unsplash.com/photo-1586773860418-d37222d8fce8?auto=format&fit=crop&w=1200&q=80",
-    description: "Constructed the ground foundation concrete framing, structural beam matrices, and partition masonry work for a regional rural healthcare complex. Work was completed according to strict state healthcare structure standards.",
+    title: "SBD Pvt. Limited – Industrial Site Development",
+    client: "SBD Pvt. Limited",
+    location: "Dhule",
+    category: "Industrial",
+    technology: "Civil & Structural",
+    scope: "Industrial civil and structural works, site development",
+    date: "2025",
+    image: sbd1,
+    description:
+      "Completed full-scale civil site development solutions for a greenfield industrial campus zone, implementing comprehensive bulk grading, trenching, road layouts subgrade, and primary structural interfaces.",
     highlights: [
-      "Reinforced footer excavations",
-      "Brick masonry partitions and frames",
-      "Utility conduits integration",
-      "External cement plaster finishing"
+      "Integrated industrial civil works and comprehensive site grading",
+      "Heavy structural frameworks installation and alignment setups",
+      "Engineered subgrade soil optimization for future processing plants expansion",
+      "Optimized storm water runoff layouts across the industrial campus footprint",
     ],
-    gallery: [
-      "https://images.unsplash.com/photo-1586773860418-d37222d8fce8?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1508459855340-fb63ac591728?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=600&q=80"
-    ]
+    gallery: [sbd1, sbd2, sbd3, sbd4],
   },
   {
     id: "7",
-    title: "Double-Track Railway Overbridge",
-    client: "Central Railways (Division Office)",
-    location: "Jalgaon Section, Maharashtra",
-    category: "Railway",
-    technology: "Reinforced Concrete Abutments",
-    scope: "Overbridge Supports & Retaining Walls",
-    date: "April 02, 2026",
-    image: "https://images.unsplash.com/photo-1474487548417-781cb71495f3?auto=format&fit=crop&w=1200&q=80",
-    description: "Built the main reinforced concrete bridge abutments, wing walls, and retaining structures for a double-track overpass section. Construction required precise grade alignments and high-strength concrete configurations to support constant railway freight loads.",
+    title: "R.M. Phosphates & Chemicals – Manufacturing Unit",
+    client: "R.M. Phosphates & Chemicals",
+    location: "Dhule",
+    category: "Industrial",
+    technology: "RCC & Drainage",
+    scope:
+      "Chemical plant civil construction, RCC structures, backfilling, drainage",
+    date: "2025",
+    image: rm1,
+    description:
+      "Constructed chemical processing infrastructure units focusing on high-integrity RCC enclosures. Executed robust bulk earthwork operations alongside extensive protective industrial surface drainage lines.",
     highlights: [
-      "High-grade reinforced abutment structures",
-      "Earth retaining wing walls casting",
-      "Ballast shoulder support structures",
-      "Railway corridor safety compliance"
+      "High-durability chemical plant civil construction and framing structures",
+      "Vibration-isolated structural concrete floors and machinery pedestals",
+      "Controlled structural backfilling with optimized Murum gravel layers",
+      "Comprehensive external trench network layouts for stormwater discharge",
     ],
-    gallery: [
-      "https://images.unsplash.com/photo-1474487548417-781cb71495f3?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1532103054090-334e6e60b73c?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1590069261209-f8e9b8642343?auto=format&fit=crop&w=600&q=80"
-    ]
+    gallery: [rm1, rm2],
   },
   {
     id: "8",
-    title: "Rail Station Aggregates Yard",
-    client: "Rail Infrastructure Development",
-    location: "Shirpur Track Bed Section",
-    category: "Railway",
-    technology: "Subgrade Compaction",
-    scope: "Track Yard Grading & Trench Drainage",
-    date: "November 30, 2025",
-    image: "https://images.unsplash.com/photo-1532103054090-334e6e60b73c?auto=format&fit=crop&w=1200&q=80",
-    description: "Completed subgrade soil compaction, track-bed ballast grading, and peripheral concrete water channels for a station yard development. The project optimized track load distribution and site drainage efficiency.",
+    title: "RMPCL – Mahavira Plant Infrastructure",
+    client: "RMPCL-Mahavira Plant",
+    location: "Indore, M.P.",
+    category: "Industrial",
+    technology: "Concrete Foundations",
+    scope: "Industrial plant civil construction, foundations, concrete works",
+    date: "2025",
+    image: rmpcl1,
+    description:
+      "Executed heavy-duty precision foundation casting cycles for a major processing infrastructure cluster in Madhya Pradesh, employing computerized automated RMC supply streams for massive structural footings.",
     highlights: [
-      "High-volume ballast subgrade grading",
-      "Vibratory roller compaction operations",
-      "U-shaped concrete drainage channels",
-      "Strict grading leveling verification"
+      "High-volume structural concrete footings and deep foundation pouring",
+      "Precision layout engineering for heavy chemical processing assemblies",
+      "Comprehensive site utility infrastructure integration and concrete works",
+      "Strict compliance with regional structural concrete building codes",
     ],
-    gallery: [
-      "https://images.unsplash.com/photo-1532103054090-334e6e60b73c?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1474487548417-781cb71495f3?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1590069261209-f8e9b8642343?auto=format&fit=crop&w=600&q=80"
-    ]
+    gallery: [rmpcl1, rmpcl2],
   },
   {
     id: "9",
-    title: "Maha-Housing Staff Quarters",
-    client: "State Housing Corporation",
-    location: "Dhule Colony Site",
-    category: "Residential",
-    technology: "Monolithic Slab Castings",
-    scope: "Concrete Frameworks & Brickwork Masonry",
-    date: "September 15, 2025",
-    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80",
-    description: "Constructed multiple housing units for the State Housing Corporation. Deliverables included monolithic concrete frame castings, brickwork partitions, utilities conduit integration, and facade plastering.",
+    title: "RMPCL – Cattle Feed Processing Plant",
+    client: "RMPCL - Cattle Feed Plant",
+    location: "Indore, M.P.",
+    category: "Industrial",
+    technology: "Shed Foundations",
+    scope:
+      "Shed foundations, concrete work, boundary wall, site infrastructure",
+    date: "2025",
+    image: rmpclPlant1,
+    description:
+      "Successfully delivered complex civil works for a centralized processing warehouse facility, focusing on robust structural anchoring for metal pre-engineered storage shed enclosures.",
     highlights: [
-      "Monolithic floor and roof slab castings",
-      "Quality interior brick partition layouts",
-      "Utility piping and wiring integration",
-      "Exterior stucco/plaster finish coatings"
+      "Precision-aligned anchor bolts and heavy concrete shed foundations",
+      "Integrated site utility trenching networks and industrial pavements",
+      "Erection of multi-kilometer perimeter security boundary wall infrastructure",
+      "High-finish rigid concrete approach surfaces and loading dock yards",
     ],
-    gallery: [
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1508459855340-fb63ac591728?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1586773860418-d37222d8fce8?auto=format&fit=crop&w=600&q=80"
-    ]
-  }
+    gallery: [rmpclPlant1, rmpclPlant2],
+  },
+  {
+    id: "10",
+    title: "Semantic Infra Projects – Urban Civil Systems",
+    client: "Semantic Infra Projects Pvt. Ltd.",
+    location: "Maharashtra",
+    category: "Industrial",
+    technology: "Infrastructure Works",
+    scope: "Infrastructure civil works, concrete, drainage",
+    date: "2025",
+    image: semantic3,
+    description:
+      "Executed high-volume public utility infrastructure setups involving major stormwater open-cut trench channels, concrete pathways, and primary culvert connectivity.",
+    highlights: [
+      "Large-scale concrete linear installations and protective civil structures",
+      "Heavy-duty cast-in-situ concrete drainage layouts and flow chambers",
+      "Bulk earth moving, route grading, and structural stabilization",
+      "High-volume, time-critical materials logistics management across sites",
+    ],
+    gallery: [semantic1, semantic2, semantic3],
+  },
+
+  // ==========================================
+  // 8.2 INSTITUTIONAL, RAILWAY & INFRA INFRASTRUCTURE PROJECTS
+  // ==========================================
+  {
+    id: "12",
+    title: "Podar International School Campus",
+    client: "Podar International School",
+    location: "Mumbai / Dhule",
+    category: "Institutional",
+    technology: "Multi-Storey RCC Framing",
+    scope:
+      "Multi-storey school building construction – RCC frame, brickwork, concrete, internal works, drainage, horticulture",
+    date: "2026",
+    image: podar1,
+    description:
+      "Executed the entire structural development for a premier multi-storey educational facility complex. The project integrated structural column matrices, partition masonry layouts, full internal utility integration, and aesthetic landscaping.",
+    highlights: [
+      "Multi-floor high-integrity RCC structural skeleton frame construction",
+      "Extensive interior fly ash masonry partition blocks and internal finishing",
+      "Integrated school facility drainage channels and safe utility frameworks",
+      "Professional site leveling for expansive horticulture and play fields",
+    ],
+    gallery: [podar1, podar2, podar3],
+  },
+  {
+    id: "13",
+    title: "MPKV College of Agriculture Complex",
+    client: "MPKV College of Agriculture",
+    location: "Dhule",
+    category: "Institutional",
+    technology: "Institutional Civil Architecture",
+    scope:
+      "College building construction – RCC structural works, brickwork, flooring, drainage, site development",
+    date: "2026",
+    image: mvpk1,
+    description:
+      "Delivered state-of-the-art educational building assets for the agricultural college division. Encompassed robust civil foundations, modern high-traffic classroom floor paths, and extensive drainage infrastructure.",
+    highlights: [
+      "Precision-cast structural columns, roof slabs, and beam grids",
+      "Durable, low-maintenance institutional flooring and tile installations",
+      "Comprehensive external layout drainage channels and link systems",
+      "Holistic campus ground leveling, road connectivity, and site grading",
+    ],
+    gallery: [mvpk1, mvpk2, mvpk3, mvpk4],
+  },
+  {
+    id: "14",
+    title: "Indian Railways Track Infrastructure Project",
+    client: "Heigl Infra Limited - Railway Project",
+    location: "Rajasthan",
+    category: "Railway",
+    technology: "Track Bed Engineering",
+    scope:
+      "Railway infrastructure civil works – concrete structures, drainage, earthwork, RCC culverts",
+    date: "2025",
+    image: railway1,
+    description:
+      "Executed highly technical track bed engineering and cross-drainage management structures for primary rail lines in Rajasthan, complying stringently with Indian Railways RDSO specifications.",
+    highlights: [
+      "Heavy-duty RCC box culverts and pipe drainage crossway paths",
+      "High-volume formation earthwork cutting and embankments fill preparation",
+      "Precision leveling alignment and ballast subgrade ground compaction",
+      "Erection of robust structural concrete retaining abutment walls",
+    ],
+    gallery: [railway1, railway2],
+  },
+
+  {
+    id: "16",
+    title: "JPG Construction – Civil Utility Systems",
+    client: "JPG Construction Pvt. Limited",
+    location: "Maharashtra",
+    category: "Government",
+    technology: "Infrastructure Works",
+    scope: "Infrastructure civil works, RCC, drainage, site development",
+    date: "2025",
+    image: hscc1,
+    description:
+      "Completed large-scale public utilities civil installations across urban Maharashtra corridors, implementing cast concrete networks and comprehensive highway storm runoff management lines.",
+    highlights: [
+      "Reinforced concrete structural installations and structural masonry",
+      "Optimized underground layout utility lines and path trenching",
+      "Comprehensive site development solutions and terrain balancing",
+      "High-durability public civil infrastructure development configurations",
+    ],
+    gallery: [hscc1, hscc2, hscc3],
+  },
+
+  {
+    id: "18",
+    title: "I.P.G Construction – National Capital Civics",
+    client: "I.P.G Construction Pvt. Ltd.",
+    location: "Delhi",
+    category: "Government",
+    technology: "Structural Sub-Elements",
+    scope: "Civil and structural works, concrete, foundations",
+    date: "2025",
+    image: ipg1,
+    description:
+      "Executed high-specification administrative building asset frameworks and technical equipment base foundations within municipal Delhi territory boundaries.",
+    highlights: [
+      "Precision-cast structural concrete foundations and ground rafts",
+      "High-grade reinforcement binding and complex architectural formwork",
+      "Seamless integration of primary mechanical, electrical, and plumbing sleeves",
+      "Strict conformance to capital municipal safety and construction codes",
+    ],
+    gallery: [ipg1, ipg2],
+  },
+
+  // ==========================================
+  // 8.3 GOVERNMENT, SEMI-GOVERNMENT & CIVIC PROJECTS
+  // ==========================================
+  {
+    id: "19",
+    title: "Dhule Municipal Corporation – Civic Pavements",
+    client: "Dhule Municipal Corporation",
+    location: "Dhule",
+    category: "Government",
+    technology: "Urban Roadways & Drainage",
+    scope:
+      "Road construction, drainage works, paver block laying, civic infrastructure",
+    date: "2026",
+    image: dhule2,
+    description:
+      "Delivered municipal road corridor revitalization networks for the municipal corporation, successfully engineering durable asphalt surfacing layers, concrete street lanes, and integrated walkway paver blocks.",
+    highlights: [
+      "Urban roadway development, granular sub-base layout, and paving",
+      "Heavy-duty cast-in-situ storm water open-channel drainage channels",
+      "Extensive high-load pedestrian paver blocks installation across walkways",
+      "Phased urban deployment minimizing daily metropolitan traffic disruption",
+    ],
+    gallery: [dhule1, dhule2, dhule3],
+  },
+  {
+    id: "20",
+    title: "Minor Irrigation Department – Irrigation Canals",
+    client: "Minor Irrigation Dept. - ZP Dhule",
+    location: "Dhule",
+    category: "Government",
+    technology: "Hydraulic Civil Engineering",
+    scope:
+      "Canal and irrigation civil works, RCC structures, drainage, earthwork",
+    date: "2026",
+    image: irrigation1,
+    description:
+      "Executed regional agricultural water distribution assets, involving high-integrity cast concrete canal profiles, check gate structural boxes, and long-line waterway channel earthworks.",
+    highlights: [
+      "Water-tight concrete lining for irrigation distribution channels",
+      "Precision canal earthwork profile cutting and side-slope grading",
+      "Structural RCC control chambers and agricultural flow check walls",
+      "Effective rural erosion management setups along distribution paths",
+    ],
+    gallery: [irrigation1, irrigation2, irrigation3],
+  },
+  {
+    id: "21",
+    title: "MJP Urban Water Supply Infrastructure",
+    client: "Maharashtra Jeevan Pradhikaran",
+    location: "Dhule",
+    category: "Government",
+    technology: "Public Hydraulic Works",
+    scope:
+      "Water supply infrastructure civil works, pipe laying, RCC structures, backfilling",
+    date: "2025",
+    image: supply1,
+    description:
+      "Constructed comprehensive bulk city water pipeline corridors for the state water authority. Scope spanned deep high-risk utility trenching, line alignment, concrete pump houses, and backfill stabilization.",
+    highlights: [
+      "Precision-aligned bulk public drinking water pipeline laying operations",
+      "Deep cross-country trench excavations and specialized subgrade stabilization",
+      "Structural concrete distribution storage structures and control houses",
+      "Vibrated rock and Murum fill compaction safeguarding crossway tracks",
+    ],
+    gallery: [supply1, supply2, supply3],
+  },
+  {
+    id: "22",
+    title: "MSEDCL Electrical Grid Sub-Civil Works",
+    client: "MSEDCL (Maharashtra State Electricity)",
+    location: "Dhule & Jalgaon",
+    category: "Government",
+    technology: "Utility Infrastructure Civil",
+    scope:
+      "Electricity infrastructure civil works – foundation, poles, backfilling, fencing",
+    date: "2025",
+    image: electricity1,
+    description:
+      "Executed technical grid distribution sub-civil installations across multiple state sectors, constructing massive reinforced electrical tower anchor footings and secure substation block limits.",
+    highlights: [
+      "High-torque structural concrete footing anchor blocks for grid towers",
+      "Precision deep installation configurations for electrical distribution poles",
+      "Erection of multi-site security perimeter chainlink and masonry fencing",
+      "Rapid turnaround multi-zone deployment matching high grid utility targets",
+    ],
+    gallery: [electricity1, electricity2, electricity3],
+  },
+  {
+    id: "23",
+    title: "Godrej Agrovet Processing Unit Civil Works",
+    client: "GAVPL – Godrej Agrovet Pvt. Ltd.",
+    location: "Dhule",
+    category: "Industrial",
+    technology: "Agro-Industrial Civil",
+    scope:
+      "Industrial civil works, shed foundations, site development, concrete works",
+    date: "2025",
+    image: gavpl3,
+    description:
+      "Delivered comprehensive agro-industrial facility civil works for Godrej Agrovet, incorporating high-precision industrial processing shed foundations, bulk grading, and durable surface pavements.",
+    highlights: [
+      "Heavy-load equipment concrete foundations and steel pedestal bases",
+      "Expansive industrial campus grading, drainage, and terrain leveling",
+      "High-finish rigid concrete sorting yards and vehicle transit pavements",
+      "Seamless supply coordination using our in-house computer-controlled RMC plant",
+    ],
+    gallery: [gavpl1, gavpl2, gavpl3],
+  },
+
+  // ==========================================
+  // 8.4 BUILDERS, DEVELOPERS & HOUSING PROJECTS
+  // ==========================================
+  {
+    id: "24",
+    title: "Patil Associates Residential Commercial Center",
+    client: "M/s Patil Associates & Developers",
+    location: "Dhule",
+    category: "Residential",
+    technology: "Mixed-Use Concrete Frame",
+    scope:
+      "Residential / commercial building civil works, RCC structure, brickwork, drainage, finishing",
+    date: "2026",
+    image: residental1,
+    description:
+      "Delivered comprehensive civil core execution for a major mixed-use multi-floor facility. Systematically managed structural skeleton casting, brick partitions, utility plumbing lines, and outer facade plastering.",
+    highlights: [
+      "Precision structural columns, intermediate floor beams, and slab casts",
+      "High-speed partition setups utilizing premium light fly ash bricks",
+      "Integrated multi-unit domestic drainage line networks and shafts",
+      "High-finish exterior cement stucco application ready for final coats",
+    ],
+    gallery: [residental1, residental2, residental3],
+  },
+  {
+    id: "25",
+    title: "Simar Pride Ventures High-Rise Framing",
+    client: "Simar Pride Ventures LLP",
+    location: "Aurangabad",
+    category: "Residential",
+    technology: "Monolithic Tower Slabs",
+    scope:
+      "Multi-storey building construction – RCC structure, concrete, slab works",
+    date: "2026",
+    image: mutli3,
+    description:
+      "Executed high-precision monolithic structural framing work for a multi-storey premier tower block in Aurangabad, deploying heavy-duty crane logistics and high-fluidity structural concrete mixes.",
+    highlights: [
+      "Monolithic floor slab casts utilizing advanced modular shuttering layouts",
+      "Rigid multi-level structural framework columns and lift core walls casting",
+      "Continuous technical testing tracking concrete strength parameters daily",
+      "Strict compliance with national safety rules for residential tower setups",
+    ],
+    gallery: [mutli1, mutli2, mutli3],
+  },
+  {
+    id: "26",
+    title: "Manjoot Pride Landmark High-Rise Core",
+    client: "M/s Manjoot Pride Landmark",
+    location: "India",
+    category: "Residential",
+    technology: "Heavy Tower Foundations",
+    scope:
+      "Building civil construction works, structural concrete, foundations",
+    date: "2025",
+    image: manjoot1,
+    description:
+      "Completed primary subterranean civil foundations and structural lower podium elements for an ambitious urban housing block project, optimizing heavy steel reinforcement mats.",
+    highlights: [
+      "High-density structural concrete raft foundation pour operations",
+      "Complex lower multi-tier structural columns and structural load beams setup",
+      "Precision subgrade earth preparation and water table shield applications",
+      "Uninterrupted concrete supply streams managed by our dedicated plant fleet",
+    ],
+    gallery: [manjoot1, manjoot2],
+  },
+  {
+    id: "27",
+    title: "Ram Dayal Jatt Regional Infrastructures",
+    client: "Ram Dayal Jatt Contractor",
+    location: "Maharashtra",
+    category: "Residential",
+    technology: "Civil Developments",
+    scope: "Civil and infrastructure construction works",
+    date: "2025",
+    image: dayal1,
+    description:
+      "Executed multiple outsourced joint infrastructure development clusters across regional Maharashtra, managing bulk site earth balancing, retaining masonry walls, and connectivity structures.",
+    highlights: [
+      "Reliable regional site development works and heavy soil levelings",
+      "Subgrade preparation for community infrastructure expansion nodes",
+      "Robust structural masonry wall channels and local pipeline linkups",
+      "Swift logistics operation moving materials safely across decentralized sites",
+    ],
+    gallery: [dayal1, dayal2],
+  },
 ];

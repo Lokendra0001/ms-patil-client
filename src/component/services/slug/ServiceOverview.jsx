@@ -1,18 +1,17 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
 import Heading from "@/component/common/Heading";
 
 const ServiceOverview = ({ data }) => {
   if (!data) return null;
 
   return (
-    <section className="py-20 sm:py-24 bg-white border-t border-slate-100 select-text">
+    <section className="py-24 sm:py-32 bg-white border-t border-slate-100 select-text">
       <div className="max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           {/* Left Column: Heading and Technical Spec sheet info */}
-          <div className="lg:col-span-4 space-y-6">
+          <div className="lg:col-span-5 space-y-8">
             <Heading
               title={"Execution "}
               tagline={"Service Overview"}
@@ -21,52 +20,41 @@ const ServiceOverview = ({ data }) => {
               className="mb-0!"
             />
 
-            <p className="text-sm text-text-gray  leading-relaxed  ">
+            <p className="text-base sm:text-lg text-slate-600 leading-relaxed font-normal">
               {data.detailedOverview}
             </p>
 
             {data.machinery && (
-              <div className="pt-6 border-t border-slate-200">
-                <span className="text-[10px] font-black tracking-widest text-slate-400 block mb-1.5 uppercase  ">
-                  Active Machinery
+              <div className="p-8 bg-slate-50 border-l-4 border-primary-light mt-8">
+                <span className="text-[10px] font-black tracking-widest text-slate-400 block mb-2 uppercase">
+                  Active Machinery & Fleet
                 </span>
-                <p className="text-xs text-text-gray font-semibold tracking-wide leading-relaxed  ">
+                <p className="text-sm sm:text-base text-slate-800 font-semibold leading-relaxed">
                   {data.machinery}
                 </p>
               </div>
             )}
           </div>
 
-          {/* Right Column: Raw Visual Showcase Gallery */}
-          <div className="lg:col-span-8">
+          {/* Right Column: Dynamic Text-Driven Capability Grid (No Images) */}
+          <div className="lg:col-span-7">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               {data.capabilities.map((item, index) => {
                 const indexStr = String(index + 1).padStart(2, "0");
                 return (
                   <div
                     key={index}
-                    className="border border-slate-200 bg-white group overflow-hidden relative rounded-none flex flex-col justify-between"
+                    className="p-8 border border-slate-200 bg-white hover:border-primary-light/40  transition-all duration-300 flex flex-col justify-between min-h-[180px] group"
                   >
-                    {/* Image Header */}
-                    <div className="relative aspect-[16/10] overflow-hidden bg-slate-900">
-                      <Image
-                        src={item.img}
-                        alt={item.name}
-                        fill
-                        className="object-cover  group-hover:scale-102 group-hover:grayscale-0 transition-all duration-500"
-                      />
-                      <div className="absolute inset-0 bg-slate-950/10 z-10" />
-                    </div>
-
-                    {/* Content Details */}
-                    <div className="p-5 border-t border-slate-200 bg-white">
-                      <span className="text-[10px] font-bold text-primary-light   tracking-widest block mb-1.5 ">
-                        {indexStr} / Techinical Component
+                    <div>
+                      <span className="text-3xl sm:text-4xl font-black text-slate-100 group-hover:text-primary-light/25 transition-colors block mb-4">
+                        {indexStr}
                       </span>
-                      <h3 className="text-xs sm:text-sm font-semibold text-text-primary  tracking-wider leading-snug  ">
+                      <h3 className="text-base sm:text-lg font-bold text-slate-900 tracking-wide leading-snug">
                         {item.name}
                       </h3>
                     </div>
+                    <div className="h-1 w-8 bg-slate-200 group-hover:w-16 group-hover:bg-primary-light transition-all duration-300 mt-6" />
                   </div>
                 );
               })}

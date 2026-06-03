@@ -3,6 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import Button from "@/component/CTA/Button";
+import banner from "../../../public/assets/about/who-we-are/banner.webp";
 
 import { bulletPoints } from "../../data/about/details";
 
@@ -88,9 +89,9 @@ const AboutDetails = () => {
               {/* Primary Image: Engineers looking at documents on-site */}
               <div className="relative w-full h-full bg-slate-100 overflow-hidden z-10 border border-slate-200/80 rounded-tr-[100px] rounded-bl-[100px] rounded-tl-[20px] rounded-br-[20px]">
                 <Image
-                  src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=80"
+                  src={banner}
                   alt="Site Managers Reviewing Structural Blueprints"
-                  className="object-cover filter grayscale-[10%] hover:grayscale-0 transition-all duration-500 hover:scale-102"
+                  className="object-cover  transition-all duration-500 hover:scale-102"
                   fill
                   priority
                 />

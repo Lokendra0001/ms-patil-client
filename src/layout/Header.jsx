@@ -672,7 +672,7 @@ const Header = () => {
                   href="/contact?consultation=true"
                   variant="theme"
                   size="hd"
-                  className={` hidden! xl:flex! uppercase tracking-wider py-3 px-6 h-auto ${isScrolled ? "hover:text-text-primary" : "hover:text-white"} `}
+                  className={` hidden! xl:flex! uppercase tracking-wider py-3 px-6 h-auto hover:bg-primary-light! hover:text-white! hover:opacity-80  `}
                 >
                   Book a Consultation
                 </Button>

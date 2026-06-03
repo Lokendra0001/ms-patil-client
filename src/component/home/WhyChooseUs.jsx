@@ -15,7 +15,7 @@ const WhyChooseUs = () => {
     <section className="w-full py-20 lg:py-24 select-text relative overflow-hidden bg-slate-50/10 border-b border-slate-100">
       {/* Next.js optimized background Image component acting as a watermark drawing */}
       <Image
-        src="/construction_blueprint_bg.jpg"
+        src="/construction_blueprint_bg.webp"
         alt="L&T style blueprint layout background"
         className="absolute inset-0 w-full h-full object-cover pointer-events-none z-0 opacity-80"
         fill

@@ -8,7 +8,6 @@ const SectorHero = ({ data }) => {
   if (!data) return null;
   const title = data.name;
   const highlight = data.highlight;
-  console.log(highlight);
   let titleNode = title;
   if (highlight && title.includes(highlight)) {
     const parts = title.split(highlight);

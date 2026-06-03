@@ -1,11 +1,11 @@
-import railway from "../../public/assets/home/hero/banner-3.png";
-import indus from "../../public/assets/services/hero/service2.png";
-import government from "../../public/assets/services/hero/service7.png";
-import residential from "../../public/assets/home/hero/banner-1.png";
-import hitachi from "../../public/assets/services/our-assets/hitachi.png";
-import roller from "../../public/assets/services/our-assets/roller.png";
-import sand from "../../public/assets/services/our-assets/sand.png";
-import rmc from "../../public/assets/home/hero/banner-1.png";
+import railway from "../../public/assets/home/hero/banner-3.webp";
+import indus from "../../public/assets/services/hero/service2.webp";
+import government from "../../public/assets/services/hero/service7.webp";
+import residential from "../../public/assets/home/hero/banner-1.webp";
+import hitachi from "../../public/assets/services/our-assets/hitachi.webp";
+import roller from "../../public/assets/services/our-assets/roller.webp";
+import sand from "../../public/assets/services/our-assets/sand.webp";
+import rmc from "../../public/assets/home/hero/banner-1.webp";
 
 export const sectorsData = {
   "railway-infrastructure": {

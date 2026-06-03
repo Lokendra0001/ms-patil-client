@@ -12,7 +12,7 @@ const CallToAction = () => {
         <div className="relative w-full bg-slate-50/50 border border-slate-200/60 p-8 sm:p-12 lg:p-16 overflow-hidden shadow-[0_24px_70px_rgba(15,23,42,0.015)]">
           {/* Engineering blueprint background watermark */}
           <Image
-            src="/construction_blueprint_bg.jpg"
+            src="/construction_blueprint_bg.webp"
             alt="Engineering Blueprint Background"
             className="absolute inset-0 w-full h-full object-cover pointer-events-none z-0 opacity-[0.08]"
             fill

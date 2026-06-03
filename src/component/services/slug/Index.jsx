@@ -9,9 +9,9 @@ import { useParams, notFound } from "next/navigation";
 
 import { servicesData } from "../../../data/services/details";
 
-const Index = () => {
+const Index = ({ slug: propSlug }) => {
   const params = useParams();
-  const slug = params?.slug;
+  const slug = propSlug || params?.slug;
 
   const service = servicesData[slug];
 
