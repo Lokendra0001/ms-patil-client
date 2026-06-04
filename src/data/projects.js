@@ -108,7 +108,7 @@ export const projectsData = [
     date: "2026",
     image: rmChemical,
     description:
-      "Executed comprehensive industrial civil engineering and structural framework development for the RM Chemical production facility. The project systematically covered deep terrain excavation, foundation structures, structural columns casting, layout flooring, and robust security perimeter fencing.",
+      "Executed comprehensive industrial civil engineering and structural framework development for the RM Chemical production facility. The project systematically covered deep terrain excavation, foundation structures, structural columns casting, layout flooring, and robust security perimeter fencing. M/S Chetankumar Bhagwan Suryawanshi deployed advanced grading machinery and mobilized a dedicated concrete supply line from our own computerized RMC plant to achieve superior structural stability. Every concrete pour was subjected to strict quality control, compression tests, and slump checks in compliance with state PWD parameters and industrial safety rules.",
     highlights: [
       "Heavy-duty RCC industrial shed foundation structural pedestals",
       "Expansive specialized concrete factory interior flatwork flooring",
@@ -129,7 +129,7 @@ export const projectsData = [
     date: "2026",
     image: indo1,
     description:
-      "Delivered full-scale industrial site mobilization, grading, and concrete framing development. Work involved robust utility alignment alongside specialized surface drainage conduits and interlocked high-strength paver installations for industrial transport transit.",
+      "Delivered full-scale industrial site mobilization, grading, and concrete framing development. Work involved robust utility alignment alongside specialized surface drainage conduits and interlocked high-strength paver installations for industrial transport transit. To support the heavy logistics footprint of the facility, our team implemented subgrade stabilization and engineered sub-base courses. The stormwater drainage system was calculated for peak monsoon volumes, ensuring zero water logging around the chemical storage bays.",
     highlights: [
       "Rigid RCC structural elements and load-bearing framing",
       "Integrated chemical facility stormwater drainage layout networks",
@@ -150,7 +150,7 @@ export const projectsData = [
     date: "2025",
     image: arihant1,
     description:
-      "Successfully constructed the main manufacturing unit shell and structural building envelope. Managed holistic site grading, heavy industrial interior ground slab overlays, and complete exterior security enclosure boundaries.",
+      "Successfully constructed the main manufacturing unit shell and structural building envelope. Managed holistic site grading, heavy industrial interior ground slab overlays, and complete exterior security enclosure boundaries. The project utilized high-strength structural steel framing paired with reinforced concrete wall panels designed to withstand severe weather conditions. Precision laser screeding was used for the indoor flooring to achieve an exceptionally flat, wear-resistant surface suitable for advanced manufacturing machinery.",
     highlights: [
       "End-to-end multi-room industrial building infrastructure construction",
       "Large-scale earthwork leveling and strategic site infrastructure development",
@@ -171,7 +171,7 @@ export const projectsData = [
     date: "2025",
     image: indo3,
     description:
-      "Executed core specialized civil structures designed for aggressive chemical environment processing zones. Built heavy-duty foundation blocks, monolithic columns matrices, open drainage collection basins, and seamless rigid concrete flooring zones.",
+      "Executed core specialized civil structures designed for aggressive chemical environment processing zones. Built heavy-duty foundation blocks, monolithic columns matrices, open drainage collection basins, and seamless rigid concrete flooring zones. The concrete formulation featured anti-corrosive chemical admixtures and specialized protective coatings to withstand chemical exposure. The foundation blocks were specifically engineered with vibration-isolation joints to minimize structural transmission from heavy chemical agitators.",
     highlights: [
       "Corrosion-resistant high-grade concrete foundation bases and slabs",
       "Engineered monolithic RCC structures and industrial facility pillars",
@@ -192,7 +192,7 @@ export const projectsData = [
     date: "2025",
     image: indPhos1,
     description:
-      "Expanded regional industrial operations by delivering high-specification structural concrete frameworks and specialized deep raft foundations to securely support heavy raw mineral processing assemblies in Rajasthan.",
+      "Expanded regional industrial operations by delivering high-specification structural concrete frameworks and specialized deep raft foundations to securely support heavy raw mineral processing assemblies in Rajasthan. The project required mobilizing skilled construction teams and heavy equipment across state lines, executing massive continuous concrete pours to avoid cold joints in the deep foundations. The structural design incorporated earthquake-resistant detailing in compliance with local seismic zone guidelines.",
     highlights: [
       "Deep heavy-load industrial equipment machinery foundations",
       "Precision structural concrete framing, beams, and columns matrix casting",
@@ -212,7 +212,7 @@ export const projectsData = [
     date: "2025",
     image: sbd1,
     description:
-      "Completed full-scale civil site development solutions for a greenfield industrial campus zone, implementing comprehensive bulk grading, trenching, road layouts subgrade, and primary structural interfaces.",
+      "Completed full-scale civil site development solutions for a greenfield industrial campus zone, implementing comprehensive bulk grading, trenching, road layouts subgrade, and primary structural interfaces. Our engineers utilized high-accuracy GPS grading instruments to achieve perfect site levels and balance the cut-and-fill operations. The subgrade preparation was optimized with lime stabilization to increase the load-bearing capacity for the heavy heavy-haul industrial roadway network.",
     highlights: [
       "Integrated industrial civil works and comprehensive site grading",
       "Heavy structural frameworks installation and alignment setups",
@@ -233,7 +233,7 @@ export const projectsData = [
     date: "2025",
     image: rm1,
     description:
-      "Constructed chemical processing infrastructure units focusing on high-integrity RCC enclosures. Executed robust bulk earthwork operations alongside extensive protective industrial surface drainage lines.",
+      "Constructed chemical processing infrastructure units focusing on high-integrity RCC enclosures. Executed robust bulk earthwork operations alongside extensive protective industrial surface drainage lines. The RCC works adhered to M40 grade concrete specifications, utilizing sulfate-resistant cement to counter ground chemical reactions. The excavation layout was systematically shored to prevent lateral soil movement and protect adjacent operational facilities during construction.",
     highlights: [
       "High-durability chemical plant civil construction and framing structures",
       "Vibration-isolated structural concrete floors and machinery pedestals",
@@ -253,7 +253,7 @@ export const projectsData = [
     date: "2025",
     image: rmpcl1,
     description:
-      "Executed heavy-duty precision foundation casting cycles for a major processing infrastructure cluster in Madhya Pradesh, employing computerized automated RMC supply streams for massive structural footings.",
+      "Executed heavy-duty precision foundation casting cycles for a major processing infrastructure cluster in Madhya Pradesh, employing computerized automated RMC supply streams for massive structural footings. The continuous logistics chain required coordinated batching from multiple local RMC facilities, logging over 1,500 cubic meters of high-strength concrete. Temperature monitoring was conducted during the curing process to mitigate thermal cracking in the massive mass-concrete foundations.",
     highlights: [
       "High-volume structural concrete footings and deep foundation pouring",
       "Precision layout engineering for heavy chemical processing assemblies",
@@ -274,7 +274,7 @@ export const projectsData = [
     date: "2025",
     image: rmpclPlant1,
     description:
-      "Successfully delivered complex civil works for a centralized processing warehouse facility, focusing on robust structural anchoring for metal pre-engineered storage shed enclosures.",
+      "Successfully delivered complex civil works for a centralized processing warehouse facility, focusing on robust structural anchoring for metal pre-engineered storage shed enclosures. The concrete anchoring blocks were cast with embedded high-tensile anchor bolts, requiring sub-millimeter placement tolerances to align with the pre-fabricated structural steel framing. The approach roads and loading bays were finished with double-layer steel mesh reinforcement to support high-frequency container transport.",
     highlights: [
       "Precision-aligned anchor bolts and heavy concrete shed foundations",
       "Integrated site utility trenching networks and industrial pavements",
@@ -294,7 +294,7 @@ export const projectsData = [
     date: "2025",
     image: semantic3,
     description:
-      "Executed high-volume public utility infrastructure setups involving major stormwater open-cut trench channels, concrete pathways, and primary culvert connectivity.",
+      "Executed high-volume public utility infrastructure setups involving major stormwater open-cut trench channels, concrete pathways, and primary culvert connectivity. These drainage works were constructed using high-durability precast and cast-in-situ concrete sections, designed to accommodate municipal surface runoff projections for the next 30 years. Work was systematically scheduled in phases to ensure minimal disruption to public utilities and local traffic.",
     highlights: [
       "Large-scale concrete linear installations and protective civil structures",
       "Heavy-duty cast-in-situ concrete drainage layouts and flow chambers",
@@ -319,7 +319,7 @@ export const projectsData = [
     date: "2026",
     image: podar1,
     description:
-      "Executed the entire structural development for a premier multi-storey educational facility complex. The project integrated structural column matrices, partition masonry layouts, full internal utility integration, and aesthetic landscaping.",
+      "Executed the entire structural development for a premier multi-storey educational facility complex. The project integrated structural column matrices, partition masonry layouts, full internal utility integration, and aesthetic landscaping. The building was constructed using seismically-isolated RCC frames, utilizing fly ash bricks for superior thermal insulation in classroom zones. The layouts include wide corridors, integrated fire exit stairs, and modern stormwater harvesting systems.",
     highlights: [
       "Multi-floor high-integrity RCC structural skeleton frame construction",
       "Extensive interior fly ash masonry partition blocks and internal finishing",
@@ -340,7 +340,7 @@ export const projectsData = [
     date: "2026",
     image: mvpk1,
     description:
-      "Delivered state-of-the-art educational building assets for the agricultural college division. Encompassed robust civil foundations, modern high-traffic classroom floor paths, and extensive drainage infrastructure.",
+      "Delivered state-of-the-art educational building assets for the agricultural college division. Encompassed robust civil foundations, modern high-traffic classroom floor paths, and extensive drainage infrastructure. The project featured specialized laboratory spaces with chemical-resistant bench layouts, high-volume HVAC conduits, and large lecture halls with acoustically-treated masonry partitions. The exterior campus pathways were paved with heavy-duty concrete interlocking blocks for accessibility.",
     highlights: [
       "Precision-cast structural columns, roof slabs, and beam grids",
       "Durable, low-maintenance institutional flooring and tile installations",
@@ -361,7 +361,7 @@ export const projectsData = [
     date: "2025",
     image: railway1,
     description:
-      "Executed highly technical track bed engineering and cross-drainage management structures for primary rail lines in Rajasthan, complying stringently with Indian Railways RDSO specifications.",
+      "Executed highly technical track bed engineering and cross-drainage management structures for primary rail lines in Rajasthan, complying stringently with Indian Railways RDSO specifications. The construction involved casting massive reinforced concrete box culverts underneath active railway alignments, using micro-tunneling and trenchless technologies where appropriate. Every segment underwent rigorous non-destructive structural testing to ensure durability under rolling train loads.",
     highlights: [
       "Heavy-duty RCC box culverts and pipe drainage crossway paths",
       "High-volume formation earthwork cutting and embankments fill preparation",
@@ -382,7 +382,7 @@ export const projectsData = [
     date: "2025",
     image: hscc1,
     description:
-      "Completed large-scale public utilities civil installations across urban Maharashtra corridors, implementing cast concrete networks and comprehensive highway storm runoff management lines.",
+      "Completed large-scale public utilities civil installations across urban Maharashtra corridors, implementing cast concrete networks and comprehensive highway storm runoff management lines. Our teams managed complex utility utility coordination, bypassing active sewer and fiber optic networks during excavation. The highway drainage conduits were lined with high-finish concrete to optimize water flow velocity and prevent silt accumulation.",
     highlights: [
       "Reinforced concrete structural installations and structural masonry",
       "Optimized underground layout utility lines and path trenching",
@@ -403,7 +403,7 @@ export const projectsData = [
     date: "2025",
     image: ipg1,
     description:
-      "Executed high-specification administrative building asset frameworks and technical equipment base foundations within municipal Delhi territory boundaries.",
+      "Executed high-specification administrative building asset frameworks and technical equipment base foundations within municipal Delhi territory boundaries. The foundations required deep excavations adjacent to high-rise structures, necessitating complex sheet piling and continuous ground water level monitoring. The administrative building features high-grade granite floor finishes, premium fire-rated masonry walls, and integrated security control chambers.",
     highlights: [
       "Precision-cast structural concrete foundations and ground rafts",
       "High-grade reinforcement binding and complex architectural formwork",
@@ -428,7 +428,7 @@ export const projectsData = [
     date: "2026",
     image: dhule2,
     description:
-      "Delivered municipal road corridor revitalization networks for the municipal corporation, successfully engineering durable asphalt surfacing layers, concrete street lanes, and integrated walkway paver blocks.",
+      "Delivered municipal road corridor revitalization networks for the municipal corporation, successfully engineering durable asphalt surfacing layers, concrete street lanes, and integrated walkway paver blocks. Road grading was executed using precision sensor-guided graders to establish proper camber and slope profiles for optimal surface drainage. Walkways were styled with anti-skid colored interlocked paving systems to enhance pedestrian safety and municipal aesthetics.",
     highlights: [
       "Urban roadway development, granular sub-base layout, and paving",
       "Heavy-duty cast-in-situ storm water open-channel drainage channels",
@@ -449,7 +449,7 @@ export const projectsData = [
     date: "2026",
     image: irrigation1,
     description:
-      "Executed regional agricultural water distribution assets, involving high-integrity cast concrete canal profiles, check gate structural boxes, and long-line waterway channel earthworks.",
+      "Executed regional agricultural water distribution assets, involving high-integrity cast concrete canal profiles, check gate structural boxes, and long-line waterway channel earthworks. The canal bed and slopes were paved with specialized slip-form concrete pavers to prevent water seepage, maximizing irrigation efficiency for local farming communities. Structural check gates were equipped with high-durability steel mechanisms to regulate seasonal water flow rates.",
     highlights: [
       "Water-tight concrete lining for irrigation distribution channels",
       "Precision canal earthwork profile cutting and side-slope grading",
@@ -470,7 +470,7 @@ export const projectsData = [
     date: "2025",
     image: supply1,
     description:
-      "Constructed comprehensive bulk city water pipeline corridors for the state water authority. Scope spanned deep high-risk utility trenching, line alignment, concrete pump houses, and backfill stabilization.",
+      "Constructed comprehensive bulk city water pipeline corridors for the state water authority. Scope spanned deep high-risk utility trenching, line alignment, concrete pump houses, and backfill stabilization. The pipeline joints were subjected to high-pressure hydrostatic tests to ensure leakproof operations across all segments. Reinforced concrete pump houses were built with soundproof walls and heavy equipment mounting pads to house high-capacity distribution pumps.",
     highlights: [
       "Precision-aligned bulk public drinking water pipeline laying operations",
       "Deep cross-country trench excavations and specialized subgrade stabilization",
@@ -491,7 +491,7 @@ export const projectsData = [
     date: "2025",
     image: electricity1,
     description:
-      "Executed technical grid distribution sub-civil installations across multiple state sectors, constructing massive reinforced electrical tower anchor footings and secure substation block limits.",
+      "Executed technical grid distribution sub-civil installations across multiple state sectors, constructing massive reinforced electrical tower anchor footings and secure substation block limits. The substation foundations were built using high-resistance grounding mats and chemical-resistant gravel overlays for safety. Anchor footings were designed with high overturning resistance factors to withstand severe wind loads on high-voltage transmission towers.",
     highlights: [
       "High-torque structural concrete footing anchor blocks for grid towers",
       "Precision deep installation configurations for electrical distribution poles",
@@ -512,7 +512,7 @@ export const projectsData = [
     date: "2025",
     image: gavpl3,
     description:
-      "Delivered comprehensive agro-industrial facility civil works for Godrej Agrovet, incorporating high-precision industrial processing shed foundations, bulk grading, and durable surface pavements.",
+      "Delivered comprehensive agro-industrial facility civil works for Godrej Agrovet, incorporating high-precision industrial processing shed foundations, bulk grading, and durable surface pavements. The project included casting high-strength loading dock walls, concrete ramp accesses, and silo foundations designed for massive static loads. Continuous concrete feed lines were supported directly by our specialized mobile batching trucks, ensuring on-demand supply.",
     highlights: [
       "Heavy-load equipment concrete foundations and steel pedestal bases",
       "Expansive industrial campus grading, drainage, and terrain leveling",
@@ -537,7 +537,7 @@ export const projectsData = [
     date: "2026",
     image: residental1,
     description:
-      "Delivered comprehensive civil core execution for a major mixed-use multi-floor facility. Systematically managed structural skeleton casting, brick partitions, utility plumbing lines, and outer facade plastering.",
+      "Delivered comprehensive civil core execution for a major mixed-use multi-floor facility. Systematically managed structural skeleton casting, brick partitions, utility plumbing lines, and outer facade plastering. The building incorporates high-integrity structural concrete beams spanning over 8 meters to provide open-concept commercial floors. Utility shafts were strategically positioned to allow easy maintenance access while keeping plumbing lines noise-insulated.",
     highlights: [
       "Precision structural columns, intermediate floor beams, and slab casts",
       "High-speed partition setups utilizing premium light fly ash bricks",
@@ -558,7 +558,7 @@ export const projectsData = [
     date: "2026",
     image: mutli3,
     description:
-      "Executed high-precision monolithic structural framing work for a multi-storey premier tower block in Aurangabad, deploying heavy-duty crane logistics and high-fluidity structural concrete mixes.",
+      "Executed high-precision monolithic structural framing work for a multi-storey premier tower block in Aurangabad, deploying heavy-duty crane logistics and high-fluidity structural concrete mixes. The project utilized high-cycle aluminum formwork systems (Mivan equivalent) to achieve rapid floor cycles and extremely smooth concrete surfaces. Concrete placement was monitored continuously using sensor systems to ensure complete compaction in high-density reinforcement zones.",
     highlights: [
       "Monolithic floor slab casts utilizing advanced modular shuttering layouts",
       "Rigid multi-level structural framework columns and lift core walls casting",
@@ -579,7 +579,7 @@ export const projectsData = [
     date: "2025",
     image: manjoot1,
     description:
-      "Completed primary subterranean civil foundations and structural lower podium elements for an ambitious urban housing block project, optimizing heavy steel reinforcement mats.",
+      "Completed primary subterranean civil foundations and structural lower podium elements for an ambitious urban housing block project, optimizing heavy steel reinforcement mats. The raft foundation utilized over 800 metric tons of high-tensile steel rebars, cast in a continuous 36-hour pouring cycle. A complex dewatering system was deployed to maintain a dry excavation pit while working below the local groundwater table level.",
     highlights: [
       "High-density structural concrete raft foundation pour operations",
       "Complex lower multi-tier structural columns and structural load beams setup",
@@ -599,7 +599,7 @@ export const projectsData = [
     date: "2025",
     image: dayal1,
     description:
-      "Executed multiple outsourced joint infrastructure development clusters across regional Maharashtra, managing bulk site earth balancing, retaining masonry walls, and connectivity structures.",
+      "Executed multiple outsourced joint infrastructure development clusters across regional Maharashtra, managing bulk site earth balancing, retaining masonry walls, and connectivity structures. The works included constructing gravity-type concrete retaining walls along hilly highway alignments to prevent landslides. Site earthwork balance was optimized through advanced excavation mapping to minimize soil transportation costs.",
     highlights: [
       "Reliable regional site development works and heavy soil levelings",
       "Subgrade preparation for community infrastructure expansion nodes",

@@ -7,7 +7,7 @@ import GeographicReach from "./GeographicReach";
 
 const Index = () => {
   return (
-    <main className="w-full flex-grow bg-white">
+    <main className="w-full flex-grow bg-white-background ">
       <ProjectsHero />
       <ProjectsList />
       <GeographicReach />

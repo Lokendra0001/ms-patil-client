@@ -3,78 +3,52 @@
 import React from "react";
 import Image from "next/image";
 import { Calendar, Clock } from "lucide-react";
+import { renderMarkdownContent } from "./markdownHelper";
 
 const BlogDetails = ({ blogdetail }) => {
-  const decodeHTMLEntities = (text) => {
-    if (!text) return "";
-    return text
-      .replace(/&rsquo;|rsquo;/g, "'")
-      .replace(/&lsquo;|lsquo;/g, "'")
-      .replace(/&ldquo;|ldquo;/g, '"')
-      .replace(/&rdquo;|rdquo;/g, '"')
-      .replace(/&#39;|#39;/g, "'")
-      .replace(/&#x27;|#x27;/g, "'")
-      .replace(/&apos;/g, "'")
-      .replace(/&quot;|quot;/g, '"')
-      .replace(/&amp;|amp;/g, "&")
-      .replace(/&lt;/g, "<")
-      .replace(/&gt;/g, ">")
-      .replace(/&nbsp;/g, " ")
-      .replace(/&ndash;|ndash;/g, "-")
-      .replace(/&mdash;|mdash;/g, "-");
-  };
-
-  const renderContent = (content) => {
-    if (!content) return null;
-    const normalized = decodeHTMLEntities(content.replace(/\u00A0/g, " "));
-
-    // If content has HTML tags, render it directly as HTML
-    if (/<[a-z][\s\S]*>/i.test(normalized)) {
-      return <div dangerouslySetInnerHTML={{ __html: normalized }} />;
-    }
-
-    // Otherwise, render plain text split by paragraphs
-    return normalized.split(/\n+/).map((para, i) => {
-      const trimmed = para.trim();
-      return trimmed ? (
-        <p
-          key={i}
-          className="text-slate-600 text-sm sm:text-base leading-relaxed mb-6"
-        >
-          {trimmed}
-        </p>
-      ) : null;
-    });
-  };
-
   return (
     <div className="py-6 space-y-8">
+      {/* Blog Title */}
+      <h1 className="text-lg sm:text-xl md:text-2xl font-bold text-text-primary leading-tight select-text">
+        {blogdetail.title}
+      </h1>
+
       {/* Meta Bar */}
       <div className="flex flex-wrap items-center gap-6 pb-6 border-b border-slate-100 text-xs font-bold text-slate-400 uppercase tracking-wider">
         <div className="flex items-center gap-2">
-          <div className="w-8 h-8 relative overflow-hidden border border-slate-100 rounded-none">
-            <Image
-              src={
-                blogdetail.authorAvatar ||
-                "https://images.unsplash.com/photo-1590402449133-79747f58e3fe?q=80&w=200&auto=format&fit=crop"
-              }
-              alt={blogdetail.author || "Ms Patil Construction"}
-              fill
-              className="object-cover"
-            />
+          {/* Custom Construction Building Logo Avatar */}
+          <div className="w-8 h-8 bg-slate-50 border border-border-secondary flex items-center justify-center text-primary">
+            <svg
+              className="w-4 h-4"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M3 21H21M5 21V8L12 3L19 8V21M9 21V13H15V21"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="square"
+              />
+              <path
+                d="M5 12H19M12 3V21"
+                stroke="currentColor"
+                strokeWidth="1.5"
+              />
+            </svg>
           </div>
-          <span className="text-primary font-extrabold select-text">
+          <span className="text-text-gray font-extrabold select-text">
             By {blogdetail.author || "Ms Patil Construction"}
           </span>
         </div>
 
         <span className="flex items-center gap-1.5 select-text">
-          <Calendar className="w-4 h-4 text-primary-light" />
+          <Calendar className="w-4 h-4 text-primary" />
           {blogdetail.date || "January 2025"}
         </span>
 
         <span className="flex items-center gap-1.5 select-text">
-          <Clock className="w-4 h-4 text-primary-light" />
+          <Clock className="w-4 h-4 text-primary" />
           {blogdetail.readTime || "5 Min Read"}
         </span>
       </div>
@@ -94,14 +68,14 @@ const BlogDetails = ({ blogdetail }) => {
 
       {/* Short Description */}
       {blogdetail.shortDescription && (
-        <div className="p-6 bg-slate-50 border-l-4 border-primary-light text-primary text-base sm:text-lg italic leading-relaxed my-6 font-medium">
+        <div className="p-6 bg-slate-50 border-l-4 border-primary text-primary-hover text-base sm:text-lg italic leading-relaxed my-6 font-medium">
           {blogdetail.shortDescription}
         </div>
       )}
 
       {/* Content Render */}
       <div className="blog-body select-text">
-        {renderContent(blogdetail.content)}
+        {renderMarkdownContent(blogdetail.content)}
       </div>
 
       {/* Spacing Styles Tag to fix Tailwind margin reset inside dangerouslySetInnerHTML */}
@@ -112,15 +86,15 @@ const BlogDetails = ({ blogdetail }) => {
           color: #475569 !important;
         }
         .blog-body h2 {
-          font-size: 1.5rem !important;
-          font-weight: 700 !important;
+          font-size: 1.05rem !important;
+          font-weight: 500 !important;
           color: #1a1a1a !important;
           margin-top: 2rem !important;
           margin-bottom: 1rem !important;
           line-height: 1.4 !important;
         }
         .blog-body h3 {
-          font-size: 1.25rem !important;
+          font-size: 0.8rem !important;
           font-weight: 700 !important;
           color: #1a1a1a !important;
           margin-top: 1.5rem !important;
@@ -140,6 +114,8 @@ const BlogDetails = ({ blogdetail }) => {
         .blog-body li {
           margin-bottom: 0.5rem !important;
           line-height: 1.75 !important;
+          font-size: 0.9rem !important;
+
         }
         .blog-body img {
           margin-top: 2.5rem !important;

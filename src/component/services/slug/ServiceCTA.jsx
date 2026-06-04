@@ -2,15 +2,16 @@
 
 import React from "react";
 import Link from "next/link";
+import { contactInfo } from "@/data/layout/header";
 
 const ServiceCTA = () => {
   return (
-    <section className="my-25 relative  bg-white overflow-hidden select-text ">
+    <section className="my-25 relative  bg-white-background  overflow-hidden select-text ">
       <div className=" py-15 bg-slate-50 max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8 text-center md:text-left">
           {/* Text Content */}
           <div className="space-y-3">
-            <span className="text-[10px] sm:text-xs font-black tracking-[0.25em] text-primary-light  block ">
+            <span className="text-[10px] sm:text-xs font-black tracking-[0.25em] text-primary  block ">
               Start Your Project
             </span>
             <h2 className="text-2xl sm:text-3xl font-bold text-text-primary  tracking-tight ">
@@ -27,8 +28,8 @@ const ServiceCTA = () => {
           <div className="flex flex-col sm:flex-row items-center gap-4 shrink-0 w-full sm:w-auto">
             {/* Call Now Button */}
             <a
-              href="tel:+919876543210"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 border border-gray-300 hover:border-border-primary hover:bg-primary-light text-text-primary hover:text-white font-bold tracking-widest text-sm transition-all duration-300 rounded-none cursor-pointer"
+              href={`tel:${contactInfo.phone.replace(/\s+/g, "")}`}
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 border border-gray-300 hover:border-border-primary hover:bg-primary text-text-primary hover:text-text-white  font-bold tracking-widest text-sm transition-all duration-300 rounded-none cursor-pointer"
             >
               <svg
                 className="w-4 h-4"
@@ -49,7 +50,7 @@ const ServiceCTA = () => {
             {/* Get a Quote Button */}
             <Link
               href="/contact"
-              className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 border border-transparent hover:border-primary-light bg-primary-light hover:bg-white text-white hover:text-text-primary font-semibold text-sm  transition-all duration-300 rounded-none cursor-pointer"
+              className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 border border-transparent hover:border-primary bg-primary hover:bg-white-background  text-text-white  hover:text-text-primary font-semibold text-sm  transition-all duration-300 rounded-none cursor-pointer"
             >
               Get a Quote
             </Link>

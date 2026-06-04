@@ -7,7 +7,7 @@ import ServiceCTA from "@/component/services/slug/ServiceCTA";
 
 const Index = () => {
   return (
-    <main className="w-full grow bg-white">
+    <main className="w-full grow bg-white-background ">
       <SectorsHero />
       <SectorsList />
       <ServiceCTA />

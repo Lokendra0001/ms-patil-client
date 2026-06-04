@@ -13,19 +13,18 @@ const FAQ = () => {
   };
 
   return (
-    <section className="w-full bg-white py-20 lg:py-24 border-b border-slate-100 select-text">
+    <section className="w-full bg-white-background  py-20 lg:py-24 border-b border-border-secondary select-text">
       <div className="max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12">
         {/* Parent grid is set to items-start to keep the left column stable */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           {/* Left Column: Vertically Centered CTA Block (Non-sticky) */}
           <div className="lg:col-span-5 flex flex-col items-start">
             <Heading
-              tagline="DEALING WITH YOUR WORRIES"
-              title="If Your Question Is Not Here"
-              highlight="Contact Us"
-              description="Can't find the specific contracting, registration, or machinery details you're looking for? Reach out directly to our operations office, and we'll resolve your query."
-              textColor="text-primary"
-              className="!mb-8 max-w-md"
+              tagline="Quick answers"
+              title="Need Clarity? We’ve Got "
+              highlight="You Covered"
+              description="Browse common questions or contact us for more information."
+              className="mb-8! max-w-md"
             />
 
             {/* Rectangular Contact Button */}
@@ -42,10 +41,10 @@ const FAQ = () => {
               return (
                 <div
                   key={index}
-                  className={`border rounded-none bg-white transition-all duration-300 ${
+                  className={`border rounded-none bg-white-background  transition-all duration-300 ${
                     isOpen
-                      ? "border-primary-light shadow-[0_4px_25px_rgba(245,158,11,0.04)]"
-                      : "border-slate-200/80 hover:border-slate-300"
+                      ? "border-primary-hover shadow-[0_4px_25px_rgba(245,158,11,0.04)]"
+                      : "border-slate-200/80 hover:border-border-primary"
                   }`}
                 >
                   {/* Accordion header button */}
@@ -55,7 +54,7 @@ const FAQ = () => {
                   >
                     <span
                       className={` text-sm sm:text-base font-bold transition-colors duration-200 ${
-                        isOpen ? "text-primary-light-hover" : "text-slate-800"
+                        isOpen ? "text-primary-hover" : "text-text-primary"
                       }`}
                     >
                       {faq.question}
@@ -64,7 +63,7 @@ const FAQ = () => {
                     {/* Expand/Collapse sign indicator */}
                     <span
                       className={`text-lg sm:text-xl font-bold shrink-0 leading-none transition-colors duration-200 select-text ${
-                        isOpen ? "text-primary-light-hover" : "text-slate-400"
+                        isOpen ? "text-primary-hover" : "text-text-gray"
                       }`}
                     >
                       {isOpen ? "−" : "+"}
@@ -77,8 +76,8 @@ const FAQ = () => {
                       isOpen ? "max-h-48" : "max-h-0"
                     }`}
                   >
-                    <div className="p-5 sm:p-6 bg-slate-50/30 border-t border-slate-100">
-                      <p className="text-xs sm:text-sm text-slate-500 font-semibold leading-relaxed">
+                    <div className="p-5 sm:p-6 bg-slate-50/30 border-t border-border-secondary">
+                      <p className="text-xs sm:text-sm text-text-gray  font-medium leading-relaxed">
                         {faq.answer}
                       </p>
                     </div>

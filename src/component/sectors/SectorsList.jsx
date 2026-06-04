@@ -10,9 +10,8 @@ const SectorsList = () => {
   const sectors = Object.values(sectorsData);
 
   return (
-    <section className="py-20 sm:py-24 bg-white select-text">
+    <section className="py-20 sm:py-24 bg-white-background  select-text">
       <div className="max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12">
-        
         {/* Section Title */}
         <Heading
           title="Heavy Industry "
@@ -27,9 +26,8 @@ const SectorsList = () => {
           {sectors.map((sector) => (
             <div
               key={sector.slug}
-              className="group relative flex flex-col justify-between min-h-[460px] bg-white border border-border-secondary rounded-none overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.02)] transition-all duration-300"
+              className="group relative flex flex-col justify-between min-h-[460px] bg-white-background  border border-border-secondary rounded-none overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.02)] transition-all duration-300"
             >
-              
               {/* Image Banner */}
               <div className="relative aspect-[16/9] w-full overflow-hidden bg-slate-100 select-text">
                 <Image
@@ -39,10 +37,10 @@ const SectorsList = () => {
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
-                
+
                 {/* Sector Badge overlay */}
                 <div className="absolute top-4 left-4 z-10">
-                  <span className="px-3 py-1 bg-primary text-white text-[10px] tracking-wider uppercase font-bold rounded-none">
+                  <span className="px-3 py-1 bg-primary text-text-white  text-[10px] tracking-wider uppercase font-bold rounded-none">
                     {sector.badge}
                   </span>
                 </div>
@@ -50,7 +48,6 @@ const SectorsList = () => {
 
               {/* Text Context & Link */}
               <div className="p-8 flex-grow flex flex-col justify-between relative">
-                
                 {/* Bottom expanding gold line */}
                 <div className="absolute bottom-0 left-0 w-0 h-[4px] bg-primary-light transition-all duration-300 group-hover:w-full select-text" />
 
@@ -83,13 +80,10 @@ const SectorsList = () => {
                     </span>
                   </Link>
                 </div>
-
               </div>
-
             </div>
           ))}
         </div>
-
       </div>
     </section>
   );

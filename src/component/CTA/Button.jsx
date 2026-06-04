@@ -11,11 +11,15 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        primary: "bg-primary text-white border border-primary hover:bg-transparent hover:text-primary font-bold rounded-none",
-        hero: "bg-transparent border border-white text-white rounded-none hover:bg-primary-light hover:text-white hover:border-primary-light",
-        theme: "bg-primary-light text-white border border-primary-light hover:bg-transparent hover:text-slate-900 font-bold rounded-none",
-        header: "bg-primary-light text-white font-medium border border-primary-light hover:bg-transparent hover:text-slate-900 rounded-none",
-        reverse: "bg-transparent text-slate-800 border border-slate-300 rounded-none hover:bg-primary-light hover:text-white hover:border-primary-light",
+        primary:
+          "bg-primary text-text-white  border border-primary hover:bg-transparent hover:text-text-primary font-bold rounded-none",
+        hero: "bg-transparent border border-white text-text-white  rounded-none hover:bg-primary hover:text-text-white  hover:border-primary",
+        theme:
+          "bg-primary text-text-white  border border-primary hover:bg-transparent hover:text-text-primary font-bold rounded-none",
+        header:
+          "bg-primary text-text-white  font-medium border border-border-primary hover:bg-transparent hover:text-text-primary rounded-none",
+        reverse:
+          "bg-transparent text-text-primary border border-slate-300 rounded-none hover:bg-primary hover:text-text-white  hover:border-primary",
       },
 
       disableHoverOnGroup: {
@@ -51,7 +55,7 @@ const buttonVariants = cva(
       size: "md",
       disableHoverOnGroup: false,
     },
-  }
+  },
 );
 
 // Button component supporting both <button> and Next.js <Link> routing
@@ -66,7 +70,7 @@ export default function Button({
 }) {
   const classes = clsx(
     buttonVariants({ variant, size, disableHoverOnGroup }),
-    className
+    className,
   );
 
   if (href) {

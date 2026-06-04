@@ -14,7 +14,7 @@ const SectorHero = ({ data }) => {
     titleNode = (
       <>
         {parts[0]}
-        <span className="text-primary-light! ">{highlight}</span>
+        <span className="text-primary ">{highlight}</span>
         {parts[1]}
       </>
     );
@@ -32,25 +32,25 @@ const SectorHero = ({ data }) => {
           className="object-cover"
         />
         {/* Dark mask overlay */}
-        <div className="absolute inset-0 bg-slate-950/80 z-10" />
+        <div className="absolute inset-0 bg-slate-background/80 z-10" />
       </div>
 
       <div className="max-w-[1600px] mx-auto w-full px-4 sm:px-8 lg:px-12 relative z-20">
         <div className="max-w-4xl space-y-6">
           {/* Technical Badge Overlay */}
           <div className="inline-block">
-            <span className="px-3 py-1 bg-primary-light text-slate-950 text-[10px] sm:text-xs font-black tracking-widest uppercase rounded-none select-text">
+            <span className="px-3 py-1 bg-primary text-text-primary  text-[10px] sm:text-xs font-black tracking-widest uppercase rounded-none select-text">
               [ {data.badge} ]
             </span>
           </div>
 
           {/* Title */}
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight uppercase tracking-tight font-sans ">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-text-white  leading-tight uppercase tracking-tight font-sans ">
             {titleNode}
           </h1>
 
           {/* 2-line operational overview */}
-          <p className="text-sm sm:text-base text-slate-300 leading-relaxed max-w-2xl font-medium tracking-wide">
+          <p className="text-sm sm:text-base text-text-white/60 leading-relaxed max-w-2xl font-medium tracking-wide">
             {data.overview}
           </p>
         </div>

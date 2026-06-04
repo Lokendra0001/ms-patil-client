@@ -5,15 +5,15 @@ import { contactInfo } from "@/data/layout/header";
 const AnnouncementBar = ({ isScrolled }) => {
   return (
     <div
-      className={`w-full text-white text-xs py-2.5 px-4 sm:px-8 lg:px-12 select-text border-b border-transparent transition-all duration-300 ${
-        isScrolled ? "hidden" : "hidden md:block"
+      className={`w-full text-text-white  text-xs py-2.5 px-4 sm:px-8 lg:px-12 select-text border-b border-transparent transition-all duration-300 ${
+        isScrolled ? "hidden" : "hidden lg:block"
       }`}
     >
       <ContentContainer className="flex justify-between items-center">
         <div className="flex items-center gap-6">
           <span className="flex items-center gap-1.5 font-medium">
             <svg
-              className="w-3.5 h-3.5 text-primary-light"
+              className="w-3.5 h-3.5 text-primary"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -28,9 +28,9 @@ const AnnouncementBar = ({ isScrolled }) => {
             {contactInfo.phone}
           </span>
           <span className="w-px h-3 bg-slate-200" />
-          <span className="flex items-center gap-1.5 font-medium text-white">
+          <span className="flex items-center gap-1.5 font-medium text-text-white ">
             <svg
-              className="w-3.5 h-3.5 text-primary-light"
+              className="w-3.5 h-3.5 text-primary"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -46,9 +46,9 @@ const AnnouncementBar = ({ isScrolled }) => {
           </span>
         </div>
         <div className="flex items-center gap-6">
-          <span className="flex items-center gap-1.5 font-medium text-white">
+          <span className="flex items-center gap-1.5 font-medium text-text-white ">
             <svg
-              className="w-3.5 h-3.5 text-primary-light"
+              className="w-3.5 h-3.5 text-primary"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -63,9 +63,9 @@ const AnnouncementBar = ({ isScrolled }) => {
             {contactInfo.hours}
           </span>
           <span className="w-px h-3 bg-slate-200" />
-          <span className="flex items-center gap-1.5 font-medium text-white">
+          <span className="flex items-center gap-1.5 font-medium text-text-white ">
             <svg
-              className="w-3.5 h-3.5 text-primary-light"
+              className="w-3.5 h-3.5 text-primary"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"

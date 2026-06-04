@@ -17,18 +17,18 @@ const Hero = () => {
     return () => clearInterval(timer);
   }, [slides.length]);
 
-  const handleNext = () => {
-    setCurrentSlide((prev) => (prev + 1) % slides.length);
-  };
+  // const handleNext = () => {
+  //   setCurrentSlide((prev) => (prev + 1) % slides.length);
+  // };
 
-  const handlePrev = () => {
-    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
-  };
+  // const handlePrev = () => {
+  //   setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
+  // };
 
   return (
-    <main className=" w-full flex-1 bg-white">
+    <main className=" w-full flex-1 bg-white-background -background">
       {/* Hero Section */}
-      <section className="  relative w-full min-h-[700px] sm:min-h-[750px] lg:min-h-[850px] bg-slate-950 overflow-hidden select-text flex flex-col justify-between">
+      <section className="  relative w-full min-h-[700px] sm:min-h-[750px] lg:min-h-[850px] bg-slate-background overflow-hidden select-text flex flex-col justify-between">
         {/* Background Images Layer */}
         <div className="absolute inset-0 z-0">
           {slides.map((slide, index) => (
@@ -52,7 +52,7 @@ const Hero = () => {
             </div>
           ))}
           {/* Solid Heavy Dark Overlay (Tinted for high contrast text) */}
-          <div className="absolute inset-0 bg-slate-950/70 z-10" />
+          <div className="absolute inset-0 bg-slate-background/70 z-10" />
         </div>
 
         {/* Slides Content Layer */}
@@ -71,26 +71,26 @@ const Hero = () => {
                   <div className="max-w-4xl pt-15 lg:pt-0">
                     {/* Accent Line + Subtitle */}
                     <div className="flex items-center  justify-start gap-3.5 mb-5 animate-fade-in-up">
-                      <div className="w-5 md:w-12 h-1 bg-primary-light " />
-                      <span className="text-xs sm:text-sm font-bold tracking-[0.22em] text-primary-light uppercase">
+                      <div className="w-5 md:w-12 h-1 bg-primary " />
+                      <span className="text-xs sm:text-sm font-bold tracking-[0.22em] text-primary uppercase">
                         {slide.subtitle}
                       </span>
                     </div>
 
                     {/* Bold Uppercase Heading */}
                     <h1
-                      className="text-[28px] sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight uppercase mb-6 max-w-4xl animate-fade-in-up text-cente lg:text-left"
+                      className="text-[28px] sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-text-white  leading-tight uppercase mb-6 max-w-4xl animate-fade-in-up text-cente lg:text-left"
                       style={{ animationDelay: "150ms" }}
                     >
                       {slide.titleText}
-                      <span className="text-primary-light-hover">
+                      <span className="text-primary-hover">
                         {slide.titleHighlight}
                       </span>
                     </h1>
 
                     {/* Description Text */}
                     <p
-                      className=" text-sm sm:text-base text-slate-300 mb-9 max-w-2xl leading-relaxed animate-fade-in-up"
+                      className=" text-sm sm:text-base text-text-white /95 mb-9 max-w-2xl leading-relaxed animate-fade-in-up"
                       style={{ animationDelay: "300ms" }}
                     >
                       {slide.description}
@@ -105,7 +105,7 @@ const Hero = () => {
                         href={slide.primaryBtn.href}
                         variant="theme"
                         size="hr"
-                        className="px-8 py-3.5 text-xs tracking-wider uppercase h-auto hover:text-white"
+                        className="px-8 py-3.5 text-xs tracking-wider uppercase h-auto hover:text-text-white "
                       >
                         {slide.primaryBtn.text}
                       </Button>
@@ -128,7 +128,7 @@ const Hero = () => {
         {/* Navigation Arrows (Left/Right Sides) */}
         {/* <button
           onClick={handlePrev}
-          className="absolute left-4 sm:left-6 top-1/2 -translate-y-1/2 z-20 w-11 h-11 bg-white/10 hover:bg-primary-light text-white hover:border-primary-light border border-white/20 flex items-center justify-center rounded-none transition-colors focus:outline-none cursor-pointer"
+          className="absolute left-4 sm:left-6 top-1/2 -translate-y-1/2 z-20 w-11 h-11 bg-white-background /10 hover:bg-primary-light text-text-white  hover:border-primary-light border border-white/20 flex items-center justify-center rounded-none transition-colors focus:outline-none cursor-pointer"
           aria-label="Previous slide"
         >
           <svg
@@ -147,7 +147,7 @@ const Hero = () => {
         </button>
         <button
           onClick={handleNext}
-          className="absolute right-4 sm:right-6 top-1/2 -translate-y-1/2 z-20 w-11 h-11 bg-white/10 hover:bg-primary-light text-white hover:border-primary-light border border-white/20 flex items-center justify-center rounded-none transition-colors focus:outline-none cursor-pointer"
+          className="absolute right-4 sm:right-6 top-1/2 -translate-y-1/2 z-20 w-11 h-11 bg-white-background /10 hover:bg-primary-light text-text-white  hover:border-primary-light border border-white/20 flex items-center justify-center rounded-none transition-colors focus:outline-none cursor-pointer"
           aria-label="Next slide"
         >
           <svg
@@ -169,10 +169,10 @@ const Hero = () => {
         <div className="absolute bottom-8 sm:bottom-10 left-0 right-0 z-20 w-full">
           <div className="max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 flex items-center justify-between">
             {/* Slide Hero Counter (01 / 03) */}
-            <div className="text-white text-xs sm:text-sm font-bold tracking-widest select-text">
-              <span className="text-primary-light">0{currentSlide + 1}</span>
-              <span className="text-white/30 mx-2">/</span>
-              <span className="text-white/55 font-medium">
+            <div className="text-text-white  text-xs sm:text-sm font-bold tracking-widest select-text">
+              <span className="text-primary">0{currentSlide + 1}</span>
+              <span className="text-text-white /30 mx-2">/</span>
+              <span className="text-text-white /55 font-medium">
                 0{slides.length}
               </span>
             </div>
@@ -185,8 +185,8 @@ const Hero = () => {
                   onClick={() => setCurrentSlide(index)}
                   className={`h-1 transition-all duration-300 rounded-none cursor-pointer focus:outline-none ${
                     index === currentSlide
-                      ? "w-10 bg-primary-light"
-                      : "w-6 bg-white/35 hover:bg-white/70"
+                      ? "w-10 bg-primary"
+                      : "w-6 bg-white-background/35 hover:bg-white-background /70"
                   }`}
                   aria-label={`Go to slide ${index + 1}`}
                 />

@@ -7,7 +7,7 @@ const ServiceOverview = ({ data }) => {
   if (!data) return null;
 
   return (
-    <section className="py-24 sm:py-32 bg-white border-t border-slate-100 select-text">
+    <section className="py-24 sm:py-32 bg-white-background  border-t border-slate-100 select-text">
       <div className="max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           {/* Left Column: Heading and Technical Spec sheet info */}
@@ -25,7 +25,7 @@ const ServiceOverview = ({ data }) => {
             </p>
 
             {data.machinery && (
-              <div className="p-8 bg-slate-50 border-l-4 border-primary-light mt-8">
+              <div className="p-8 bg-slate-50 border-l-4 border-primary mt-8">
                 <span className="text-[10px] font-black tracking-widest text-slate-400 block mb-2 uppercase">
                   Active Machinery & Fleet
                 </span>
@@ -44,17 +44,17 @@ const ServiceOverview = ({ data }) => {
                 return (
                   <div
                     key={index}
-                    className="p-8 border border-slate-200 bg-white hover:border-primary-light/40  transition-all duration-300 flex flex-col justify-between min-h-[180px] group"
+                    className="p-8 border border-slate-200 bg-white-background  hover:border-primary/80  transition-all duration-300 flex flex-col justify-between min-h-[180px] group"
                   >
                     <div>
-                      <span className="text-3xl sm:text-4xl font-black text-slate-100 group-hover:text-primary-light/25 transition-colors block mb-4">
+                      <span className="text-3xl sm:text-4xl font-black text-slate-100 group-hover:text-primary/25 transition-colors block mb-4">
                         {indexStr}
                       </span>
-                      <h3 className="text-base sm:text-lg font-bold text-slate-900 tracking-wide leading-snug">
+                      <h3 className="text-base sm:text-lg font-bold text-slate-900 tracking-wide leading-snug group-hover:text-primary">
                         {item.name}
                       </h3>
                     </div>
-                    <div className="h-1 w-8 bg-slate-200 group-hover:w-16 group-hover:bg-primary-light transition-all duration-300 mt-6" />
+                    <div className="h-1 w-8 bg-slate-200 group-hover:w-16 group-hover:bg-primary transition-all duration-300 mt-6" />
                   </div>
                 );
               })}

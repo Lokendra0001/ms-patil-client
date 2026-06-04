@@ -15,8 +15,8 @@ const page = () => {
       "@type": "LocalBusiness",
       "name": "M/S Chetankumar Bhagwan Suryawanshi",
       "alternateName": "Ms Patil Construction",
-      "telephone": "+919876543210",
-      "email": "contact@mspatilconstruction.com",
+      "telephone": process.env.NEXT_PUBLIC_COMPANY_PHONE?.replace(/\s+/g, "") || "+919876543210",
+      "email": process.env.NEXT_PUBLIC_COMPANY_EMAIL || "info@mspatilconstruction.com",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Dhule",

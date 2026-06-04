@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState, useRef } from "react";
 import Button from "@/component/CTA/Button";
+import Heading from "../common/Heading";
 import { clientLogos, statsList } from "../../data/home/stats";
 
 const AnimatedCounter = ({
@@ -73,13 +74,13 @@ const LogoItem = ({ name, icon }) => (
 
 const Stats = () => {
   return (
-    <section className="w-full bg-white py-16 sm:py-20 border-b border-slate-100 select-text">
+    <section className="w-full bg-white-background  py-16 sm:py-20 border-b border-border-secondary select-text">
       <div className="max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12">
         {/* Top: 5 Logo Marquee with Left & Right Fading Effects */}
-        <div className="relative w-full overflow-hidden pb-16 border-b border-slate-100 select-text">
+        <div className="relative w-full overflow-hidden pb-16 border-b border-border-secondary select-text">
           {/* Gradient Masks */}
-          <div className="absolute left-0 top-0 bottom-0 w-16 sm:w-28 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
-          <div className="absolute right-0 top-0 bottom-0 w-16 sm:w-28 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
+          <div className="absolute left-0 top-0 bottom-0 w-16 sm:w-28 bg-gradient-to-r from-white-background to-transparent z-10 pointer-events-none" />
+          <div className="absolute right-0 top-0 bottom-0 w-16 sm:w-28 bg-gradient-to-l from-white-background to-transparent z-10 pointer-events-none" />
 
           {/* Scrolling Marquee Tape */}
           <div className="flex w-max gap-16 items-center animate-marquee">
@@ -109,22 +110,12 @@ const Stats = () => {
         {/* Middle: Stats Statement & Action Button */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 py-16 items-center">
           <div className="lg:col-span-8 flex flex-col items-start">
-            {/* Aligned Tagline typography block */}
-            <span className="text-[10px] sm:text-xs font-black tracking-[0.25em] text-primary-light uppercase mb-2 block select-text">
-              KEY PERFORMANCE
-            </span>
-
-            {/* Aligned standard sentence-case heading */}
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-primary leading-tight max-w-3xl select-text">
-              Our construction performance translates blueprints into{" "}
-              <span className="text-primary-light-hover">
-                completed landmarks
-              </span>{" "}
-              that stand the test of time.
-            </h2>
-
-            {/* Standard yellow accent line */}
-            <div className="w-16 h-1 bg-primary-light mt-4 select-text" />
+            <Heading
+              tagline="Key Performance"
+              title="Delivering Infrastructure That  "
+              highlight="Stands For Generations"
+              className="mb-0! max-w-3xl"
+            />
           </div>
 
           <div className="lg:col-span-4 flex lg:justify-end">
@@ -144,10 +135,10 @@ const Stats = () => {
           {statsList.map((stat, idx) => (
             <div key={idx} className="flex flex-col items-center text-center">
               {/* Thin Separator Line */}
-              <div className="w-full h-px bg-slate-200 mb-6" />
+              <div className="w-full h-px bg-border-secondary mb-6" />
 
               {/* Bold Refined Stat Number */}
-              <div className="text-3xl sm:text-4xl lg:text-5xl font-black text-primary mb-2.5 leading-none">
+              <div className="text-3xl sm:text-4xl lg:text-5xl font-black text-text-primary mb-2.5 leading-none">
                 <AnimatedCounter
                   target={stat.target}
                   prefix={stat.prefix}
@@ -156,7 +147,7 @@ const Stats = () => {
               </div>
 
               {/* Compact Stat Label */}
-              <span className="text-xs sm:text-sm font-semibold text-slate-500 tracking-wide uppercase">
+              <span className="text-xs sm:text-sm font-semibold text-text-gray  tracking-wide uppercase">
                 {stat.label}
               </span>
             </div>

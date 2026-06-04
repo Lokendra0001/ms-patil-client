@@ -3,10 +3,31 @@
 import React, { useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
 import Button from "@/component/CTA/Button";
+import { contactInfo } from "@/data/layout/header";
+import { FiMapPin, FiBriefcase, FiCheckCircle } from "react-icons/fi";
 
 const ContactForm = () => {
   const searchParams = useSearchParams();
   const isConsultationMode = searchParams.get("consultation") === "true";
+
+  const offices = [
+    {
+      id: "pune",
+      title: "Pune Corporate Headquarters",
+      address:
+        "Suite 405, Signature Towers, Senapati Bapat Road, Pune, Maharashtra 411016",
+      phone: contactInfo.phone,
+      icon: <FiMapPin className="w-5 h-5" />,
+    },
+    {
+      id: "mumbai",
+      title: "Mumbai Regional Liaison",
+      address:
+        "11th Floor, Nariman Point Commercial Hub, Marine Drive, Mumbai, Maharashtra 400021",
+      phone: "+91 98765 43211",
+      icon: <FiBriefcase className="w-5 h-5" />,
+    },
+  ];
 
   // Form State
   const [formData, setFormData] = useState({
@@ -122,37 +143,25 @@ const ContactForm = () => {
   };
 
   return (
-    <section className="py-20 lg:py-24 bg-white select-text">
+    <section className="py-20 lg:py-24 bg-white-background  select-text">
       <div className="max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
           {/* LEFT COLUMN: CONTACT FORM (Col 7) */}
-          <div className="lg:col-span-7 bg-white border border-slate-200 p-8 sm:p-10 shadow-sm">
+          <div className="lg:col-span-7 bg-white-background  border border-slate-200 p-8 sm:p-10 shadow-sm">
             <div className="mb-8">
               <h2 className="text-xl sm:text-2xl font-black text-primary uppercase mb-2">
                 Submit Business Inquiry
               </h2>
-              <p className="text-xs sm:text-sm text-slate-500 font-normal">
+              <p className="text-xs sm:text-sm text-text-gray  font-normal">
                 Please fill out the form below. Fields marked with{" "}
                 <span className="text-red-500">*</span> are mandatory.
               </p>
             </div>
 
             {submitSuccess ? (
-              <div className="bg-emerald-50 border border-emerald-200 p-8 text-center text-slate-800">
-                <svg
-                  className="w-12 h-12 text-emerald-500 mx-auto mb-4"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                  />
-                </svg>
-                <h4 className="text-lg font-bold text-emerald-800 uppercase mb-2">
+              <div className=" border border-border-primary p-8 text-center text-text-primary">
+                <FiCheckCircle className="w-12 h-12 text-primary mx-auto mb-4" />
+                <h4 className="text-lg font-bold text-primary uppercase mb-2">
                   Inquiry Submitted Successfully
                 </h4>
                 <p className="text-xs text-slate-600 leading-relaxed mb-6">
@@ -160,20 +169,22 @@ const ContactForm = () => {
                   Suryawanshi. Your inquiry has been registered, and a regional
                   manager will follow up with you shortly.
                 </p>
-                <button
-                  type="button"
+                <Button
+                  type="submit"
+                  variant="theme"
+                  size="ct"
                   onClick={() => setSubmitSuccess(false)}
-                  className="px-6 py-2.5 bg-slate-900 text-white font-bold text-xs uppercase tracking-wider hover:bg-slate-800 transition-colors"
+                  className="w-fit! flex items-center justify-center tracking-wide cursor-pointer text-xs py-4 h-auto font-black"
                 >
                   Submit Another Inquiry
-                </button>
+                </Button>
               </div>
             ) : (
               <form onSubmit={handleFormSubmit} className="space-y-6">
                 {/* Name & Email Group */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div>
-                    <label className="block text-[10px] font-extrabold text-slate-500 uppercase tracking-wider mb-2">
+                    <label className="block text-[10px] font-extrabold text-text-gray  uppercase tracking-wider mb-2">
                       Full Name <span className="text-red-500">*</span>
                     </label>
                     <input
@@ -181,10 +192,10 @@ const ContactForm = () => {
                       name="name"
                       value={formData.name}
                       onChange={handleInputChange}
-                      className={`w-full px-4 py-3 bg-slate-50 border text-sm focus:outline-none focus:bg-white transition-all ${
+                      className={`w-full px-4 py-3 bg-slate-50 border text-sm focus:outline-none focus:bg-white-background  transition-all ${
                         formErrors.name
                           ? "border-red-400 focus:ring-1 focus:ring-red-100"
-                          : "border-slate-200 focus:border-primary-light focus:ring-4 focus:ring-primary-light/5"
+                          : "border-slate-200 focus:border-primary focus:ring-4 focus:ring-primary/5"
                       }`}
                       placeholder="John Doe"
                     />
@@ -196,7 +207,7 @@ const ContactForm = () => {
                   </div>
 
                   <div>
-                    <label className="block text-[10px] font-extrabold text-slate-500 uppercase tracking-wider mb-2">
+                    <label className="block text-[10px] font-extrabold text-text-gray  uppercase tracking-wider mb-2">
                       Email Address <span className="text-red-500">*</span>
                     </label>
                     <input
@@ -204,10 +215,10 @@ const ContactForm = () => {
                       name="email"
                       value={formData.email}
                       onChange={handleInputChange}
-                      className={`w-full px-4 py-3 bg-slate-50 border text-sm focus:outline-none focus:bg-white transition-all ${
+                      className={`w-full px-4 py-3 bg-slate-50 border text-sm focus:outline-none focus:bg-white-background  transition-all ${
                         formErrors.email
                           ? "border-red-400 focus:ring-1 focus:ring-red-100"
-                          : "border-slate-200 focus:border-primary-light focus:ring-4 focus:ring-primary-light/5"
+                          : "border-slate-200 focus:border-primary focus:ring-4 focus:ring-primary/5"
                       }`}
                       placeholder="john@example.com"
                     />
@@ -222,7 +233,7 @@ const ContactForm = () => {
                 {/* Phone & Inquiry Type Group */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div>
-                    <label className="block text-[10px] font-extrabold text-slate-500 uppercase tracking-wider mb-2">
+                    <label className="block text-[10px] font-extrabold text-text-gray  uppercase tracking-wider mb-2">
                       Contact Number <span className="text-red-500">*</span>
                     </label>
                     <input
@@ -230,12 +241,12 @@ const ContactForm = () => {
                       name="phone"
                       value={formData.phone}
                       onChange={handleInputChange}
-                      className={`w-full px-4 py-3 bg-slate-50 border text-sm focus:outline-none focus:bg-white transition-all ${
+                      className={`w-full px-4 py-3 bg-slate-50 border text-sm focus:outline-none focus:bg-white-background  transition-all ${
                         formErrors.phone
                           ? "border-red-400 focus:ring-1 focus:ring-red-100"
-                          : "border-slate-200 focus:border-primary-light focus:ring-4 focus:ring-primary-light/5"
+                          : "border-slate-200 focus:border-primary focus:ring-4 focus:ring-primary/5"
                       }`}
-                      placeholder="+91 98765 43210"
+                      placeholder={contactInfo.phone}
                     />
                     {formErrors.phone && (
                       <p className="text-[10px] font-bold text-red-500 mt-1.5">
@@ -245,14 +256,14 @@ const ContactForm = () => {
                   </div>
 
                   <div>
-                    <label className="block text-[10px] font-extrabold text-slate-500 uppercase tracking-wider mb-2">
+                    <label className="block text-[10px] font-extrabold text-text-gray  uppercase tracking-wider mb-2">
                       Inquiry Type <span className="text-red-500">*</span>
                     </label>
                     <select
                       name="inquiryType"
                       value={formData.inquiryType}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 bg-slate-50 border border-slate-200 text-sm focus:outline-none focus:border-primary-light focus:bg-white focus:ring-4 focus:ring-primary-light/5 transition-all"
+                      className="w-full px-4 py-3 bg-slate-50 border border-slate-200 text-sm focus:outline-none focus:border-primary focus:bg-white-background  focus:ring-4 focus:ring-primary/5 transition-all"
                     >
                       <option value="general">General Inquiries</option>
                       <option value="consultation">
@@ -274,7 +285,7 @@ const ContactForm = () => {
 
                 {/* Subject Input */}
                 <div>
-                  <label className="block text-[10px] font-extrabold text-slate-500 uppercase tracking-wider mb-2">
+                  <label className="block text-[10px] font-extrabold text-text-gray  uppercase tracking-wider mb-2">
                     Subject <span className="text-red-500">*</span>
                   </label>
                   <input
@@ -282,10 +293,10 @@ const ContactForm = () => {
                     name="subject"
                     value={formData.subject}
                     onChange={handleInputChange}
-                    className={`w-full px-4 py-3 bg-slate-50 border text-sm focus:outline-none focus:bg-white transition-all ${
+                    className={`w-full px-4 py-3 bg-slate-50 border text-sm focus:outline-none focus:bg-white-background  transition-all ${
                       formErrors.subject
                         ? "border-red-400 focus:ring-1 focus:ring-red-100"
-                        : "border-slate-200 focus:border-primary-light focus:ring-4 focus:ring-primary-light/5"
+                        : "border-slate-200 focus:border-primary focus:ring-4 focus:ring-primary/5"
                     }`}
                     placeholder="Project Proposal Inquiries"
                   />
@@ -298,7 +309,7 @@ const ContactForm = () => {
 
                 {/* Message Input */}
                 <div>
-                  <label className="block text-[10px] font-extrabold text-slate-500 uppercase tracking-wider mb-2">
+                  <label className="block text-[10px] font-extrabold text-text-gray  uppercase tracking-wider mb-2">
                     Message <span className="text-red-500">*</span>
                   </label>
                   <textarea
@@ -306,10 +317,10 @@ const ContactForm = () => {
                     value={formData.message}
                     onChange={handleInputChange}
                     rows={5}
-                    className={`w-full px-4 py-3 bg-slate-50 border text-sm focus:outline-none focus:bg-white transition-all resize-none ${
+                    className={`w-full px-4 py-3 bg-slate-50 border text-sm focus:outline-none focus:bg-white-background  transition-all resize-none ${
                       formErrors.message
                         ? "border-red-400 focus:ring-1 focus:ring-red-100"
-                        : "border-slate-200 focus:border-primary-light focus:ring-4 focus:ring-primary-light/5"
+                        : "border-slate-200 focus:border-primary focus:ring-4 focus:ring-primary/5"
                     }`}
                     placeholder="Provide brief details about your civil operations, highway segments, or site inquiries..."
                   />
@@ -331,7 +342,7 @@ const ContactForm = () => {
                   {isSubmitting ? (
                     <span className="flex items-center gap-2">
                       <svg
-                        className="animate-spin h-4 w-4 text-white"
+                        className="animate-spin h-4 w-4 text-text-white "
                         fill="none"
                         viewBox="0 0 24 24"
                       >
@@ -367,73 +378,35 @@ const ContactForm = () => {
                 Regional Offices
               </h2>
               <div className="space-y-6">
-                {/* Pune HQ */}
-                <div className="border border-slate-200/60 p-6 bg-slate-50 flex gap-4">
-                  <div className="text-primary-light mt-1 flex-shrink-0">
-                    <svg
-                      className="w-5 h-5"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-                      />
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-                      />
-                    </svg>
+                {offices.map((office) => (
+                  <div
+                    key={office.id}
+                    className="border border-slate-200/60 p-6 bg-slate-50 flex gap-4"
+                  >
+                    <div className="text-primary mt-1 flex-shrink-0">
+                      {office.icon}
+                    </div>
+                    <div>
+                      <h4
+                        className={`text-sm font-extrabold text-text-primary uppercase tracking-wide mb-1`}
+                      >
+                        {office.title}
+                      </h4>
+                      <p className="text-xs text-text-gray leading-relaxed font-normal mb-2">
+                        {office.address}
+                      </p>
+                      <p className="text-xs font-semibold text-slate-700">
+                        Phone:{" "}
+                        <a
+                          href={`tel:${office.phone.replace(/\s+/g, "")}`}
+                          className="hover:text-primary-hover transition-colors duration-200"
+                        >
+                          {office.phone}
+                        </a>
+                      </p>
+                    </div>
                   </div>
-                  <div>
-                    <h4 className="text-sm font-extrabold text-primary uppercase tracking-wide mb-1">
-                      Pune Corporate Headquarters
-                    </h4>
-                    <p className="text-xs text-slate-500 leading-relaxed font-normal mb-2">
-                      Suite 405, Signature Towers, Senapati Bapat Road, Pune,
-                      Maharashtra 411016
-                    </p>
-                    <p className="text-xs font-semibold text-slate-700">
-                      Phone: +91 98765 43210
-                    </p>
-                  </div>
-                </div>
-
-                {/* Mumbai Liaison */}
-                <div className="border border-slate-200/60 p-6 bg-slate-50 flex gap-4">
-                  <div className="text-primary-light mt-1 flex-shrink-0">
-                    <svg
-                      className="w-5 h-5"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
-                      />
-                    </svg>
-                  </div>
-                  <div>
-                    <h4 className="text-sm font-extrabold text-primary uppercase tracking-wide mb-1">
-                      Mumbai Regional Liaison
-                    </h4>
-                    <p className="text-xs text-slate-500 leading-relaxed font-normal mb-2">
-                      11th Floor, Nariman Point Commercial Hub, Marine Drive,
-                      Mumbai, Maharashtra 400021
-                    </p>
-                    <p className="text-xs font-semibold text-slate-700">
-                      Phone: +91 98765 43211
-                    </p>
-                  </div>
-                </div>
+                ))}
               </div>
             </div>
           </div>

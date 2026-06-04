@@ -42,7 +42,7 @@ const ServicesProcess = () => {
   return (
     <section
       ref={sectionRef}
-      className="py-20 sm:py-24 bg-white border-t border-slate-100 select-text"
+      className="py-20 sm:py-24 bg-white-background  border-t border-border-secondary select-text"
     >
       <div className="max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12">
         {/* Section Heading */}
@@ -51,7 +51,7 @@ const ServicesProcess = () => {
           title="Our Construction"
           highlight="Methodology"
           align="center"
-          textColor="text-slate-950"
+          textColor="text-text-primary "
           className="mb-16"
         />
 
@@ -68,7 +68,7 @@ const ServicesProcess = () => {
 
             {/* Active Highlighted Line segment */}
             <div
-              className="absolute top-[22px] left-10 h-0.5 bg-red-linear-right-background transition-all duration-500 z-0"
+              className="absolute top-[22px] left-10 h-0.5 bg-primary transition-all duration-500 z-0"
               style={{ width: `${(activeIndex / (phases.length - 1)) * 94}%` }}
             />
 
@@ -87,10 +87,10 @@ const ServicesProcess = () => {
                     <div
                       className={`w-11 h-11 rounded-none flex items-center justify-center font-bold text-sm border-2 transition-all duration-300 ${
                         isActive
-                          ? "bg-red-linear-right-background border-red-linear-right-background text-primary scale-105"
+                          ? "bg-primary border-primary text-text-primary scale-105"
                           : isCompleted
-                            ? "bg-red-linear-right-background  border-transparent text-white"
-                            : "bg-white border-slate-200 text-slate-400 group-hover:border-primary group-hover:text-primary"
+                            ? "bg-primary border-transparent text-text-white "
+                            : "bg-white-background  border-slate-200 text-slate-400 group-hover:border-primary group-hover:text-primary"
                       }`}
                     >
                       {phase.num}
@@ -101,7 +101,7 @@ const ServicesProcess = () => {
                       className={`text-[11px] font-bold uppercase tracking-wider mt-3 transition-colors duration-300 text-center ${
                         isActive
                           ? "text-text-primary font-black"
-                          : "text-slate-400 group-hover:text-slate-700"
+                          : "text-text-gray group-hover:text-text-primary"
                       }`}
                     >
                       {phase.name}
@@ -130,17 +130,19 @@ const ServicesProcess = () => {
             {/* Right Side: Informational Context */}
             <div className="w-full md:w-1/2 flex flex-col justify-between py-2">
               <div>
-                <span className="text-[12px] font-black tracking-wider text-primary-light  block mb-3">
+                <span className="text-[12px] font-black tracking-wider text-primary  block mb-3">
                   Phase {phases[activeIndex].num} : {phases[activeIndex].name}
                 </span>
 
-                <h3 className="text-2xl sm:text-3xl font-extrabold text-text-primary mb-4">
+                <h3 className="text-2xl sm:text-3xl font-bold text-text-primary mb-4">
                   {phases[activeIndex].title}
                 </h3>
 
-                <p className="text-text-gray text-sm sm:text-base tracking-wide mb-6">
-                  {phases[activeIndex].description}
-                </p>
+                {phases[activeIndex].description.map((para, pIdx) => (
+                  <p key={pIdx} className="text-text-gray text-sm sm:text-[14px] tracking-wide mb-4 last:mb-6">
+                    {para}
+                  </p>
+                ))}
               </div>
 
               {/* Key Deliverables Bullet layout */}
@@ -154,7 +156,7 @@ const ServicesProcess = () => {
                       key={index}
                       className="flex items-center gap-3 text-xs sm:text-sm text-text-primary font-medium"
                     >
-                      <span className="  text-primary-light flex items-center justify-center text-[12px] font-bold">
+                      <span className="  text-primary flex items-center justify-center text-[12px] font-bold">
                         ✓
                       </span>
                       {item}
@@ -181,10 +183,10 @@ const ServicesProcess = () => {
                   className="w-full px-6 py-5 flex items-center justify-between text-left focus:outline-none"
                 >
                   <div className="flex items-center gap-4">
-                    <span className="text-sm font-bold font-mono text-slate-950 bg-red-linear-right-background px-2 py-0.5">
+                    <span className="text-sm font-bold font-mono text-text-primary  bg-red-linear-right-background px-2 py-0.5">
                       {phase.num}
                     </span>
-                    <h3 className="text-sm sm:text-base font-extrabold text-slate-950 uppercase tracking-wider">
+                    <h3 className="text-sm sm:text-base font-extrabold text-text-primary  uppercase tracking-wider">
                       {phase.title}
                     </h3>
                   </div>
@@ -207,9 +209,11 @@ const ServicesProcess = () => {
 
                     {/* Context details */}
                     <div>
-                      <p className="text-slate-600 text-xs sm:text-sm leading-relaxed font-semibold mb-4">
-                        {phase.description}
-                      </p>
+                      {phase.description.map((para, pIdx) => (
+                        <p key={pIdx} className="text-slate-600 text-xs sm:text-sm leading-relaxed font-semibold mb-4">
+                          {para}
+                        </p>
+                      ))}
 
                       <h4 className="text-[10px] font-black tracking-wider uppercase text-slate-900 mb-2">
                         Deliverables:
@@ -220,7 +224,7 @@ const ServicesProcess = () => {
                             key={index}
                             className="flex items-center gap-2 text-xs text-slate-700 font-bold"
                           >
-                            <span className="w-4.5 h-4.5 bg-red-linear-right-background text-slate-950 flex items-center justify-center text-[8px] font-bold">
+                            <span className="w-4.5 h-4.5 bg-red-linear-right-background text-text-primary  flex items-center justify-center text-[8px] font-bold">
                               ✓
                             </span>
                             {item}

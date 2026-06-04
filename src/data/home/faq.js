@@ -1,6 +1,6 @@
 export const faqs = [
   {
-    question: "What work does M/S Patil Associates & Developers do?",
+    question: "What work does Ms Patil Construction do?",
     answer: "We are a civil engineering and government contracting firm specializing in RCC works, road building, earthworks, drainage networks, and major infrastructure.",
   },
   {

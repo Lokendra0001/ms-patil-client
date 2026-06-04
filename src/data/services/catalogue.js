@@ -12,7 +12,7 @@ export const catalogue = [
     slug: "civil-construction",
     icon: (
       <svg
-        className="w-7 h-7 text-white"
+        className="w-7 h-7 text-text-white "
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
@@ -35,7 +35,7 @@ export const catalogue = [
     slug: "road-pavement-works",
     icon: (
       <svg
-        className="w-7 h-7 text-white"
+        className="w-7 h-7 text-text-white "
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
@@ -63,7 +63,7 @@ export const catalogue = [
     slug: "drainage-water-infra",
     icon: (
       <svg
-        className="w-7 h-7 text-white"
+        className="w-7 h-7 text-text-white "
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
@@ -86,7 +86,7 @@ export const catalogue = [
     slug: "industrial-projects",
     icon: (
       <svg
-        className="w-7 h-7 text-white"
+        className="w-7 h-7 text-text-white "
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
@@ -109,7 +109,7 @@ export const catalogue = [
     slug: "railway-infrastructure",
     icon: (
       <svg
-        className="w-7 h-7 text-white"
+        className="w-7 h-7 text-text-white "
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
@@ -132,7 +132,7 @@ export const catalogue = [
     slug: "material-supply-mfg",
     icon: (
       <svg
-        className="w-7 h-7 text-white"
+        className="w-7 h-7 text-text-white "
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"

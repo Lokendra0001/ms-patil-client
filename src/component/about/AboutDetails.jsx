@@ -3,50 +3,33 @@
 import React from "react";
 import Image from "next/image";
 import Button from "@/component/CTA/Button";
-import banner from "../../../public/assets/about/who-we-are/banner.webp";
+import Heading from "@/component/common/Heading";
+import banner from "../../../public/assets/about/who-we-are/banner2.webp";
+import bannerSub from "../../../public/assets/about/who-we-are/banner1.webp";
 
 import { bulletPoints } from "../../data/about/details";
 
 const AboutDetails = () => {
   return (
-    <section className="w-full bg-white py-20 lg:py-28 select-text">
+    <section className="w-full bg-white-background  py-20 lg:py-28 select-text">
       <div className="max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-y-16 gap-10 xl:gap-15 items-center">
           {/* Left Column: Brand Story & Feature Bullets */}
           <div className="col-span-1 lg:col-span-7 flex flex-col items-start">
-            {/* Tagline block with gold line on left */}
-            <div className="flex items-center gap-3 mb-4 select-text">
-              <div className="w-8 h-0.5 bg-primary-light" />
-              <span className="text-[10px] sm:text-xs font-black tracking-[0.25em] text-primary-light uppercase">
-                Who We Are
-              </span>
-            </div>
-
-            {/* Highlight Heading */}
-            <h2 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-primary leading-tight mb-6">
-              Bringing{" "}
-              <span className="text-primary-light-hover">Your Ideas</span> and
-              Innovations to Life
-            </h2>
-
-            {/* Paragraph Description */}
-            <div className="text-xs sm:text-sm text-slate-500 font-semibold leading-relaxed space-y-6 max-w-3xl mb-8">
-              <p>
-                M/S Chetankumar Bhagwan Suryawanshi (formerly operating under Ms
-                Patil Construction) is a premier PWD Class IV Government
-                Contractor based in Dhule, Maharashtra. Over the past 20 years,
-                we have delivered engineering, procurement, and civil
-                construction services for highway networks, industrial
-                facilities, and urban municipal utilities.
-              </p>
-            </div>
+            <Heading
+              tagline="Who We Are"
+              title="Bringing Your"
+              highlight=" Ideas and Innovations to Life"
+              className="mb-6! max-w-2xl"
+              description="M/S Chetankumar Bhagwan Suryawanshi (formerly operating under Ms Patil Construction) is a premier PWD Class IV Government Contractor based in Dhule, Maharashtra. Over the past 20 years, we have delivered engineering, procurement, and civil construction services for highway networks, industrial facilities, and urban municipal utilities."
+            />
 
             {/* List with gold arrows (matching reference template) */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full max-w-2xl mb-10 select-text">
               {bulletPoints.map((point, index) => (
                 <div key={index} className="flex items-center gap-2">
                   <svg
-                    className="w-4 h-4 text-primary-light-hover flex-shrink-0"
+                    className="w-4 h-4 text-primary flex-shrink-0"
                     fill="none"
                     stroke="currentColor"
                     strokeWidth="3"
@@ -58,7 +41,7 @@ const AboutDetails = () => {
                       d="M14 5l7 7m0 0l-7 7m7-7H3"
                     />
                   </svg>
-                  <span className="text-xs sm:text-sm font-extrabold text-primary">
+                  <span className="text-xs sm:text-sm font-medium text-text-primary">
                     {point}
                   </span>
                 </div>
@@ -77,32 +60,52 @@ const AboutDetails = () => {
             </div>
           </div>
 
-          {/* Right Column: Engineering Side Image */}
-          <div className="col-span-1 lg:col-span-5 relative w-full">
-            <div className="relative w-full aspect-[4/5]">
-              {/* Decorative wireframe background bracket */}
-              <div
-                className="absolute w-full h-full border-2 border-primary-light/40 pointer-events-none z-0 hidden sm:block rounded-tr-[100px] rounded-bl-[100px] rounded-tl-[20px] rounded-br-[20px]"
-                style={{ transform: "translate(16px, 16px)" }}
-              />
+          {/* Right Column: Engineering Side Image (Large-Scale Precision Bevel Layout) */}
+          <div className="col-span-1 lg:col-span-5 relative w-full select-none py-6">
+            <div className="relative w-full mx-auto lg:ml-auto">
+              {/* Background gold bevel outline SVG (prevents browser clipping borders) */}
+              <svg
+                className="absolute inset-0 text-primary pointer-events-none z-0 translate-x-4 translate-y-4 hidden sm:block w-full h-full"
+                viewBox="0 0 100 100"
+                preserveAspectRatio="none"
+              >
+                <polygon
+                  points="12,0 100,0 100,88 88,100 0,100 0,12"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  vectorEffect="non-scaling-stroke"
+                />
+              </svg>
 
-              {/* Primary Image: Engineers looking at documents on-site */}
-              <div className="relative w-full h-full bg-slate-100 overflow-hidden z-10 border border-slate-200/80 rounded-tr-[100px] rounded-bl-[100px] rounded-tl-[20px] rounded-br-[20px]">
+              {/* Primary Image Container with Precision Beveled Shape */}
+              <div
+                className="relative overflow-hidden z-10 bg-slate-100 shadow-[0_20px_50px_rgba(0,0,0,0.08)] border border-slate-200/50"
+                style={{
+                  clipPath:
+                    "polygon(12% 0, 100% 0, 100% 88%, 88% 100%, 0 100%, 0 12%)",
+                }}
+              >
                 <Image
                   src={banner}
-                  alt="Site Managers Reviewing Structural Blueprints"
-                  className="object-cover  transition-all duration-500 hover:scale-102"
-                  fill
+                  alt="Site Managers Reviewing Blueprints"
+                  className="w-full h-auto hover:scale-102 transition-transform duration-700 select-none pointer-events-none"
                   priority
                 />
               </div>
 
-              {/* Secondary Floating Statistics Badge */}
-              <div className="absolute -bottom-6 -left-2 md:-left-6 bg-primary-light text-text-primary px-6 py-5  z-20 flex flex-col justify-center items-center w-28 h-28 sm:w-32 sm:h-32 select-text">
-                <span className=" text-3xl sm:text-4xl font-black tracking-tight leading-none">
+              {/* Floating Statistics Badge with matching Beveled Corners */}
+              <div
+                className="absolute -bottom-6 -left-6 bg-primary text-text-white px-6 py-5 z-20 flex flex-col justify-center items-center w-28 h-28 sm:w-32 sm:h-32 shadow-xl border border-primary/20"
+                style={{
+                  clipPath:
+                    "polygon(12% 0, 100% 0, 100% 88%, 88% 100%, 0 100%, 0 12%)",
+                }}
+              >
+                <span className="text-2xl sm:text-4xl font-extrabold text-text-white tracking-tight leading-none font-mono">
                   20+
                 </span>
-                <span className="text-[9px] sm:text-[10px] font-black tracking-widest uppercase text-slate-900 mt-1.5 text-center leading-tight">
+                <span className="text-[8px] sm:text-[10px] font-bold tracking-widest uppercase text-text-white mt-2 text-center leading-tight">
                   Years of Trust
                 </span>
               </div>

@@ -8,7 +8,7 @@ import ServicesRailway from "./ServicesRailway";
 
 const Index = () => {
   return (
-    <main className="w-full grow bg-white">
+    <main className="w-full grow bg-white-background ">
       <ServicesHero />
       <ServicesList />
       <ServicesCatalogue />

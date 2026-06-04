@@ -1,42 +1,92 @@
 export const testimonials = [
   {
     quote:
-      "M/S Patil Associates demonstrated exemplary execution on the highway bypass corridor. Having their own aggregate crushing and RMC concrete plants meant zero material supply delays.",
-    author: "Er. Rajesh Deshmukh",
-    role: "Executive Engineer",
-    organization: "Public Works Department (PWD)",
-    initials: "RD",
+      "M/S Suryawanshi executed the entire multi-storey structural skeleton for our Podar International School campus. Their precision-cast columns, quality masonry brickwork, and neat layouts delivered an outstanding school environment.",
+    author: "Dr. Sandeep Patil",
+    role: "Trust Director",
+    organization: "Podar International School",
+    initials: "PI",
+    rating: 5,
   },
   {
     quote:
-      "Outstanding performance on our PEB industrial park foundation. Their Trimix concrete floor finish was highly accurate and completed two weeks ahead of schedule.",
+      "Outstanding performance on our urban civil systems infrastructure. Their cast-in-situ concrete drainage layouts, culvert works, and heavy-duty storm channels were completed ahead of schedule with flawless compliance.",
     author: "Vikas Khandelwal",
     role: "Project Director",
-    organization: "Semantic Infra Projects",
-    initials: "VK",
+    organization: "Semantic Infra",
+    initials: "SI",
+    rating: 4,
   },
   {
     quote:
-      "Excellent cooperation during our joint venture railway sub-grade execution. Their fully-owned fleet of Tata Hitachi excavators eliminated mobilization bottlenecks entirely.",
+      "Excellent cooperation during our track bed engineering project. Their RCC box culverts construction and precision ballast subgrade compaction in Rajasthan strictly complied with RDSO specifications.",
     author: "Sanjay Shekhawat",
     role: "Chief Engineer",
-    organization: "HEIGL Infra Ltd (Railways Division)",
-    initials: "SS",
+    organization: "Indian Railways",
+    initials: "IR",
+    rating: 5,
   },
   {
     quote:
-      "The Trimix flooring and industrial shed works completed at the Chincholi MIDC site was highly professional. Excellent technical compliance and finish.",
+      "Highly professional execution of municipal road corridors and pedestrian paver block walkways. The open-channel storm drainage systems have greatly improved civic water runoff management.",
     author: "Er. Anil Patil",
-    role: "Division Engineer",
-    organization: "MIDC Maharashtra Division",
-    initials: "AP",
+    role: "Chief City Engineer",
+    organization: "Dhule Municipal Corporation",
+    initials: "DM",
+    rating: 4,
   },
   {
     quote:
-      "M/S Patil is our primary supplier for fly ash bricks and RMC concrete. Their testing records, cube tests, and load parameters are always transparent and compliant.",
+      "Exemplary civil execution on our industrial chemical plant. Their in-house RMC supply, heavy-duty RCC foundations, and structured boundary wall construction met our tight industrial commissioning deadlines perfectly.",
     author: "Manoj Jaiswal",
-    role: "Procurement Manager",
-    organization: "Jaiswal Builders & Materials",
+    role: "Infrastructure Lead",
+    organization: "RM Chemical Pvt. Ltd.",
+    initials: "RC",
+    rating: 5,
+  },
+  {
+    quote:
+      "They constructed state-of-the-art agricultural college buildings. The RCC structural integrity, flooring, and site grading were delivered with professional precision.",
+    author: "Dr. K. R. Suryawanshi",
+    role: "Campus Coordinator",
+    organization: "MPKV College of Agriculture",
+    initials: "MP",
+    rating: 5,
+  },
+  {
+    quote:
+      "Their concrete lining and profile cutting for ZP Dhule canals have significantly improved local irrigation. Outstanding speed in executing rural earthworks.",
+    author: "Er. Sunil More",
+    role: "Superintending Engineer",
+    organization: "Minor Irrigation Dept.",
+    initials: "MI",
+    rating: 5,
+  },
+  {
+    quote:
+      "Seamless execution of bulk city water pipeline corridors and concrete storage tanks. The Murum compaction over the utility trenches is highly durable.",
+    author: "Vijay Mahajan",
+    role: "Project Director",
+    organization: "Maharashtra Jeevan Pradhikaran",
     initials: "MJ",
+    rating: 4,
+  },
+  {
+    quote:
+      "Highly satisfied with their industrial processing shed foundations and sorting yard pavements. Their in-house RMC plant ensured constant concrete availability.",
+    author: "Rahul Godrej",
+    role: "Operations Manager",
+    organization: "Godrej Agrovet",
+    initials: "GA",
+    rating: 5,
+  },
+  {
+    quote:
+      "Excellent precision on monolithic tower slab casts. Their team managed the heavy-duty machinery logistics and concrete cube strength tests very professionally.",
+    author: "Sartaj Singh",
+    role: "Construction Lead",
+    organization: "Simar Pride Ventures",
+    initials: "SP",
+    rating: 4,
   },
 ];

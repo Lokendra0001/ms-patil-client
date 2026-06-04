@@ -1,123 +1,23 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
+import Heading from "@/component/common/Heading";
 
 import { philosophyData } from "../../data/about/philosophy";
+import visionImg from "../../../public/assets/about/vision/vision.webp";
+import missionImg from "../../../public/assets/about/vision/mission.webp";
+import valuesImg from "../../../public/assets/about/vision/ourValue.webp";
 
 const AboutPhilosophy = () => {
-  const graphicsMap = {
-    vision: (
-      <svg
-        className="w-full h-full max-w-sm text-primary-light-hover"
-        viewBox="0 0 200 200"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1"
-      >
-        <circle
-          cx="100"
-          cy="100"
-          r="80"
-          strokeDasharray="4 4"
-          className="opacity-40"
-        />
-        <circle cx="100" cy="100" r="50" className="opacity-60" />
-        <line x1="20" y1="100" x2="180" y2="100" className="opacity-40" />
-        <line x1="100" y1="20" x2="100" y2="180" className="opacity-40" />
-        {/* Compass dial */}
-        <line x1="100" y1="100" x2="150" y2="50" strokeWidth="2" />
-        <polygon points="150,50 142,58 147,63" fill="currentColor" />
-        {/* Measurements */}
-        <text
-          x="155"
-          y="48"
-          fontSize="8"
-          className="fill-primary font-bold opacity-80 font-mono"
-        >
-          45° N
-        </text>
-        <text
-          x="105"
-          y="32"
-          fontSize="8"
-          className="fill-primary font-bold opacity-60 font-mono"
-        >
-          R=80m
-        </text>
-        <circle cx="100" cy="100" r="3" fill="currentColor" />
-      </svg>
-    ),
-    mission: (
-      <svg
-        className="w-full h-full max-w-sm text-primary-light-hover"
-        viewBox="0 0 200 200"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1"
-      >
-        {/* Ground line */}
-        <line x1="10" y1="160" x2="190" y2="160" strokeWidth="2" />
-        {/* House frames */}
-        <rect x="40" y="80" width="120" height="80" className="opacity-60" />
-        <polygon
-          points="30,80 100,20 170,80"
-          className="opacity-80"
-          strokeWidth="1.5"
-        />
-        <rect x="85" y="110" width="30" height="50" className="opacity-60" />
-        {/* Dimension markings */}
-        <line x1="30" y1="175" x2="170" y2="175" strokeDasharray="3 3" />
-        <line x1="30" y1="170" x2="30" y2="180" />
-        <line x1="170" y1="170" x2="170" y2="180" />
-        <text
-          x="90"
-          y="190"
-          fontSize="8"
-          className="fill-primary font-bold opacity-80 font-mono"
-        >
-          14.00 m
-        </text>
-        {/* Grid indicators */}
-        <circle cx="100" cy="20" r="2" fill="currentColor" />
-      </svg>
-    ),
-    values: (
-      <svg
-        className="w-full h-full max-w-sm text-primary-light-hover"
-        viewBox="0 0 200 200"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1"
-      >
-        {/* Base */}
-        <rect
-          x="30"
-          y="150"
-          width="140"
-          height="15"
-          className="opacity-85"
-          strokeWidth="1.5"
-        />
-        <rect x="20" y="165" width="160" height="10" className="opacity-60" />
-        {/* Pillars */}
-        <rect x="50" y="55" width="15" height="95" className="opacity-55" />
-        <rect x="92" y="55" width="15" height="95" className="opacity-55" />
-        <rect x="135" y="55" width="15" height="95" className="opacity-55" />
-        {/* Architrave */}
-        <polygon
-          points="15,55 100,15 185,55"
-          className="opacity-85"
-          strokeWidth="1.5"
-        />
-        <circle cx="57.5" cy="100" r="1.5" fill="currentColor" />
-        <circle cx="99.5" cy="100" r="1.5" fill="currentColor" />
-        <circle cx="142.5" cy="100" r="1.5" fill="currentColor" />
-      </svg>
-    ),
+  const imagesMap = {
+    vision: visionImg,
+    mission: missionImg,
+    values: valuesImg,
   };
 
   return (
-    <section className="w-full bg-white py-20 lg:py-24 border-t border-slate-200/40 relative overflow-hidden select-text">
+    <section className="w-full bg-white-background  py-20 lg:py-24 border-t border-border-secondary/40 relative overflow-hidden select-text">
       {/* Blueprint grid background */}
       <div className="absolute inset-0 opacity-[0.012] pointer-events-none select-text">
         <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
@@ -142,16 +42,13 @@ const AboutPhilosophy = () => {
 
       <div className="max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 relative z-10">
         {/* Section Headers */}
-        <div className="flex flex-col items-center text-center mb-24 select-text">
-          <span className="text-[10px] sm:text-xs font-black tracking-[0.25em] text-primary-light uppercase mb-2">
-            Our Purpose
-          </span>
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-primary leading-tight">
-            Our Vision, Mission &{" "}
-            <span className="text-primary-light-hover">Core Values</span>
-          </h2>
-          <div className="w-16 h-1 bg-primary-light mt-4" />
-        </div>
+        <Heading
+          tagline="Our Purpose"
+          title="Our Vision, Mission &"
+          highlight="Core Values"
+          align="center"
+          className="mb-24!"
+        />
 
         {/* Dynamic alternating row sequence */}
         <div className="space-y-28 lg:space-y-36">
@@ -165,8 +62,8 @@ const AboutPhilosophy = () => {
                 {/* Left/Right Text Content Column */}
                 <div className="w-full lg:w-1/2 flex flex-col items-start">
                   {/* Item Index / Tag */}
-                  <div className="flex items-center gap-3.5 mb-5 select-text">
-                    <span className="text-xs font-bold text-primary-light-hover font-mono">
+                  <div className="flex items-center gap-3.5 mb-3 select-text">
+                    <span className="text-xs font-bold text-primary font-mono">
                       {item.num}
                     </span>
                     <div className="w-6 h-px bg-slate-300" />
@@ -177,26 +74,37 @@ const AboutPhilosophy = () => {
 
                   {/* Title */}
                   <h3 className="text-2xl sm:text-3xl font-extrabold text-primary mb-6">
-                    {item.title}
+                    {(() => {
+                      const words = item.title.split(" ");
+                      if (words.length <= 1) return item.title;
+                      const lastWord = words.pop();
+                      const mainPart = words.join(" ");
+                      return (
+                        <>
+                          {mainPart}{" "}
+                          <span className="text-primary">{lastWord}</span>
+                        </>
+                      );
+                    })()}
                   </h3>
 
                   {/* Description */}
-                  <p className="text-xs sm:text-sm text-slate-500 font-semibold leading-relaxed mb-8">
+                  <p className="text-xs sm:text-sm text-text-gray  font-medium leading-relaxed mb-8">
                     {item.description}
                   </p>
 
                   {/* Conditional List Rendering */}
-                  <div className="w-full border-t border-slate-100 pt-6">
+                  <div className="w-full border-t border-border-secondary pt-6">
                     {/* 1. Bullets (Vision List) */}
                     {item.type === "bullets" && (
                       <ul className="space-y-3.5 select-text w-full">
                         {item.items.map((bullet, idx) => (
                           <li
                             key={idx}
-                            className="flex items-start gap-3 text-xs font-extrabold text-primary"
+                            className="flex items-start gap-3 text-xs font-semibold text-text-gray"
                           >
                             <svg
-                              className="w-4 h-4 text-primary-light-hover flex-shrink-0 mt-0.5"
+                              className="w-4 h-4 text-primary flex-shrink-0 mt-0.5"
                               fill="none"
                               stroke="currentColor"
                               strokeWidth="3"
@@ -220,9 +128,9 @@ const AboutPhilosophy = () => {
                         {item.items.map((checkbox, idx) => (
                           <li
                             key={idx}
-                            className="flex items-start gap-3 text-xs font-extrabold text-primary"
+                            className="flex items-start gap-3 text-xs font-semibold text-text-gray"
                           >
-                            <span className="w-4 h-4 bg-primary-light/15 border border-primary-light/35 flex items-center justify-center flex-shrink-0 text-primary-light-hover font-bold text-[9px] mt-0.5">
+                            <span className="w-4 h-4 bg-primary/15 border border-primary/35 flex items-center justify-center flex-shrink-0 text-primary font-bold text-[9px] mt-0.5">
                               ✓
                             </span>
                             <span className="leading-tight">{checkbox}</span>
@@ -239,16 +147,16 @@ const AboutPhilosophy = () => {
                           return (
                             <div
                               key={idx}
-                              className="flex items-start gap-3.5 pb-2.5 border-b border-slate-100 last:border-none"
+                              className="flex items-start gap-3.5 pb-2.5 border-b border-border-secondary last:border-none"
                             >
-                              <span className="text-xs font-black text-primary-light-hover mt-0.5 select-text font-mono">
+                              <span className="text-xs font-black text-primary mt-0.5 select-text font-mono">
                                 {numVal}
                               </span>
                               <div className="flex flex-col leading-tight">
                                 <span className="text-xs font-extrabold text-primary uppercase select-text">
                                   {val.label}
                                 </span>
-                                <span className="text-[11px] text-slate-500 font-semibold mt-0.5">
+                                <span className="text-[11px] text-text-gray  font-semibold mt-0.5">
                                   {val.desc}
                                 </span>
                               </div>
@@ -260,16 +168,35 @@ const AboutPhilosophy = () => {
                   </div>
                 </div>
 
-                {/* Left/Right Visual Column (Architectural Drafting Vector) */}
+                {/* Left/Right Visual Column (Proprietor-style Offset Frame) */}
                 <div className="w-full lg:w-1/2 flex items-center justify-center py-6">
-                  <div className="w-full aspect-square max-w-[320px] bg-slate-50/50 border border-slate-100 rounded-none flex items-center justify-center p-8 relative shadow-inner">
-                    {/* Corner Drafting Marks */}
-                    <div className="absolute top-2 left-2 w-2.5 h-2.5 border-t border-l border-slate-300" />
-                    <div className="absolute top-2 right-2 w-2.5 h-2.5 border-t border-r border-slate-300" />
-                    <div className="absolute bottom-2 left-2 w-2.5 h-2.5 border-b border-l border-slate-300" />
-                    <div className="absolute bottom-2 right-2 w-2.5 h-2.5 border-b border-r border-slate-300" />
+                  <div className="relative w-full max-w-[440px]">
+                    {/* Offset outline border backing with matching curves */}
+                    <div
+                      className={`absolute inset-0 border-2 border-primary/30 pointer-events-none z-0 transition-transform duration-300 ${
+                        isEven
+                          ? "translate-x-4 translate-y-4 rounded-tr-[3.5rem] rounded-bl-[3.5rem]"
+                          : "-translate-x-4 translate-y-4 rounded-tl-[3.5rem] rounded-br-[3.5rem]"
+                      }`}
+                    />
 
-                    {graphicsMap[item.id]}
+                    {/* Image container frame with premium curves */}
+                    <div
+                      className={`relative w-full aspect-[4/3] overflow-hidden z-10 shadow-[0_15px_30px_rgba(0,0,0,0.08)] ${
+                        isEven
+                          ? "rounded-tr-[3.5rem] rounded-bl-[3.5rem]"
+                          : "rounded-tl-[3.5rem] rounded-br-[3.5rem]"
+                      }`}
+                    >
+                      <Image
+                        src={imagesMap[item.id]}
+                        alt={item.title}
+                        fill
+                        className="object-cover transition-transform duration-700 hover:scale-105 pointer-events-none select-none"
+                      />
+                      {/* Subtle shading overlay */}
+                      <div className="absolute inset-0 bg-gradient-to-tr from-slate-950/10 via-transparent to-transparent pointer-events-none" />
+                    </div>
                   </div>
                 </div>
               </div>

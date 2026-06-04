@@ -14,7 +14,7 @@ const renderTitle = (title, highlight) => {
   return (
     <>
       {before}
-      <span className="text-primary-light-hover">{match}</span>
+      <span className="text-primary">{match}</span>
       {after}
     </>
   );
@@ -22,7 +22,7 @@ const renderTitle = (title, highlight) => {
 
 const ServiceHero = ({ data }) => {
   return (
-    <main className="w-full flex-grow bg-white select-text">
+    <main className="w-full flex-grow bg-white-background  select-text">
       {/* 1. Page Header / Banner */}
       <section className="relative bg-slate-950 py-32 sm:py-44 lg:py-52 min-h-[480px] sm:min-h-[560px] lg:min-h-[750px] overflow-hidden flex items-center">
         {/* Background Grayscale Image with Overlay */}
@@ -41,31 +41,31 @@ const ServiceHero = ({ data }) => {
         {/* Content Container */}
         <ContentContainer className="pt-15 relative">
           {/* Breadcrumbs */}
-          <nav className="flex items-center gap-2 text-xs font-mono font-bold tracking-wider text-slate-400 uppercase mb-6">
+          <nav className="flex items-center gap-2 text-xs  font-bold tracking-wider text-slate-400 uppercase mb-6">
             <Link
               href="/"
-              className="hover:text-primary-light transition-colors duration-200"
+              className="hover:text-primary transition-colors duration-200"
             >
               Home
             </Link>
             <span className="text-slate-600">/</span>
             <Link
               href="/services"
-              className="hover:text-primary-light transition-colors duration-200"
+              className="hover:text-primary transition-colors duration-200"
             >
               Services
             </Link>
             <span className="text-slate-600">/</span>
-            <span className="text-primary-light">
+            <span className="text-primary">
               {data.titleLabel || data.title}
             </span>
           </nav>
 
           {/* Service Name & Tagline */}
-          <span className="text-[10px] sm:text-xs font-black tracking-[0.25em] text-primary-light uppercase block mb-3 font-mono">
+          <span className="text-[10px] sm:text-xs font-black tracking-[0.25em] text-primary uppercase block mb-3 font-mono">
             {data.tagline}
           </span>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-none uppercase mb-6">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-text-white  tracking-tight leading-none uppercase mb-6">
             {renderTitle(data.title, data.highlight)}
           </h1>
 

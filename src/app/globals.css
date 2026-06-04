@@ -27,12 +27,11 @@ body {
   --font-serif: "Times New Roman", Times, serif;
 
   /* ===== BACKGROUNDS ===== */
-  --color-primary-background: var(--background);
+  --color-white-background: var(--white-background);
   --color-gray-background: var(--gray-background);
+  --color-slate-background: var(--slate-background);
   --color-service-btn-background: var(--service-btn-background);
   --color-input-background: var(--input-background);
-  --color-red-linear-left-background: var(--red-linear-left-background);
-  --color-red-linear-right-background: var(--red-linear-right-background);
 
   /* ===== TEXT COLORS ===== */
   --color-text-primary: var(--text-primary);
@@ -57,86 +56,26 @@ body {
 
   /* ===== EXTRA ===== */
   --color-whatsapp: var(--whatsapp);
+
+  /* ===== BORDER ===== */
+  --color-border-primary: var(--border-primary);
+  --color-border-secondary: var(--border-secondary);
 }
 
 :root {
   /* ===== COLORS ===== */
-  --background: #ffffff;
+  --white-background: #ffffff;
+  --slate-background: #020617;
+
   --gray-background: #f1f5f9;
   --service-btn-background: #e0ecff;
   --input-background: #ffffff;
 
   /* ===== ACTIVE PALETTE: Warm Honey Yellow (Current) ===== */
-  --primary: #1a1a1a;
-  --primary-hover: #000000;
-  --primary-light: #ffb83b;
-  --primary-light-hover: #e09b1f;
-  --red-linear-left-background: #1a1a1a;
-  --red-linear-right-background: #ffb83b;
-
-  /* 🌌 Midnight Blue + Coral (Bold but Professional) */
-  /* --primary: #1b263b;
---primary-hover: #141c2b;
---primary-light: #ff6b6b;
---primary-light-hover: #e05555;
-
---red-linear-left-background: #1b263b;
---red-linear-right-background: #ff6b6b; */
-
-  /* ===== OPTIONAL PALETTES (To swap, comment the active lines above and uncomment one of these blocks) ===== */
-
-  /* Palette 1: Pure Safety Yellow (#ffcc00)
-  --primary: #1a1a1a;
-  --primary-hover: #000000;
-  --primary-light: #ffcc00;
-  --primary-light-hover: #cc9900;
-  --red-linear-left-background: #1a1a1a;
-  --red-linear-right-background: #ffcc00;
-  */
-
-  /* Palette 2: Vibrant Yellow (#eab308)
-  --primary: #1a1a1a;
-  --primary-hover: #000000;
-  --primary-light: #eab308;
-  --primary-light-hover: #ca8a04;
-  --red-linear-left-background: #1a1a1a;
-  --red-linear-right-background: #eab308;
-  */
-
-  /* Palette 3: Golden (#d1a12e)
-  --primary: #1a1a1a;
-  --primary-hover: #000000;
-  --primary-light: #d1a12e;
-  --primary-light-hover: #b58924;
-  --red-linear-left-background: #1a1a1a;
-  --red-linear-right-background: #d1a12e;
-  */
-
-  /* Palette 4: Orangered (#f25a22)
-  --primary: #1a1a1a;
-  --primary-hover: #000000;
-  --primary-light: #f25a22;
-  --primary-light-hover: #d94e18;
-  --red-linear-left-background: #1a1a1a;
-  --red-linear-right-background: #f25a22;
-  */
-
-  /* Palette 5: Indigo & Dark Navy (#4f46e5 / #0b1528)
-  --primary: #0b1528;
-  --primary-hover: #050a14;
-  --primary-light: #4f46e5;
-  --primary-light-hover: #3730a3;
-  --red-linear-left-background: #0b1528;
-  --red-linear-right-background: #4f46e5;
-  */
-
-  /* Palette 6: Classic Light Blue (#3b82f6)
-  --primary: #1e3a8a;
-  --primary-hover: #172a6b;
-  --primary-light: #3b82f6;
-  --primary-light-hover: #2563eb;
-  --red-linear-left-background: #1e3a8a;
-  --red-linear-right-background: #3b82f6;
+  --primary: #ffb83b;
+  --primary-hover: #e09b1f;
+  --secondary: #1a1a1a;
+  --secondary-hover: #ffb83b;
 
   /* ===== TEXT ===== */
   --text-primary: #1e293b;
@@ -148,6 +87,10 @@ body {
 
   /* ===== EXTRA ===== */
   --whatsapp: #25d366;
+
+  /* ===== EXTRA ===== */
+  --border-primary: #ffb83b;
+  --border-secondary: #f3f4f6;
 
   /* ===== FONT ===== */
   --font-poppins: "Poppins", sans-serif;
@@ -231,4 +174,3 @@ body {
 @utility animate-content-slide-in {
   animation: contentSlideIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
-

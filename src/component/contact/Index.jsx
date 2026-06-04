@@ -8,9 +8,15 @@ import ContactDirect from "./ContactDirect";
 
 const Index = () => {
   return (
-    <main className="w-full flex-grow bg-white">
+    <main className="w-full flex-grow bg-white-background ">
       <ContactHero />
-      <Suspense fallback={<div className="py-20 text-center text-slate-500 font-mono text-xs uppercase tracking-widest">Loading contact console...</div>}>
+      <Suspense
+        fallback={
+          <div className="py-20 text-center text-text-gray  font-mono text-xs uppercase tracking-widest">
+            Loading contact console...
+          </div>
+        }
+      >
         <ContactForm />
       </Suspense>
       <ContactMap />

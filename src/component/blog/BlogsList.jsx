@@ -41,7 +41,7 @@ const BlogsList = () => {
               setSearchTerm(e.target.value);
               setCurrentPage(1);
             }}
-            className="w-full pl-5 pr-12 py-4 bg-white border border-slate-200 rounded-none focus:outline-none focus:ring-1 focus:ring-primary-light focus:border-primary-light text-sm text-slate-800 transition-all placeholder-slate-400 font-semibold shadow-[0_4px_20px_rgba(0,0,0,0.02)]"
+            className="w-full pl-5 pr-12 py-4 bg-white-background  border border-slate-200 rounded-none focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary text-sm text-text-primary transition-all placeholder-slate-400 font-semibold shadow-[0_4px_20px_rgba(0,0,0,0.02)]"
           />
           <Search className="absolute right-4.5 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" />
         </div>
@@ -73,8 +73,8 @@ const BlogsList = () => {
                 }}
                 className={`w-10 h-10 transition-all text-xs font-bold rounded-none border select-text cursor-pointer ${
                   currentPage === i + 1
-                    ? "bg-primary-light text-white border-primary-light"
-                    : "bg-white hover:bg-primary-light text-slate-600 hover:text-white border-slate-200 hover:border-primary-light"
+                    ? "bg-primary text-text-white  border-primary"
+                    : "bg-white-background  hover:bg-primary text-text-primary hover:text-text-white  border-slate-200 hover:border-primary"
                 }`}
               >
                 {i + 1}

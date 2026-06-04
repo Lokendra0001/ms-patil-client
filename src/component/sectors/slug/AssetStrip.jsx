@@ -34,7 +34,7 @@ const AssetStrip = ({ data }) => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Left Column: Machinery Focus copy */}
           <div className="lg:col-span-7 space-y-4 text-left">
-            <span className="text-[10px] sm:text-xs font-bold tracking-[0.22em] text-primary-light uppercase block font-sans">
+            <span className="text-[10px] sm:text-xs font-bold tracking-[0.22em] text-primary uppercase block font-sans">
               Dedicated Asset Integration
             </span>
             <h2 className="text-2xl sm:text-4xl font-bold text-text-primary uppercase tracking-tight font-sans">
@@ -46,7 +46,7 @@ const AssetStrip = ({ data }) => {
 
             {/* Value Stamp */}
             <div className="pt-2">
-              <span className="inline-flex items-center gap-2 px-3 py-1.5 bg-primary-light/10 border border-primary-light/20 text-primary-light-hover text-[10px] font-bold uppercase tracking-wider select-text">
+              <span className="inline-flex items-center gap-2 px-3 py-1.5 bg-primary/10 border border-primary/20 text-primary-hover text-[10px] font-bold uppercase tracking-wider select-text">
                 Zero Third-Party Dependency
               </span>
             </div>
@@ -62,10 +62,10 @@ const AssetStrip = ({ data }) => {
               sizes="(max-width: 1024px) 100vw, 40vw"
             />
             {/* Layout Framing Corners */}
-            <div className="absolute top-2 left-2 w-3 h-3 border-t border-l border-primary-light/40 select-text pointer-events-none" />
-            <div className="absolute top-2 right-2 w-3 h-3 border-t border-r border-primary-light/40 select-text pointer-events-none" />
-            <div className="absolute bottom-2 left-2 w-3 h-3 border-b border-l border-primary-light/40 select-text pointer-events-none" />
-            <div className="absolute bottom-2 right-2 w-3 h-3 border-b border-r border-primary-light/40 select-text pointer-events-none" />
+            <div className="absolute top-2 left-2 w-3 h-3 border-t border-l border-primary/40 select-text pointer-events-none" />
+            <div className="absolute top-2 right-2 w-3 h-3 border-t border-r border-primary/40 select-text pointer-events-none" />
+            <div className="absolute bottom-2 left-2 w-3 h-3 border-b border-l border-primary/40 select-text pointer-events-none" />
+            <div className="absolute bottom-2 right-2 w-3 h-3 border-b border-r border-primary/40 select-text pointer-events-none" />
           </div>
         </div>
       </div>

@@ -41,10 +41,10 @@ const BlogCard = ({ post }) => {
   return (
     <article
       key={post.id || post.slug}
-      className="relative overflow-hidden group border border-slate-200/60 rounded-none flex flex-col justify-between bg-white transition-all duration-300 min-h-[440px] shadow-[0_4px_20px_rgba(0,0,0,0.02)]"
+      className="relative overflow-hidden group border border-slate-200/60 rounded-none flex flex-col justify-between bg-white-background  transition-all duration-300 min-h-[440px] shadow-[0_4px_20px_rgba(0,0,0,0.02)]"
     >
       {/* Hover gold bottom accent line */}
-      <div className="absolute bottom-0 left-0 w-0 h-[4px] bg-primary-light transition-all duration-300 group-hover:w-full z-20" />
+      <div className="absolute bottom-0 left-0 w-0 h-[4px] bg-primary transition-all duration-300 group-hover:w-full z-20" />
 
       {/* Image Box */}
       <div className="relative aspect-[4/3] w-full overflow-hidden bg-slate-100 select-text">
@@ -56,7 +56,7 @@ const BlogCard = ({ post }) => {
           className="object-cover transition-transform duration-500 group-hover:scale-105"
         />
         <div className="absolute top-4 left-4 z-10">
-          <span className="px-3 py-1 bg-primary text-white text-[10px] tracking-wider uppercase font-bold rounded-none">
+          <span className="px-3 py-1 bg-primary text-text-white  text-[10px] tracking-wider uppercase font-bold rounded-none">
             {post.category || "General"}
           </span>
         </div>
@@ -66,17 +66,17 @@ const BlogCard = ({ post }) => {
       <div className="p-6 flex-grow flex flex-col justify-between relative">
         <div>
           {/* Meta info */}
-          <span className="text-[10px] font-black tracking-wider text-primary-light-hover uppercase mb-1 block select-text">
+          <span className="text-[10px] font-black tracking-wider text-primary-hover uppercase mb-1 block select-text">
             {getPostDate(post)}
           </span>
 
           {/* Title */}
-          <h3 className="text-base sm:text-lg font-bold text-primary mb-2 transition-colors duration-300 group-hover:text-primary-light-hover line-clamp-2">
+          <h3 className="text-base sm:text-lg font-semibold  mb-2 transition-colors duration-300 group-hover:text-primary-hover line-clamp-2">
             <Link href={`/blog/${post.slug}`}>{post.title}</Link>
           </h3>
 
           {/* Description */}
-          <p className="text-xs sm:text-sm text-slate-500 font-semibold leading-relaxed mb-4 line-clamp-3">
+          <p className="text-xs sm:text-sm text-text-gray  font-medium leading-relaxed mb-4 line-clamp-3">
             {getPostDescription(post)}
           </p>
         </div>
@@ -84,7 +84,7 @@ const BlogCard = ({ post }) => {
         {/* Link Footer */}
         <Link
           href={`/blog/${post.slug}`}
-          className="w-fit mt-4 relative z-10 flex items-center gap-1.5 text-xs font-black tracking-wider uppercase text-slate-400 group-hover:text-primary-light-hover transition-colors duration-300 select-text"
+          className="w-fit mt-4 relative z-10 flex items-center gap-1.5 text-xs font-black tracking-wider uppercase text-slate-400 group-hover:text-primary-hover transition-colors duration-300 select-text"
         >
           <span>Read Article</span>
           <span className="transform group-hover:translate-x-1.5 transition-transform duration-300">

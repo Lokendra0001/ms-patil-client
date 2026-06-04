@@ -33,38 +33,14 @@ const Gallery = () => {
   });
 
   return (
-    <section className="w-full bg-white py-20 lg:py-24 border-t border-slate-200/50 relative overflow-hidden select-text">
-      {/* Background graphic wireframes */}
-      <div className="absolute inset-0 opacity-[0.01] pointer-events-none">
-        <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
-          <line
-            x1="10%"
-            y1="0"
-            x2="10%"
-            y2="100%"
-            stroke="currentColor"
-            strokeWidth="1"
-          />
-          <line
-            x1="80%"
-            y1="0"
-            x2="80%"
-            y2="100%"
-            stroke="currentColor"
-            strokeWidth="1"
-          />
-        </svg>
-      </div>
-
+    <section className="w-full bg-white-background  py-20 lg:py-24 border-t border-slate-200/50 relative overflow-hidden select-text">
       <div className="max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 relative z-10">
         {/* Header Block (Centered) */}
         <Heading
-          tagline="VISUAL PORTFOLIO"
-          title="Our Project Progress"
+          tagline="ENGINEERING IN MOTION"
+          title="Our Active Project & Progress "
           highlight="Gallery"
           align="center"
-          textColor="text-primary"
-          className="!mb-12"
         />
 
         {/* Filter Navigation Tabs */}
@@ -94,7 +70,7 @@ const Gallery = () => {
             <div
               key={item.id}
               onClick={() => setLightboxIndex(index)}
-              className="relative overflow-hidden aspect-[4/3] group cursor-pointer border border-slate-200/80 bg-slate-50"
+              className="relative overflow-hidden aspect-[4/3] group cursor-pointer border border-border-secondary/40 bg-slate-50"
             >
               {/* Project Image */}
               <Image
@@ -107,10 +83,10 @@ const Gallery = () => {
               />
 
               {/* Hover Zoom Overlay (No text content, just zoom watermark icon) */}
-              <div className="absolute inset-0 bg-slate-950/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-10">
-                <div className="w-12 h-12 border border-white/25 rounded-full flex items-center justify-center scale-90 group-hover:scale-100 transition-all duration-300 bg-slate-950/20 backdrop-blur-xs">
+              <div className="absolute inset-0 bg-slate-background/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-10">
+                <div className="w-12 h-12 border border-border-secondary/25 rounded-full flex items-center justify-center scale-90 group-hover:scale-100 transition-all duration-300 bg-slate-background/20 backdrop-blur-xs">
                   <svg
-                    className="w-5 h-5 text-primary-light"
+                    className="w-5 h-5 text-primary"
                     fill="none"
                     stroke="currentColor"
                     strokeWidth="2.5"
@@ -134,7 +110,7 @@ const Gallery = () => {
             <Button
               onClick={() => setIsExpanded(!isExpanded)}
               variant="theme"
-              className="px-8 py-3.5 uppercase tracking-wider text-xs font-bold transition-all duration-300"
+              className="px-8 py-3.5 uppercase tracking-wider text-xs font-bold transition-all duration-300 cursor-pointer"
             >
               {isExpanded
                 ? "Show Less"

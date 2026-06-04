@@ -1,5 +1,5 @@
 import React from "react";
-import ProjectDetailsView from "@/component/projects/ProjectDetailsView";
+import ProjectDetail from "@/component/projects/[slug]/Index";
 import { projectsData } from "@/data/projects";
 
 // Generate static params for Next.js build compilation
@@ -60,7 +60,7 @@ const page = async ({ params }) => {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       )}
-      <ProjectDetailsView id={id} />
+      <ProjectDetail id={id} />
     </>
   );
 };

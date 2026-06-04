@@ -14,7 +14,7 @@ const ServicesList = () => {
   };
 
   return (
-    <section className="pb-20 sm:pb-28 sm:pt-10 xl:pt-50 bg-white select-text">
+    <section className="pb-20 sm:pb-28 sm:pt-10 xl:pt-50 bg-white-background  select-text">
       <div className="max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12">
         {/* Section Header */}
         <Heading
@@ -38,10 +38,12 @@ const ServicesList = () => {
                   className="w-full flex items-center justify-between py-6 sm:py-8 cursor-pointer select-text text-left focus:outline-none group"
                 >
                   <div className="flex items-center gap-6 sm:gap-10">
-                    <span className="text-xl sm:text-2xl font-bold font-mono text-primary-light tracking-wide">
+                    <span className="text-xl sm:text-2xl font-bold font-mono text-primary tracking-wide">
                       {cat.number}
                     </span>
-                    <h3 className="text-lg md:text-2.5xl font-semibold text-primary tracking-tight group-hover:text-primary-light-hover transition-colors duration-300">
+                    <h3
+                      className={`text-lg md:text-2.5xl font-semibold ${isOpen ? "text-primary" : "text-text-primary"} tracking-tight group-hover:text-primary-hover transition-colors duration-300`}
+                    >
                       {cat.title}
                     </h3>
                   </div>
@@ -51,8 +53,8 @@ const ServicesList = () => {
                     <div
                       className={`w-8 h-8 rounded-full border border-slate-200 flex items-center justify-center transition-all duration-300 ${
                         isOpen
-                          ? "bg-primary-light border-primary-light text-white rotate-180"
-                          : "bg-transparent text-slate-950"
+                          ? "bg-primary border-primary text-text-white  rotate-180"
+                          : "bg-transparent text-text-primary "
                       }`}
                     >
                       <svg
@@ -97,7 +99,7 @@ const ServicesList = () => {
                     {/* Right Column: Division Summary & Technical Capabilities (7 cols) */}
                     <div className="lg:col-span-7 flex flex-col justify-between h-full py-1">
                       <div>
-                        <span className="text-[10px] sm:text-xs font-bold tracking-widest text-primary-light uppercase mb-2 block">
+                        <span className="text-[10px] sm:text-xs font-bold tracking-widest text-primary uppercase mb-2 block">
                           {cat.tagline}
                         </span>
                         <p className="text-slate-600 text-sm sm:text-base leading-relaxed mb-6 max-w-2xl">
@@ -111,7 +113,7 @@ const ServicesList = () => {
                               key={itemIdx}
                               className="flex items-start gap-2.5"
                             >
-                              <div className="w-1.5 h-1.5 bg-primary-light mt-2 shrink-0 rounded-none" />
+                              <div className="w-1.5 h-1.5 bg-primary mt-2 shrink-0 rounded-none" />
                               <span className="text-xs sm:text-sm font-semibold text-slate-800 leading-snug">
                                 {item}
                               </span>

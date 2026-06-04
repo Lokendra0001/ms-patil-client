@@ -33,7 +33,7 @@ const BlogDetailPage = ({ slug: propSlug }) => {
   ];
 
   return (
-    <div className="w-full bg-white select-text">
+    <div className="w-full bg-white-background  select-text">
       <Hero
         tagline={heroTagline}
         title={heroTitle}
@@ -47,7 +47,7 @@ const BlogDetailPage = ({ slug: propSlug }) => {
         ) : (
           <div className="text-center py-12 flex flex-col justify-center items-center">
             <h2 className="text-2xl font-bold text-red-500">Blog Not Found</h2>
-            <p className="text-slate-500 mt-2">
+            <p className="text-text-gray  mt-2">
               The blog post you are looking for does not exist.
             </p>
             <div className="mt-6">

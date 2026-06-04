@@ -6,16 +6,16 @@ import Image from "next/image";
 
 const Hero = ({ tagline, title, bgImage, breadcrumbs = [] }) => {
   return (
-    <section className="relative w-full py-20 sm:py-28 border-b border-slate-900 overflow-hidden select-text bg-slate-950">
+    <section className="relative w-full py-20 sm:py-28 border-b border-slate-900 overflow-hidden select-text bg-slate-background">
       <Image src={bgImage} alt={title} priority fill className="object-cover" />
       {/* Background Image with Dark Mask Overlay */}
       <div className="absolute inset-0 bg-cover bg-center bg-no-repeat filter grayscale-[10%]" />
-      <div className="absolute inset-0 bg-slate-950/80 sm:bg-slate-950/75 z-0" />
+      <div className="absolute inset-0 bg-slate-background/80 sm:bg-slate-background/75 z-0" />
 
       {/* Architectural Blueprint SVG Watermark */}
       <div className="absolute right-0 top-0 bottom-0 w-full md:w-1/2 opacity-[0.035] pointer-events-none hidden sm:block z-10">
         <svg
-          className="w-full h-full text-white"
+          className="w-full h-full text-text-white "
           viewBox="0 0 400 400"
           fill="none"
           stroke="currentColor"
@@ -56,8 +56,8 @@ const Hero = ({ tagline, title, bgImage, breadcrumbs = [] }) => {
         {/* Tagline block */}
         {tagline && (
           <div className="flex items-center gap-3.5 mb-4 animate-fade-in-up">
-            <div className="w-12 h-0.5 bg-primary-light" />
-            <span className="text-[10px] sm:text-xs font-bold tracking-[0.25em] text-primary-light uppercase">
+            <div className="w-12 h-0.5 bg-primary" />
+            <span className="text-[10px] sm:text-xs font-bold tracking-[0.25em] text-primary uppercase">
               {tagline}
             </span>
           </div>
@@ -65,7 +65,7 @@ const Hero = ({ tagline, title, bgImage, breadcrumbs = [] }) => {
 
         {/* Heading */}
         <h1
-          className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight mb-5 animate-fade-in-up"
+          className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-text-white  leading-tight mb-5 animate-fade-in-up"
           style={{ animationDelay: "100ms" }}
         >
           {title}
@@ -75,22 +75,28 @@ const Hero = ({ tagline, title, bgImage, breadcrumbs = [] }) => {
         {breadcrumbs.length > 0 && (
           <nav
             aria-label="Breadcrumb"
-            className="flex items-center gap-2 text-xs font-bold tracking-wide text-slate-400 select-text animate-fade-in-up"
+            className="flex items-center gap-2 text-xs font-bold tracking-wide text-text-white/60 select-text animate-fade-in-up"
             style={{ animationDelay: "200ms" }}
           >
             <ol className="flex items-center gap-2 list-none p-0 m-0">
               {breadcrumbs.map((crumb, index) => (
                 <li key={index} className="flex items-center gap-2">
-                  {index > 0 && <span className="text-slate-600" aria-hidden="true">/</span>}
+                  {index > 0 && (
+                    <span className="text-text-gray" aria-hidden="true">
+                      /
+                    </span>
+                  )}
                   {crumb.href ? (
                     <Link
                       href={crumb.href}
-                      className="hover:text-primary-light transition-colors"
+                      className="hover:text-primary transition-colors"
                     >
                       {crumb.name}
                     </Link>
                   ) : (
-                    <span className="text-primary-light" aria-current="page">{crumb.name}</span>
+                    <span className="text-primary" aria-current="page">
+                      {crumb.name}
+                    </span>
                   )}
                 </li>
               ))}

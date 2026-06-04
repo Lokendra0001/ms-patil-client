@@ -1,7 +1,7 @@
 import foundation from "../../../public/assets/about/history/foundation.webp";
-import scale from "../../../public/assets/about/history/scale.webp";
+import contractor from "../../../public/assets/about/history/scale.webp";
 import verticle from "../../../public/assets/about/history/verticle.webp";
-import contractor from "../../../public/assets/about/history/contractor.webp";
+import  scale from "../../../public/assets/about/history/contractor.webp";
 
 export const milestones = [
   {

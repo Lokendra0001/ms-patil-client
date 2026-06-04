@@ -48,12 +48,12 @@
 //   return (
 //     <>
 //       {/* Top Bar - Professional Light Theme */}
-//       <div className=" w-full bg-slate-50 text-white text-xs py-2.5 px-4 sm:px-8 lg:px-12 border-b border-slate-200 hidden md:block select-text">
+//       <div className=" w-full bg-slate-background text-text-white  text-xs py-2.5 px-4 sm:px-8 lg:px-12 border-b border-border-secondary hidden md:block select-text">
 //         <div className="max-w-[1600px] mx-auto flex justify-between items-center">
 //           <div className="flex items-center gap-6">
 //             <span className="flex items-center gap-1.5 font-medium text-slate-700">
 //               <svg
-//                 className="w-3.5 h-3.5 text-primary-light"
+//                 className="w-3.5 h-3.5 text-primary"
 //                 fill="none"
 //                 viewBox="0 0 24 24"
 //                 stroke="currentColor"
@@ -70,7 +70,7 @@
 //             <span className="w-px h-3 bg-slate-200" />
 //             <span className="flex items-center gap-1.5 font-medium text-slate-700">
 //               <svg
-//                 className="w-3.5 h-3.5 text-primary-light"
+//                 className="w-3.5 h-3.5 text-primary"
 //                 fill="none"
 //                 viewBox="0 0 24 24"
 //                 stroke="currentColor"
@@ -86,9 +86,9 @@
 //             </span>
 //           </div>
 //           <div className="flex items-center gap-6">
-//             <span className="flex items-center gap-1.5 font-medium text-white">
+//             <span className="flex items-center gap-1.5 font-medium text-text-white ">
 //               <svg
-//                 className="w-3.5 h-3.5 text-primary-light"
+//                 className="w-3.5 h-3.5 text-primary"
 //                 fill="none"
 //                 viewBox="0 0 24 24"
 //                 stroke="currentColor"
@@ -103,9 +103,9 @@
 //               Mon - Sat: 9:00 AM - 6:00 PM
 //             </span>
 //             <span className="w-px h-3 bg-slate-200" />
-//             <span className="flex items-center gap-1.5 font-medium text-white">
+//             <span className="flex items-center gap-1.5 font-medium text-text-white ">
 //               <svg
-//                 className="w-3.5 h-3.5 text-primary-light"
+//                 className="w-3.5 h-3.5 text-primary"
 //                 fill="none"
 //                 viewBox="0 0 24 24"
 //                 stroke="currentColor"
@@ -131,10 +131,10 @@
 
 //       {/* Main Header */}
 //       <header
-//         className={`sticky top-0 z-40 w-full bg-white border-b transition-all duration-200 rounded-none ${
+//         className={`sticky top-0 z-40 w-full bg-white-background  border-b transition-all duration-200 rounded-none ${
 //           isScrolled
-//             ? "shadow-sm py-3.5 border-slate-200"
-//             : "py-5 border-slate-200"
+//             ? "shadow-sm py-3.5 border-border-secondary"
+//             : "py-5 border-border-secondary"
 //         }`}
 //       >
 //         <div className="max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12">
@@ -144,7 +144,7 @@
 //               href="/"
 //               className="flex items-center gap-3 group focus:outline-none"
 //             >
-//               <div className="flex items-center justify-center w-9 h-9 text-primary-light">
+//               <div className="flex items-center justify-center w-9 h-9 text-primary">
 //                 <svg
 //                   className="w-8 h-8"
 //                   viewBox="0 0 24 24"
@@ -165,10 +165,10 @@
 //                 </svg>
 //               </div>
 //               <div className="flex flex-col">
-//                 <span className="font-extrabold text-2xl tracking-tight text-primary leading-none group-hover:text-primary-light transition-colors uppercase">
+//                 <span className="font-extrabold text-2xl tracking-tight text-primary leading-none group-hover:text-primary transition-colors uppercase">
 //                   MS PATIL
 //                 </span>
-//                 <span className="text-[9px] font-bold tracking-[0.28em] text-primary-light leading-none mt-1.5 uppercase">
+//                 <span className="text-[9px] font-bold tracking-[0.28em] text-primary leading-none mt-1.5 uppercase">
 //                   CONSTRUCTION & INFRA
 //                 </span>
 //               </div>
@@ -180,8 +180,8 @@
 //                 href="/"
 //                 className={`text-[13px] font-semibold tracking-wider uppercase transition-colors py-1.5 border-b-2 ${
 //                   pathname === "/"
-//                     ? "border-primary-light text-primary"
-//                     : "border-transparent text-slate-700 hover:text-primary hover:border-primary-light"
+//                     ? "border-primary text-primary"
+//                     : "border-transparent text-slate-700 hover:text-primary hover:border-primary"
 //                 }`}
 //               >
 //                 Home
@@ -207,14 +207,14 @@
 //                 </button>
 
 //                 {/* Dropdown Menu */}
-//                 <div className="absolute top-full left-1/2 -translate-x-1/2 mt-3.5 w-64 bg-white rounded-none shadow-md border border-slate-200 opacity-0 invisible group-hover/dropdown:opacity-100 group-hover/dropdown:visible transition-all duration-150 z-50">
-//                   <div className="h-1 bg-primary-light w-full" />
+//                 <div className="absolute top-full left-1/2 -translate-x-1/2 mt-3.5 w-64 bg-white-background  rounded-none shadow-md border border-border-secondary opacity-0 invisible group-hover/dropdown:opacity-100 group-hover/dropdown:visible transition-all duration-150 z-50">
+//                   <div className="h-1 bg-primary w-full" />
 //                   <div className="flex flex-col">
 //                     {services.map((service, index) => (
 //                       <Link
 //                         key={index}
 //                         href={service.href}
-//                         className="text-xs font-semibold tracking-wide text-slate-700 hover:text-primary hover:bg-slate-50 px-5 py-3.5 border-b border-slate-100 last:border-none transition-colors uppercase"
+//                         className="text-xs font-semibold tracking-wide text-slate-700 hover:text-primary hover:bg-slate-background px-5 py-3.5 border-b border-border-secondary last:border-none transition-colors uppercase"
 //                       >
 //                         {service.title}
 //                       </Link>
@@ -227,8 +227,8 @@
 //                 href="/projects"
 //                 className={`text-[13px] font-semibold tracking-wider uppercase transition-colors py-1.5 border-b-2 ${
 //                   pathname === "/projects"
-//                     ? "border-primary-light text-primary"
-//                     : "border-transparent text-slate-700 hover:text-primary hover:border-primary-light"
+//                     ? "border-primary text-primary"
+//                     : "border-transparent text-slate-700 hover:text-primary hover:border-primary"
 //                 }`}
 //               >
 //                 Projects
@@ -237,8 +237,8 @@
 //                 href="/about"
 //                 className={`text-[13px] font-semibold tracking-wider uppercase transition-colors py-1.5 border-b-2 ${
 //                   pathname === "/about"
-//                     ? "border-primary-light text-primary"
-//                     : "border-transparent text-slate-700 hover:text-primary hover:border-primary-light"
+//                     ? "border-primary text-primary"
+//                     : "border-transparent text-slate-700 hover:text-primary hover:border-primary"
 //                 }`}
 //               >
 //                 About Us
@@ -247,8 +247,8 @@
 //                 href="/contact"
 //                 className={`text-[13px] font-semibold tracking-wider uppercase transition-colors py-1.5 border-b-2 ${
 //                   pathname === "/contact"
-//                     ? "border-primary-light text-primary"
-//                     : "border-transparent text-slate-700 hover:text-primary hover:border-primary-light"
+//                     ? "border-primary text-primary"
+//                     : "border-transparent text-slate-700 hover:text-primary hover:border-primary"
 //                 }`}
 //               >
 //                 Contact Us
@@ -269,7 +269,7 @@
 //               {/* Mobile Hamburger Button */}
 //               <button
 //                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-//                 className="lg:hidden p-2 text-slate-800 hover:text-primary-light hover:bg-slate-100 rounded-none border border-slate-200 focus:outline-none transition-colors"
+//                 className="lg:hidden p-2 text-slate-800 hover:text-primary hover:bg-slate-100 rounded-none border border-border-secondary focus:outline-none transition-colors"
 //                 aria-label="Toggle menu"
 //               >
 //                 {isMobileMenuOpen ? (
@@ -320,19 +320,19 @@
 
 //       {/* Drawer Container */}
 //       <div
-//         className={`fixed top-0 right-0 bottom-0 w-full max-w-xs bg-white z-50 p-6 flex flex-col justify-between transition-transform duration-300 ease-out transform rounded-none lg:hidden ${
+//         className={`fixed top-0 right-0 bottom-0 w-full max-w-xs bg-white-background  z-50 p-6 flex flex-col justify-between transition-transform duration-300 ease-out transform rounded-none lg:hidden ${
 //           isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
 //         }`}
 //       >
 //         <div className="flex flex-col gap-6 overflow-y-auto no-scrollbar">
 //           {/* Drawer Header */}
-//           <div className="flex items-center justify-between pb-4 border-b border-slate-200">
+//           <div className="flex items-center justify-between pb-4 border-b border-border-secondary">
 //             <Link
 //               href="/"
 //               className="flex items-center gap-2"
 //               onClick={() => setIsMobileMenuOpen(false)}
 //             >
-//               <div className="w-8 h-8 text-primary-light flex items-center justify-center">
+//               <div className="w-8 h-8 text-primary flex items-center justify-center">
 //                 <svg
 //                   className="w-6 h-6"
 //                   viewBox="0 0 24 24"
@@ -352,7 +352,7 @@
 //             </Link>
 //             <button
 //               onClick={() => setIsMobileMenuOpen(false)}
-//               className="p-1 text-slate-500 hover:text-slate-950 focus:outline-none border border-transparent hover:border-slate-200"
+//               className="p-1 text-text-gray  hover:text-text-primary  focus:outline-none border border-transparent hover:border-border-secondary"
 //             >
 //               <svg
 //                 className="w-6 h-6"
@@ -376,23 +376,23 @@
 //               href="/"
 //               className={`text-[13px] font-semibold tracking-wider uppercase px-3 py-2.5 rounded-none transition-colors border-l-2 ${
 //                 pathname === "/"
-//                   ? "bg-slate-50 border-primary-light text-primary"
-//                   : "text-slate-700 hover:bg-slate-50 border-transparent border-b border-slate-100"
+//                   ? "bg-slate-background border-primary text-primary"
+//                   : "text-slate-700 hover:bg-slate-background border-transparent border-b border-border-secondary"
 //               }`}
 //             >
 //               Home
 //             </Link>
 
 //             {/* Mobile Services Accordion */}
-//             <div className="flex flex-col border-b border-slate-100">
+//             <div className="flex flex-col border-b border-border-secondary">
 //               <button
 //                 onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)}
-//                 className="flex items-center justify-between text-[13px] font-semibold tracking-wider uppercase px-3 py-2.5 text-slate-700 hover:bg-slate-50 focus:outline-none text-left cursor-pointer"
+//                 className="flex items-center justify-between text-[13px] font-semibold tracking-wider uppercase px-3 py-2.5 text-slate-700 hover:bg-slate-background focus:outline-none text-left cursor-pointer"
 //               >
 //                 <span>Services</span>
 //                 <svg
 //                   className={`w-4 h-4 transition-transform duration-200 text-slate-400 ${
-//                     isMobileServicesOpen ? "rotate-180 text-primary-light" : ""
+//                     isMobileServicesOpen ? "rotate-180 text-primary" : ""
 //                   }`}
 //                   fill="none"
 //                   viewBox="0 0 24 24"
@@ -414,12 +414,12 @@
 //                     : "max-h-0 opacity-0"
 //                 }`}
 //               >
-//                 <div className="flex flex-col gap-1.5 pl-5 border-l-2 border-primary-light">
+//                 <div className="flex flex-col gap-1.5 pl-5 border-l-2 border-primary">
 //                   {services.map((service, index) => (
 //                     <Link
 //                       key={index}
 //                       href={service.href}
-//                       className="text-xs font-semibold text-white hover:text-primary py-1.5 transition-colors uppercase tracking-wide"
+//                       className="text-xs font-semibold text-text-white  hover:text-primary py-1.5 transition-colors uppercase tracking-wide"
 //                     >
 //                       {service.title}
 //                     </Link>
@@ -432,8 +432,8 @@
 //               href="/projects"
 //               className={`text-[13px] font-semibold tracking-wider uppercase px-3 py-2.5 rounded-none transition-colors border-l-2 ${
 //                 pathname === "/projects"
-//                   ? "bg-slate-50 border-primary-light text-primary"
-//                   : "text-slate-700 hover:bg-slate-50 border-transparent border-b border-slate-100"
+//                   ? "bg-slate-background border-primary text-primary"
+//                   : "text-slate-700 hover:bg-slate-background border-transparent border-b border-border-secondary"
 //               }`}
 //             >
 //               Projects
@@ -442,8 +442,8 @@
 //               href="/about"
 //               className={`text-[13px] font-semibold tracking-wider uppercase px-3 py-2.5 rounded-none transition-colors border-l-2 ${
 //                 pathname === "/about"
-//                   ? "bg-slate-50 border-primary-light text-primary"
-//                   : "text-slate-700 hover:bg-slate-50 border-transparent border-b border-slate-100"
+//                   ? "bg-slate-background border-primary text-primary"
+//                   : "text-slate-700 hover:bg-slate-background border-transparent border-b border-border-secondary"
 //               }`}
 //             >
 //               About Us
@@ -452,8 +452,8 @@
 //               href="/contact"
 //               className={`text-[13px] font-semibold tracking-wider uppercase px-3 py-2.5 rounded-none transition-colors border-l-2 ${
 //                 pathname === "/contact"
-//                   ? "bg-slate-50 border-primary-light text-primary"
-//                   : "text-slate-700 hover:bg-slate-50 border-transparent border-b border-slate-100"
+//                   ? "bg-slate-background border-primary text-primary"
+//                   : "text-slate-700 hover:bg-slate-background border-transparent border-b border-border-secondary"
 //               }`}
 //             >
 //               Contact Us
@@ -462,7 +462,7 @@
 //         </div>
 
 //         {/* Drawer Bottom CTA using common Button */}
-//         <div className="pt-6 border-t border-slate-200">
+//         <div className="pt-6 border-t border-border-secondary">
 //           <Button
 //             href="/contact?consultation=true"
 //             variant="theme"
@@ -520,7 +520,7 @@ const Header = () => {
       <div
         className={
           isScrolled
-            ? "fixed top-0 z-999 w-full bg-white border-b border-gray-100 animate-slide-down"
+            ? "fixed top-0 z-999 w-full bg-white-background border-b border-border-secondary animate-slide-down"
             : "absolute top-0 z-999 w-full bg-transparent"
         }
       >
@@ -539,7 +539,7 @@ const Header = () => {
                 href="/"
                 className="flex items-center gap-3 group focus:outline-none"
               >
-                <div className="flex items-center justify-center w-9 h-9 text-primary-light">
+                <div className="flex items-center justify-center w-9 h-9 text-primary">
                   <svg
                     className="w-8 h-8"
                     viewBox="0 0 24 24"
@@ -561,11 +561,11 @@ const Header = () => {
                 </div>
                 <div className="flex flex-col">
                   <span
-                    className={`font-extrabold text-2xl tracking-tight leading-none transition-colors uppercase ${isScrolled ? "text-slate-900 group-hover:text-primary-light" : "text-white group-hover:text-white"}`}
+                    className={`font-extrabold text-2xl tracking-tight leading-none transition-colors uppercase ${isScrolled ? "text-text-primary group-hover:text-primary" : "text-text-white  group-hover:text-text-white "}`}
                   >
                     MS PATIL
                   </span>
-                  <span className="text-[9px] font-bold tracking-[0.28em] text-primary-light leading-none mt-1.5 uppercase">
+                  <span className="text-[9px] font-bold tracking-[0.28em] text-primary leading-none mt-1.5 uppercase">
                     CONSTRUCTION & INFRA
                   </span>
                 </div>
@@ -581,17 +581,17 @@ const Header = () => {
                         <button
                           className={`flex items-center gap-1.5 text-[13px] font-semibold tracking-wider transition-colors py-1.5 border-b-2 cursor-pointer ${
                             isSectorsActive
-                              ? `border-primary-light ${isScrolled ? "text-primary" : "text-white"}`
+                              ? `border-primary ${isScrolled ? "text-primary" : "text-text-white "}`
                               : `border-transparent  ${
                                   isScrolled
-                                    ? "text-slate-700 group-hover:text-primary"
-                                    : "text-white group-hover:text-white"
+                                    ? "text-text-primary group-hover:text-primary"
+                                    : "text-text-white  group-hover:text-text-white "
                                 }`
                           }`}
                         >
                           <span>Sectors</span>
                           <svg
-                            className="w-3 h-3 text-slate-400 group-hover:rotate-180 transition-transform duration-200"
+                            className="w-3 h-3 text-text-gray group-hover:text-primary group-hover:rotate-180 transition-transform duration-200"
                             fill="none"
                             stroke="currentColor"
                             viewBox="0 0 24 24"
@@ -609,24 +609,24 @@ const Header = () => {
                         <div
                           className={`absolute left-0 pt-4 w-72 z-50 hidden group-hover:block animate-fade-in ${isScrolled ? "top-full" : "top-7"}`}
                         >
-                          <div className="bg-white  border-b border-border-secondary shadow-2xl py-1 rounded-none">
+                          <div className="bg-white-background   border-b border-border-secondary shadow-2xl py-1 rounded-none">
                             {sectors.map((sec) => {
                               const isLinkActive = pathname === sec.href;
                               return (
                                 <Link
                                   key={sec.href}
                                   href={sec.href}
-                                  className={`group/item flex items-center justify-between px-5 py-4 bg-white border-b border-slate-100 last:border-0 border-l-2 transition-all duration-200 rounded-none text-left ${
+                                  className={`group/item flex items-center justify-between px-5 py-4 bg-white-background  border-b border-border-secondary last:border-b-0 border-l-2 transition-all duration-200 rounded-none text-left ${
                                     isLinkActive
-                                      ? "border-l-primary-light bg-slate-50/80"
-                                      : "border-l-transparent hover:border-l-primary-light hover:bg-slate-50/80"
+                                      ? "border-l-primary! bg-slate-background/5!"
+                                      : "border-l-transparent hover:border-l-primary hover:bg-slate-background/5"
                                   }`}
                                 >
                                   <span
                                     className={`text-[11px] font-bold uppercase tracking-wider transition-colors ${
                                       isLinkActive
-                                        ? "text-primary-light"
-                                        : "text-text-primary group-hover/item:text-primary-light"
+                                        ? "text-primary "
+                                        : "text-text-primary group-hover/item:text-primary"
                                     }`}
                                   >
                                     {sec.name}
@@ -634,8 +634,8 @@ const Header = () => {
                                   <span
                                     className={`text-[8px] font-mono font-bold tracking-widest px-2 py-0.5 transition-colors uppercase ${
                                       isLinkActive
-                                        ? "bg-primary-light text-slate-950"
-                                        : "text-slate-500 bg-slate-100 group-hover/item:bg-primary-light group-hover/item:text-slate-950"
+                                        ? "bg-primary text-text-primary "
+                                        : "text-text-gray  bg-slate-100 group-hover/item:bg-primary group-hover/item:text-text-primary "
                                     }`}
                                   >
                                     {sec.code}
@@ -656,8 +656,8 @@ const Header = () => {
                       href={link.href}
                       className={`text-[13px] font-semibold tracking-wider  transition-colors py-1.5 border-b-2 ${
                         isActive
-                          ? `border-primary-light ${isScrolled ? "text-primary" : "text-white"}`
-                          : `border-transparent ${isScrolled ? "text-slate-700 hover:text-primary hover:border-primary-light" : "text-white hover:opacity-90 "}`
+                          ? `border-primary ${isScrolled ? "text-primary" : "text-text-white "}`
+                          : `border-transparent ${isScrolled ? "text-text-primary hover:text-primary hover:border-primary" : "text-text-white  hover:opacity-90 "}`
                       }`}
                     >
                       {link.name}
@@ -672,15 +672,15 @@ const Header = () => {
                   href="/contact?consultation=true"
                   variant="theme"
                   size="hd"
-                  className={` hidden! xl:flex! uppercase tracking-wider py-3 px-6 h-auto hover:bg-primary-light! hover:text-white! hover:opacity-80  `}
+                  className={` hidden! xl:flex! uppercase tracking-wider py-3 px-6 h-auto hover:bg-primary! hover:text-text-white ! hover:opacity-80  `}
                 >
-                  Book a Consultation
+                  Get a Quotation
                 </Button>
 
                 {/* Mobile Hamburger Button */}
                 <button
                   onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                  className={`xl:hidden p-2 rounded-none border focus:outline-none transition-colors ${isScrolled ? "text-slate-800 border-slate-200 hover:bg-slate-100" : "text-white border-white/20 hover:bg-white/10"}`}
+                  className={`xl:hidden p-2 rounded-none border focus:outline-none transition-colors ${isScrolled ? "text-text-primary border-border-secondary hover:bg-background-white" : "text-text-white  border-border-secondary/20 hover:bg-white-background /10"}`}
                   aria-label="Toggle menu"
                 >
                   {isMobileMenuOpen ? (
@@ -722,7 +722,7 @@ const Header = () => {
       {/* MOBILE DRAWER - Square & Light Grid */}
       {/* Backdrop */}
       <div
-        className={`fixed inset-0 bg-slate-900/40 transition-opacity duration-300 z-[9999] xl:hidden ${
+        className={`fixed inset-0 bg-slate-background/40 transition-opacity duration-300 z-[9999] xl:hidden ${
           isMobileMenuOpen
             ? "opacity-100 pointer-events-auto"
             : "opacity-0 pointer-events-none"
@@ -732,19 +732,19 @@ const Header = () => {
 
       {/* Drawer Container */}
       <div
-        className={`fixed top-0 right-0 bottom-0 w-full max-w-xs md:max-w-xl bg-white z-[10000] p-6 flex flex-col justify-between transition-transform duration-300 ease-out transform rounded-none xl:hidden ${
+        className={`fixed top-0 right-0 bottom-0 w-full max-w-xs md:max-w-xl bg-white-background  z-[10000] p-6 flex flex-col justify-between transition-transform duration-300 ease-out transform rounded-none xl:hidden ${
           isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
         <div className="flex flex-col gap-6 overflow-y-auto no-scrollbar">
           {/* Drawer Header */}
-          <div className="flex items-center justify-between pb-4 border-b border-slate-200">
+          <div className="flex items-center justify-between pb-4 border-b border-border-secondary">
             <Link
               href="/"
               className="flex items-center gap-2"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              <div className="w-8 h-8 text-primary-light flex items-center justify-center">
+              <div className="w-8 h-8 text-primary flex items-center justify-center">
                 <svg
                   className="w-6 h-6"
                   viewBox="0 0 24 24"
@@ -764,7 +764,7 @@ const Header = () => {
             </Link>
             <button
               onClick={() => setIsMobileMenuOpen(false)}
-              className="p-1 text-slate-500 hover:text-slate-950 focus:outline-none border border-transparent hover:border-slate-200"
+              className="p-1 text-text-gray  hover:text-text-primary  focus:outline-none border border-transparent hover:border-border-secondary"
             >
               <svg
                 className="w-6 h-6"
@@ -793,15 +793,15 @@ const Header = () => {
                       onClick={() =>
                         setIsMobileSectorsOpen(!isMobileSectorsOpen)
                       }
-                      className={`w-full flex items-center justify-between text-[13px] font-semibold tracking-wider uppercase px-3 py-2.5 rounded-none border-b border-slate-100 focus:outline-none cursor-pointer hover:bg-slate-50 transition-colors ${
+                      className={`w-full flex items-center justify-between text-[13px] font-semibold tracking-wider uppercase px-3 py-2.5 rounded-none border-b border-l-2 hover:border-l-primary border-border-secondary focus:outline-none cursor-pointer hover:bg-slate-background/5 transition-colors ${
                         isSectorsActive
-                          ? "bg-slate-50 border-l-2 border-l-primary-light text-primary"
-                          : "text-slate-800"
+                          ? "bg-slate-background/5 border-l-2 border-l-primary text-primary"
+                          : "text-text-primary"
                       }`}
                     >
                       <span>Sectors</span>
                       <svg
-                        className={`w-4 h-4 text-slate-500 transition-transform duration-200 ${isMobileSectorsOpen ? "rotate-180" : ""}`}
+                        className={`w-4 h-4 text-text-gray  transition-transform duration-200 ${isMobileSectorsOpen ? "rotate-180" : ""}`}
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"
@@ -815,13 +815,13 @@ const Header = () => {
                       </svg>
                     </button>
                     {isMobileSectorsOpen && (
-                      <div className="bg-slate-50 pl-6 pr-3 py-2 flex flex-col gap-1 border-b border-slate-100 select-text">
+                      <div className=" pl-6 pr-3 py-2 flex flex-col gap-1 border-b border-border-secondary select-text">
                         {sectors.map((sec) => (
                           <Link
                             key={sec.href}
                             onClick={() => setIsMobileMenuOpen(false)}
                             href={sec.href}
-                            className="block py-2.5 pl-3 border-l border-slate-200 text-xs font-bold text-slate-600 hover:text-primary-light hover:border-l-primary-light uppercase tracking-wider transition-all text-left"
+                            className="block py-2.5 pl-3 border-l border-border-secondary text-xs font-bold text-text-primary hover:text-primary hover:border-l-primary uppercase tracking-wider transition-all text-left"
                           >
                             {sec.name}
                           </Link>
@@ -839,8 +839,8 @@ const Header = () => {
                   href={link.href}
                   className={`text-[13px] font-semibold tracking-wider uppercase px-3 py-2.5 rounded-none transition-colors border-l-2 ${
                     isActive
-                      ? "bg-slate-50 border-primary-light text-primary"
-                      : "text-slate-800 hover:text-primary hover:bg-slate-50 border-transparent border-b border-slate-100"
+                      ? "bg-slate-background/5 border-primary text-primary "
+                      : "text-text-primary hover:text-primary border-border-secondary hover:border-primary hover:bg-slate-background/5  "
                   }`}
                 >
                   {link.name}
@@ -851,14 +851,14 @@ const Header = () => {
         </div>
 
         {/* Drawer Bottom CTA using common Button */}
-        <div className="  pt-6 border-t border-slate-200">
+        <div className="  pt-6 border-t border-border-secondary">
           <Button
             href="/contact?consultation=true"
             variant="theme"
             size="hd"
             className=" w-full flex items-center justify-center uppercase tracking-wider py-3.5 h-auto"
           >
-            Book a Consultation
+            Get A Quotation
           </Button>
         </div>
       </div>

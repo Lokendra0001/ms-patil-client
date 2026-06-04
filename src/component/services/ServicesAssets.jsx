@@ -7,7 +7,7 @@ import { plants, fleet } from "../../data/services/assets";
 
 const ServicesAssets = () => {
   return (
-    <section className="py-20 sm:py-24 bg-white border-t border-slate-100 select-text">
+    <section className="py-20 sm:py-24 bg-white-background  border-t border-border-secondary select-text">
       <div className="max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12">
         {/* Section Header */}
         <Heading
@@ -15,15 +15,15 @@ const ServicesAssets = () => {
           title="In-House Plants &"
           highlight="Machinery Fleet"
           align="center"
-          textColor="text-slate-950"
+          textColor="text-text-primary "
           className="mb-16"
         />
 
         {/* Manufacturing Plants */}
         <div className="mb-20">
           <div className="flex items-center gap-3 mb-8">
-            <span className="h-0.5 w-8 bg-red-linear-right-background" />
-            <h3 className="text-xs font-black tracking-widest uppercase text-primary-light font-mono">
+            <span className="h-0.5 w-8 bg-primary" />
+            <h3 className="text-xs font-black tracking-widest uppercase text-primary font-mono">
               In-House Production Plants
             </h3>
           </div>
@@ -32,7 +32,7 @@ const ServicesAssets = () => {
             {plants.map((asset) => (
               <div
                 key={asset.index}
-                className="relative overflow-hidden group aspect-[4/5] bg-slate-900 border-none"
+                className="relative overflow-hidden group aspect-[4/5] bg-slate-background border-none"
               >
                 {/* Full Card Image Background */}
                 <Image
@@ -44,24 +44,24 @@ const ServicesAssets = () => {
                 />
 
                 {/* Visual Dark Overlay Gradient */}
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-90 transition-opacity duration-300 z-10" />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-background via-slate-background/60 to-transparent opacity-90 transition-opacity duration-300 z-10" />
 
                 {/* Minimal Overlay Content */}
                 <div className="absolute inset-0 flex flex-col justify-between p-6 z-20">
                   {/* Top: Monospace Index */}
-                  <span className="text-[10px] font-mono text-slate-400 tracking-wider">
+                  <span className="text-[10px] font-mono text-text-gray tracking-wider">
                     {asset.index}
                   </span>
 
                   {/* Bottom: Stat & Title */}
                   <div>
-                    <span className="text-2xl sm:text-3xl font-black text-red-linear-right-background block tracking-tight mb-1">
+                    <span className="text-2xl sm:text-3xl font-black text-primary block tracking-tight mb-1">
                       {asset.stat}
                     </span>
-                    <h4 className="text-base font-extrabold uppercase text-white tracking-tight leading-tight">
+                    <h4 className="text-base font-extrabold uppercase text-text-white  tracking-tight leading-tight">
                       {asset.name}
                     </h4>
-                    <p className="text-xs text-slate-300 mt-1 font-semibold">
+                    <p className="text-xs text-text-gray mt-1 font-semibold">
                       {asset.detail}
                     </p>
                   </div>
@@ -74,8 +74,8 @@ const ServicesAssets = () => {
         {/* Heavy Equipment Fleet */}
         <div>
           <div className="flex items-center gap-3 mb-8">
-            <span className="h-0.5 w-8 bg-red-linear-right-background" />
-            <h3 className="text-xs font-black tracking-widest uppercase text-primary-light font-mono">
+            <span className="h-0.5 w-8 bg-primary" />
+            <h3 className="text-xs font-black tracking-widest uppercase text-primary font-mono">
               Owned Heavy Machinery Fleet
             </h3>
           </div>
@@ -84,7 +84,7 @@ const ServicesAssets = () => {
             {fleet.map((asset) => (
               <div
                 key={asset.index}
-                className="relative overflow-hidden group aspect-[4/3] bg-slate-900 border-none"
+                className="relative overflow-hidden group aspect-[4/3] bg-slate-background border-none"
               >
                 {/* Full Card Image Background */}
                 <Image
@@ -95,24 +95,24 @@ const ServicesAssets = () => {
                 />
 
                 {/* Visual Dark Overlay Gradient */}
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-90 transition-opacity duration-300 z-10" />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-background via-slate-background/60 to-transparent opacity-90 transition-opacity duration-300 z-10" />
 
                 {/* Minimal Overlay Content */}
                 <div className="absolute inset-0 flex flex-col justify-between p-6 z-20">
                   {/* Top: Monospace Index */}
-                  <span className="text-[10px] font-mono text-slate-400 tracking-wider">
+                  <span className="text-[10px] font-mono text-text-gray tracking-wider">
                     {asset.index}
                   </span>
 
                   {/* Bottom: Stat & Title */}
                   <div>
-                    <span className="text-2xl sm:text-3xl font-black text-red-linear-right-background block tracking-tight mb-1">
+                    <span className="text-2xl sm:text-3xl font-black text-primary block tracking-tight mb-1">
                       {asset.stat}
                     </span>
-                    <h4 className="text-base font-extrabold uppercase text-white tracking-tight leading-tight">
+                    <h4 className="text-base font-extrabold uppercase text-text-white  tracking-tight leading-tight">
                       {asset.name}
                     </h4>
-                    <p className="text-xs text-slate-300 mt-1 font-semibold">
+                    <p className="text-xs text-text-gray mt-1 font-semibold">
                       {asset.detail}
                     </p>
                   </div>
