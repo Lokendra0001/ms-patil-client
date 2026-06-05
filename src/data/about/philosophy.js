@@ -8,9 +8,9 @@ export const philosophyData = [
       "To become a trusted leader in the construction industry by delivering innovative, sustainable, and high-quality infrastructure that shapes the future and improves communities.",
     type: "bullets",
     items: [
-      "Global industry leadership standards",
-      "Innovation-driven development and structural growth",
-      "Sustainable civil engineering and carbon-neutral targets",
+      "Multi-State Infrastructure Delivery Across India",
+      "Complete Self-Reliant Materials Supply Integration",
+      "High-Precision Concrete and Technical Excellence",
     ],
   },
   {
@@ -22,10 +22,10 @@ export const philosophyData = [
       "Our mission is to transform every client’s vision into reality by delivering high-quality construction services on time and within budget, while maintaining excellence in workmanship, safety, and professionalism.",
     type: "checkboxes",
     items: [
-      "Strict adherence to project delivery timelines",
-      "Client-centric customization and communication",
-      "Rigorous quality standards and site inspections",
-      "Ethical practices, licensing, and regulatory compliance",
+      "Leveraging In-House Raw Material Logistics",
+      "Zero Mobilization Delay via 100% Owned Fleet",
+      "Strict Adherence to Project Budgets & Timelines",
+      "Delivering Uncompromising Structural Quality Standards",
     ],
   },
   {
@@ -39,20 +39,20 @@ export const philosophyData = [
     items: [
       {
         label: "Quality First",
-        desc: "Never compromise on structural build standards",
+        desc: "Rigorous IS-code batch testing from source to structure",
       },
       {
         label: "Integrity",
-        desc: "Honest and transparent corporate work culture",
+        desc: "Transparent government contracting and bidding ethics",
       },
-      { label: "Commitment", desc: "Delivering what we promise on time" },
+      { label: "Commitment", desc: "Meeting demanding PWD and structural deadlines" },
       {
         label: "Safety",
-        desc: "Prioritizing people and site safety guidelines",
+        desc: "Strict live-site monitoring and RDSO safety enforcement",
       },
       {
         label: "Innovation",
-        desc: "Using modern engineering solutions and techniques",
+        desc: "Complete vertical integration across all supply chains",
       },
     ],
   },

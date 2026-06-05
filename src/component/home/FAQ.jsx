@@ -24,7 +24,7 @@ const FAQ = () => {
               title="Need Clarity? We’ve Got "
               highlight="You Covered"
               description="Browse common questions or contact us for more information."
-              className="mb-8! max-w-md"
+              className="mb-0! max-w-md"
             />
 
             {/* Rectangular Contact Button */}

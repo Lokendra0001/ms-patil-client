@@ -1,9 +1,13 @@
 "use client";
 
 import React, { useEffect, useState, useRef } from "react";
+import Image from "next/image";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
 import Button from "@/component/CTA/Button";
 import Heading from "../common/Heading";
 import { clientLogos, statsList } from "../../data/home/stats";
+import "swiper/css";
 
 const AnimatedCounter = ({
   target,
@@ -63,48 +67,80 @@ const AnimatedCounter = ({
   );
 };
 
-const LogoItem = ({ name, icon }) => (
-  <div className="flex items-center gap-2.5 text-slate-400 opacity-65 hover:opacity-95 transition-opacity duration-200">
-    {icon}
-    <span className="font-bold text-sm tracking-wider uppercase select-text">
-      {name}
-    </span>
+const LogoItem = ({ name, image, className }) => (
+  <div className="relative flex items-center justify-center h-full w-full  opacity-70 hover:opacity-100 transition-opacity duration-200">
+    <Image
+      src={image}
+      alt={name}
+      fill
+      className={`select-none object-contain grayscale-100 brightness-[0.8] hover:grayscale-0 hover:brightness-100 ${className}`}
+    />
   </div>
 );
 
 const Stats = () => {
   return (
-    <section className="w-full bg-white-background  py-16 sm:py-20 border-b border-border-secondary select-text">
+    <section className="w-full bg-white-background  pb-16 sm:pb-20 border-b border-border-secondary select-text">
       <div className="max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12">
-        {/* Top: 5 Logo Marquee with Left & Right Fading Effects */}
-        <div className="relative w-full overflow-hidden pb-16 border-b border-border-secondary select-text">
+        {/* Top: Client Logo Slider with Swiper */}
+        <div className="my-10 relative w-full h-[80px]   select-text">
           {/* Gradient Masks */}
           <div className="absolute left-0 top-0 bottom-0 w-16 sm:w-28 bg-gradient-to-r from-white-background to-transparent z-10 pointer-events-none" />
           <div className="absolute right-0 top-0 bottom-0 w-16 sm:w-28 bg-gradient-to-l from-white-background to-transparent z-10 pointer-events-none" />
 
-          {/* Scrolling Marquee Tape */}
-          <div className="flex w-max gap-16 items-center animate-marquee">
-            {/* Set 1 */}
-            <div className="flex gap-16 items-center shrink-0 pr-8">
-              {clientLogos.map((logo, idx) => (
-                <LogoItem
-                  key={`set1-${idx}`}
-                  name={logo.name}
-                  icon={logo.icon}
-                />
-              ))}
-            </div>
-            {/* Set 2 (for seamless loop wrapping) */}
-            <div className="flex gap-16 items-center shrink-0 pr-8">
-              {clientLogos.map((logo, idx) => (
-                <LogoItem
-                  key={`set2-${idx}`}
-                  name={logo.name}
-                  icon={logo.icon}
-                />
-              ))}
-            </div>
-          </div>
+          <style
+            dangerouslySetInnerHTML={{
+              __html: `
+            .logo-swiper .swiper-wrapper {
+              transition-timing-function: linear !important;
+            }
+          `,
+            }}
+          />
+
+          <Swiper
+            modules={[Autoplay]}
+            slidesPerView={2}
+            spaceBetween={30}
+            loop={true}
+            speed={3500}
+            autoplay={{
+              delay: 0,
+              disableOnInteraction: false,
+            }}
+            allowTouchMove={false}
+            breakpoints={{
+              640: {
+                slidesPerView: 3,
+                spaceBetween: 40,
+              },
+              768: {
+                slidesPerView: 4,
+                spaceBetween: 40,
+              },
+              1024: {
+                slidesPerView: 5,
+                spaceBetween: 30,
+              },
+              1280: {
+                slidesPerView: 8,
+                spaceBetween: 60,
+              },
+            }}
+            className="w-full flex items-center h-full   logo-swiper"
+          >
+            {[...clientLogos, ...clientLogos, ...clientLogos].map(
+              (logo, idx) => (
+                <SwiperSlide key={`${logo.name}-${idx}`} className="h-full ">
+                  <LogoItem
+                    name={logo.name}
+                    image={logo.image}
+                    className={logo.className}
+                  />
+                </SwiperSlide>
+              ),
+            )}
+          </Swiper>
         </div>
 
         {/* Middle: Stats Statement & Action Button */}

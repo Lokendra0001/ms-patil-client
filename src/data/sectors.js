@@ -10,23 +10,23 @@ import rmc from "../../public/assets/home/hero/banner-1.webp";
 export const sectorsData = {
   "railway-infrastructure": {
     slug: "railway-infrastructure",
-    name: "Railway Infrastructure Works",
-    highlight: "Railway",
-    badge: "RDSO Standard Approved",
+    name: "Railway & Airport Civil Infrastructure",
+    highlight: "Railway & Aviation",
+    badge: "RDSO & Airside Approved",
     overview:
-      "Executing bulk earthworks, track bed cutting and filling, and critical cross-drainage infrastructure in highly regulated live-line rail corridors.",
+      "Executing bulk earthworks, track bed layouts, high-grade airside rigid pavement foundations, and critical cross-drainage infrastructure.",
     image: railway,
     scope: {
       punchlines: [
-        "Bulk earthwork cutting and filling to achieve precise railway formation gradients.",
-        "Track surface civil works including ballast bed preparation and blanket layer laying.",
-        "RDSO-compliant heavy-duty RCC box culverts and pipe cross-drainage networks.",
-        "Slope protection through RCC toe walls, masonry retaining walls, and stone pitching.",
+        "Bulk earthwork cutting and filling to achieve precise runway and track bed gradients.",
+        "Track surface and airfield civil works including ballast beds and aggregate base layouts.",
+        "RDSO-compliant heavy-duty RCC box culverts and high-capacity storm-water channels.",
+        "Slope protection through RCC toe walls, masonry retaining walls, and perimeter security walls.",
       ],
       reference: {
         client: "HEIGL Infra Limited",
         location: "Rajasthan, India",
-        project: "Indian Railways Civil Infrastructure Project",
+        project: "Indian Railways Civil Infrastructure Project (Airport Extensible)",
         verification:
           "Executed near active lines with dedicated safety marshals and full engineering sign-off.",
       },
@@ -41,8 +41,8 @@ export const sectorsData = {
         desc: "Approved Cross-Drainage & Culvert Designs",
       },
       {
-        title: "Standard Proctor Compaction",
-        desc: "Sub-grade Soil Layer Load Density Limits",
+        title: "IS:456 & IS:1904",
+        desc: "Plain, Reinforced Concrete, and Foundation Structural Standards",
       },
     ],
     asset: {
@@ -90,7 +90,7 @@ export const sectorsData = {
     ],
     asset: {
       focus: "KYB Conmat CP-30 RMC Plant",
-      text: "Our fully computerised 30 CUM/hr Ready Mix Concrete plant ensures continuous pours of high-grade M25 to M40 mix designs with full electronic batch logs.",
+      text: "Our fully computerised 30 CUM/hr Ready Mix Concrete plant ensures continuous pours of high-grade M5 to M40 mix designs with full electronic batch logs.",
       image: rmc,
     },
   },
@@ -105,7 +105,7 @@ export const sectorsData = {
     scope: {
       punchlines: [
         "Complete highway and municipal road layouts utilizing bituminous concrete (BC) and WMM.",
-        "Bulk water supply distribution infrastructure and heavy-duty utility pipeline laying.",
+        "Bulk water supply distribution (MJP) and heavy-duty utility electrical pipeline trenching (MSEDCL).",
         "Irrigation canal structures, concrete slab drains, and regional drainage networks.",
         "Paver block laying, masonry finishing, and extensive civic landscape site grading.",
       ],

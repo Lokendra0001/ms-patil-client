@@ -19,7 +19,7 @@ export const milestones = [
     tag: "PHASE II",
     title: "Scale & Capability Upgrade",
     description:
-      "Expanded our operational footprint into major institutional structures, highway projects, and complex industrial foundations across multiple states, scaling our heavy machinery fleet.",
+      "Expanded our operational footprint into multi-state institutional structures, highway projects, and heavy industrial foundations, scaling our privately owned machinery fleet to eliminate mobilization delays.",
     metric: "Focus Area",
     metricDetail: "Industrial Foundations & Heavy Concrete Works",
     image: scale,
@@ -29,7 +29,7 @@ export const milestones = [
     tag: "PHASE III",
     title: "Vertical Integration",
     description:
-      "Shifted to complete self-reliance by establishing our own automated 30-CUM/hr Ready Mix Concrete (RMC) plant, 200-TPH Stone Crusher units, sand processing, and Fly Ash Brick factory.",
+      "Achieved complete vertical self-reliance by establishing our own automated 30-CUM/hr KYB Conmat RMC plant, 200-TPH stone crushers, sand processing units, and a high-strength Fly Ash brick factory",
     metric: "Focus Area",
     metricDetail: "RMC Operations & Crushing Plant Production",
     image: verticle, // Industrial manufacturing & raw materials processing

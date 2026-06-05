@@ -43,9 +43,12 @@ const ProjectCard = ({ project }) => {
           </span>
 
           {/* Title */}
-          <h3 className="text-base sm:text-lg font-semibold text-text-primary mb-2 transition-colors duration-300 group-hover:text-primary-hover line-clamp-2">
+          <Link
+            href={`/projects/${project.id}`}
+            className="text-base sm:text-lg font-semibold text-text-primary mb-2 transition-colors duration-300 group-hover:text-primary-hover line-clamp-2"
+          >
             {project.title}
-          </h3>
+          </Link>
 
           {/* Description */}
           <p className="text-xs sm:text-sm text-text-gray group-hover:text-text-primary font-medium leading-relaxed mb-4 line-clamp-2">

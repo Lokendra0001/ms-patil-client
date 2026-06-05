@@ -11,7 +11,7 @@ export const services = [
     highlight: "Civil",
     tagline: "BUILDING STRUCTURES OF TRUST",
     description:
-      "Specializing in high-quality residential, commercial, and corporate civil constructions. Delivering unparalleled structural integrity, robust foundation works, and state-of-the-art architectures.",
+      "Specializing in high-demand industrial, institutional, and government civil engineering works. Delivering uncompromised structural integrity through massive multi-storey concrete frames, specialized factory sub-structures, and heavy security boundary walls built to rigid PWD standards.",
     image: service1,
     href: "/services/civil-construction",
   },

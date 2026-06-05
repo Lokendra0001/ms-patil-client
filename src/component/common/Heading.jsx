@@ -68,7 +68,7 @@ const Heading = ({
       <div className="w-16 h-1 bg-primary mt-4 mb-6" />
       {description && (
         <p
-          className={`text-text-primary! font-medium mb-8 xl:max-w-2xl text-xs sm:text-sm md:text-base ${descClassName}`}
+          className={`text-text-primary!  mb-8 xl:max-w-2xl text-xs sm:text-sm md:text-base ${descClassName}`}
         >
           {description}
         </p>

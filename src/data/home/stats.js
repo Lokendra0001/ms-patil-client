@@ -1,47 +1,44 @@
-import React from "react";
-import {
-  FiBriefcase,
-  FiGrid,
-  FiDroplet,
-  FiZap,
-  FiGlobe,
-  FiHexagon,
-  FiActivity,
-  FiPlusSquare,
-} from "react-icons/fi";
-
 export const clientLogos = [
   {
     name: "PWD MAHARASHTRA",
-    icon: <FiBriefcase className="w-5 h-5 text-primary" />,
-  },
-  {
-    name: "HEIGL INFRA LTD",
-    icon: <FiGrid className="w-5 h-5 text-primary" />,
-  },
-  {
-    name: "MJP INDIA",
-    icon: <FiDroplet className="w-5 h-5 text-primary" />,
-  },
-  {
-    name: "MSEDCL",
-    icon: <FiZap className="w-5 h-5 text-primary" />,
+    image: "/assets/home/stat/client-logo/pwd.png",
+    className: "h-10 lg:h-12 w-auto object-contain",
   },
   {
     name: "GODREJ AGROVET",
-    icon: <FiGlobe className="w-5 h-5 text-primary" />,
+    image: "/assets/home/stat/client-logo/godrej.png",
+    className: "h-8 lg:h-10 w-auto object-contain",
+  },
+  {
+    name: "HEIGL INFRA LTD",
+    image: "/assets/home/stat/client-logo/heigl.png",
+    className: "h-7 lg:h-9 w-auto object-contain",
   },
   {
     name: "RM CHEMICAL",
-    icon: <FiHexagon className="w-5 h-5 text-primary" />,
+    image: "/assets/home/stat/client-logo/rmChemical.png",
+    className: "h-8 lg:h-10 w-auto object-contain",
   },
+  {
+    name: "MJP INDIA",
+    image: "/assets/home/stat/client-logo/mjp.png",
+    className: "h-10 lg:h-12 w-auto object-contain",
+  },
+
   {
     name: "INDO AMINES LTD",
-    icon: <FiActivity className="w-5 h-5 text-primary" />,
+    image: "/assets/home/stat/client-logo/indo.png",
+    className: "h-7 lg:h-9 w-auto object-contain",
   },
   {
-    name: "HSCC LIMITED",
-    icon: <FiPlusSquare className="w-5 h-5 text-primary" />,
+    name: "DMC DHULE",
+    image: "/assets/home/stat/client-logo/DMC.png",
+    className: "h-11 lg:h-13 w-auto object-contain",
+  },
+  {
+    name: "RMPCL",
+    image: "/assets/home/stat/client-logo/rmpcl.png",
+    className: "h-8 lg:h-10 w-auto object-contain",
   },
 ];
 

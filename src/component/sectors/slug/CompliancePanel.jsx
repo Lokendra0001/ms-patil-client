@@ -11,10 +11,10 @@ const CompliancePanel = ({ data }) => {
       <div className="max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12">
         {/* Section Heading */}
         <Heading
-          title="Codes & "
+          title="Quality "
           tagline="The Quality Anchor"
           align="center"
-          highlight="Compliance"
+          highlight="Control & Standards"
         />
 
         {/* 3-Column Compliance Grid */}

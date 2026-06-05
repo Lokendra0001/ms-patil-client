@@ -47,12 +47,7 @@ const ServicesAssets = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-background via-slate-background/60 to-transparent opacity-90 transition-opacity duration-300 z-10" />
 
                 {/* Minimal Overlay Content */}
-                <div className="absolute inset-0 flex flex-col justify-between p-6 z-20">
-                  {/* Top: Monospace Index */}
-                  <span className="text-[10px] font-mono text-text-gray tracking-wider">
-                    {asset.index}
-                  </span>
-
+                <div className="absolute inset-0 flex flex-col justify-end p-6 z-20">
                   {/* Bottom: Stat & Title */}
                   <div>
                     <span className="text-2xl sm:text-3xl font-black text-primary block tracking-tight mb-1">
@@ -61,7 +56,7 @@ const ServicesAssets = () => {
                     <h4 className="text-base font-extrabold uppercase text-text-white  tracking-tight leading-tight">
                       {asset.name}
                     </h4>
-                    <p className="text-xs text-text-gray mt-1 font-semibold">
+                    <p className="text-xs text-text-white/80 mt-1 font-semibold">
                       {asset.detail}
                     </p>
                   </div>
@@ -98,12 +93,7 @@ const ServicesAssets = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-background via-slate-background/60 to-transparent opacity-90 transition-opacity duration-300 z-10" />
 
                 {/* Minimal Overlay Content */}
-                <div className="absolute inset-0 flex flex-col justify-between p-6 z-20">
-                  {/* Top: Monospace Index */}
-                  <span className="text-[10px] font-mono text-text-gray tracking-wider">
-                    {asset.index}
-                  </span>
-
+                <div className="absolute inset-0 flex flex-col justify-end p-6 z-20">
                   {/* Bottom: Stat & Title */}
                   <div>
                     <span className="text-2xl sm:text-3xl font-black text-primary block tracking-tight mb-1">
@@ -112,7 +102,7 @@ const ServicesAssets = () => {
                     <h4 className="text-base font-extrabold uppercase text-text-white  tracking-tight leading-tight">
                       {asset.name}
                     </h4>
-                    <p className="text-xs text-text-gray mt-1 font-semibold">
+                    <p className="text-xs text-text-white/80 mt-1 font-semibold">
                       {asset.detail}
                     </p>
                   </div>

@@ -23,29 +23,40 @@ const RelatedProjects = ({ slug }) => {
 
   // Keyword refinement for services that share high-level categories
   if (slug === "road-pavement-works") {
-    related = related.filter(
-      (p) =>
-        p.title.toLowerCase().includes("highway") ||
-        p.title.toLowerCase().includes("road") ||
-        p.title.toLowerCase().includes("paving") ||
-        p.scope.toLowerCase().includes("paving"),
-    );
+    related = related.filter((p) => {
+      const searchStr = `${p.title} ${p.scope}`.toLowerCase();
+      return (
+        searchStr.includes("road") ||
+        searchStr.includes("highway") ||
+        searchStr.includes("pave") ||
+        searchStr.includes("paver")
+      );
+    });
   } else if (slug === "drainage-water-infra") {
-    related = related.filter(
-      (p) =>
-        p.title.toLowerCase().includes("drainage") ||
-        p.title.toLowerCase().includes("sewerage") ||
-        p.title.toLowerCase().includes("culvert") ||
-        p.scope.toLowerCase().includes("drainage"),
-    );
+    related = related.filter((p) => {
+      const searchStr = `${p.title} ${p.scope}`.toLowerCase();
+      return (
+        searchStr.includes("drainage") ||
+        searchStr.includes("sewerage") ||
+        searchStr.includes("culvert") ||
+        searchStr.includes("water") ||
+        searchStr.includes("irrigation") ||
+        searchStr.includes("canal") ||
+        searchStr.includes("supply")
+      );
+    });
   } else if (slug === "material-supply-mfg") {
-    related = related.filter(
-      (p) =>
-        p.title.toLowerCase().includes("rmc") ||
-        p.title.toLowerCase().includes("plant") ||
-        p.title.toLowerCase().includes("brick") ||
-        p.title.toLowerCase().includes("crusher"),
-    );
+    related = related.filter((p) => {
+      const searchStr = `${p.title} ${p.scope}`.toLowerCase();
+      return (
+        searchStr.includes("rmc") ||
+        searchStr.includes("plant") ||
+        searchStr.includes("brick") ||
+        searchStr.includes("crusher") ||
+        searchStr.includes("concrete") ||
+        searchStr.includes("material")
+      );
+    });
   }
 
   // Cap at 3 items

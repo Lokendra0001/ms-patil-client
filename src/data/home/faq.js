@@ -9,11 +9,11 @@ export const faqs = [
   },
   {
     question: "Where are you located and which areas do you serve?",
-    answer: "We are headquartered in Dhule, Maharashtra and operate across Maharashtra, Rajasthan, Madhya Pradesh, Delhi, and Mumbai.",
+    answer: "We are headquartered in Dhule, Maharashtra and hold a multi-state geographic operational reach across Maharashtra, Rajasthan, Madhya Pradesh, Delhi, and Mumbai.",
   },
   {
     question: "Do you own your construction equipment fleet or hire it?",
-    answer: "We own 100% of our fleet (including Tata Hitachi excavators, transit mixers, road rollers, and Kyb Conmat RMC plants) for zero mobilization delay.",
+    answer: "We own 100% of our heavy machinery fleet to guarantee zero mobilization delays. This includes 5 TATA Hitachi 210 excavators, 4 hydraulic breakers, 3 transit mixers, 5 high-capacity tippers, an industrial road paver, and our specialized KYB Conmat CP-30 RMC plant.",
   },
   {
     question: "Are you a registered government contractor?",

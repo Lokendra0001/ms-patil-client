@@ -38,7 +38,7 @@ export const capabilities = [
     num: "01",
     tag: "Vertical Integration",
     title: "We don't just build, we manufacture",
-    desc: "Operating our own Stone Crusher, RMC, Sand Processing, and Fly Ash Brick plants to guarantee material quality from source to structure.",
+    desc: "Operating our own 200-TPH Stone Crusher, 30-CUM/hr Ready Mix Concrete (RMC) plant, Sand Processing plant (producing M-Type and P-Type graded sand), and Fly Ash Brick factory to control our entire supply chain from quarry to finished structure.",
   },
   {
     num: "02",

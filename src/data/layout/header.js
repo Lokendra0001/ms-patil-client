@@ -33,7 +33,8 @@ export const navLinks = [
 
 export const contactInfo = {
   phone: process.env.NEXT_PUBLIC_COMPANY_PHONE || "+91 98765 43210",
+  fallback_phone: process.env.NEXT_PUBLIC_FALLBACK_COMPANY_PHONE || "+91 98765 43210",
   email: process.env.NEXT_PUBLIC_COMPANY_EMAIL || "info@mspatilconstruction.com",
   hours: "Mon - Sat: 9:00 AM - 6:00 PM",
-  location: "Pune, Maharashtra",
+  location: "Dhule, Maharashtra",
 };

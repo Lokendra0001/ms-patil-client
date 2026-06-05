@@ -110,7 +110,7 @@ const Footer = () => {
               <div className="flex items-start gap-3">
                 <FiMapPin className="w-4 h-4 text-primary-hover shrink-0 mt-0.5" />
                 <span className="text-xs sm:text-sm text-text-gray  font-semibold leading-relaxed">
-                  Dhule & Pune, Maharashtra, India
+                  Dhule, Maharashtra, India
                 </span>
               </div>
               <div className="flex items-center gap-3">

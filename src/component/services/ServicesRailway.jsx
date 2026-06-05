@@ -11,9 +11,9 @@ const ServicesRailway = () => {
       <div className="max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12">
         {/* Section Header */}
         <Heading
-          tagline="Official Sector Experience"
-          title="Approved Railway"
-          highlight="Civil Infrastructure"
+          tagline="STRATEGIC SECTOR EXPERIENCE"
+          title="Aviation & "
+          highlight="Railway Infrastructure"
           align="center"
           textColor="text-text-primary "
           className="mb-16"
@@ -41,8 +41,7 @@ const ServicesRailway = () => {
             {/* Top Text Intro */}
             <div>
               <p className="text-sm sm:text-base text-text-gray font-medium   mb-8">
-                Executing highly regulated civil works in live-line rail
-                environments under strict Indian Railways specifications.
+               Executing precision civil works under strict RDSO railway specifications and preparing for high-grade airside airport deployments.
               </p>
 
               {/* Scopes - Clean 2x2 Grid */}

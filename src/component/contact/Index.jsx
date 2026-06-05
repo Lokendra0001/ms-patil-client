@@ -8,7 +8,7 @@ import ContactDirect from "./ContactDirect";
 
 const Index = () => {
   return (
-    <main className="w-full flex-grow bg-white-background ">
+    <main className="w-full  bg-white-background ">
       <ContactHero />
       <Suspense
         fallback={

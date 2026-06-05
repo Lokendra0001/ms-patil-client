@@ -5,8 +5,6 @@ import Image from "next/image";
 import Button from "@/component/CTA/Button";
 import Heading from "@/component/common/Heading";
 import banner from "../../../public/assets/about/who-we-are/banner2.webp";
-import bannerSub from "../../../public/assets/about/who-we-are/banner1.webp";
-
 import { bulletPoints } from "../../data/about/details";
 
 const AboutDetails = () => {
@@ -21,7 +19,7 @@ const AboutDetails = () => {
               title="Bringing Your"
               highlight=" Ideas and Innovations to Life"
               className="mb-6! max-w-2xl"
-              description="M/S Chetankumar Bhagwan Suryawanshi (formerly operating under Ms Patil Construction) is a premier PWD Class IV Government Contractor based in Dhule, Maharashtra. Over the past 20 years, we have delivered engineering, procurement, and civil construction services for highway networks, industrial facilities, and urban municipal utilities."
+              description="M/s Chetankumar Bhagwan Suryawanshi is a premier registered PWD Class IV Government Contractor based in Dhule, Maharashtra. Backed by 20+ years of civil engineering expertise, we deliver end-to-end engineering, procurement, and specialized concrete infrastructure—spanning highway bypass corridors, complex industrial foundations, and heavy cross-drainage networks across 5 states including Maharashtra, Rajasthan, and Madhya Pradesh."
             />
 
             {/* List with gold arrows (matching reference template) */}

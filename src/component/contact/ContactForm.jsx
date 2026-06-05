@@ -2,9 +2,10 @@
 
 import React, { useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
+import { useForm } from "react-hook-form";
 import Button from "@/component/CTA/Button";
 import { contactInfo } from "@/data/layout/header";
-import { FiMapPin, FiBriefcase, FiCheckCircle } from "react-icons/fi";
+import { MapPin, Building2, CheckCircle, ChevronDown } from "lucide-react";
 
 const ContactForm = () => {
   const searchParams = useSearchParams();
@@ -13,85 +14,64 @@ const ContactForm = () => {
   const offices = [
     {
       id: "pune",
-      title: "Pune Corporate Headquarters",
-      address:
-        "Suite 405, Signature Towers, Senapati Bapat Road, Pune, Maharashtra 411016",
+      title: "DHULE HEAD OFFICE",
+      address: "Dhule, Maharashtra, India",
       phone: contactInfo.phone,
-      icon: <FiMapPin className="w-5 h-5" />,
+      icon: <MapPin className="w-5 h-5 text-primary" />,
     },
     {
       id: "mumbai",
-      title: "Mumbai Regional Liaison",
-      address:
-        "11th Floor, Nariman Point Commercial Hub, Marine Drive, Mumbai, Maharashtra 400021",
-      phone: "+91 98765 43211",
-      icon: <FiBriefcase className="w-5 h-5" />,
+      title: "MUMBAI OPERATIONAL REACH",
+      address: "Mumbai, Maharashtra, India",
+      phone: contactInfo.fallback_phone,
+      icon: <Building2 className="w-5 h-5 text-primary" />,
     },
   ];
 
-  // Form State
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    inquiryType: isConsultationMode ? "consultation" : "general",
-    subject: "",
-    message: "",
+  const inquiryOptions = [
+    { value: "general", label: "General Inquiries" },
+    { value: "consultation", label: "Request a Consultation" },
+    { value: "infrastructure", label: "Infrastructure & Highway Tenders" },
+    { value: "commercial", label: "Commercial Construction" },
+    { value: "materials", label: "Materials & Logistics Partnership" },
+    { value: "careers", label: "Careers & HR Division" },
+  ];
+
+  // react-hook-form
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm({
+    defaultValues: {
+      name: "",
+      email: "",
+      phone: "",
+      inquiryType: isConsultationMode ? "consultation" : "general",
+      subject: isConsultationMode ? "Request for Consultation" : "",
+      message: "",
+    },
   });
 
-  const [formErrors, setFormErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
-
-  // FAQ Accordion State
-  const [openFaqIndex, setOpenFaqIndex] = useState(null);
 
   // Auto-fill inquiry type if consultation mode is active
   useEffect(() => {
     if (isConsultationMode) {
-      setFormData((prev) => ({
-        ...prev,
+      reset({
+        name: "",
+        email: "",
+        phone: "",
         inquiryType: "consultation",
         subject: "Request for Consultation",
-      }));
+        message: "",
+      });
     }
-  }, [isConsultationMode]);
+  }, [isConsultationMode, reset]);
 
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-    if (formErrors[name]) {
-      setFormErrors((prev) => ({ ...prev, [name]: "" }));
-    }
-  };
-
-  const validateForm = () => {
-    const errors = {};
-    if (!formData.name.trim()) errors.name = "Full name is required";
-
-    if (!formData.email.trim()) {
-      errors.email = "Email address is required";
-    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-      errors.email = "Please enter a valid email address";
-    }
-
-    if (!formData.phone.trim()) {
-      errors.phone = "Phone number is required";
-    } else if (!/^\+?[\d\s-]{10,}$/.test(formData.phone)) {
-      errors.phone = "Please enter a valid phone number (min 10 digits)";
-    }
-
-    if (!formData.subject.trim()) errors.subject = "Subject is required";
-    if (!formData.message.trim()) errors.message = "Message cannot be empty";
-
-    setFormErrors(errors);
-    return Object.keys(errors).length === 0;
-  };
-
-  const handleFormSubmit = async (e) => {
-    e.preventDefault();
-    if (!validateForm()) return;
-
+  const onSubmit = async (data) => {
     setIsSubmitting(true);
 
     try {
@@ -105,12 +85,12 @@ const ContactForm = () => {
         },
         body: JSON.stringify({
           access_key: accessKey,
-          name: formData.name,
-          email: formData.email,
-          phone: formData.phone,
-          inquiry_type: formData.inquiryType,
-          subject: formData.subject,
-          message: formData.message,
+          name: data.name,
+          email: data.email,
+          phone: data.phone,
+          inquiry_type: data.inquiryType,
+          subject: data.subject,
+          message: data.message,
           from_name: "Ms Patil Construction - Website",
         }),
       });
@@ -119,7 +99,7 @@ const ContactForm = () => {
 
       if (result.success) {
         setSubmitSuccess(true);
-        setFormData({
+        reset({
           name: "",
           email: "",
           phone: "",
@@ -138,30 +118,26 @@ const ContactForm = () => {
     }
   };
 
-  const toggleFaq = (index) => {
-    setOpenFaqIndex(openFaqIndex === index ? null : index);
-  };
-
   return (
     <section className="py-20 lg:py-24 bg-white-background  select-text">
       <div className="max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
           {/* LEFT COLUMN: CONTACT FORM (Col 7) */}
-          <div className="lg:col-span-7 bg-white-background  border border-slate-200 p-8 sm:p-10 shadow-sm">
+          <div className="lg:col-span-7 bg-white-background  border border-border-secondary p-8 sm:p-10 shadow-sm">
             <div className="mb-8">
               <h2 className="text-xl sm:text-2xl font-black text-primary uppercase mb-2">
                 Submit Business Inquiry
               </h2>
               <p className="text-xs sm:text-sm text-text-gray  font-normal">
                 Please fill out the form below. Fields marked with{" "}
-                <span className="text-red-500">*</span> are mandatory.
+                <span className="text-text-red">*</span> are mandatory.
               </p>
             </div>
 
             {submitSuccess ? (
               <div className=" border border-border-primary p-8 text-center text-text-primary">
-                <FiCheckCircle className="w-12 h-12 text-primary mx-auto mb-4" />
-                <h4 className="text-lg font-bold text-primary uppercase mb-2">
+                <CheckCircle className="w-12 h-12 text-primary mx-auto mb-4" />
+                <h4 className="text-lg font-medium tracking-wide text-primary uppercase mb-2">
                   Inquiry Submitted Successfully
                 </h4>
                 <p className="text-xs text-slate-600 leading-relaxed mb-6">
@@ -180,51 +156,55 @@ const ContactForm = () => {
                 </Button>
               </div>
             ) : (
-              <form onSubmit={handleFormSubmit} className="space-y-6">
+              <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
                 {/* Name & Email Group */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div>
                     <label className="block text-[10px] font-extrabold text-text-gray  uppercase tracking-wider mb-2">
-                      Full Name <span className="text-red-500">*</span>
+                      Full Name <span className="text-text-red">*</span>
                     </label>
                     <input
                       type="text"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleInputChange}
                       className={`w-full px-4 py-3 bg-slate-50 border text-sm focus:outline-none focus:bg-white-background  transition-all ${
-                        formErrors.name
+                        errors.name
                           ? "border-red-400 focus:ring-1 focus:ring-red-100"
-                          : "border-slate-200 focus:border-primary focus:ring-4 focus:ring-primary/5"
+                          : "border-border-secondary focus:border-primary focus:ring-4 focus:ring-primary/5"
                       }`}
                       placeholder="John Doe"
+                      {...register("name", {
+                        required: "Full name is required",
+                      })}
                     />
-                    {formErrors.name && (
-                      <p className="text-[10px] font-bold text-red-500 mt-1.5">
-                        {formErrors.name}
+                    {errors.name && (
+                      <p className="text-[10px] font-medium tracking-wide text-text-red mt-1.5">
+                        {errors.name.message}
                       </p>
                     )}
                   </div>
 
                   <div>
                     <label className="block text-[10px] font-extrabold text-text-gray  uppercase tracking-wider mb-2">
-                      Email Address <span className="text-red-500">*</span>
+                      Email Address <span className="text-text-red">*</span>
                     </label>
                     <input
                       type="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleInputChange}
                       className={`w-full px-4 py-3 bg-slate-50 border text-sm focus:outline-none focus:bg-white-background  transition-all ${
-                        formErrors.email
+                        errors.email
                           ? "border-red-400 focus:ring-1 focus:ring-red-100"
-                          : "border-slate-200 focus:border-primary focus:ring-4 focus:ring-primary/5"
+                          : "border-border-secondary focus:border-primary focus:ring-4 focus:ring-primary/5"
                       }`}
                       placeholder="john@example.com"
+                      {...register("email", {
+                        required: "Email address is required",
+                        pattern: {
+                          value: /\S+@\S+\.\S+/,
+                          message: "Please enter a valid email address",
+                        },
+                      })}
                     />
-                    {formErrors.email && (
-                      <p className="text-[10px] font-bold text-red-500 mt-1.5">
-                        {formErrors.email}
+                    {errors.email && (
+                      <p className="text-[10px] font-medium tracking-wide text-text-red mt-1.5">
+                        {errors.email.message}
                       </p>
                     )}
                   </div>
@@ -234,75 +214,72 @@ const ContactForm = () => {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div>
                     <label className="block text-[10px] font-extrabold text-text-gray  uppercase tracking-wider mb-2">
-                      Contact Number <span className="text-red-500">*</span>
+                      Contact Number <span className="text-text-red">*</span>
                     </label>
                     <input
                       type="text"
-                      name="phone"
-                      value={formData.phone}
-                      onChange={handleInputChange}
                       className={`w-full px-4 py-3 bg-slate-50 border text-sm focus:outline-none focus:bg-white-background  transition-all ${
-                        formErrors.phone
+                        errors.phone
                           ? "border-red-400 focus:ring-1 focus:ring-red-100"
-                          : "border-slate-200 focus:border-primary focus:ring-4 focus:ring-primary/5"
+                          : "border-border-secondary focus:border-primary focus:ring-4 focus:ring-primary/5"
                       }`}
                       placeholder={contactInfo.phone}
+                      {...register("phone", {
+                        required: "Phone number is required",
+                        pattern: {
+                          value: /^\+?[\d\s-]{10,}$/,
+                          message:
+                            "Please enter a valid phone number (min 10 digits)",
+                        },
+                      })}
                     />
-                    {formErrors.phone && (
-                      <p className="text-[10px] font-bold text-red-500 mt-1.5">
-                        {formErrors.phone}
+                    {errors.phone && (
+                      <p className="text-[10px] font-medium tracking-wide text-text-red mt-1.5">
+                        {errors.phone.message}
                       </p>
                     )}
                   </div>
 
                   <div>
                     <label className="block text-[10px] font-extrabold text-text-gray  uppercase tracking-wider mb-2">
-                      Inquiry Type <span className="text-red-500">*</span>
+                      Inquiry Type <span className="text-text-red">*</span>
                     </label>
+                  <div className="relative">
                     <select
-                      name="inquiryType"
-                      value={formData.inquiryType}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 bg-slate-50 border border-slate-200 text-sm focus:outline-none focus:border-primary focus:bg-white-background  focus:ring-4 focus:ring-primary/5 transition-all"
+                      className="w-full px-4 py-3 pr-10 bg-slate-50 border border-border-secondary text-sm focus:outline-none focus:border-primary focus:bg-white-background focus:ring-4 focus:ring-primary/5 transition-all appearance-none cursor-pointer"
+                      {...register("inquiryType")}
                     >
-                      <option value="general">General Inquiries</option>
-                      <option value="consultation">
-                        Request a Consultation
-                      </option>
-                      <option value="infrastructure">
-                        Infrastructure & Highway Tenders
-                      </option>
-                      <option value="commercial">
-                        Commercial Construction
-                      </option>
-                      <option value="materials">
-                        Materials & Logistics Partnership
-                      </option>
-                      <option value="careers">Careers & HR Division</option>
+                      {inquiryOptions.map((opt) => (
+                        <option key={opt.value} value={opt.value}>
+                          {opt.label}
+                        </option>
+                      ))}
                     </select>
+                    <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-500 pointer-events-none" />
+                  </div>
                   </div>
                 </div>
 
                 {/* Subject Input */}
                 <div>
                   <label className="block text-[10px] font-extrabold text-text-gray  uppercase tracking-wider mb-2">
-                    Subject <span className="text-red-500">*</span>
+                    Subject <span className="text-text-red">*</span>
                   </label>
                   <input
                     type="text"
-                    name="subject"
-                    value={formData.subject}
-                    onChange={handleInputChange}
                     className={`w-full px-4 py-3 bg-slate-50 border text-sm focus:outline-none focus:bg-white-background  transition-all ${
-                      formErrors.subject
+                      errors.subject
                         ? "border-red-400 focus:ring-1 focus:ring-red-100"
-                        : "border-slate-200 focus:border-primary focus:ring-4 focus:ring-primary/5"
+                        : "border-border-secondary focus:border-primary focus:ring-4 focus:ring-primary/5"
                     }`}
                     placeholder="Project Proposal Inquiries"
+                    {...register("subject", {
+                      required: "Subject is required",
+                    })}
                   />
-                  {formErrors.subject && (
-                    <p className="text-[10px] font-bold text-red-500 mt-1.5">
-                      {formErrors.subject}
+                  {errors.subject && (
+                    <p className="text-[10px] font-medium tracking-wide text-text-red mt-1.5">
+                      {errors.subject.message}
                     </p>
                   )}
                 </div>
@@ -310,23 +287,23 @@ const ContactForm = () => {
                 {/* Message Input */}
                 <div>
                   <label className="block text-[10px] font-extrabold text-text-gray  uppercase tracking-wider mb-2">
-                    Message <span className="text-red-500">*</span>
+                    Message <span className="text-text-red">*</span>
                   </label>
                   <textarea
-                    name="message"
-                    value={formData.message}
-                    onChange={handleInputChange}
                     rows={5}
                     className={`w-full px-4 py-3 bg-slate-50 border text-sm focus:outline-none focus:bg-white-background  transition-all resize-none ${
-                      formErrors.message
+                      errors.message
                         ? "border-red-400 focus:ring-1 focus:ring-red-100"
-                        : "border-slate-200 focus:border-primary focus:ring-4 focus:ring-primary/5"
+                        : "border-border-secondary focus:border-primary focus:ring-4 focus:ring-primary/5"
                     }`}
                     placeholder="Provide brief details about your civil operations, highway segments, or site inquiries..."
+                    {...register("message", {
+                      required: "Message cannot be empty",
+                    })}
                   />
-                  {formErrors.message && (
-                    <p className="text-[10px] font-bold text-red-500 mt-1.5">
-                      {formErrors.message}
+                  {errors.message && (
+                    <p className="text-[10px] font-medium tracking-wide text-text-red mt-1.5">
+                      {errors.message.message}
                     </p>
                   )}
                 </div>
@@ -370,9 +347,8 @@ const ContactForm = () => {
             )}
           </div>
 
-          {/* RIGHT COLUMN: CORPORATE OFFICES & FAQ (Col 5) */}
+          {/* RIGHT COLUMN: CORPORATE OFFICES (Col 5) */}
           <div className="lg:col-span-5 space-y-12">
-            {/* Offices list */}
             <div>
               <h2 className="text-xl font-black text-primary uppercase tracking-wide mb-6">
                 Regional Offices
@@ -381,9 +357,9 @@ const ContactForm = () => {
                 {offices.map((office) => (
                   <div
                     key={office.id}
-                    className="border border-slate-200/60 p-6 bg-slate-50 flex gap-4"
+                    className="border border-border-secondary/60 p-6 bg-slate-50 flex items-start gap-4"
                   >
-                    <div className="text-primary mt-1 flex-shrink-0">
+                    <div className="text-primary mt-[3px] flex-shrink-0">
                       {office.icon}
                     </div>
                     <div>

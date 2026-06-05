@@ -14,7 +14,7 @@ import CallToAction from "./CallToAction";
 
 const Index = () => {
   return (
-    <main className="w-full flex-grow bg-white-background ">
+    <main className="w-full  bg-white-background ">
       {/* Hero Slider Section */}
       <Hero />
 

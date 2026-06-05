@@ -16,10 +16,10 @@ export const slides = [
   {
     image: banner2,
     subtitle: "HEAVY INDUSTRIAL CIVIL SPECIALISTS",
-    titleText: "HIGH-DURABILITY FOUNDATIONS & ",
-    titleHighlight: "MIDC INDUSTRIAL LANDMARKS",
+    titleText: "RCC, CONCRETE WORKS &  ",
+    titleHighlight: "INFRASTRUCTURE EXCELLENCE",
     description:
-      "Engineering heavy-load concrete layouts, precision Trimix industrial flooring, and structural PEB foundations for premier corporate facilities including RM Chemical, Indo Amines, and Arihant Detergents.",
+      "Engineering heavy-duty concrete layouts, precision Trimix industrial flooring, slab drains, and robust foundations for industrial complexes and government infrastructure across India.",
     primaryBtn: { text: "Explore Services", href: "/services" },
     secondaryBtn: { text: "Contact Us", href: "/contact" },
   },

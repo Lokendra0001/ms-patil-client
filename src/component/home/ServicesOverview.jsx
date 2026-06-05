@@ -45,7 +45,7 @@ const ServicesOverview = () => {
               </span>
 
               {/* Foreground content */}
-              <div className="relative z-10 h-full flex flex-col justify-between">
+              <div className="relative z-10 h-full flex flex-col justify-end  ">
                 {/* Top content */}
                 <div>
                   <span className="text-[10px] font-black tracking-widest text-primary-hover group-hover:text-primary transition-colors duration-300 block mb-6 select-text">
@@ -56,7 +56,7 @@ const ServicesOverview = () => {
                     {service.title}
                   </h3>
 
-                  <p className="text-xs sm:text-sm text-text-gray  group-hover:text-text-white/60 transition-colors duration-300 leading-relaxed max-w-xs font-medium">
+                  <p className="text-xs sm:text-sm text-text-gray  group-hover:text-text-white/70 transition-colors duration-300 leading-relaxed max-w-xs font-medium">
                     {service.description}
                   </p>
                 </div>

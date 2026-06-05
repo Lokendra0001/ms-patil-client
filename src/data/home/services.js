@@ -8,7 +8,7 @@ export const primaryServices = [
     slug: "road-pavement-works",
     title: "Infrastructure & Highways",
     description:
-      "Engineering and building high-speed national highway networks, concrete corridor roadways, bypass junctions, and transport channels.",
+      "Engineering high-speed highway networks, concrete corridor roadways, and specialized cross-drainage systems. Mastered in high-compliance RCC slab drains and box culvert construction for long-term structural integrity.",
     image: highway,
   },
   {
@@ -16,7 +16,7 @@ export const primaryServices = [
     slug: "industrial-projects",
     title: "Industrial Construction",
     description:
-      "Executing heavy structural steelworks, civil foundation layouts, advanced manufacturing complexes, and logistical warehouse parks.",
+      "Executing heavy civil foundation layouts, monolithic column matrices, and precision Trimix concrete flooring. Engineered to support heavy-load logistics and aggressive industrial chemical environments.",
     image: industrial,
   },
   {
@@ -24,7 +24,7 @@ export const primaryServices = [
     slug: "material-supply-mfg",
     title: "Ready Mix Concrete (RMC)",
     description:
-      "Supplying certified Ready Mix Concrete (RMC) and Fly Ash bricks processed at our vertically integrated manufacturing facilities.",
+      "Supplying certified Ready Mix Concrete (M5 to M40 grades) processed via our in-house 30-CUM/hr KYB Conmat plant. Backed by our own 200-TPH stone crusher, processed sand units, and high-strength Fly Ash bricks.",
     image: concrete,
   },
 ];

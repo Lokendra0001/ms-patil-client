@@ -22,7 +22,7 @@ const renderTitle = (title, highlight) => {
 
 const ServiceHero = ({ data }) => {
   return (
-    <main className="w-full flex-grow bg-white-background  select-text">
+    <main className="w-full  bg-white-background  select-text">
       {/* 1. Page Header / Banner */}
       <section className="relative bg-slate-950 py-32 sm:py-44 lg:py-52 min-h-[480px] sm:min-h-[560px] lg:min-h-[750px] overflow-hidden flex items-center">
         {/* Background Grayscale Image with Overlay */}

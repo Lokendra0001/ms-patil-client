@@ -2,7 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
-import { Calendar, Clock } from "lucide-react";
+import { Calendar, Clock, User } from "lucide-react";
 import { renderMarkdownContent } from "./markdownHelper";
 
 const BlogDetails = ({ blogdetail }) => {
@@ -18,24 +18,7 @@ const BlogDetails = ({ blogdetail }) => {
         <div className="flex items-center gap-2">
           {/* Custom Construction Building Logo Avatar */}
           <div className="w-8 h-8 bg-slate-50 border border-border-secondary flex items-center justify-center text-primary">
-            <svg
-              className="w-4 h-4"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M3 21H21M5 21V8L12 3L19 8V21M9 21V13H15V21"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="square"
-              />
-              <path
-                d="M5 12H19M12 3V21"
-                stroke="currentColor"
-                strokeWidth="1.5"
-              />
-            </svg>
+            <User className="w-4 h-4" />
           </div>
           <span className="text-text-gray font-extrabold select-text">
             By {blogdetail.author || "Ms Patil Construction"}

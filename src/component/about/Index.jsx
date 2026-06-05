@@ -8,7 +8,7 @@ import Leadership from "./Leadership";
 
 const Index = () => {
   return (
-    <main className="w-full flex-grow bg-white-background ">
+    <main className="w-full  bg-white-background ">
       <AboutHero />
       <AboutDetails />
       <CeoMessage />

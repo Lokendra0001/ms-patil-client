@@ -8,6 +8,15 @@ import Zoom from "yet-another-react-lightbox/plugins/zoom";
 import "yet-another-react-lightbox/styles.css";
 import { contactInfo } from "@/data/layout/header";
 import Heading from "@/component/common/Heading";
+import {
+  ArrowLeft,
+  ChevronRight,
+  Phone,
+  Mail,
+  MapPin,
+  Search,
+} from "lucide-react";
+import ProjectGallery from "./ProjectGallery";
 
 const ProjectDetails = ({ project }) => {
   const [activeImageIndex, setActiveImageIndex] = useState(null);
@@ -20,29 +29,31 @@ const ProjectDetails = ({ project }) => {
         : imgUrl,
   }));
 
+  const contactItems = [
+    {
+      href: `tel:${contactInfo.phone.replace(/\s+/g, "")}`,
+      icon: (
+        <Phone className="w-4 h-4 text-primary-hover hover:text-primary flex-shrink-0" />
+      ),
+      label: contactInfo.phone,
+    },
+    {
+      href: `mailto:${contactInfo.email}`,
+      icon: (
+        <Mail className="w-4 h-4 text-primary-hover hover:text-primary flex-shrink-0" />
+      ),
+      label: contactInfo.email,
+    },
+    {
+      href: null,
+      icon: <MapPin className="w-4 h-4 text-primary flex-shrink-0" />,
+      label: "Dhule, Maharashtra",
+    },
+  ];
+
   return (
     <section className="w-full py-20 lg:py-24 bg-white-background relative overflow-hidden">
       {/* Blueprint grid watermark */}
-      <div className="absolute inset-0 opacity-[0.012] pointer-events-none select-text">
-        <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
-          <line
-            x1="20%"
-            y1="0"
-            x2="20%"
-            y2="100%"
-            stroke="currentColor"
-            strokeWidth="1"
-          />
-          <line
-            x1="80%"
-            y1="0"
-            x2="80%"
-            y2="100%"
-            stroke="currentColor"
-            strokeWidth="1"
-          />
-        </svg>
-      </div>
 
       <div className="max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 relative z-10">
         <div className="mb-6 flex items-center">
@@ -50,19 +61,7 @@ const ProjectDetails = ({ project }) => {
             href="/projects"
             className="inline-flex items-center gap-2 text-xs font-black tracking-widest text-text-primary  hover:text-primary transition-colors uppercase select-text group"
           >
-            <svg
-              className="w-4 h-4 transform group-hover:-translate-x-1 transition-transform text-text-primary  group-hover:text-primary"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2.5}
-                d="M10 19l-7-7m0 0l7-7m-7 7h18"
-              />
-            </svg>
+            <ArrowLeft className="w-4 h-4 transform group-hover:-translate-x-1 transition-transform text-text-primary  group-hover:text-primary" />
             <span>Back to Projects</span>
           </Link>
         </div>
@@ -132,19 +131,7 @@ const ProjectDetails = ({ project }) => {
                   key={index}
                   className="flex items-start gap-3 text-xs font-medium text-text-gray"
                 >
-                  <svg
-                    className="w-4 h-4 text-primary flex-shrink-0 mt-0.5"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    strokeWidth={3}
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M9 5l7 7-7 7"
-                    />
-                  </svg>
+                  <ChevronRight className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
                   <span>{point}</span>
                 </li>
               ))}
@@ -234,72 +221,34 @@ const ProjectDetails = ({ project }) => {
               </p>
 
               <div className="space-y-4">
-                <a
-                  href={`tel:${contactInfo.phone.replace(/\s+/g, "")}`}
-                  className="flex items-center gap-3 hover:text-primary transition-colors duration-200"
-                >
-                  <svg
-                    className="w-4 h-4 text-primary-hover hover:text-primary flex-shrink-0"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-                    />
-                  </svg>
-                  <span className="text-xs font-semibold text-primary-hover hover:text-primary">
-                    {contactInfo.phone}
-                  </span>
-                </a>
-                <a
-                  href={`mailto:${contactInfo.email}`}
-                  className="flex items-center gap-3 hover:text-primary transition-colors duration-200"
-                >
-                  <svg
-                    className="w-4 h-4 text-primary flex-shrink-0"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                    />
-                  </svg>
-                  <span className="text-xs font-semibold text-primary-hover hover:text-primary">
-                    {contactInfo.email}
-                  </span>
-                </a>
-                <div className="flex items-center gap-3">
-                  <svg
-                    className="w-4 h-4 text-primary flex-shrink-0"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-                    />
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-                    />
-                  </svg>
-                  <span className="text-xs font-semibold text-primary-hover hover:text-primary">
-                    Pune, Maharashtra
-                  </span>
-                </div>
+                {contactItems.map((item, idx) => {
+                  if (item.href) {
+                    return (
+                      <a
+                        key={idx}
+                        href={item.href}
+                        className="flex items-center gap-3 hover:text-primary transition-colors duration-200 "
+                      >
+                        {item.icon}
+                        <span
+                          className={`text-xs text-text-primary hover:text-primary-hover font-medium`}
+                        >
+                          {item.label}
+                        </span>
+                      </a>
+                    );
+                  }
+                  return (
+                    <div key={idx} className="flex items-center gap-3">
+                      {item.icon}
+                      <span
+                        className={`text-xs text-text-primary hover:text-primary-hover font-medium`}
+                      >
+                        {item.label}
+                      </span>
+                    </div>
+                  );
+                })}
               </div>
 
               <Link
@@ -312,50 +261,7 @@ const ProjectDetails = ({ project }) => {
           </div>
         </div>
 
-        {/* Interactive Project Gallery Section */}
-        <div className="mt-20 lg:mt-24 border-t border-slate-100 pt-16 select-text">
-          <Heading
-            tagline="Visual Showcase"
-            title="Project Photo"
-            highlight="Gallery"
-            align="center"
-          />
-
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {project.gallery.map((imgUrl, index) => (
-              <div
-                key={index}
-                onClick={() => setActiveImageIndex(index)}
-                className="group relative aspect-video sm:aspect-square overflow-hidden bg-slate-50 border border-slate-200/50 cursor-pointer"
-              >
-                <Image
-                  src={imgUrl}
-                  alt={`Project Gallery Image ${index + 1}`}
-                  fill
-                  className="object-cover filter grayscale-[10%] group-hover:grayscale-0 transition-all duration-700 ease-out group-hover:scale-105"
-                />
-                {/* Hover expansion overlay */}
-                <div className="absolute inset-0 bg-slate-950/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-10">
-                  <div className="w-12 h-12 border border-white/25 rounded-full flex items-center justify-center scale-90 group-hover:scale-100 transition-all duration-300 bg-slate-950/20 backdrop-blur-xs">
-                    <svg
-                      className="w-5 h-5 text-primary"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2.5"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                      />
-                    </svg>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
+        <ProjectGallery project={project} setIndex={setActiveImageIndex} />
       </div>
 
       {/* FULLSCREEN LIGHTBOX MODAL */}

@@ -11,7 +11,10 @@ const AnnouncementBar = ({ isScrolled }) => {
     >
       <ContentContainer className="flex justify-between items-center">
         <div className="flex items-center gap-6">
-          <span className="flex items-center gap-1.5 font-medium">
+          <a
+            href={`tel:${contactInfo.phone.replace(/\s+/g, "")}`}
+            className="flex items-center gap-1.5 font-medium text-text-white hover:text-primary transition-colors duration-200 cursor-pointer"
+          >
             <svg
               className="w-3.5 h-3.5 text-primary"
               fill="none"
@@ -26,9 +29,12 @@ const AnnouncementBar = ({ isScrolled }) => {
               />
             </svg>
             {contactInfo.phone}
-          </span>
+          </a>
           <span className="w-px h-3 bg-slate-200" />
-          <span className="flex items-center gap-1.5 font-medium text-text-white ">
+          <a
+            href={`mailto:${contactInfo.email}`}
+            className="flex items-center gap-1.5 font-medium text-text-white hover:text-primary transition-colors duration-200 cursor-pointer"
+          >
             <svg
               className="w-3.5 h-3.5 text-primary"
               fill="none"
@@ -43,7 +49,7 @@ const AnnouncementBar = ({ isScrolled }) => {
               />
             </svg>
             {contactInfo.email}
-          </span>
+          </a>
         </div>
         <div className="flex items-center gap-6">
           <span className="flex items-center gap-1.5 font-medium text-text-white ">

@@ -1,10 +1,9 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
 import Link from "next/link";
 import Heading from "@/component/common/Heading";
-import { FiLayers, FiTruck, FiAward, FiClock, FiPhoneCall } from "react-icons/fi";
+import { PhoneCall, Check } from "lucide-react";
 import {
   highlightPoints,
   checklistItems,
@@ -23,7 +22,6 @@ const WhyChooseUs = () => {
               tagline={whyChooseUsData.tagline}
               title={whyChooseUsData.title}
               highlight={whyChooseUsData.highlight}
-              textColor="text-primary"
               className="!mb-0"
             />
 
@@ -34,20 +32,7 @@ const WhyChooseUs = () => {
                   key={idx}
                   className="flex items-center gap-3 text-xs sm:text-sm text-slate-600 font-semibold select-text"
                 >
-                  {/* Yellow Check SVG */}
-                  <svg
-                    className="w-4 h-4 text-primary-hover shrink-0"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    strokeWidth={2}
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M5 13l4 4L19 7"
-                    />
-                  </svg>
+                  <Check className="w-4 h-4 text-primary-hover shrink-0" />
                   {item}
                 </li>
               ))}
@@ -56,21 +41,7 @@ const WhyChooseUs = () => {
 
           {/* Loop over highlights array (Box 2 to Box 5) */}
           {highlightPoints.map((point, index) => {
-            const iconClasses = "w-6 h-6 text-primary-hover group-hover:text-primary transition-colors duration-300";
-            const getIcon = () => {
-              switch (index) {
-                case 0:
-                  return <FiLayers className={iconClasses} />;
-                case 1:
-                  return <FiTruck className={iconClasses} />;
-                case 2:
-                  return <FiAward className={iconClasses} />;
-                case 3:
-                  return <FiClock className={iconClasses} />;
-                default:
-                  return point.icon;
-              }
-            };
+            const Icon = point.icon;
 
             return (
               <div
@@ -82,7 +53,7 @@ const WhyChooseUs = () => {
 
                 <div className="flex justify-between items-start mb-6 relative z-10">
                   <div className="w-12 h-12 bg-slate-50 flex items-center justify-center border border-slate-100 group-hover:bg-primary/15 group-hover:border-primary/10 transition-colors duration-300 shrink-0">
-                    {getIcon()}
+                    <Icon className="w-6 h-6 text-primary-hover group-hover:text-primary transition-colors duration-300" />
                   </div>
                   <span className="text-4xl font-extrabold text-slate-100 group-hover:text-primary-hover/10 transition-colors duration-300 select-text">
                     0{index + 1}
@@ -90,10 +61,10 @@ const WhyChooseUs = () => {
                 </div>
 
                 <div className="relative z-10 flex-grow">
-                  <h3 className="text-base sm:text-lg font-bold text-slate-900 mb-2 transition-colors duration-300 group-hover:text-primary-hover">
+                  <h3 className="text-base sm:text-lg font-bold text-text-primary mb-2 transition-colors duration-300 group-hover:text-primary-hover">
                     {point.title}
                   </h3>
-                  <p className="text-xs sm:text-sm text-slate-500 group-hover:text-slate-600 transition-colors duration-300 leading-relaxed font-semibold">
+                  <p className="text-xs sm:text-sm text-text-gray group-hover:text-text-primary transition-colors duration-300 leading-relaxed font-medium">
                     {point.description}
                   </p>
                 </div>
@@ -108,7 +79,7 @@ const WhyChooseUs = () => {
 
             <div className="flex justify-between items-start mb-6 relative z-10">
               <div className="w-12 h-12 bg-slate-50 flex items-center justify-center border border-slate-100 group-hover:bg-primary/15 group-hover:border-primary/10 transition-colors duration-300 shrink-0">
-                <FiPhoneCall className="w-6 h-6 text-primary-hover group-hover:text-primary transition-colors duration-300" />
+                <PhoneCall className="w-6 h-6 text-primary-hover group-hover:text-primary transition-colors duration-300" />
               </div>
               <span className="text-4xl font-extrabold text-slate-100 group-hover:text-primary-hover/10 transition-colors duration-300 select-text">
                 0{highlightPoints.length + 1}
@@ -117,10 +88,10 @@ const WhyChooseUs = () => {
 
             <div className="relative z-10 flex-grow flex flex-col justify-between">
               <div>
-                <h3 className="text-base sm:text-lg font-bold text-slate-900 mb-2 relative z-10">
+                <h3 className="text-base sm:text-lg font-bold text-text-primary mb-2 relative z-10">
                   {whyChooseUsData.cta.title}
                 </h3>
-                <p className="text-xs sm:text-sm text-slate-500 group-hover:text-slate-600 transition-colors duration-300 leading-relaxed font-semibold relative z-10">
+                <p className="text-xs sm:text-sm text-text-gray group-hover:text-text-primary transition-colors duration-300 leading-relaxed font-medium relative z-10">
                   {whyChooseUsData.cta.description}
                 </p>
               </div>

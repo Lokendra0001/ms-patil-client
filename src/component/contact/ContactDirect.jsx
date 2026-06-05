@@ -3,7 +3,8 @@
 import React from "react";
 import { contactInfo } from "@/data/layout/header";
 import { TbBrandWhatsapp } from "react-icons/tb";
-import { FiPhone } from "react-icons/fi";
+import { PhoneCall } from "lucide-react";
+import Heading from "@/component/common/Heading";
 
 const ContactDirect = () => {
   const whatsappNumber = contactInfo.phone.replace(/\D/g, "");
@@ -22,18 +23,15 @@ const ContactDirect = () => {
     <section className="py-12 bg-white-background  border-t border-slate-100 select-text">
       <div className="max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 flex flex-col md:flex-row items-center justify-between gap-8">
         {/* Left Side: Minimalist Text Content */}
-        <div className="text-center md:text-left">
-          <span className="text-[9px] font-black tracking-[0.25em] text-primary-light uppercase block mb-1">
-            Direct Redirection
-          </span>
-          <h3 className="text-xl font-extrabold text-primary uppercase">
-            Connect Instantly
-          </h3>
-          <p className="text-xs text-text-gray  font-normal leading-relaxed mt-1">
-            Skip the intake form and reach out directly to our operations
-            coordinators.
-          </p>
-        </div>
+        <Heading
+          tagline="Direct Redirection"
+          title="Connect"
+          highlight={"Instantly"}
+          description="Skip the intake form and reach out directly to our operations coordinators."
+          className="mb-0! text-left md:max-w-2xl"
+          descClassName="text-text-gray! font-normal! mb-0!"
+          align="left"
+        />
 
         {/* Right Side: Sleek Compact Action Buttons */}
         <div className="flex flex-wrap items-center justify-center gap-4">
@@ -51,9 +49,9 @@ const ContactDirect = () => {
           {/* Call Operations Direct */}
           <a
             href={`tel:${contactInfo.phone.replace(/\s+/g, "")}`}
-            className="inline-flex items-center gap-2.5 px-6 py-3 border border-slate-200 text-slate-800 text-xs font-bold uppercase tracking-wider bg-slate-50 hover:bg-primary hover:text-text-white  hover:border-primary transition-all duration-200 select-text cursor-pointer"
+            className="inline-flex items-center gap-2.5 px-6 py-3 border border-slate-200 text-slate-800 text-xs font-bold uppercase tracking-wider bg-slate-50 hover:bg-primary hover:text-text-white  hover:border-primary transition-all duration-200 select-text cursor-pointer group"
           >
-            <FiPhone className="w-4 h-4" />
+            <PhoneCall className="w-4 h-4 text-primary group-hover:text-text-white transition-colors duration-200" />
             Call Operations
           </a>
         </div>

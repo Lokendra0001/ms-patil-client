@@ -30,9 +30,9 @@ export const plants = [
   },
   {
     index: "04 // BRK",
-    stat: "In-House",
-    name: "Fly Ash Bricks",
-    detail: "Manufacturing Unit",
+    stat: "IS:12894 Compliant",
+    name: "FLY ASH BRICKS",
+    detail: "In-House Manufacturing Unit",
     image: brks,
   },
 ];
@@ -47,9 +47,9 @@ export const fleet = [
   },
   {
     index: "02 // MXR",
-    stat: "10x Units",
+    stat: "3x Units",
     name: "Transit Mixers",
-    detail: "7 CUM Concrete Carriers",
+    detail: "7 CUM (Total 21 CUM Capacity)",
     image: trucks,
   },
   {

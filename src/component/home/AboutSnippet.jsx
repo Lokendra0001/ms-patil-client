@@ -62,8 +62,8 @@ const AboutSnippet = () => {
               tagline="About Our Firm"
               highlight=" Engineering & Infrastructure Excellence"
               className="mb-0!"
-              description="M/S Chetankumar Bhagwan Suryawanshi is a professionally managed civil engineering and government contracting firm (PWD Class IV) headquartered in Dhule, Maharashtra. We deliver high-quality structures on-time, within budget, and without compromise."
-              descClassName="text-text-primary! font-medium mb-8 xl:max-w-2xl text-xs sm:text-sm md:text-base"
+              description="M/s Chetankumar Bhagwan Suryawanshi is a professionally managed civil engineering enterprise and registered PWD Class IV government contractor headquartered in Dhule, Maharashtra. Specializing in high-precision concrete and RCC infrastructure, we deliver robust civil structures across India on time and without compromise."
+              descClassName=""
             />
 
             {/* Dynamic Capabilities Stack with Hover Animations */}

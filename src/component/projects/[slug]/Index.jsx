@@ -12,7 +12,7 @@ const Index = ({ id }) => {
 
   if (!project) {
     return (
-      <main className="w-full flex-grow bg-white-background py-24 text-center">
+      <main className="w-full  bg-white-background py-24 text-center">
         <h2 className="text-xl font-bold text-primary mb-4">
           Project Not Found
         </h2>
@@ -32,7 +32,7 @@ const Index = ({ id }) => {
     .slice(0, 3);
 
   return (
-    <main className="w-full flex-grow bg-white-background select-text">
+    <main className="w-full  bg-white-background select-text">
       <ProjectHero project={project} />
       <ProjectDetails project={project} />
       <RelatedProjects otherProjects={otherProjects} />

@@ -31,9 +31,9 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} ${poppins.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} ${poppins.variable}  antialiased`}
     >
-      <body className="min-h-full flex flex-col">
+      <body className="">
         <Header />
         {children}
         <Footer />
