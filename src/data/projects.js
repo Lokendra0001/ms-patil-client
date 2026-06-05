@@ -1004,8 +1004,8 @@ export const projectsData = [
   },
   {
     id: "18",
-    title: "I.P.G Construction – National Capital Civics",
-    client: "I.P.G Construction Pvt. Ltd.",
+    title: "J.P.G Construction – National Capital Civics",
+    client: "J.P.G Construction Pvt. Ltd.",
     location: "Delhi",
     category: "Government",
     technology: "Structural Sub-Elements",
