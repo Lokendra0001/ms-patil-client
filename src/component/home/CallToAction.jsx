@@ -14,12 +14,7 @@ const CallToAction = () => {
         {/* Floating Premium Card Frame */}
         <div className="relative w-full bg-slate-50/50 border border-border-secondary/60 p-8 sm:p-12 lg:p-16 overflow-hidden shadow-[0_24px_70px_rgba(15,23,42,0.015)]">
           {/* Engineering blueprint background watermark */}
-          <Image
-            src="/construction_blueprint_bg.webp"
-            alt="Engineering Blueprint Background"
-            className="absolute inset-0 w-full h-full object-cover pointer-events-none z-0 opacity-[0.08]"
-            fill
-          />
+
           <div className="absolute inset-0 bg-gradient-to-r from-slate-50 via-slate-50/80 to-transparent pointer-events-none z-0" />
 
           {/* Symmetrical split grid wrapper */}
@@ -99,7 +94,10 @@ const CallToAction = () => {
 
               {/* Bottom validation seal */}
               <div className="mt-4 flex items-center gap-2 text-[10px] text-text-gray font-bold tracking-wide uppercase select-text">
-                <FiCheck className="w-3.5 h-3.5 text-primary-hover" strokeWidth={3} />
+                <FiCheck
+                  className="w-3.5 h-3.5 text-primary-hover"
+                  strokeWidth={3}
+                />
                 <span>Registered Class IV PWD Contractor</span>
               </div>
             </div>

@@ -488,8 +488,8 @@ import Button from "@/component/CTA/Button";
 import ContentContainer from "@/component/common/ContentContainer";
 import AnnouncementBar from "@/component/common/header/AnnouncementBar";
 import { sectors, navLinks } from "@/data/layout/header";
-import logo from "../../public/assets/header/logo.svg"
-import logo2 from "../../public/assets/header/logo.png"
+import logo from "../../public/assets/header/logo.svg";
+import logo2 from "../../public/assets/header/logo.png";
 import Image from "next/image";
 
 const Header = () => {
@@ -542,7 +542,21 @@ const Header = () => {
                 href="/"
                 className="flex items-center gap-3 group focus:outline-none"
               >
-                {isScrolled ? <Image src={logo2} alt="logo" priority className="h-auto w-[100px]"/> :<Image src={logo} alt="logo" priority className="h-auto w-[100px]"/>  }
+                {isScrolled ? (
+                  <Image
+                    src={logo2}
+                    alt="logo"
+                    priority
+                    className="h-auto w-[100px]"
+                  />
+                ) : (
+                  <Image
+                    src={logo}
+                    alt="logo"
+                    priority
+                    className="h-auto w-[100px]"
+                  />
+                )}
               </Link>
 
               {/* MIDDLE: Desktop Navigation - Centered Menu Links */}
@@ -718,23 +732,13 @@ const Header = () => {
               className="flex items-center gap-2"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              <div className="w-8 h-8 text-primary flex items-center justify-center">
-                <svg
-                  className="w-6 h-6"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2050/svg"
-                >
-                  <path
-                    d="M4 4H20M4 20H20M12 4V20M8 8L16 16M16 8L8 16"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                  />
-                </svg>
-              </div>
-              <span className="font-extrabold text-lg tracking-tight text-primary">
-                MS PATIL
-              </span>
+              
+              <Image
+                src={logo2}
+                alt="logo"
+                priority
+                className="h-auto w-[75px]"
+              />
             </Link>
             <button
               onClick={() => setIsMobileMenuOpen(false)}
