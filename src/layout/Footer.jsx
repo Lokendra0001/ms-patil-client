@@ -8,6 +8,7 @@ import { usePathname } from "next/navigation";
 import { quickLinks, coreServices } from "@/data/layout/footer";
 
 import { FiMapPin, FiPhone, FiMail } from "react-icons/fi";
+import logo from "../../public/assets/header/logo-black.svg";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -29,9 +30,12 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16 pb-12">
           {/* Column 1: Company Profile */}
           <div className="flex flex-col items-start">
-            <h3 className="text-xs font-black tracking-[0.2em] text-text-primary uppercase mb-4">
-              M/S Patil Construction
-            </h3>
+            <Image
+              src={logo}
+              alt="logo"
+              priority
+              className="h-auto w-[120px]"
+            />
             <div className="w-8 h-0.5 bg-primary mb-5" />
             <p className="text-xs sm:text-sm text-text-gray  font-medium leading-relaxed mb-6">
               Delivering highway bypass corridors, municipal complexes, and
@@ -59,8 +63,8 @@ const Footer = () => {
                       href={link.href}
                       className={`text-xs sm:text-sm transition-colors duration-200 font-semibold inline-flex items-center gap-1.5 ${
                         isActive
-                           ? "text-primary-hover"
-                           : "text-slate-600 hover:text-primary"
+                          ? "text-primary-hover"
+                          : "text-slate-600 hover:text-primary"
                       }`}
                     >
                       <span className="text-primary-hover select-text">→</span>
@@ -87,8 +91,8 @@ const Footer = () => {
                       href={service.href}
                       className={`text-xs sm:text-sm transition-colors duration-200 font-semibold inline-flex items-center gap-1.5 ${
                         isActive
-                           ? "text-primary"
-                           : "text-slate-600 hover:text-primary-hover"
+                          ? "text-primary"
+                          : "text-slate-600 hover:text-primary-hover"
                       }`}
                     >
                       <span className="text-primary-hover select-text">▪</span>

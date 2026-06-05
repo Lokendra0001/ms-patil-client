@@ -2,7 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
-import ceo from "../../../public/assets/about/ceo-message/profile.webp";
+import ceo from "../../../public/assets/about/ceo-message/profile4.webp";
 import { credentials } from "../../data/about/leadership";
 import { Factory, Hammer, Train } from "lucide-react";
 

@@ -72,8 +72,9 @@ body {
   --input-background: #ffffff;
 
   /* ===== ACTIVE PALETTE: Warm Honey Yellow (Current) ===== */
-  --primary: #ffb83b;
-  --primary-hover: #e09b1f;
+  /* --primary: #ffb83b; */
+  --primary: #72CB75;
+  --primary-hover: #2D9331;
   --secondary: #1a1a1a;
   --secondary-hover: #ffb83b;
 
@@ -89,7 +90,8 @@ body {
   --whatsapp: #25d366;
 
   /* ===== EXTRA ===== */
-  --border-primary: #ffb83b;
+  /* --border-primary: #ffb83b; */
+  --border-primary: #2D9331;
   --border-secondary: #f3f4f6;
 
   /* ===== FONT ===== */

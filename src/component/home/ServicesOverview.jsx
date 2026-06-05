@@ -48,7 +48,7 @@ const ServicesOverview = () => {
               <div className="relative z-10 h-full flex flex-col justify-end  ">
                 {/* Top content */}
                 <div>
-                  <span className="text-[10px] font-black tracking-widest text-primary-hover group-hover:text-primary transition-colors duration-300 block mb-6 select-text">
+                  <span className="text-[10px] font-black tracking-widest text-primary-hover group-hover:text-text-white transition-colors duration-300 block mb-6 select-text">
                     SERVICE / {service.num}
                   </span>
 
@@ -62,7 +62,7 @@ const ServicesOverview = () => {
                 </div>
 
                 {/* Bottom link indicator */}
-                <span className="text-xs font-black tracking-widest uppercase text-text-primary group-hover:text-primary transition-colors duration-300 inline-flex items-center gap-1.5 mt-8 select-text">
+                <span className="text-xs font-black tracking-widest uppercase text-text-primary group-hover:text-text-white transition-colors duration-300 inline-flex items-center gap-1.5 mt-8 select-text">
                   Explore Service{" "}
                   <span className="transform group-hover:translate-x-1.5 transition-transform duration-300">
                     →

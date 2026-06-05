@@ -488,6 +488,9 @@ import Button from "@/component/CTA/Button";
 import ContentContainer from "@/component/common/ContentContainer";
 import AnnouncementBar from "@/component/common/header/AnnouncementBar";
 import { sectors, navLinks } from "@/data/layout/header";
+import logo from "../../public/assets/header/logo.svg"
+import logo2 from "../../public/assets/header/logo.png"
+import Image from "next/image";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -539,36 +542,7 @@ const Header = () => {
                 href="/"
                 className="flex items-center gap-3 group focus:outline-none"
               >
-                <div className="flex items-center justify-center w-9 h-9 text-primary">
-                  <svg
-                    className="w-8 h-8"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M3 21H21M5 21V8L12 3L19 8V21M9 21V13H15V21"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="square"
-                    />
-                    <path
-                      d="M5 12H19M12 3V21"
-                      stroke="currentColor"
-                      strokeWidth="1.5"
-                    />
-                  </svg>
-                </div>
-                <div className="flex flex-col">
-                  <span
-                    className={`font-extrabold text-2xl tracking-tight leading-none transition-colors uppercase ${isScrolled ? "text-text-primary group-hover:text-primary" : "text-text-white  group-hover:text-text-white "}`}
-                  >
-                    MS PATIL
-                  </span>
-                  <span className="text-[9px] font-bold tracking-[0.28em] text-primary leading-none mt-1.5 uppercase">
-                    CONSTRUCTION & INFRA
-                  </span>
-                </div>
+                {isScrolled ? <Image src={logo2} alt="logo" priority className="h-auto w-[100px]"/> :<Image src={logo} alt="logo" priority className="h-auto w-[100px]"/>  }
               </Link>
 
               {/* MIDDLE: Desktop Navigation - Centered Menu Links */}

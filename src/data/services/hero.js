@@ -2,7 +2,7 @@ import service1 from "../../../public/assets/home/hero/banner-2.webp";
 import service2 from "../../../public/assets/services/hero/service2.webp";
 import service3 from "../../../public/assets/home/projects/indo.webp";
 import service4 from "../../../public/assets/home/deliver/highway.webp";
-import service5 from "../../../public/assets/home/hero/banner-1.webp";
+import service5 from "../../../public/assets/services/service-catalogue/material.webp";
 import service7 from "../../../public/assets/services/service-catalogue/drainage.webp";
 
 export const services = [
