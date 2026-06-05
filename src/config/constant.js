@@ -14,6 +14,12 @@ export const API = {
   },
 };
 
+export const CONTACT_INFO = {
+  phone: "+91 9420857717",
+  fallback_phone: "+91 9422366937",
+  email: "chetankumarsuryawanshi5599@gmail.com",
+};
+
 export const META = {
   HOME: {
     title: "M/S Chetankumar Bhagwan Suryawanshi | Ms Patil Construction",

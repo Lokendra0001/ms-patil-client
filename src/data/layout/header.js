@@ -1,3 +1,5 @@
+import { CONTACT_INFO } from "@/config/constant";
+
 export const sectors = [
   {
     name: "Railway Infrastructure",
@@ -32,9 +34,10 @@ export const navLinks = [
 ];
 
 export const contactInfo = {
-  phone: process.env.NEXT_PUBLIC_COMPANY_PHONE || "+91 98765 43210",
-  fallback_phone: process.env.NEXT_PUBLIC_FALLBACK_COMPANY_PHONE || "+91 98765 43210",
-  email: process.env.NEXT_PUBLIC_COMPANY_EMAIL || "info@mspatilconstruction.com",
+  phone: CONTACT_INFO.phone,
+  fallback_phone: CONTACT_INFO.fallback_phone,
+  email: CONTACT_INFO.email,
   hours: "Mon - Sat: 9:00 AM - 6:00 PM",
   location: "Dhule, Maharashtra",
 };
+

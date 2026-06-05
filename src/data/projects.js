@@ -643,7 +643,6 @@ import railway2 from "../../public/assets/home/gallary-grid/img17.webp";
 
 import hscc1 from "../../public/assets/project/hccc/img1.webp";
 import hscc2 from "../../public/assets/project/hccc/img2.webp";
-import hscc3 from "../../public/assets/project/hccc/img3.avif";
 
 import ipg1 from "../../public/assets/project/ipg/img1.webp";
 import ipg2 from "../../public/assets/project/ipg/img2.webp";
@@ -1001,7 +1000,7 @@ export const projectsData = [
       "Comprehensive site development solutions and terrain balancing",
       "High-durability public civil infrastructure development configurations",
     ],
-    gallery: [hscc1, hscc2, hscc3],
+    gallery: [hscc1, hscc2],
   },
   {
     id: "18",

@@ -1,6 +1,6 @@
 import React from "react";
 import ContactPage from "@/component/contact/Index";
-import { META } from "@/config/constant";
+import { META, CONTACT_INFO } from "@/config/constant";
 
 export const metadata = {
   title: META.CONTACT.title,
@@ -15,8 +15,8 @@ const page = () => {
       "@type": "LocalBusiness",
       "name": "M/S Chetankumar Bhagwan Suryawanshi",
       "alternateName": "Ms Patil Construction",
-      "telephone": process.env.NEXT_PUBLIC_COMPANY_PHONE?.replace(/\s+/g, "") || "+919876543210",
-      "email": process.env.NEXT_PUBLIC_COMPANY_EMAIL || "info@mspatilconstruction.com",
+      "telephone": CONTACT_INFO.phone.replace(/\s+/g, ""),  
+      "email": CONTACT_INFO.email,
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Dhule",
