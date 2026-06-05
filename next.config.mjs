@@ -1,3 +1,9 @@
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
@@ -11,6 +17,12 @@ const nextConfig = {
         hostname: "res.cloudinary.com",
       },
     ],
+  },
+  experimental: {
+    turbopack: {
+      // यह Turbopack को आपके इसी client फ़ोल्डर के अंदर सीमित रखेगा
+      root: __dirname,
+    },
   },
 };
 
