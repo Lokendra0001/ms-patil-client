@@ -68,7 +68,18 @@ const Hero = ({ tagline, title, bgImage, breadcrumbs = [] }) => {
           className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-text-white  leading-tight mb-5 animate-fade-in-up"
           style={{ animationDelay: "100ms" }}
         >
-          {title}
+          {(() => {
+            if (typeof title !== "string") return title;
+            const words = title.split(" ");
+            if (words.length <= 1) return title;
+            const lastWord = words.pop();
+            const mainPart = words.join(" ");
+            return (
+              <>
+                {mainPart} <span className="text-primary">{lastWord}</span>
+              </>
+            );
+          })()}
         </h1>
 
         {/* Breadcrumbs */}

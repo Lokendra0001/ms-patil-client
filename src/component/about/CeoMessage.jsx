@@ -93,7 +93,7 @@ const CeoMessage = () => {
             <div className="mt-8 flex flex-col items-start select-text">
               {/* Cursive text rendering */}
               <div
-                className="text-3xl text-primary tracking-wide font-normal mb-1.5"
+                className="text-2xl sm:text-3xl text-primary tracking-wide font-normal mb-1.5"
                 style={{
                   fontFamily: "'Brush Script MT', 'Dancing Script', cursive",
                 }}

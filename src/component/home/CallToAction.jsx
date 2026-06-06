@@ -12,13 +12,13 @@ const CallToAction = () => {
     <section className="w-full py-16 sm:py-24 bg-white-background  select-text">
       <div className="max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12">
         {/* Floating Premium Card Frame */}
-        <div className="relative w-full bg-slate-50/50 border border-border-secondary/60 p-8 sm:p-12 lg:p-16 overflow-hidden shadow-[0_24px_70px_rgba(15,23,42,0.015)]">
+        <div className="relative w-full bg-slate-50/50 border border-border-secondary/60 p-4 sm:p-12 lg:p-16 overflow-hidden shadow-[0_24px_70px_rgba(15,23,42,0.015)]">
           {/* Engineering blueprint background watermark */}
 
           <div className="absolute inset-0 bg-gradient-to-r from-slate-50 via-slate-50/80 to-transparent pointer-events-none z-0" />
 
           {/* Symmetrical split grid wrapper */}
-          <div className="relative z-10 grid grid-cols-1 xl:grid-cols-12 gap-10 items-center">
+          <div className=" relative z-10 grid grid-cols-1 xl:grid-cols-12 gap-10 items-center">
             {/* Left Column: Typography Statement & Contacts */}
             <div className="xl:col-span-7 flex flex-col items-start ">
               <Heading
@@ -35,7 +35,7 @@ const CallToAction = () => {
                 {/* Office Contact Card */}
                 <a
                   href={`tel:${contactInfo.phone.replace(/\s+/g, "")}`}
-                  className="flex items-center gap-4 bg-white-background/80 backdrop-blur-sm p-4 border border-border-secondary/50 shadow-[0_4px_20px_rgba(0,0,0,0.005)] hover:border-primary/50 transition-all duration-300 group/phone min-w-[280px]"
+                  className="flex items-center gap-4 bg-white-background/80 backdrop-blur-sm p-4 border border-border-secondary/50 shadow-[0_4px_20px_rgba(0,0,0,0.005)] hover:border-primary/50 transition-all duration-300 group/phone w-full sm:w-auto sm:min-w-[280px]"
                 >
                   <div className="w-10 h-10 bg-gray-background border border-border-secondary flex items-center justify-center text-primary-hover shrink-0 group-hover/phone:bg-primary/15 transition-colors duration-300">
                     <FiPhone className="w-5 h-5" />
@@ -53,16 +53,16 @@ const CallToAction = () => {
                 {/* Email Support Card */}
                 <a
                   href={`mailto:${contactInfo.email}`}
-                  className="flex items-center gap-4 bg-white-background/80 backdrop-blur-sm p-4 border border-border-secondary/50 shadow-[0_4px_20px_rgba(0,0,0,0.005)] hover:border-primary/50 transition-all duration-300 group/email min-w-[280px]"
+                  className="flex items-center gap-4 bg-white-background/80 backdrop-blur-sm p-4 border border-border-secondary/50 shadow-[0_4px_20px_rgba(0,0,0,0.005)] hover:border-primary/50 transition-all duration-300 group/email w-full sm:w-auto sm:min-w-[280px]"
                 >
                   <div className="w-10 h-10 bg-gray-background border border-border-secondary flex items-center justify-center text-primary-hover shrink-0 group-hover/email:bg-primary/15 transition-colors duration-300">
                     <FiMail className="w-5 h-5" />
                   </div>
-                  <div>
+                  <div className="min-w-0 flex-1">
                     <div className="text-[9px] uppercase tracking-wider text-text-gray font-black">
                       Email Us
                     </div>
-                    <div className="text-sm font-extrabold text-text-primary group-hover/email:text-primary-hover transition-colors duration-300">
+                    <div className="text-sm font-extrabold text-text-primary group-hover/email:text-primary-hover transition-colors duration-300 break-all">
                       {contactInfo.email}
                     </div>
                   </div>
@@ -77,16 +77,16 @@ const CallToAction = () => {
                   href="/contact?consultation=true"
                   variant="theme"
                   size="lg"
-                  className="w-full uppercase tracking-wider py-4 h-auto select-text"
+                  className="w-full  tracking-wider py-4 h-auto select-text"
                 >
-                  Book a Consultation
+                  Get a Quotation
                 </Button>
 
                 <Button
                   href="/projects"
                   variant="reverse"
                   size="lg"
-                  className="w-full uppercase tracking-wider py-4 h-auto select-text"
+                  className="w-full  tracking-wider py-4 h-auto select-text"
                 >
                   View Our Portfolio
                 </Button>

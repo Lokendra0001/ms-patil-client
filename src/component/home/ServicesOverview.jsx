@@ -25,7 +25,7 @@ const ServicesOverview = () => {
             <Link
               key={idx}
               href={`/services/${service.slug}`}
-              className="relative overflow-hidden bg-white-background  px-8 py-20 lg:py-24 transition-all duration-500 cursor-pointer flex flex-col justify-between h-[350px] md:h-[450px] group border-b lg:border-b-0 lg:border-r border-border-secondary last:border-r-0 last:border-b-0"
+              className="relative overflow-hidden bg-white-background  px-8 py-20 lg:py-24 transition-all duration-500 cursor-pointer flex flex-col justify-between min-h-[350px] md:h-[450px] group border-b lg:border-b-0 lg:border-r border-border-secondary last:border-r-0 last:border-b-0"
             >
               {/* Background Project Image (always exists at low opacity, turns colorful on hover) */}
               <Image

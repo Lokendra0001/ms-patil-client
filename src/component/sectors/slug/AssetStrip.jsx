@@ -7,7 +7,7 @@ const AssetStrip = ({ data }) => {
   if (!data || !data.asset) return null;
 
   return (
-    <section className="relative  py-16 sm:py-20 overflow-hidden select-text border-t border-border-secondary">
+    <section className="relative  pt-16 sm:py-20 overflow-hidden select-text border-t border-border-secondary">
       {/* Blueprint Grid Lines Watermark (Subtle) */}
       <div className="absolute inset-0 opacity-[0.02] pointer-events-none z-0">
         <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
@@ -58,6 +58,7 @@ const AssetStrip = ({ data }) => {
               src={data.asset.image}
               alt={data.asset.focus}
               fill
+              priority
               className="object-cover"
               sizes="(max-width: 1024px) 100vw, 40vw"
             />

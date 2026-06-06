@@ -26,6 +26,7 @@ const ServicesRailway = () => {
               src={railway}
               alt="Approved Railway Infrastructure Work"
               fill
+              priority
               className="object-cover grayscale-[10%] hover:scale-105 transition-transform duration-700"
             />
             <div className="absolute inset-0 bg-slate-background/15" />

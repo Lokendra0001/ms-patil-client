@@ -73,6 +73,7 @@ const LogoItem = ({ name, image, className }) => (
       src={image}
       alt={name}
       fill
+      priority
       className={`select-none object-contain grayscale-100 brightness-[0.8] hover:grayscale-0 hover:brightness-100 ${className}`}
     />
   </div>

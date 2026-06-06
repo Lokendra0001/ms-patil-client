@@ -42,7 +42,7 @@ const ServicesList = () => {
                       {cat.number}
                     </span>
                     <h3
-                      className={`text-lg md:text-2.5xl font-semibold ${isOpen ? "text-primary" : "text-text-primary"} tracking-tight group-hover:text-primary-hover transition-colors duration-300`}
+                      className={`text-sm md:text-2.5xl font-semibold ${isOpen ? "text-primary" : "text-text-primary"} tracking-tight group-hover:text-primary-hover transition-colors duration-300`}
                     >
                       {cat.title}
                     </h3>
@@ -90,6 +90,7 @@ const ServicesList = () => {
                           src={cat.image}
                           alt={cat.title}
                           fill
+                          priority
                           className="object-cover grayscale-[15%] hover:grayscale-0 hover:scale-102 transition-all duration-700"
                         />
                         <div className="absolute inset-0 bg-slate-950/20 z-10" />

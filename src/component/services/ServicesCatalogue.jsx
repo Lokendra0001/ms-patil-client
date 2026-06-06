@@ -33,13 +33,14 @@ const ServicesCatalogue = () => {
                   src={item.image}
                   alt={item.title}
                   fill
+                  priority
                   className="object-cover grayscale-[15%] group-hover:scale-105 group-hover:grayscale-[0%] transition-all duration-700"
                 />
                 <div className="absolute inset-0 bg-slate-background/20 z-10" />
               </div>
 
               {/* Card Body */}
-              <div className="p-6  flex-grow flex flex-col justify-between">
+              <div className="p-3 py-6 sm:p-6  flex-grow flex flex-col justify-between">
                 <div className="flex gap-4 sm:gap-6 items-start">
                   {/* Dark Blue Square Icon Box */}
                   <div className="w-14 h-14 bg-primary/80  flex items-center justify-center shrink-0">

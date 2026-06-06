@@ -119,9 +119,10 @@ const ServicesProcess = () => {
             {/* Left Side: Visual Image representation */}
             <div className="w-full md:w-1/2 overflow-hidden bg-slate-900 relative">
               <Image
-                src={phases[activeIndex].image}
-                alt={phases[activeIndex].title}
+                src={phases[activeIndex]?.image}
+                alt={phases[activeIndex]?.title}
                 fill
+                priority
                 className="object-cover transition-all duration-700 hover:scale-105"
               />
               <div className="absolute inset-0 bg-slate-950/15 z-10" />
@@ -186,7 +187,7 @@ const ServicesProcess = () => {
                     <span className="text-sm font-bold font-mono text-text-primary  bg-red-linear-right-background px-2 py-0.5">
                       {phase.num}
                     </span>
-                    <h3 className="text-sm sm:text-base font-extrabold text-text-primary  uppercase tracking-wider">
+                    <h3 className="text-sm sm:text-base font-extrabold text-text-primary   tracking-wider">
                       {phase.title}
                     </h3>
                   </div>
@@ -200,9 +201,10 @@ const ServicesProcess = () => {
                   <div className="px-6 pb-6 pt-2 border-t border-slate-100 flex flex-col gap-6">
                     <div className="w-full h-48 overflow-hidden bg-slate-900 relative">
                       <Image
-                        src={phase.image}
-                        alt={phase.title}
+                        src={phase?.image}
+                        alt={phase?.title}
                         fill
+                        priority
                         className="object-cover transition-all duration-700 hover:scale-105"
                       />
                     </div>

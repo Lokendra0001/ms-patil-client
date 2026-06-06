@@ -11,7 +11,7 @@ export const sectorsData = {
   "railway-infrastructure": {
     slug: "railway-infrastructure",
     name: "Railway & Airport Civil Infrastructure",
-    highlight: "Railway & Aviation",
+    highlight: "Railway & Airport",
     badge: "RDSO & Airside Approved",
     overview:
       "Executing bulk earthworks, track bed layouts, high-grade airside rigid pavement foundations, and critical cross-drainage infrastructure.",

@@ -86,6 +86,7 @@ const ServicesAssets = () => {
                   src={asset.image}
                   alt={asset.name}
                   fill
+                  priority
                   className="object-cover transition-transform duration-700 "
                 />
 
@@ -120,7 +121,7 @@ const ServicesAssets = () => {
             guarantee consistency, and transfer cost savings directly to our
             clients.
           </p>
-          <div className="flex gap-4 items-center  text-xs text-text-primary font-medium  tracking-wider shrink-0">
+          <div className="flex flex-wrap justify-center gap-4 items-center  text-xs text-text-primary font-medium  tracking-wider shrink-0">
             <span>● 100% CONTROL</span>
             <span>● ZERO THIRD-PARTY DEPENDENCY</span>
           </div>

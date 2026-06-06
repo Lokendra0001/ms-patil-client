@@ -10,6 +10,7 @@ const Blogs = () => {
       <Hero
         tagline="RESOURCES & INSIGHTS"
         title="Our Construction Journal"
+        
         bgImage="/assets/image/common/b1.webp"
         breadcrumbs={breadcrumbItems}
       />

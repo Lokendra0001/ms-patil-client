@@ -9,12 +9,13 @@ const SectorHero = ({ data }) => {
   const title = data.name;
   const highlight = data.highlight;
   let titleNode = title;
+  console.log(highlight)
   if (highlight && title.includes(highlight)) {
     const parts = title.split(highlight);
     titleNode = (
       <>
         {parts[0]}
-        <span className="text-primary ">{highlight}</span>
+        <span className="text-primary">{highlight}</span>
         {parts[1]}
       </>
     );

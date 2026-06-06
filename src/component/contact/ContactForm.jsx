@@ -120,7 +120,7 @@ const ContactForm = () => {
 
   return (
     <section className="py-20 lg:py-24 bg-white-background  select-text">
-      <div className="max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12">
+      <div className="max-w-[1600px] mx-auto px-2 sm:px-8 lg:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
           {/* LEFT COLUMN: CONTACT FORM (Col 7) */}
           <div className="lg:col-span-7 bg-white-background  border border-border-secondary p-8 sm:p-10 shadow-sm">

@@ -227,11 +227,11 @@ const ProjectDetails = ({ project }) => {
                       <a
                         key={idx}
                         href={item.href}
-                        className="flex items-center gap-3 hover:text-primary transition-colors duration-200 "
+                        className="flex items-center gap-3 hover:text-primary transition-colors duration-200 min-w-0"
                       >
                         {item.icon}
                         <span
-                          className={`text-xs text-text-primary hover:text-primary-hover font-medium`}
+                          className={`text-xs text-text-primary hover:text-primary-hover font-medium break-all`}
                         >
                           {item.label}
                         </span>
@@ -239,10 +239,10 @@ const ProjectDetails = ({ project }) => {
                     );
                   }
                   return (
-                    <div key={idx} className="flex items-center gap-3">
+                    <div key={idx} className="flex items-center gap-3 min-w-0">
                       {item.icon}
                       <span
-                        className={`text-xs text-text-primary hover:text-primary-hover font-medium`}
+                        className={`text-xs text-text-primary hover:text-primary-hover font-medium break-all`}
                       >
                         {item.label}
                       </span>

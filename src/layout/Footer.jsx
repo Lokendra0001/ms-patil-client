@@ -22,6 +22,7 @@ const Footer = () => {
         alt="Engineering Blueprint Background"
         className="absolute inset-0 w-full h-full object-cover pointer-events-none z-0 opacity-[0.03]"
         fill
+        priority
       />
       <div className="absolute inset-0 bg-gradient-to-b from-slate-50/50 via-slate-50 to-slate-50/90 pointer-events-none z-0" />
 

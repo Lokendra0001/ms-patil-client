@@ -11,9 +11,9 @@ const AboutDetails = () => {
   return (
     <section className="w-full bg-white-background  py-20 lg:py-28 select-text">
       <div className="max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-y-16 gap-10 xl:gap-15 items-center">
+        <div className=" grid grid-cols-1 lg:grid-cols-12 gap-y-16 gap-10 xl:gap-15 items-center">
           {/* Left Column: Brand Story & Feature Bullets */}
-          <div className="col-span-1 lg:col-span-7 flex flex-col items-start">
+          <div className="order-2 lg:order-1 col-span-1 lg:col-span-7 flex flex-col items-start">
             <Heading
               tagline="Who We Are"
               title="Bringing Your"
@@ -59,7 +59,7 @@ const AboutDetails = () => {
           </div>
 
           {/* Right Column: Engineering Side Image (Large-Scale Precision Bevel Layout) */}
-          <div className="col-span-1 lg:col-span-5 relative w-full select-none py-6">
+          <div className="order-1 lg:order-2 col-span-1 lg:col-span-5 relative w-full select-none py-6">
             <div className="relative w-full mx-auto lg:ml-auto">
               {/* Background gold bevel outline SVG (prevents browser clipping borders) */}
               <svg
@@ -94,7 +94,7 @@ const AboutDetails = () => {
 
               {/* Floating Statistics Badge with matching Beveled Corners */}
               <div
-                className="absolute -bottom-6 -left-6 bg-primary text-text-white px-6 py-5 z-20 flex flex-col justify-center items-center w-28 h-28 sm:w-32 sm:h-32 shadow-xl border border-primary/20"
+                className="absolute -bottom-6 -left-2 sm:-left-6 bg-primary text-text-white px-6 py-5 z-20 flex flex-col justify-center items-center w-25 h-20 sm:w-32 sm:h-32 shadow-xl border border-primary/20"
                 style={{
                   clipPath:
                     "polygon(12% 0, 100% 0, 100% 88%, 88% 100%, 0 100%, 0 12%)",

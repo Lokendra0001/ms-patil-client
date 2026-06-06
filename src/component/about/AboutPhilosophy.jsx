@@ -175,8 +175,8 @@ const AboutPhilosophy = () => {
                     <div
                       className={`absolute inset-0 border-2 border-primary/30 pointer-events-none z-0 transition-transform duration-300 ${
                         isEven
-                          ? "translate-x-4 translate-y-4 rounded-tr-[3.5rem] rounded-bl-[3.5rem]"
-                          : "-translate-x-4 translate-y-4 rounded-tl-[3.5rem] rounded-br-[3.5rem]"
+                          ? "translate-x-2 translate-y-2 sm:translate-x-4 sm:translate-y-4 rounded-tr-[3.5rem] rounded-bl-[3.5rem]"
+                          : "-translate-x-2 translate-y-2 sm:-translate-x-4 sm:translate-y-4 rounded-tl-[3.5rem] rounded-br-[3.5rem]"
                       }`}
                     />
 
@@ -192,6 +192,7 @@ const AboutPhilosophy = () => {
                         src={imagesMap[item.id]}
                         alt={item.title}
                         fill
+                        priority
                         className="object-cover transition-transform duration-700 hover:scale-105 pointer-events-none select-none"
                       />
                       {/* Subtle shading overlay */}

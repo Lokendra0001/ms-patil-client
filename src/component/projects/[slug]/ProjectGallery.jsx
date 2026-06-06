@@ -24,6 +24,7 @@ const ProjectGallery = ({ project, setIndex }) => {
               src={imgUrl}
               alt={`Project Gallery Image ${index + 1}`}
               fill
+              priority
               className="object-cover filter grayscale-[10%] group-hover:grayscale-0 transition-all duration-700 ease-out group-hover:scale-105"
             />
             {/* Hover expansion overlay */}

@@ -75,7 +75,7 @@ const ServicesHero = () => {
         <div className="absolute inset-0 bg-slate-background/70 z-10" />
 
         {/* Main Content Layout */}
-        <div className="max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 relative z-20 h-full flex items-center justify-between pb-28 sm:pb-36 lg:pb-44">
+        <div className="max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 relative z-20 h-full flex gap-4 sm:gap-0 items-center justify-between pb-28 sm:pb-36 lg:pb-44">
           {/* Left Side: Service Details */}
           <div className="max-w-2xl text-left">
             <div
@@ -102,7 +102,7 @@ const ServicesHero = () => {
 
             <p
               key={`desc-${currentIdx}`}
-              className="text-slate-300 text-sm sm:text-base leading-relaxed mb-8 max-w-xl animate-content-slide-in"
+              className="text-slate-300 text-[13px] sm:text-base leading-relaxed mb-8 max-w-xl animate-content-slide-in"
               style={{ animationDelay: "200ms" }}
             >
               {services[currentIdx].description}
